@@ -47,4 +47,4 @@ First 3 screenshots = 80% of conversion work (above-fold). iOS CVR 33.4% avg vs 
 Use **Custom Product Pages** (70 max in 2026). +5.9% CVR vs default, +8.6% paired with Search Ads.
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

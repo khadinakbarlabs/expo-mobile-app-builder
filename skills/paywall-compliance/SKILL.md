@@ -52,4 +52,4 @@ MEDIUM:
 ```
 
 ## Reference
-`../../docs/references/06-store-readiness.md`
+`references/06-store-readiness.md`

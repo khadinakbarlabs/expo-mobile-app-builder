@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "expo-mobile-app-builder",
   "displayName": "Mobile App Builder for Expo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Privacy-first Expo workflows for building, testing, and preparing iOS and Android apps.",
   "author": {
     "name": "Khadin Akbar",

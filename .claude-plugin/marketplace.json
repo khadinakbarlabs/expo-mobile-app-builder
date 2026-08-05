@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "expo-mobile-app-builder",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": "./",
       "description": "Build, test, and prepare Expo apps for iOS and Android.",
       "category": "Development",

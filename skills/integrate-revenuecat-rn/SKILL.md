@@ -87,4 +87,4 @@ useEffect(() => {
 4. In RevenueCat: Entitlement `pro`, Products linked to ASC, Offering `current` with packages
 
 ## Reference
-`../../docs/references/03-monetization.md`
+`references/03-monetization.md`

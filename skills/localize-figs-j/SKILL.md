@@ -54,4 +54,4 @@ i18n.locale = getLocales()[0].languageCode;
 ASC → App Store → app → version → + Add Language. Translate Name, Subtitle, Keywords, Promotional Text, Description, screenshots.
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

@@ -53,4 +53,4 @@ OTA may not change app's primary purpose or add features the reviewed binary cou
 EAS Update usage and pricing can change. Check the current Expo pricing page before approving a release that could incur charges.
 
 ## Reference
-`../../docs/references/02-eas-pipeline.md`
+`references/02-eas-pipeline.md`

@@ -34,4 +34,4 @@ Validate before code. AI-assisted development lowers build cost so much that the
 70-80 waitlist signups → 1:1 calls with 20-30 → pitch heavily-discounted lifetime deal upfront. **If 5 people pay, build it.** If not, idea fails fast and cheap.
 
 ## Reference
-`../../docs/references/05-product-design.md`
+`references/05-product-design.md`

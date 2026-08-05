@@ -97,4 +97,4 @@ VERDICT: BLOCK SUBMISSION until 2 critical and 1 high fixed.
 ```
 
 ## Reference
-`../../docs/references/06-store-readiness.md`
+`references/06-store-readiness.md`

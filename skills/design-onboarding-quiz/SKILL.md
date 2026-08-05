@@ -60,4 +60,4 @@ useEffect(() => { progress.value = withTiming(1, { duration: 2500 }); }, []);
 Critical pattern: show discounted annual offer banner when user dismisses paywall. Recovers 10-20% of bouncers.
 
 ## Reference
-`../../docs/references/03-monetization.md`
+`references/03-monetization.md`

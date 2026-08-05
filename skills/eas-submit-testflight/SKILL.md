@@ -62,4 +62,4 @@ Apple processes ~10-30 min. Then:
 TestFlight builds expire 90 days after upload. Plan rolling cadence so you always have a build <90 days old.
 
 ## Reference
-`../../docs/references/02-eas-pipeline.md`
+`references/02-eas-pipeline.md`

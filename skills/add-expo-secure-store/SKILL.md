@@ -51,4 +51,4 @@ await SecureStore.setItemAsync('vaultKey', secret, {
 ```
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

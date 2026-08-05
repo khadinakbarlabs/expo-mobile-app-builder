@@ -49,4 +49,4 @@ const styles = StyleSheet.create({
 ```
 
 ## Reference
-`../../docs/references/05-product-design.md`
+`references/05-product-design.md`

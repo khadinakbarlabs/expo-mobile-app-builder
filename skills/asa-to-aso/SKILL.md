@@ -36,4 +36,4 @@ If you're already #1-3 organically for a keyword, **pause ASA spend** on it for 
 Apple expanded ad slots from 1 to positions 2-5 in search results. **More inventory = more opportunity**, but also rising CPI as competition fills slots.
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

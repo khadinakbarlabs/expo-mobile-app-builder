@@ -73,4 +73,4 @@ Always pre-prompt with custom UI explaining WHY before triggering system dialog.
 Treat barcode data as untrusted input. Validate its expected format and pass it as a structured route parameter; do not concatenate it into a navigation URL or use it to open arbitrary links.
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

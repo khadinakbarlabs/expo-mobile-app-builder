@@ -23,4 +23,4 @@ This sentence becomes North Star — every feature gets gut-checked against it.
 - `research-competitors` for what they considered
 
 ## Reference
-`../../docs/references/05-product-design.md`
+`references/05-product-design.md`

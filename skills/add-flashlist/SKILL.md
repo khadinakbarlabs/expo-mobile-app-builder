@@ -59,4 +59,4 @@ import { FlashList } from '@shopify/flash-list';
 ```
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

@@ -23,6 +23,8 @@ const requiredFiles = [
   "SUPPORT.md",
   "SECURITY.md",
   "LICENSE",
+  "scripts/plan-expo-project.mjs",
+  "skills/command-scaffold-app/scripts/plan-expo-project.mjs",
 ];
 const failures = [];
 
@@ -71,6 +73,7 @@ if (skillFiles.length === 0) failures.push("skills/: no SKILL.md files found");
 
 for (const skillFile of skillFiles) {
   const skillDirectory = path.basename(path.dirname(skillFile));
+  const skillDirectoryPath = path.dirname(skillFile);
   const content = fs.readFileSync(skillFile, "utf8");
   const frontmatter = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
   if (!frontmatter) {
@@ -85,6 +88,27 @@ for (const skillFile of skillFiles) {
 
   const openAiMetadata = path.join(path.dirname(skillFile), "agents", "openai.yaml");
   if (!fs.existsSync(openAiMetadata)) failures.push(`${relative(openAiMetadata)}: required metadata is missing`);
+
+  if (content.includes("../../docs/")) {
+    failures.push(`${relative(skillFile)}: repository-level documentation paths break standalone installs`);
+  }
+  for (const link of content.matchAll(/\]\((?!https?:|mailto:|#)([^)\s]+)\)/g)) {
+    const reference = link[1].replace(/^<|>$/g, "").split("#", 1)[0];
+    const target = path.resolve(skillDirectoryPath, reference);
+    if (!target.startsWith(`${skillDirectoryPath}${path.sep}`) || !fs.existsSync(target)) {
+      failures.push(`${relative(skillFile)}: standalone link is missing or escapes the skill (${reference})`);
+    }
+  }
+}
+
+const rootPlanner = path.join(packageRoot, "scripts", "plan-expo-project.mjs");
+const skillPlanner = path.join(skillRoot, "command-scaffold-app", "scripts", "plan-expo-project.mjs");
+if (
+  fs.existsSync(rootPlanner) &&
+  fs.existsSync(skillPlanner) &&
+  fs.readFileSync(rootPlanner, "utf8") !== fs.readFileSync(skillPlanner, "utf8")
+) {
+  failures.push("the root and standalone scaffold planners must remain identical");
 }
 
 walk(packageRoot);

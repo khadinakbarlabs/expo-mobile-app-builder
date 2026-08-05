@@ -57,4 +57,4 @@ xcrun simctl openurl booted "myapp://recipe/123"
 ```
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

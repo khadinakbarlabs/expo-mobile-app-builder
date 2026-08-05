@@ -43,4 +43,4 @@ Weekly cadence proven by Marc Lou ($70K/mo), Pieter Levels ($3.1M/yr solo), Vikt
 On launch day: tweet AT 9am ET with PH link + ask for hunters. PH hunters check X for product activity before voting.
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

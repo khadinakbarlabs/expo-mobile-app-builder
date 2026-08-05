@@ -50,4 +50,4 @@ Keywords: fitness,nutrition,calorie,routine,strength,cardio,health,exercise
 ~13 distinct terms across 90 chars used.
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

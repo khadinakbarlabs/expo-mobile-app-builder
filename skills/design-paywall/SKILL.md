@@ -104,4 +104,4 @@ function PaywallScreen() {
 - No way to dismiss paywall
 
 ## Reference
-`../../docs/references/03-monetization.md`, `../../docs/references/06-store-readiness.md`
+`references/03-monetization.md`, `references/06-store-readiness.md`

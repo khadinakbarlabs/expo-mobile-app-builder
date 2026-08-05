@@ -81,4 +81,4 @@ await Notifications.scheduleNotificationAsync({
 Recommended: Expo Push API (free, simple) or direct APNs HTTP/2 with .p8 key.
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

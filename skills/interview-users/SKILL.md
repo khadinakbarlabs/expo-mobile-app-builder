@@ -32,4 +32,4 @@ Output a job story: *"When [situation], I want to [motivation], so I can [expect
 - Use the user's approved analysis tool to extract a JTBD timeline and three direct quotes; remove personal data before uploading a transcript.
 
 ## Reference
-`../../docs/references/05-product-design.md`
+`references/05-product-design.md`

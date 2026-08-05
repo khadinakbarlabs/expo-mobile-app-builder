@@ -63,4 +63,4 @@ eas build --platform ios --profile production
 Distribution certs last 1 year. Provisioning profiles last 1 year. EAS auto-regenerates interactively. For CI, run `eas credentials` proactively a month before expiry.
 
 ## Reference
-`../../docs/references/02-eas-pipeline.md`
+`references/02-eas-pipeline.md`

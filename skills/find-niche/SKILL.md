@@ -35,4 +35,4 @@ ESTIMATED 6-MONTH REVENUE CEILING: $X/mo at Y subs
 ```
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`, `../../docs/references/03-monetization.md`
+`references/04-discovery-listing.md`, `references/03-monetization.md`

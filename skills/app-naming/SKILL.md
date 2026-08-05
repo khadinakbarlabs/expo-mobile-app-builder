@@ -46,4 +46,4 @@ Pattern A or B. Skip pattern C until you have distribution.
 - Cost: $2,000-$3,500 flat fee or $300-$600/hr
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

@@ -65,4 +65,4 @@ EXPECTED METRICS
 ```
 
 ## Reference
-`../../docs/references/03-monetization.md`
+`references/03-monetization.md`

@@ -92,4 +92,4 @@ client_id=com.example.myapp
 - Don't keep PII after deletion — must hard-delete
 
 ## Reference
-`../../docs/references/06-store-readiness.md`
+`references/06-store-readiness.md`

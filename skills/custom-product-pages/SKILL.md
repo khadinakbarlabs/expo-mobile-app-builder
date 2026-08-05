@@ -34,4 +34,4 @@ Build CPPs for:
 Pull weekly from ASA → identify top converters → create CPP variant matching that intent.
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

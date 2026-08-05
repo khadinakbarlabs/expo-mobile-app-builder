@@ -55,4 +55,4 @@ Every interactive element:
 - Settings → Accessibility → Display & Text Size → Increase Contrast → On.
 
 ## Reference
-`../../docs/references/05-product-design.md`
+`references/05-product-design.md`

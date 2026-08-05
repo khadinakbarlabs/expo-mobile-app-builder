@@ -30,4 +30,4 @@ If "no" to that last one, nobody will pay for yours either.
 All produce polite lies.
 
 ## Reference
-`../../docs/references/05-product-design.md`
+`references/05-product-design.md`

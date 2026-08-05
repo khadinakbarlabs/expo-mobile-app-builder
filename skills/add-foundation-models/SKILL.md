@@ -58,4 +58,4 @@ const recipe = await session.respond({
 - Apple loves featuring apps that use it
 
 ## Reference
-`../../docs/references/06-store-readiness.md` — 5.1.2(i) AI disclosure exemption for on-device.
+`references/06-store-readiness.md` — 5.1.2(i) AI disclosure exemption for on-device.

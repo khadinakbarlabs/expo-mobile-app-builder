@@ -76,4 +76,4 @@ This skill creates a launch plan. It must not submit an app for review, create a
 7. **Podcast tour** — credibility + niche reach, low conversion volume
 
 ## Reference
-`../../docs/references/04-discovery-listing.md`
+`references/04-discovery-listing.md`

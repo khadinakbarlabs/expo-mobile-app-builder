@@ -4,6 +4,7 @@
 
 - [ ] Run `node scripts/validate-release.mjs` and `node scripts/audit-public-package.mjs .`.
 - [ ] Validate every skill frontmatter and referenced resource.
+- [ ] Install at least one skill with the public Skills CLI and audit every skill as a standalone directory.
 - [ ] Run the Plugin Creator and Codex Plugin Builder validators.
 - [ ] Create and round-trip validate the root-layout ZIP.
 - [ ] Re-scan the final archive and Git history for credential artifacts and private paths.

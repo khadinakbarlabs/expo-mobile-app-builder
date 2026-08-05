@@ -61,4 +61,4 @@ Three visibility levels:
 `eas build --clear-cache` invalidates dependency cache. Use it only after approval for the associated build; cache duration and cost vary by plan and project.
 
 ## Reference
-`../../docs/references/02-eas-pipeline.md`
+`references/02-eas-pipeline.md`

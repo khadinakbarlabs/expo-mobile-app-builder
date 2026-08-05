@@ -73,4 +73,4 @@ const like = useMutation({
 ```
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

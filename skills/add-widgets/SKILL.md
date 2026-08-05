@@ -11,7 +11,7 @@ Expo SDK 54 apps can use native iOS targets when the product genuinely benefits 
 
 1. Confirm the widget's one primary job, update frequency, offline fallback, supported iOS versions, and whether the data is safe to show on a lock screen.
 2. Prefer an in-app quick action when the widget would expose sensitive, account, health, or financial information.
-3. Read [the Expo SDK 54 reference](../../docs/references/01-expo-sdk-54.md) and verify the exact native-target approach and third-party library compatibility before adding dependencies. Do not assume a package designed for a newer SDK works on SDK 54.
+3. Read [the Expo SDK 54 reference](references/01-expo-sdk-54.md) and verify the exact native-target approach and third-party library compatibility before adding dependencies. Do not assume a package designed for a newer SDK works on SDK 54.
 
 ## Implementation outline
 

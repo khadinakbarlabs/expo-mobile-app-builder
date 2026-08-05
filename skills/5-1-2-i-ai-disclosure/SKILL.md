@@ -93,4 +93,4 @@ We obtain explicit consent before sending data to [Provider] for the first time.
 ```
 
 ## Reference
-`../../docs/references/06-store-readiness.md`
+`references/06-store-readiness.md`

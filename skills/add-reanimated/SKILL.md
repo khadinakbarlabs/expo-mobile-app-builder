@@ -72,4 +72,4 @@ scale.value = reduceMotion ? withTiming(1.4, { duration: 0 }) : withSpring(1.4);
 ```
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

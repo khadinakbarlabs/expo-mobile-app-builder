@@ -66,4 +66,4 @@ Topic: `<bundle-id>.push-type.liveactivity`. Push the activity's pushToken (retu
 - 4-hour max activity duration; can be extended via push update
 
 ## Reference
-`../../docs/references/01-expo-sdk-54.md`
+`references/01-expo-sdk-54.md`

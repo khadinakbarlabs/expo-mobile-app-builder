@@ -47,4 +47,4 @@ Do not rely on a particular review timeline. Use expedited-review requests only 
 For JS-only fixes, skip phased release entirely — use `eas update --rollout-percentage 10` (run `eas-update-rollout`).
 
 ## Reference
-`../../docs/references/06-store-readiness.md`
+`references/06-store-readiness.md`

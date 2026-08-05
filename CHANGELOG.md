@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-08-05
+
+- Made every referenced document travel with its skill during standalone Skills CLI installation.
+- Bundled the credential-free scaffold planner inside `command-scaffold-app` while retaining the repository helper.
+- Added release validation that rejects parent-relative paths and broken isolated-skill links.
+
 ## 1.0.0 — 2026-08-05
 
 - Rebuilt the owner-authorized private mobile workflow bundle as a public, skills-only Expo package for iOS and Android.
