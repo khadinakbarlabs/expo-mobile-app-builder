@@ -27,6 +27,8 @@ const requiredFiles = [
   "skills/command-scaffold-app/scripts/plan-expo-project.mjs",
 ];
 const failures = [];
+const publicDisplayName = "iOS/Android Mobile App Builder";
+const openAiDisplayNameLimit = 30;
 
 function relative(filePath) {
   return path.relative(packageRoot, filePath).split(path.sep).join("/");
@@ -62,6 +64,25 @@ for (const file of manifestPaths) {
 
 for (const [file, manifest] of manifests) {
   if (manifest.name !== "expo-mobile-app-builder") failures.push(`${file}: unexpected package name`);
+}
+
+const publicDisplayNames = new Map([
+  [".codex-plugin/plugin.json", manifests.get(".codex-plugin/plugin.json")?.interface?.displayName],
+  [".agents/plugins/marketplace.json", manifests.get(".agents/plugins/marketplace.json")?.interface?.displayName],
+  [".claude-plugin/plugin.json", manifests.get(".claude-plugin/plugin.json")?.displayName],
+  [".claude-plugin/marketplace.json", manifests.get(".claude-plugin/marketplace.json")?.plugins?.[0]?.displayName],
+  [".cursor-plugin/plugin.json", manifests.get(".cursor-plugin/plugin.json")?.displayName],
+]);
+
+for (const [file, displayName] of publicDisplayNames) {
+  if (displayName !== publicDisplayName) {
+    failures.push(`${file}: public display name must be ${JSON.stringify(publicDisplayName)}`);
+  }
+}
+
+const openAiDisplayName = publicDisplayNames.get(".codex-plugin/plugin.json");
+if (typeof openAiDisplayName === "string" && Array.from(openAiDisplayName).length > openAiDisplayNameLimit) {
+  failures.push(`.codex-plugin/plugin.json: interface.displayName exceeds ${openAiDisplayNameLimit} characters`);
 }
 
 const skillRoot = path.join(packageRoot, "skills");

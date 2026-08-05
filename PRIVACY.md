@@ -2,7 +2,7 @@
 
 Effective date: August 5, 2026
 
-Mobile App Builder for Expo is a static skills package. It does not operate a service, create an account, collect analytics, store prompts, receive workspace files, or transmit data.
+iOS/Android Mobile App Builder is a static skills package. It does not operate a service, create an account, collect analytics, store prompts, receive workspace files, or transmit data.
 
 The AI host chosen by the user may process the user’s prompt and any files the user authorizes it to access under that host’s own terms and controls. Third-party command-line tools, provider dashboards, device emulators, and app stores are also governed by their respective policies when the user chooses to use them.
 

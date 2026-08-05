@@ -1,13 +1,13 @@
-# Mobile App Builder for Expo
+# iOS/Android Mobile App Builder
 
 [![skills.sh](https://skills.sh/b/khadinakbarlabs/expo-mobile-app-builder)](https://skills.sh/khadinakbarlabs/expo-mobile-app-builder)
 [![CI](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
 [![license](https://img.shields.io/badge/license-MIT-2154D8)](LICENSE)
 [![Expo SDK 54](https://img.shields.io/badge/Expo-SDK%2054-000020)](https://docs.expo.dev/versions/v54.0.0/)
 
-An open-source, skills-only mobile engineering studio for planning, designing, building, testing, and preparing Expo apps for iOS and Android.
+An open-source iOS and Android mobile app builder for Expo and React Native—covering product planning, UI/UX, implementation, testing, EAS, App Store, and Google Play readiness.
 
-The package contains 163 focused Agent Skills for product discovery, React Native and Expo implementation, native platform work, accessibility, testing, EAS release preparation, monetization planning, and store-readiness review. Expo SDK 54 is the versioned documentation baseline.
+The package contains 164 focused Agent Skills for product discovery, React Native and Expo implementation, native platform work, accessibility, testing, EAS release preparation, monetization planning, and store-readiness review. Expo SDK 54 is the versioned documentation baseline.
 
 > This independent community project is not affiliated with or endorsed by Expo, Apple, Google, React Native, EAS, Anthropic, Cursor, or OpenAI.
 
@@ -19,10 +19,11 @@ List the available skills, then install them for a supported coding agent:
 
 ```bash
 npx skills add khadinakbarlabs/expo-mobile-app-builder --list
+npx skills add khadinakbarlabs/expo-mobile-app-builder --skill mobile-app-builder-ios-android --agent codex --copy --yes
 npx skills add khadinakbarlabs/expo-mobile-app-builder --skill '*' --agent codex --copy --yes
 ```
 
-Replace `codex` with `claude-code`, `cursor`, or another profile supported by the installed Skills CLI. Browse the catalog on [skills.sh](https://skills.sh/khadinakbarlabs/expo-mobile-app-builder).
+Replace `codex` with `claude-code`, `cursor`, or another profile supported by the installed Skills CLI. Browse the full catalog on [skills.sh](https://skills.sh/khadinakbarlabs/expo-mobile-app-builder), or start with the flagship [iOS/Android Mobile App Builder skill](https://skills.sh/khadinakbarlabs/expo-mobile-app-builder/mobile-app-builder-ios-android).
 
 ### Codex
 
@@ -52,7 +53,7 @@ The repository also contains a native Cursor plugin manifest for the Cursor Mark
 
 ### ChatGPT and the universal Plugins Directory
 
-After the official listing is approved and published, search for **Mobile App Builder for Expo** in the Plugins Directory shared by ChatGPT and Codex. The GitHub, Claude Code, Codex CLI, Cursor, and Agent Skills installation routes remain independent of that review.
+After the official listing is approved and published, search for **iOS/Android Mobile App Builder** in the Plugins Directory shared by ChatGPT and Codex. The GitHub, Claude Code, Codex CLI, Cursor, and Agent Skills installation routes remain independent of that review.
 
 ### Clone from GitHub
 
@@ -66,7 +67,7 @@ node scripts/audit-public-package.mjs .
 ## Start with a task
 
 ```text
-Use Mobile App Builder for Expo to scaffold a production-ready iOS and Android app.
+Use iOS/Android Mobile App Builder to scaffold a production-ready Expo and React Native app.
 Audit this Expo app for accessibility, privacy, and release-readiness gaps.
 Diagnose this EAS, iOS, or Android build failure without exposing credentials.
 Plan subscriptions and store configuration, but stop before any account or publishing action.
@@ -112,7 +113,7 @@ The helper prints commands only. It does not create a project, log in, start a b
 ## Repository layout
 
 ```text
-skills/                    163 portable Agent Skills
+skills/                    164 portable Agent Skills
 docs/references/           Versioned Expo, Apple, Android, and security references
 .codex-plugin/             OpenAI Codex and Plugins Directory manifest
 .agents/plugins/           Direct Codex repository marketplace metadata

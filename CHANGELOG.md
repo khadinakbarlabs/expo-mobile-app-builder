@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 — 2026-08-05
+
+- Renamed every supported marketplace-facing title to **iOS/Android Mobile App Builder**, exactly 30 characters, while preserving the stable `expo-mobile-app-builder` install identifier.
+- Added SEO-focused iOS, Android, Expo, and React Native descriptions, keywords, and discovery tags.
+- Added a standalone `mobile-app-builder-ios-android` flagship skill for skills.sh and Skills CLI discovery.
+
 ## 1.0.1 — 2026-08-05
 
 - Made every referenced document travel with its skill during standalone Skills CLI installation.

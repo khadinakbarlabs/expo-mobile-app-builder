@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "expo-mobile-app-builder",
-  "displayName": "Mobile App Builder for Expo",
-  "version": "1.0.1",
-  "description": "Privacy-first Expo workflows for building, testing, and preparing iOS and Android apps.",
+  "displayName": "iOS/Android Mobile App Builder",
+  "version": "1.0.2",
+  "description": "Build iOS and Android mobile apps with Expo and React Native.",
   "author": {
     "name": "Khadin Akbar",
     "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
@@ -18,7 +18,10 @@
     "android",
     "mobile",
     "eas",
-    "agent-skills"
+    "agent-skills",
+    "mobile-app-builder",
+    "ios-app-builder",
+    "android-app-builder"
   ],
   "skills": "./skills/"
 }

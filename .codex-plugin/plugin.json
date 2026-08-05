@@ -1,7 +1,7 @@
 {
   "name": "expo-mobile-app-builder",
-  "version": "1.0.1",
-  "description": "Privacy-first Expo workflows for building iOS and Android apps.",
+  "version": "1.0.2",
+  "description": "Build iOS and Android mobile apps with Expo and React Native.",
   "author": {
     "name": "Khadin Akbar",
     "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
@@ -15,13 +15,16 @@
     "ios",
     "android",
     "mobile",
-    "eas"
+    "eas",
+    "mobile-app-builder",
+    "ios-app-builder",
+    "android-app-builder"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Mobile App Builder for Expo",
-    "shortDescription": "Build, test, and ship Expo apps for iOS and Android.",
-    "longDescription": "A privacy-first, skills-only mobile engineering studio with 163 focused workflows for planning, designing, building, testing, and preparing Expo SDK 54 apps for iOS and Android. It has no hosted backend, telemetry, account system, or embedded credentials.",
+    "displayName": "iOS/Android Mobile App Builder",
+    "shortDescription": "Build iOS and Android apps with Expo and React Native.",
+    "longDescription": "Plan, build, test, and prepare production-ready iOS and Android mobile apps with Expo SDK 54 and React Native. Includes 164 focused workflows for product strategy, UI/UX, implementation, native features, testing, EAS, App Store, and Google Play readiness. It has no hosted backend, telemetry, account system, or embedded credentials.",
     "developerName": "Khadin Akbar",
     "category": "Productivity",
     "capabilities": [
@@ -32,7 +35,7 @@
     "privacyPolicyURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md",
     "termsOfServiceURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md",
     "defaultPrompt": [
-      "Help me build a production-ready Expo app for iOS and Android.",
+      "Build a production-ready iOS and Android app with Expo and React Native.",
       "Audit my Expo app for iOS and Android release readiness.",
       "Debug this Expo, EAS, iOS, or Android build issue safely."
     ],
