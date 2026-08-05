@@ -1,0 +1,4 @@
+interface:
+  display_name: "Custom Store Listings"
+  short_description: "Help with Custom Store Listings tasks"
+  default_prompt: "Use $custom-store-listings to help with this mobile app task."

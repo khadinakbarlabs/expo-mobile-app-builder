@@ -1,0 +1,21 @@
+{
+  "name": "expo-mobile-app-builder",
+  "interface": {
+    "displayName": "Mobile App Builder for Expo"
+  },
+  "plugins": [
+    {
+      "name": "expo-mobile-app-builder",
+      "version": "1.0.0",
+      "source": {
+        "source": "local",
+        "path": "../.."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

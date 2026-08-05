@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design App Icon Adaptive"
+  short_description: "Help with Design App Icon Adaptive tasks"
+  default_prompt: "Use $design-app-icon-adaptive to help with this mobile app task."

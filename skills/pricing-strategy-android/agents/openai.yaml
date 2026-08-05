@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pricing Strategy Android"
+  short_description: "Help with Pricing Strategy Android tasks"
+  default_prompt: "Use $pricing-strategy-android to help with this mobile app task."

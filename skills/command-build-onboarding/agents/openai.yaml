@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Build Onboarding"
+  short_description: "Help with Command Build Onboarding tasks"
+  default_prompt: "Use $command-build-onboarding to help with this mobile app task."

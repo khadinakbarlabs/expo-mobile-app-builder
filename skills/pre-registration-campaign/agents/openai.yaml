@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pre Registration Campaign"
+  short_description: "Help with Pre Registration Campaign tasks"
+  default_prompt: "Use $pre-registration-campaign to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Niche Android"
+  short_description: "Help with Find Niche Android tasks"
+  default_prompt: "Use $find-niche-android to help with this mobile app task."

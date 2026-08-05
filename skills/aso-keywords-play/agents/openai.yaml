@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aso Keywords Play"
+  short_description: "Help with Aso Keywords Play tasks"
+  default_prompt: "Use $aso-keywords-play to help with this mobile app task."

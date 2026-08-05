@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Haptics"
+  short_description: "Help with Add Haptics tasks"
+  default_prompt: "Use $add-haptics to help with this mobile app task."

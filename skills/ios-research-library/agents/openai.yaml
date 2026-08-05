@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ios Research Library"
+  short_description: "Help with Ios Research Library tasks"
+  default_prompt: "Use $ios-research-library to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handle Anr Android"
+  short_description: "Help with Handle Anr Android tasks"
+  default_prompt: "Use $handle-anr-android to help with this mobile app task."

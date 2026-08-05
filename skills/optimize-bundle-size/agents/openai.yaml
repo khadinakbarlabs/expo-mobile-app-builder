@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize Bundle Size"
+  short_description: "Help with Optimize Bundle Size tasks"
+  default_prompt: "Use $optimize-bundle-size to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Drizzle SQLite"
+  short_description: "Help with Add Drizzle SQLite tasks"
+  default_prompt: "Use $add-drizzle-sqlite to help with this mobile app task."

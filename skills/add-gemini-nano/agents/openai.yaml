@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Gemini Nano"
+  short_description: "Help with Add Gemini Nano tasks"
+  default_prompt: "Use $add-gemini-nano to help with this mobile app task."

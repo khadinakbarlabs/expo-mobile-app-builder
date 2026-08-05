@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add App Attestation"
+  short_description: "Help with Add App Attestation tasks"
+  default_prompt: "Use $add-app-attestation to help with this mobile app task."

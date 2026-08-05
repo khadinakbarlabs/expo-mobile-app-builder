@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add App Clips"
+  short_description: "Help with Add App Clips tasks"
+  default_prompt: "Use $add-app-clips to help with this mobile app task."

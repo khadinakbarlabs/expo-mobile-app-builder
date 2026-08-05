@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Build Paywall"
+  short_description: "Help with Command Build Paywall tasks"
+  default_prompt: "Use $command-build-paywall to help with this mobile app task."

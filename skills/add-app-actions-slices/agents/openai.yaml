@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add App Actions Slices"
+  short_description: "Help with Add App Actions Slices tasks"
+  default_prompt: "Use $add-app-actions-slices to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dissect Competitor Android App"
+  short_description: "Help with Dissect Competitor Android App tasks"
+  default_prompt: "Use $dissect-competitor-android-app to help with this mobile app task."

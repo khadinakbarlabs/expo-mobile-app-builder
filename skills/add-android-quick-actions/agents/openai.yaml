@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Android Quick Actions"
+  short_description: "Help with Add Android Quick Actions tasks"
+  default_prompt: "Use $add-android-quick-actions to help with this mobile app task."

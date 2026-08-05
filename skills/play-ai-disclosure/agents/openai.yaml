@@ -1,0 +1,4 @@
+interface:
+  display_name: "Play Ai Disclosure"
+  short_description: "Help with Play Ai Disclosure tasks"
+  default_prompt: "Use $play-ai-disclosure to help with this mobile app task."

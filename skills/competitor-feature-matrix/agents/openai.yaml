@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitor Feature Matrix"
+  short_description: "Help with Competitor Feature Matrix tasks"
+  default_prompt: "Use $competitor-feature-matrix to help with this mobile app task."

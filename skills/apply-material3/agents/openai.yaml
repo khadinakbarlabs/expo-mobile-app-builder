@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Material3"
+  short_description: "Help with Apply Material3 tasks"
+  default_prompt: "Use $apply-material3 to help with this mobile app task."

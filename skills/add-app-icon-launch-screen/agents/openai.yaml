@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add App Icon Launch Screen"
+  short_description: "Help with Add App Icon Launch Screen tasks"
+  default_prompt: "Use $add-app-icon-launch-screen to help with this mobile app task."

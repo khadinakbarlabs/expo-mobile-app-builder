@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Launch"
+  short_description: "Help with Plan Launch tasks"
+  default_prompt: "Use $plan-launch to help with this mobile app task."

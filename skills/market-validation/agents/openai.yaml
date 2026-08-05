@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Validation"
+  short_description: "Help with Market Validation tasks"
+  default_prompt: "Use $market-validation to help with this mobile app task."

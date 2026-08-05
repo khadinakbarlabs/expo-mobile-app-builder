@@ -1,0 +1,4 @@
+interface:
+  display_name: "Custom Product Pages"
+  short_description: "Help with Custom Product Pages tasks"
+  default_prompt: "Use $custom-product-pages to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "5 1 2 I Ai Disclosure"
+  short_description: "Help with 5 1 2 I Ai Disclosure tasks"
+  default_prompt: "Use $5-1-2-i-ai-disclosure to help with this mobile app task."

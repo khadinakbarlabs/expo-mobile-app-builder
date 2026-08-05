@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enroll Apple Developer"
+  short_description: "Help with Enroll Apple Developer tasks"
+  default_prompt: "Use $enroll-apple-developer to help with this mobile app task."

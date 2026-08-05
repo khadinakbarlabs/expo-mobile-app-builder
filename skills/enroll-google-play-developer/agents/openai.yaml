@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enroll Google Play Developer"
+  short_description: "Help with Enroll Google Play Developer tasks"
+  default_prompt: "Use $enroll-google-play-developer to help with this mobile app task."

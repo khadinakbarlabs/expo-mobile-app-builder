@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Supabase Auth Android"
+  short_description: "Help with Add Supabase Auth Android tasks"
+  default_prompt: "Use $add-supabase-auth-android to help with this mobile app task."

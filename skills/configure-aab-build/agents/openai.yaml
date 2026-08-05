@@ -1,0 +1,4 @@
+interface:
+  display_name: "Configure Aab Build"
+  short_description: "Help with Configure Aab Build tasks"
+  default_prompt: "Use $configure-aab-build to help with this mobile app task."

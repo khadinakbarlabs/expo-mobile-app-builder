@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Material You Dynamic Colors"
+  short_description: "Help with Apply Material You Dynamic Colors tasks"
+  default_prompt: "Use $apply-material-you-dynamic-colors to help with this mobile app task."

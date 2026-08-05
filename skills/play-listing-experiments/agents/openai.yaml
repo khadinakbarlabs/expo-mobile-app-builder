@@ -1,0 +1,4 @@
+interface:
+  display_name: "Play Listing Experiments"
+  short_description: "Help with Play Listing Experiments tasks"
+  default_prompt: "Use $play-listing-experiments to help with this mobile app task."

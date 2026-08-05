@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eas Submit Testflight"
+  short_description: "Help with Eas Submit Testflight tasks"
+  default_prompt: "Use $eas-submit-testflight to help with this mobile app task."

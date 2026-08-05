@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Zustand"
+  short_description: "Help with Add Zustand tasks"
+  default_prompt: "Use $add-zustand to help with this mobile app task."

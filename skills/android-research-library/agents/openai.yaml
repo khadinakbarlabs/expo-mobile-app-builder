@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android Research Library"
+  short_description: "Help with Android Research Library tasks"
+  default_prompt: "Use $android-research-library to help with this mobile app task."

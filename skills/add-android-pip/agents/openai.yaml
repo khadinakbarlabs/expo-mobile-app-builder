@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Android Pip"
+  short_description: "Help with Add Android Pip tasks"
+  default_prompt: "Use $add-android-pip to help with this mobile app task."

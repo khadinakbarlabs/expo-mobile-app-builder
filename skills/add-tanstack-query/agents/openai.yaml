@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Tanstack Query"
+  short_description: "Help with Add Tanstack Query tasks"
+  default_prompt: "Use $add-tanstack-query to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eas Update Rollout"
+  short_description: "Help with Eas Update Rollout tasks"
+  default_prompt: "Use $eas-update-rollout to help with this mobile app task."

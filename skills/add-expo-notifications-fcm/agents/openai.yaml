@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Expo Notifications Fcm"
+  short_description: "Help with Add Expo Notifications Fcm tasks"
+  default_prompt: "Use $add-expo-notifications-fcm to help with this mobile app task."

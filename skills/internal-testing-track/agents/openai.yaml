@@ -1,0 +1,4 @@
+interface:
+  display_name: "Internal Testing Track"
+  short_description: "Help with Internal Testing Track tasks"
+  default_prompt: "Use $internal-testing-track to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Paywall Android"
+  short_description: "Help with Design Paywall Android tasks"
+  default_prompt: "Use $design-paywall-android to help with this mobile app task."

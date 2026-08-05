@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Live Activity"
+  short_description: "Help with Add Live Activity tasks"
+  default_prompt: "Use $add-live-activity to help with this mobile app task."

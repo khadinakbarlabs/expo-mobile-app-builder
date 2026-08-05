@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Screenshots"
+  short_description: "Help with Design Screenshots tasks"
+  default_prompt: "Use $design-screenshots to help with this mobile app task."

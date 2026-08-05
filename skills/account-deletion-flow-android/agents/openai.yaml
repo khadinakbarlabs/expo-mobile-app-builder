@@ -1,0 +1,4 @@
+interface:
+  display_name: "Account Deletion Flow Android"
+  short_description: "Help with Account Deletion Flow Android tasks"
+  default_prompt: "Use $account-deletion-flow-android to help with this mobile app task."

@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible plugin, skill, or documentation defect.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, signing material, customer data, or private source code. Use the Security tab for vulnerabilities.
+  - type: input
+    id: host
+    attributes:
+      label: Host and version
+      placeholder: Codex, Claude Code, Cursor, ChatGPT, or Skills CLI version
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      placeholder: Name of the affected skill, if applicable
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Redacted reproduction
+      description: Provide the smallest safe sequence that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

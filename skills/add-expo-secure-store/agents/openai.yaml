@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Expo Secure Store"
+  short_description: "Help with Add Expo Secure Store tasks"
+  default_prompt: "Use $add-expo-secure-store to help with this mobile app task."

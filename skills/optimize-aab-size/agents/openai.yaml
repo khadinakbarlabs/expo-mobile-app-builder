@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimize Aab Size"
+  short_description: "Help with Optimize Aab Size tasks"
+  default_prompt: "Use $optimize-aab-size to help with this mobile app task."

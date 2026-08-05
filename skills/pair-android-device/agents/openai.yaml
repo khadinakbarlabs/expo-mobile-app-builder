@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pair Android Device"
+  short_description: "Help with Pair Android Device tasks"
+  default_prompt: "Use $pair-android-device to help with this mobile app task."

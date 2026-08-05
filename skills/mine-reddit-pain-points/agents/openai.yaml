@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mine Reddit Pain Points"
+  short_description: "Help with Mine Reddit Pain Points tasks"
+  default_prompt: "Use $mine-reddit-pain-points to help with this mobile app task."

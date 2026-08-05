@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enable R8 Proguard"
+  short_description: "Help with Enable R8 Proguard tasks"
+  default_prompt: "Use $enable-r8-proguard to help with this mobile app task."

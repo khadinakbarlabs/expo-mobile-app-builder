@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Aso Pass Play"
+  short_description: "Help with Command Aso Pass Play tasks"
+  default_prompt: "Use $command-aso-pass-play to help with this mobile app task."

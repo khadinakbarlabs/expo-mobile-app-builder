@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Haptics Android"
+  short_description: "Help with Add Haptics Android tasks"
+  default_prompt: "Use $add-haptics-android to help with this mobile app task."

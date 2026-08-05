@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set up Project Guidance"
+  short_description: "Help with Set up Project Guidance tasks"
+  default_prompt: "Use $set-up-project-guidance to help with this mobile app task."

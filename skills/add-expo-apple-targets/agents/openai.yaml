@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Expo Apple Targets"
+  short_description: "Help with Add Expo Apple Targets tasks"
+  default_prompt: "Use $add-expo-apple-targets to help with this mobile app task."

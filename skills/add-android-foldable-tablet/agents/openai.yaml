@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Android Foldable Tablet"
+  short_description: "Help with Add Android Foldable Tablet tasks"
+  default_prompt: "Use $add-android-foldable-tablet to help with this mobile app task."

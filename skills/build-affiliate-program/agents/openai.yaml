@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Affiliate Program"
+  short_description: "Help with Build Affiliate Program tasks"
+  default_prompt: "Use $build-affiliate-program to help with this mobile app task."

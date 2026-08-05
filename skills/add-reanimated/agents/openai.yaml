@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Reanimated"
+  short_description: "Help with Add Reanimated tasks"
+  default_prompt: "Use $add-reanimated to help with this mobile app task."

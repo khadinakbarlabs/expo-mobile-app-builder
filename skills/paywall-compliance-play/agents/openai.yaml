@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paywall Compliance Play"
+  short_description: "Help with Paywall Compliance Play tasks"
+  default_prompt: "Use $paywall-compliance-play to help with this mobile app task."

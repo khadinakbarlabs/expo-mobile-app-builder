@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Scaffold App"
+  short_description: "Help with Command Scaffold App tasks"
+  default_prompt: "Use $command-scaffold-app to help with this mobile app task."

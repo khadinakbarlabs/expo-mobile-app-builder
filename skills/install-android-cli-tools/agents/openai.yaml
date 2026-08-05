@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install Android CLI Tools"
+  short_description: "Help with Install Android CLI Tools tasks"
+  default_prompt: "Use $install-android-cli-tools to help with this mobile app task."

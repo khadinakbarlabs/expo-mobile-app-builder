@@ -1,0 +1,4 @@
+interface:
+  display_name: "Choose Storage"
+  short_description: "Help with Choose Storage tasks"
+  default_prompt: "Use $choose-storage to help with this mobile app task."

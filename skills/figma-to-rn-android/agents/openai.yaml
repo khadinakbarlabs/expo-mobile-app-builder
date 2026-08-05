@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma to Rn Android"
+  short_description: "Help with Figma to Rn Android tasks"
+  default_prompt: "Use $figma-to-rn-android to help with this mobile app task."

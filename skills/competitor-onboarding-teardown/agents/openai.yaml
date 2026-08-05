@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitor Onboarding Teardown"
+  short_description: "Help with Competitor Onboarding Teardown tasks"
+  default_prompt: "Use $competitor-onboarding-teardown to help with this mobile app task."

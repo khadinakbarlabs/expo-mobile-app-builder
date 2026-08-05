@@ -1,0 +1,4 @@
+interface:
+  display_name: "Position Pitch Android"
+  short_description: "Help with Position Pitch Android tasks"
+  default_prompt: "Use $position-pitch-android to help with this mobile app task."

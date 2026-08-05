@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Privacy Policy"
+  short_description: "Help with Generate Privacy Policy tasks"
+  default_prompt: "Use $generate-privacy-policy to help with this mobile app task."

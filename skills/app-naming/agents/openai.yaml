@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Naming"
+  short_description: "Help with App Naming tasks"
+  default_prompt: "Use $app-naming to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Image Android"
+  short_description: "Help with Add Image Android tasks"
+  default_prompt: "Use $add-image-android to help with this mobile app task."

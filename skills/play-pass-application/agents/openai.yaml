@@ -1,0 +1,4 @@
+interface:
+  display_name: "Play Pass Application"
+  short_description: "Help with Play Pass Application tasks"
+  default_prompt: "Use $play-pass-application to help with this mobile app task."

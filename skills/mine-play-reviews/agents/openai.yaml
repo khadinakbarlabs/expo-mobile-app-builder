@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mine Play Reviews"
+  short_description: "Help with Mine Play Reviews tasks"
+  default_prompt: "Use $mine-play-reviews to help with this mobile app task."

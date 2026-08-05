@@ -1,0 +1,4 @@
+interface:
+  display_name: "E2e Checklist"
+  short_description: "Help with E2e Checklist tasks"
+  default_prompt: "Use $e2e-checklist to help with this mobile app task."

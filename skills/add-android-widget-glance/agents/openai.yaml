@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Android Widget Glance"
+  short_description: "Help with Add Android Widget Glance tasks"
+  default_prompt: "Use $add-android-widget-glance to help with this mobile app task."

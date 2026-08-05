@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Liquid Glass"
+  short_description: "Help with Apply Liquid Glass tasks"
+  default_prompt: "Use $apply-liquid-glass to help with this mobile app task."

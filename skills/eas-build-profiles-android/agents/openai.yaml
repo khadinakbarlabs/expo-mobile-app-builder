@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eas Build Profiles Android"
+  short_description: "Help with Eas Build Profiles Android tasks"
+  default_prompt: "Use $eas-build-profiles-android to help with this mobile app task."

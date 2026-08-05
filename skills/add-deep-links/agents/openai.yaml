@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Deep Links"
+  short_description: "Help with Add Deep Links tasks"
+  default_prompt: "Use $add-deep-links to help with this mobile app task."

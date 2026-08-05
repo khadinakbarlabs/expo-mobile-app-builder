@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Edge to Edge Android"
+  short_description: "Help with Add Edge to Edge Android tasks"
+  default_prompt: "Use $add-edge-to-edge-android to help with this mobile app task."

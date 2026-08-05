@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accessibility Audit Android"
+  short_description: "Help with Accessibility Audit Android tasks"
+  default_prompt: "Use $accessibility-audit-android to help with this mobile app task."

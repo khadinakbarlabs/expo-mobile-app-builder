@@ -1,0 +1,4 @@
+interface:
+  display_name: "Localize Figs J"
+  short_description: "Help with Localize Figs J tasks"
+  default_prompt: "Use $localize-figs-j to help with this mobile app task."

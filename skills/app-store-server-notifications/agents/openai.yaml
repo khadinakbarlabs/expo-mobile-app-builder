@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Store Server Notifications"
+  short_description: "Help with App Store Server Notifications tasks"
+  default_prompt: "Use $app-store-server-notifications to help with this mobile app task."

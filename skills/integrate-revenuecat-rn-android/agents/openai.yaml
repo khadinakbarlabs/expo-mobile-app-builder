@@ -1,0 +1,4 @@
+interface:
+  display_name: "Integrate Revenuecat Rn Android"
+  short_description: "Help with Integrate Revenuecat Rn Android tasks"
+  default_prompt: "Use $integrate-revenuecat-rn-android to help with this mobile app task."

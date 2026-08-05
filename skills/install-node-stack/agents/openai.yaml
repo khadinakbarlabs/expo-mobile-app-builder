@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install Node Stack"
+  short_description: "Help with Install Node Stack tasks"
+  default_prompt: "Use $install-node-stack to help with this mobile app task."

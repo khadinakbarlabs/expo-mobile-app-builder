@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eas Submit Play"
+  short_description: "Help with Eas Submit Play tasks"
+  default_prompt: "Use $eas-submit-play to help with this mobile app task."

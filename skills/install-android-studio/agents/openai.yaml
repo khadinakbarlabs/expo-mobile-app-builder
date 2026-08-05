@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install Android Studio"
+  short_description: "Help with Install Android Studio tasks"
+  default_prompt: "Use $install-android-studio to help with this mobile app task."

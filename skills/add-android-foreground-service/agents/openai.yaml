@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Android Foreground Service"
+  short_description: "Help with Add Android Foreground Service tasks"
+  default_prompt: "Use $add-android-foreground-service to help with this mobile app task."

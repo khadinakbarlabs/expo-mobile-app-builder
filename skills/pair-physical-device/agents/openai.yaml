@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pair Physical Device"
+  short_description: "Help with Pair Physical Device tasks"
+  default_prompt: "Use $pair-physical-device to help with this mobile app task."

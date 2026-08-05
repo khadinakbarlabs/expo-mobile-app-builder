@@ -1,0 +1,4 @@
+interface:
+  display_name: "Phased Release Play"
+  short_description: "Help with Phased Release Play tasks"
+  default_prompt: "Use $phased-release-play to help with this mobile app task."

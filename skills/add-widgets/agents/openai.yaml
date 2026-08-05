@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Widgets"
+  short_description: "Help with Add Widgets tasks"
+  default_prompt: "Use $add-widgets to help with this mobile app task."

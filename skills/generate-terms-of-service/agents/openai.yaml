@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Terms Of Service"
+  short_description: "Help with Generate Terms Of Service tasks"
+  default_prompt: "Use $generate-terms-of-service to help with this mobile app task."

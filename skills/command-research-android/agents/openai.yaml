@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Research Android"
+  short_description: "Help with Command Research Android tasks"
+  default_prompt: "Use $command-research-android to help with this mobile app task."

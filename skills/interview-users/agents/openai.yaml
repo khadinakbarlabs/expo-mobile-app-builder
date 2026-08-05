@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Users"
+  short_description: "Help with Interview Users tasks"
+  default_prompt: "Use $interview-users to help with this mobile app task."

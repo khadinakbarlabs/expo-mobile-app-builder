@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mom Test"
+  short_description: "Help with Mom Test tasks and workflows"
+  default_prompt: "Use $mom-test to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Launch On Hacker News"
+  short_description: "Help with Launch On Hacker News tasks"
+  default_prompt: "Use $launch-on-hacker-news to help with this mobile app task."

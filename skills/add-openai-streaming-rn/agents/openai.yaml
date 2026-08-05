@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add OpenAI Streaming Rn"
+  short_description: "Help with Add OpenAI Streaming Rn tasks"
+  default_prompt: "Use $add-openai-streaming-rn to help with this mobile app task."

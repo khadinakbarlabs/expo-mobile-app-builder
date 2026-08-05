@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Ship It"
+  short_description: "Help with Command Ship It tasks"
+  default_prompt: "Use $command-ship-it to help with this mobile app task."

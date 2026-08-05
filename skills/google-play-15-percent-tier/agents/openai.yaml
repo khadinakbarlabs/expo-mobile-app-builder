@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Play 15 Percent Tier"
+  short_description: "Help with Google Play 15 Percent Tier tasks"
+  default_prompt: "Use $google-play-15-percent-tier to help with this mobile app task."

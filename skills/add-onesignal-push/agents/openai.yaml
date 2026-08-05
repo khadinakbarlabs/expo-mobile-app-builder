@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Onesignal Push"
+  short_description: "Help with Add Onesignal Push tasks"
+  default_prompt: "Use $add-onesignal-push to help with this mobile app task."

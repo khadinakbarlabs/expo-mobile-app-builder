@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Foundation Models"
+  short_description: "Help with Add Foundation Models tasks"
+  default_prompt: "Use $add-foundation-models to help with this mobile app task."

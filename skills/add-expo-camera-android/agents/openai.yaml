@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Expo Camera Android"
+  short_description: "Help with Add Expo Camera Android tasks"
+  default_prompt: "Use $add-expo-camera-android to help with this mobile app task."

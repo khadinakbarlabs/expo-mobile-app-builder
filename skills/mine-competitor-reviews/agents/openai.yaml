@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mine Competitor Reviews"
+  short_description: "Help with Mine Competitor Reviews tasks"
+  default_prompt: "Use $mine-competitor-reviews to help with this mobile app task."

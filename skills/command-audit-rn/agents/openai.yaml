@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Audit Rn"
+  short_description: "Help with Command Audit Rn tasks"
+  default_prompt: "Use $command-audit-rn to help with this mobile app task."

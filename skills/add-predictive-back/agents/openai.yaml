@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Predictive Back"
+  short_description: "Help with Add Predictive Back tasks"
+  default_prompt: "Use $add-predictive-back to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Asa to Aso"
+  short_description: "Help with Asa to Aso tasks"
+  default_prompt: "Use $asa-to-aso to help with this mobile app task."

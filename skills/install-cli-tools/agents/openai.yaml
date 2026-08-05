@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install CLI Tools"
+  short_description: "Help with Install CLI Tools tasks"
+  default_prompt: "Use $install-cli-tools to help with this mobile app task."

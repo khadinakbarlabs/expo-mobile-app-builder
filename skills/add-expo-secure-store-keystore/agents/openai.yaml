@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Expo Secure Store Keystore"
+  short_description: "Help with Add Expo Secure Store Keystore tasks"
+  default_prompt: "Use $add-expo-secure-store-keystore to help with this mobile app task."

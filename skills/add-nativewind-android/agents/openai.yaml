@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Nativewind Android"
+  short_description: "Help with Add Nativewind Android tasks"
+  default_prompt: "Use $add-nativewind-android to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Phased Release"
+  short_description: "Help with Phased Release tasks"
+  default_prompt: "Use $phased-release to help with this mobile app task."

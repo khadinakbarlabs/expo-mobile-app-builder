@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Hig"
+  short_description: "Help with Apply Hig tasks"
+  default_prompt: "Use $apply-hig to help with this mobile app task."

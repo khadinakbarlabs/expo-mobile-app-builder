@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Audit Android"
+  short_description: "Help with Command Audit Android tasks"
+  default_prompt: "Use $command-audit-android to help with this mobile app task."

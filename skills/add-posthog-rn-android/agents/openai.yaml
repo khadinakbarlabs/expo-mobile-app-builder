@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Posthog Rn Android"
+  short_description: "Help with Add Posthog Rn Android tasks"
+  default_prompt: "Use $add-posthog-rn-android to help with this mobile app task."

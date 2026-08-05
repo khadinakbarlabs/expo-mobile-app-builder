@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build In Public X"
+  short_description: "Help with Build In Public X tasks"
+  default_prompt: "Use $build-in-public-x to help with this mobile app task."

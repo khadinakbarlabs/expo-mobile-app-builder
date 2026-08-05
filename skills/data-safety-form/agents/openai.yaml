@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Safety Form"
+  short_description: "Help with Data Safety Form tasks"
+  default_prompt: "Use $data-safety-form to help with this mobile app task."

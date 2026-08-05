@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install Jdk Gradle"
+  short_description: "Help with Install Jdk Gradle tasks"
+  default_prompt: "Use $install-jdk-gradle to help with this mobile app task."

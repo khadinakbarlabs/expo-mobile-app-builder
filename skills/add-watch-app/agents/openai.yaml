@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Watch App"
+  short_description: "Help with Add Watch App tasks"
+  default_prompt: "Use $add-watch-app to help with this mobile app task."

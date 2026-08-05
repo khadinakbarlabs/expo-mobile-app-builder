@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pre Submission Audit Play"
+  short_description: "Help with Pre Submission Audit Play tasks"
+  default_prompt: "Use $pre-submission-audit-play to help with this mobile app task."

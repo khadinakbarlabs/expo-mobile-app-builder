@@ -1,0 +1,43 @@
+{
+  "name": "expo-mobile-app-builder",
+  "version": "1.0.0",
+  "description": "Privacy-first Expo workflows for building iOS and Android apps.",
+  "author": {
+    "name": "Khadin Akbar",
+    "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
+  },
+  "homepage": "https://github.com/khadinakbarlabs/expo-mobile-app-builder#readme",
+  "repository": "https://github.com/khadinakbarlabs/expo-mobile-app-builder",
+  "license": "MIT",
+  "keywords": [
+    "expo",
+    "react-native",
+    "ios",
+    "android",
+    "mobile",
+    "eas"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Mobile App Builder for Expo",
+    "shortDescription": "Build, test, and ship Expo apps for iOS and Android.",
+    "longDescription": "A privacy-first, skills-only mobile engineering studio with 163 focused workflows for planning, designing, building, testing, and preparing Expo SDK 54 apps for iOS and Android. It has no hosted backend, telemetry, account system, or embedded credentials.",
+    "developerName": "Khadin Akbar",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder",
+    "privacyPolicyURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "Help me build a production-ready Expo app for iOS and Android.",
+      "Audit my Expo app for iOS and Android release readiness.",
+      "Debug this Expo, EAS, iOS, or Android build issue safely."
+    ],
+    "brandColor": "#2154D8",
+    "composerIcon": "./assets/composer-icon.png",
+    "logo": "./assets/composer-icon.png"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Command Eas Deploy"
+  short_description: "Help with Command Eas Deploy tasks"
+  default_prompt: "Use $command-eas-deploy to help with this mobile app task."

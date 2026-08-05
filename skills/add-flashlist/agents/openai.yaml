@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Flashlist"
+  short_description: "Help with Add Flashlist tasks"
+  default_prompt: "Use $add-flashlist to help with this mobile app task."

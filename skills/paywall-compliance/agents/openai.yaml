@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paywall Compliance"
+  short_description: "Help with Paywall Compliance tasks"
+  default_prompt: "Use $paywall-compliance to help with this mobile app task."

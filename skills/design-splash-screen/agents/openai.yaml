@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Splash Screen"
+  short_description: "Help with Design Splash Screen tasks"
+  default_prompt: "Use $design-splash-screen to help with this mobile app task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install Cursor Vscode"
+  short_description: "Help with Install Cursor Vscode tasks"
+  default_prompt: "Use $install-cursor-vscode to help with this mobile app task."

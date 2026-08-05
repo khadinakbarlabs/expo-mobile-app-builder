@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Google Signin Credential Manager"
+  short_description: "Help with Add Google Signin Credential Manager tasks"
+  default_prompt: "Use $add-google-signin-credential-manager to help with this mobile app task."

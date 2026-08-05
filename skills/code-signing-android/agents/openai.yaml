@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Signing Android"
+  short_description: "Help with Code Signing Android tasks"
+  default_prompt: "Use $code-signing-android to help with this mobile app task."

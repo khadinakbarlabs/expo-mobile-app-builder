@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Wear Os App"
+  short_description: "Help with Add Wear Os App tasks"
+  default_prompt: "Use $add-wear-os-app to help with this mobile app task."

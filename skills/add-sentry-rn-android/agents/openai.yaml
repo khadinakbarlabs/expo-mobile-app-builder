@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Sentry Rn Android"
+  short_description: "Help with Add Sentry Rn Android tasks"
+  default_prompt: "Use $add-sentry-rn-android to help with this mobile app task."

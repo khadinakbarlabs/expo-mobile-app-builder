@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jtbd Interview"
+  short_description: "Help with Jtbd Interview tasks"
+  default_prompt: "Use $jtbd-interview to help with this mobile app task."

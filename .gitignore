@@ -1,0 +1,22 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pem
+*.key
+*.jks
+*.keystore
+GoogleService-Info.plist
+google-services.json
+credentials.json
+service-account*.json
+
+# Expo, build, and editor output
+.expo/
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
