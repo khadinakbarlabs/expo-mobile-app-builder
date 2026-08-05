@@ -2,8 +2,13 @@
 
 ## Unreleased
 
+## 1.0.3 — 2026-08-05
+
 - Added `prepare-chatgpt-app-submission`, a Codex-managed wrapper that delegates to OpenAI Developers' official `chatgpt-app-submission` skill for real MCP server repositories, enforces review checks, and blocks fabricated JSON for static plugins.
 - Expanded the public package inventory to 165 skills and documented the distinction between a static Agent Skills plugin and a ChatGPT Apps MCP server.
+- Replaced the public composer icon with a modern cross-platform mobile-builder mark.
+- Aligned the public package publisher with the verified business identity.
+- Prepared a minimal single-root skills-only archive for Plugins Directory upload.
 
 ## 1.0.2 — 2026-08-05
 

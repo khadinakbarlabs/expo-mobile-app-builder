@@ -1,9 +1,9 @@
 {
   "name": "expo-mobile-app-builder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build iOS and Android mobile apps with Expo and React Native.",
   "author": {
-    "name": "Khadin Akbar",
+    "name": "Khadin Akbar Ventures LLC",
     "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
   },
   "homepage": "https://github.com/khadinakbarlabs/expo-mobile-app-builder#readme",
@@ -25,7 +25,7 @@
     "displayName": "iOS/Android Mobile App Builder",
     "shortDescription": "Build iOS and Android apps with Expo and React Native.",
     "longDescription": "Plan, build, test, and prepare production-ready iOS and Android mobile apps with Expo SDK 54 and React Native. Includes 165 focused workflows for product strategy, UI/UX, implementation, native features, testing, EAS, App Store, Google Play, and Codex-managed ChatGPT Apps submission readiness. It has no hosted backend, telemetry, account system, or embedded credentials.",
-    "developerName": "Khadin Akbar",
+    "developerName": "Khadin Akbar Ventures LLC",
     "category": "Productivity",
     "capabilities": [
       "Read",

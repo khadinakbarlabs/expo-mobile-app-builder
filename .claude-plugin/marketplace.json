@@ -10,7 +10,7 @@
     {
       "name": "expo-mobile-app-builder",
       "displayName": "iOS/Android Mobile App Builder",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "source": "./",
       "description": "Build iOS and Android mobile apps with Expo and React Native.",
       "category": "Development",
