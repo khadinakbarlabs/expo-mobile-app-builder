@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD013 -->
 
-# iOS/Android Mobile App Builder
+# Mobile App Builder
 
 [![skills.sh](https://skills.sh/b/khadinakbarlabs/expo-mobile-app-builder)](https://skills.sh/khadinakbarlabs/expo-mobile-app-builder)
 [![CI](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
@@ -11,7 +11,7 @@
 
 **Turn a mobile app idea, an existing Expo repository, or a release blocker into a clear plan and a verified iOS and Android implementation.**
 
-iOS/Android Mobile App Builder is a public, open-source plugin for building mobile products with [Expo](https://expo.dev/) and [React Native](https://reactnative.dev/). It covers the path from product research and planning through UI/UX, architecture, development, native platform work, testing, EAS, store submission, review response, and approval follow-through. The same skill library is packaged for ChatGPT and Codex's universal plugin format, direct Codex and Claude Code repository marketplaces, Cursor, and portable Agent Skills-compatible hosts.
+Mobile App Builder is a public, open-source plugin for building mobile products with [Expo](https://expo.dev/) and [React Native](https://reactnative.dev/). Its store subtitle is **Develop Android & iOS Apps**. It covers the path from product research and planning through UI/UX, architecture, development, native platform work, testing, EAS, store submission, review response, and approval follow-through. The same skill library is packaged for ChatGPT and Codex's universal plugin format, direct Codex and Claude Code repository marketplaces, Cursor, and portable Agent Skills-compatible hosts.
 
 It is not a hosted no-code service and it does not hide your project behind a proprietary editor. The package is a portable library of **165 focused Agent Skills** that work with your files, your repository, and your chosen coding agent. Start with one flagship skill for complete app-building work, or install the full catalog and let the agent load only the workflow relevant to the task.
 
@@ -89,7 +89,7 @@ npx skills add khadinakbarlabs/expo-mobile-app-builder \
 Replace `codex` with `claude-code`, `cursor`, or another profile supported by your installed Skills CLI. Then open your mobile app repository in that agent and use a direct prompt:
 
 ```text
-Use iOS/Android Mobile App Builder to inspect this repository and build the
+Use Mobile App Builder to inspect this repository and build the
 smallest complete version of [feature]. Preserve iOS and Android parity,
 include loading/empty/error/offline states where relevant, validate the result,
 and stop before any build, upload, submission, publication, or paid action.
@@ -149,7 +149,7 @@ The repository also includes a native Cursor manifest for directory packaging. A
 
 ### ChatGPT and the universal Plugins Directory
 
-The package includes an OpenAI plugin manifest with the public display name **iOS/Android Mobile App Builder**. The name is exactly 30 characters so it fits a 30-character listing limit while retaining the two highest-intent platform terms.
+The package includes an OpenAI plugin manifest with the public title **Mobile App Builder** and the 26-character subtitle **Develop Android & iOS Apps**. Both fit the 30-character listing limit.
 
 After an official listing is reviewed and published, users can search that directory by the public name. Until then, GitHub, skills.sh, Codex CLI, Claude Code, Cursor, and portable Agent Skills installation remain separate routes. See [distribution status](#distribution-status) for the honest current boundary.
 
@@ -238,7 +238,7 @@ Building a mobile app rarely fails because nobody can generate a screen. It fail
 
 This plugin turns those seams into an explicit workflow.
 
-| Without a connected workflow | With iOS/Android Mobile App Builder |
+| Without a connected workflow | With Mobile App Builder |
 | --- | --- |
 | Research lives in a document that development never reads | Research produces product constraints, scope, and risks that shape the implementation |
 | A large prompt creates many screens but no complete journey | The agent builds the smallest vertical slice through UI, state, data, errors, and persistence |
@@ -533,7 +533,7 @@ Use these rules when the prompt is underspecified:
 Repository owners can paste this into almost any compatible coding agent:
 
 ```text
-Use the installed iOS/Android Mobile App Builder skills for this repository.
+Use the installed Mobile App Builder skills for this repository.
 
 Operating mode: [plan only / implement / audit / debug / release preparation]
 Goal: [user-visible outcome]
@@ -648,7 +648,7 @@ These prompts are starting points. Replace bracketed text with your product cont
 ### 1. Turn an idea into an MVP
 
 ```text
-Use iOS/Android Mobile App Builder in plan-only mode.
+Use Mobile App Builder in plan-only mode.
 
 Idea: [describe the app]
 Target user: [who has the problem]
@@ -1482,7 +1482,7 @@ Many product goals are shared, but platform APIs, design conventions, build syst
 
 ### Why is the flagship name different from the repository slug?
 
-`expo-mobile-app-builder` is a stable technical slug for installs and links. **iOS/Android Mobile App Builder** is a human-facing, search-oriented display name that fits a 30-character limit. `mobile-app-builder-ios-android` is the flagship skill name. Each serves a different compatibility or discovery purpose.
+`expo-mobile-app-builder` is a stable technical slug for installs and links. **Mobile App Builder** is the human-facing display name, and **Develop Android & iOS Apps** is its 26-character store subtitle. `mobile-app-builder-ios-android` remains the flagship skill name for platform-specific discovery.
 
 ### How do I report a bug?
 

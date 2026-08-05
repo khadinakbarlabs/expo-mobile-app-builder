@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "expo-mobile-app-builder",
-  "description": "Open-source iOS and Android mobile app builder workflows for Expo and React Native.",
+  "description": "Develop Android & iOS Apps",
   "owner": {
     "name": "Khadin Akbar",
     "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
@@ -9,10 +9,10 @@
   "plugins": [
     {
       "name": "expo-mobile-app-builder",
-      "displayName": "iOS/Android Mobile App Builder",
-      "version": "1.0.3",
+      "displayName": "Mobile App Builder",
+      "version": "1.0.4",
       "source": "./",
-      "description": "Build iOS and Android mobile apps with Expo and React Native.",
+      "description": "Develop Android & iOS Apps",
       "category": "Development",
       "tags": [
         "expo",

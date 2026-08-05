@@ -1,8 +1,8 @@
 {
   "name": "expo-mobile-app-builder",
-  "displayName": "iOS/Android Mobile App Builder",
-  "version": "1.0.3",
-  "description": "Build iOS and Android mobile apps with Expo and React Native.",
+  "displayName": "Mobile App Builder",
+  "version": "1.0.4",
+  "description": "Develop Android & iOS Apps",
   "author": {
     "name": "Khadin Akbar Ventures LLC"
   },

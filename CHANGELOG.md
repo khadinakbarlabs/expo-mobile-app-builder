@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.0.4 — 2026-08-05
+
+- Renamed the public plugin title to **Mobile App Builder** and set its 26-character subtitle to **Develop Android & iOS Apps** across supported marketplace manifests.
+
 ## 1.0.3 — 2026-08-05
 
 - Added `prepare-chatgpt-app-submission`, a Codex-managed wrapper that delegates to OpenAI Developers' official `chatgpt-app-submission` skill for real MCP server repositories, enforces review checks, and blocks fabricated JSON for static plugins.

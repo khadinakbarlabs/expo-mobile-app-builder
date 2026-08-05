@@ -27,7 +27,8 @@ const requiredFiles = [
   "skills/command-scaffold-app/scripts/plan-expo-project.mjs",
 ];
 const failures = [];
-const publicDisplayName = "iOS/Android Mobile App Builder";
+const publicDisplayName = "Mobile App Builder";
+const publicShortDescription = "Develop Android & iOS Apps";
 const openAiDisplayNameLimit = 30;
 
 function relative(filePath) {
@@ -83,6 +84,14 @@ for (const [file, displayName] of publicDisplayNames) {
 const openAiDisplayName = publicDisplayNames.get(".codex-plugin/plugin.json");
 if (typeof openAiDisplayName === "string" && Array.from(openAiDisplayName).length > openAiDisplayNameLimit) {
   failures.push(`.codex-plugin/plugin.json: interface.displayName exceeds ${openAiDisplayNameLimit} characters`);
+}
+
+const openAiShortDescription = manifests.get(".codex-plugin/plugin.json")?.interface?.shortDescription;
+if (openAiShortDescription !== publicShortDescription) {
+  failures.push(`.codex-plugin/plugin.json: interface.shortDescription must be ${JSON.stringify(publicShortDescription)}`);
+}
+if (typeof openAiShortDescription === "string" && Array.from(openAiShortDescription).length > openAiDisplayNameLimit) {
+  failures.push(`.codex-plugin/plugin.json: interface.shortDescription exceeds ${openAiDisplayNameLimit} characters`);
 }
 
 const skillRoot = path.join(packageRoot, "skills");
