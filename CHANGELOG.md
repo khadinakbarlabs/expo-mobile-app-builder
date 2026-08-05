@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added `prepare-chatgpt-app-submission`, a Codex-managed wrapper that delegates to OpenAI Developers' official `chatgpt-app-submission` skill for real MCP server repositories, enforces review checks, and blocks fabricated JSON for static plugins.
+- Expanded the public package inventory to 165 skills and documented the distinction between a static Agent Skills plugin and a ChatGPT Apps MCP server.
+
 ## 1.0.2 — 2026-08-05
 
 - Renamed every supported marketplace-facing title to **iOS/Android Mobile App Builder**, exactly 30 characters, while preserving the stable `expo-mobile-app-builder` install identifier.

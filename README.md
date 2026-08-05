@@ -7,13 +7,13 @@
 [![license](https://img.shields.io/badge/license-MIT-2154D8)](LICENSE)
 [![Expo SDK 54](https://img.shields.io/badge/Expo-SDK%2054-000020)](https://docs.expo.dev/versions/v54.0.0/)
 [![iOS + Android](https://img.shields.io/badge/platforms-iOS%20%2B%20Android-2154D8)](#iosandroid-parity-by-default)
-[![164 Agent Skills](https://img.shields.io/badge/Agent%20Skills-164-16A34A)](#the-skill-library)
+[![165 Agent Skills](https://img.shields.io/badge/Agent%20Skills-165-16A34A)](#the-skill-library)
 
 **Turn a mobile app idea, an existing Expo repository, or a release blocker into a clear plan and a verified iOS and Android implementation.**
 
 iOS/Android Mobile App Builder is a public, open-source plugin for building mobile products with [Expo](https://expo.dev/) and [React Native](https://reactnative.dev/). It covers the path from product research and planning through UI/UX, architecture, development, native platform work, testing, EAS, store submission, review response, and approval follow-through. The same skill library is packaged for ChatGPT and Codex's universal plugin format, direct Codex and Claude Code repository marketplaces, Cursor, and portable Agent Skills-compatible hosts.
 
-It is not a hosted no-code service and it does not hide your project behind a proprietary editor. The package is a portable library of **164 focused Agent Skills** that work with your files, your repository, and your chosen coding agent. Start with one flagship skill for complete app-building work, or install the full catalog and let the agent load only the workflow relevant to the task.
+It is not a hosted no-code service and it does not hide your project behind a proprietary editor. The package is a portable library of **165 focused Agent Skills** that work with your files, your repository, and your chosen coding agent. Start with one flagship skill for complete app-building work, or install the full catalog and let the agent load only the workflow relevant to the task.
 
 **Credential-free by design.** This repository contains no Expo access token, Apple signing key, Android keystore, Play service-account file, API key, private account identifier, hosted backend, telemetry collector, or remote executor. Local implementation may edit your app when you ask it to. Builds, uploads, submissions, publication, pricing changes, and paid actions stay behind explicit user authorization.
 
@@ -27,7 +27,7 @@ It is not a hosted no-code service and it does not hide your project behind a pr
 | **Platforms** | iOS and Android, with platform parity treated as a first-class requirement |
 | **Mobile stack** | Expo SDK 54 and React Native, with Expo Router and TypeScript used when they fit the project |
 | **Coverage** | Research and validation through implementation, QA, EAS, submission, review response, and approval follow-through |
-| **Library** | 164 narrowly triggered, independently installable Agent Skills |
+| **Library** | 165 narrowly triggered, independently installable Agent Skills |
 | **Default entry point** | `mobile-app-builder-ios-android` |
 | **Configuration** | None required for the plugin itself; optional project guidance improves repeatability |
 | **Runtime** | Static Markdown guidance plus small credential-free local planning and validation scripts |
@@ -101,7 +101,7 @@ To browse before installing:
 npx skills add khadinakbarlabs/expo-mobile-app-builder --list
 ```
 
-To install all 164 skills:
+To install all 165 skills:
 
 ```bash
 npx skills add khadinakbarlabs/expo-mobile-app-builder \
@@ -271,7 +271,7 @@ Each skill is a small instruction package with a precise trigger and workflow. W
 
 The package does not send your repository to a plugin-owned server. It does not provide a remote build queue, inject an analytics SDK, create an account, or obtain provider credentials. Your chosen coding-agent host controls model execution and repository access according to its own settings. The plugin contributes domain guidance and local, inspectable scripts.
 
-### Why 164 focused skills instead of one enormous prompt?
+### Why 165 focused skills instead of one enormous prompt?
 
 Mobile product work spans several disciplines:
 
@@ -892,6 +892,7 @@ You can name a skill directly in a prompt, or describe the task naturally and le
 | Privacy and account lifecycle | `generate-privacy-policy`, `generate-privacy-policy-android`, `generate-terms-of-service`, `account-deletion-flow`, `account-deletion-flow-android` |
 | EAS configuration | `eas-build-profiles`, `eas-build-profiles-android`, `eas-update-rollout`, `eas-update-rollout-android` |
 | Controlled upload preparation | `eas-submit-testflight`, `eas-submit-play` |
+| Prepare a ChatGPT Apps submission from a real MCP server | `prepare-chatgpt-app-submission` |
 | Gradual release planning | `phased-release`, `phased-release-play`, `internal-testing-track` |
 | Listing and ASO work | `aso-keywords`, `aso-keywords-play`, `design-screenshots`, `design-screenshots-play`, `custom-product-pages`, `custom-store-listings` |
 
@@ -976,6 +977,7 @@ Approval is therefore treated as a **traceable process**: prepare, submit with a
 
 | Stage | iOS/App Store | Android/Google Play |
 | --- | --- | --- |
+| ChatGPT Apps submission | `prepare-chatgpt-app-submission` (requires a real MCP server repository) | — |
 | Developer access planning | `enroll-apple-developer` | `enroll-google-play-developer` |
 | Signing preparation | `code-signing` | `code-signing-android` |
 | Build profiles | `eas-build-profiles` | `eas-build-profiles-android`, `configure-aab-build` |
@@ -1017,14 +1019,14 @@ npx skills add khadinakbarlabs/expo-mobile-app-builder \
 
 Change the skill name and agent profile as needed. Installing only the specialist is useful for a narrow audit or a team that already has its own broader mobile workflow.
 
-### Complete catalog: 164 skills
+### Complete catalog: 165 skills
 
 The table is alphabetical so exact install names are easy to copy. The canonical live source remains [`skills/`](skills/).
 
 <!-- markdownlint-disable MD033 -->
 
 <details>
-<summary><strong>View all 164 installable skill names</strong></summary>
+<summary><strong>View all 165 installable skill names</strong></summary>
 
 | | | | |
 | --- | --- | --- | --- |
@@ -1068,7 +1070,8 @@ The table is alphabetical so exact install names are easy to copy. The canonical
 | `paywall-compliance-play` | `phased-release` | `phased-release-play` | `plan-launch` |
 | `plan-launch-android` | `play-ai-disclosure` | `play-listing-experiments` | `play-pass-application` |
 | `position-pitch` | `position-pitch-android` | `pre-registration-campaign` | `pre-submission-audit` |
-| `pre-submission-audit-play` | `pricing-strategy` | `pricing-strategy-android` | `set-up-project-guidance` |
+| `pre-submission-audit-play` | `prepare-chatgpt-app-submission` | `pricing-strategy` | `pricing-strategy-android` |
+| `set-up-project-guidance` | | | |
 
 </details>
 
@@ -1236,7 +1239,7 @@ expo-mobile-app-builder/
 │   ├── plan-expo-project.mjs
 │   ├── validate-release.mjs
 │   └── audit-public-package.mjs
-├── skills/                  164 portable Agent Skills
+├── skills/                  165 portable Agent Skills
 ├── AGENTS.md                Public package contribution and safety rules
 ├── CONTRIBUTING.md          Contributor workflow
 ├── PRIVACY.md               Plugin privacy policy

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare ChatGPT App Submission"
+  short_description: "Draft ChatGPT Apps submission JSON"
+  default_prompt: "Use $prepare-chatgpt-app-submission to inspect an MCP server and prepare a reviewed ChatGPT Apps submission draft."
