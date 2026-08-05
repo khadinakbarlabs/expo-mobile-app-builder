@@ -1,6 +1,6 @@
 ---
 name: "design-paywall"
-description: "Build Apple-compliant React Native paywall via RevenueCat Paywalls v2  -  visible price, billing freq, trial timeline, restore button. Use when the user says 'design paywall', 'build paywall', 'subscription screen', 'RevenueCat paywall'."
+description: "Build Apple-compliant React Native paywalls with RevenueCat Paywalls v2, visible pricing, billing frequency, a trial timeline, and restore purchases. Use when the user says 'design paywall', 'build paywall', 'subscription screen', or 'RevenueCat paywall'."
 ---
 
 # Design Paywall

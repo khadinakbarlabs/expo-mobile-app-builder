@@ -1,6 +1,6 @@
 ---
 name: "custom-product-pages"
-description: "Build Custom Product Pages (CPPs)  -  70 max in 2026  -  for use cases, ad sources, search intent clusters. +5.9% CVR vs default. Use when the user says 'CPP', 'Custom Product Page', 'ASC product page'."
+description: "Build Custom Product Pages (CPPs) for use cases, ad sources, and search-intent clusters. Use when the user says 'CPP', 'Custom Product Page', or 'ASC product page'."
 ---
 
 # Custom Product Pages

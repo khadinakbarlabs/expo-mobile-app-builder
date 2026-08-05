@@ -1,6 +1,6 @@
 ---
 name: "paywall-compliance"
-description: "Audit a paywall against 3.1.1 / 3.1.2  -  visible price, billing freq, trial timeline, restore button. Use when the user says 'paywall compliance', 'paywall audit', 'paywall rejection', 'toggle paywall'."
+description: "Audit a paywall against Apple App Review Guidelines 3.1.1 and 3.1.2 for visible pricing, billing frequency, a trial timeline, and restore purchases. Use when the user says 'paywall compliance', 'paywall audit', 'paywall rejection', or 'toggle paywall'."
 ---
 
 # Paywall Compliance
