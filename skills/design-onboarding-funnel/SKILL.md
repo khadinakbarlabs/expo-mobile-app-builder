@@ -50,7 +50,7 @@ These are the conversion drivers the activation-first default explicitly avoids.
 - **Progress momentum.** A progress bar that fills, a "Building your plan…" animation, a loading state with rotating benefits. Creates anticipation and a sense of inevitability before the paywall.
 - **Anchor before ask.** Show the annual price as "just $0.77/week" beside the monthly $9.99. The annual looks like the obvious choice. See `pricing-strategy`.
 - **Social proof at the paywall.** "47,000 meals logged this week." "Join 2M people." Use only real numbers. Fabricated social proof is a rejection trigger and a lie.
-- **The post-close discount.** When the user dismisses the paywall, show a 24-hour discounted annual offer banner. Recovers an estimated 10–20% of bouncers. ([mobile-studio:design-onboarding-quiz](https://github.com/khadinakbarlabs/expo-mobile-app-builder))
+- **The post-close discount.** When the user dismisses the paywall, show a 24-hour discounted annual offer banner. Recovers an estimated 10–20% of bouncers. (See `design-onboarding-quiz` for the activation-first alternative.)
 
 ## The quiz pattern
 
