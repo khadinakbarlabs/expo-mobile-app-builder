@@ -2,6 +2,28 @@
 
 ## Unreleased
 
+## 1.0.8 — 2026-08-07
+
+- Renamed the cross-client plugin install identifier from `expo-mobile-app-builder` to `mobile-app-builder` while keeping the public title **Mobile App Builder** and the existing GitHub repository URL.
+- Prepared a matching local Codex marketplace deployment so the plugin folder, manifests, marketplace selector, and installed identifier use the same normalized name.
+
+## 1.0.7 — 2026-08-07
+
+- Synchronized the portable Agent Plugins and OpenAI manifest keyword lists so the uploader does not need to override divergent Codex metadata during conversion.
+- Rebuilt the OpenAI archive for the marketplace's Agent Plugins-to-Codex normalization path.
+
+## 1.0.6 — 2026-08-07
+
+- Added the vendor-neutral Agent Plugins 1.0 root `plugin.json` while retaining OpenAI's required `.codex-plugin/plugin.json` entry point.
+- Repackaged the skills-only OpenAI upload as a dual-compatible root-layout archive with synchronized 1.0.6 metadata.
+
+## 1.0.5 — 2026-08-07
+
+- Rebuilt `design-onboarding-quiz` around an activation contract, shortest path to value, question-utility ledger, visible answer-to-experience mapping, purposeful motion, truthful evidence, privacy-aware telemetry, accessibility, and a measurable iOS/Android test matrix.
+- Reworked `command-build-onboarding` into a test-first Expo workflow with versioned resume state, existing-user migration behavior, permission and monetization timing, reduced-motion support, and activation-path acceptance checks.
+- Updated the flagship mobile builder to treat onboarding-to-activation as part of the first complete vertical slice instead of assuming a fixed quiz or paywall sequence.
+- Rebuilt the OpenAI skills-only upload package with the **Developer Tools** category, root-layout archive validation, extracted-package verification, 165 normalized skills, production branding, reviewer cases, and credential/private-path scans.
+
 ## 1.0.4 — 2026-08-05
 
 - Renamed the public plugin title to **Mobile App Builder** and set its 26-character subtitle to **Develop Android & iOS Apps** across supported marketplace manifests.

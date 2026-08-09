@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const packageRoot = path.resolve(scriptDirectory, "..");
 const manifestPaths = [
+  "plugin.json",
   ".codex-plugin/plugin.json",
   ".claude-plugin/plugin.json",
   ".claude-plugin/marketplace.json",
@@ -64,7 +65,21 @@ for (const file of manifestPaths) {
 }
 
 for (const [file, manifest] of manifests) {
-  if (manifest.name !== "expo-mobile-app-builder") failures.push(`${file}: unexpected package name`);
+  if (manifest.name !== "mobile-app-builder") failures.push(`${file}: unexpected package name`);
+}
+
+const portableManifest = manifests.get("plugin.json");
+const openAiManifest = manifests.get(".codex-plugin/plugin.json");
+if (portableManifest?.$schema !== "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json") {
+  failures.push("plugin.json: expected the canonical Agent Plugins 1.0 schema identifier");
+}
+if (portableManifest?.version !== openAiManifest?.version) {
+  failures.push("plugin.json: version must match .codex-plugin/plugin.json");
+}
+for (const field of ["name", "version", "description", "author", "homepage", "repository", "license", "keywords"]) {
+  if (JSON.stringify(portableManifest?.[field]) !== JSON.stringify(openAiManifest?.[field])) {
+    failures.push(`plugin.json: ${field} must match .codex-plugin/plugin.json for lossless marketplace conversion`);
+  }
 }
 
 const publicDisplayNames = new Map([

@@ -117,7 +117,7 @@ The flagship skill is also available on [skills.sh](https://skills.sh/khadinakba
 
 ```bash
 codex plugin marketplace add khadinakbarlabs/expo-mobile-app-builder
-codex plugin add expo-mobile-app-builder@expo-mobile-app-builder
+codex plugin add mobile-app-builder@mobile-app-builder
 ```
 
 If your Codex build does not support repository marketplaces, use the Skills CLI route above with `--agent codex`.
@@ -128,7 +128,7 @@ Run these commands inside Claude Code:
 
 ```text
 /plugin marketplace add khadinakbarlabs/expo-mobile-app-builder
-/plugin install expo-mobile-app-builder@expo-mobile-app-builder
+/plugin install mobile-app-builder@mobile-app-builder
 ```
 
 The GitHub marketplace route is independent of any approval in a platform-operated directory.
@@ -149,7 +149,9 @@ The repository also includes a native Cursor manifest for directory packaging. A
 
 ### ChatGPT and the universal Plugins Directory
 
-The package includes an OpenAI plugin manifest with the public title **Mobile App Builder** and the 26-character subtitle **Develop Android & iOS Apps**. Both fit the 30-character listing limit.
+The package includes OpenAI's required `.codex-plugin/plugin.json` manifest with the public title **Mobile App Builder** and the 26-character subtitle **Develop Android & iOS Apps**. Both fit the 30-character listing limit. It also includes the vendor-neutral Agent Plugins 1.0 `plugin.json` at the repository root so compatible clients can discover the same 165 skills through the portable protocol.
+
+Marketplace ZIPs retain both manifests: OpenAI reads `.codex-plugin/plugin.json`, while Agent Plugins-compatible clients read the root `plugin.json`. Distribution, installation, permissions, and marketplace review remain client-specific.
 
 After an official listing is reviewed and published, users can search that directory by the public name. Until then, GitHub, skills.sh, Codex CLI, Claude Code, Cursor, and portable Agent Skills installation remain separate routes. See [distribution status](#distribution-status) for the honest current boundary.
 
@@ -339,7 +341,7 @@ The flagship builder treats a mobile app as a connected lifecycle. A decision ma
 | **1. Discover** | Is there a real problem and a reachable user? | Pain evidence, alternatives, niche and competitor map | `find-niche`, `market-validation`, `mine-competitor-reviews`, `mine-reddit-pain-points` |
 | **2. Define** | What is the smallest useful release? | Target user, job-to-be-done, scope, non-goals, success signal | `jtbd-interview`, `mom-test`, `interview-users`, `position-pitch` |
 | **3. Architect** | What is the least complex system that meets the requirement? | Navigation, state, data, backend, storage, security, parity plan | `choose-backend`, `choose-storage`, `set-up-project-guidance`, `command-scaffold-app` |
-| **4. Design** | How does the user reach value in every state? | Screen map, tokens, onboarding, happy/empty/loading/error states | `figma-to-rn`, `design-onboarding-quiz`, `apply-hig`, `apply-material3` |
+| **4. Design** | How does the user reach value in every state? | Activation contract, shortest onboarding path, screen map, tokens, happy/empty/loading/error states | `figma-to-rn`, `design-onboarding-quiz`, `apply-hig`, `apply-material3` |
 | **5. Build** | Can one complete user journey work end to end? | Typed screens, state, data flow, accessible interactions | `mobile-app-builder-ios-android`, `add-zustand`, `add-tanstack-query`, `add-reanimated` |
 | **6. Integrate** | Which native and third-party capabilities are justified? | Auth, notifications, deep links, analytics, subscriptions, extensions | `add-supabase-auth`, `add-expo-notifications`, `add-deep-links`, `integrate-revenuecat-rn` |
 | **7. Verify** | What evidence shows the behavior works and fails safely? | Lint/type/test results, simulator/device evidence, accessibility findings | `command-audit-rn`, `accessibility-audit`, `e2e-checklist`, `add-sentry-rn` |
@@ -849,7 +851,7 @@ You can name a skill directly in a prompt, or describe the task naturally and le
 | --- | --- |
 | Convert a design into accessible React Native | `figma-to-rn`, `figma-to-rn-android` |
 | Apply platform conventions | `apply-hig`, `apply-material3`, `apply-material-you-dynamic-colors` |
-| Design onboarding | `design-onboarding-quiz`, `command-build-onboarding` |
+| Design and build activation-first onboarding | `design-onboarding-quiz`, `command-build-onboarding` |
 | Build a transparent paywall | `design-paywall`, `design-paywall-android`, `command-build-paywall`, `command-build-paywall-android` |
 | Add motion or list performance | `add-reanimated`, `add-flashlist` |
 | Add images, haptics, camera, and splash assets | `add-image`, `add-image-android`, `add-haptics`, `add-haptics-android`, `add-expo-camera`, `add-expo-camera-android`, `add-app-icon-launch-screen`, `design-splash-screen` |
@@ -1226,7 +1228,8 @@ Use [GitHub's private vulnerability-reporting flow](https://github.com/khadinakb
 ## Repository architecture
 
 ```text
-expo-mobile-app-builder/
+mobile-app-builder/
+├── plugin.json              Vendor-neutral Agent Plugins 1.0 manifest
 ├── .agents/plugins/         Direct Codex repository marketplace metadata
 ├── .claude-plugin/          Claude Code plugin and marketplace manifests
 ├── .codex-plugin/           OpenAI/Codex universal plugin manifest
@@ -1339,7 +1342,7 @@ Use the update mechanism provided by Codex, Claude Code, or Cursor for the insta
 
 ### Pin for reproducibility
 
-Teams that require reproducible behavior can pin a Git tag or commit in their own installation workflow and review changes before moving forward. Keep the technical slug `expo-mobile-app-builder` stable; the human-facing display name can remain optimized for discovery without breaking install paths.
+Teams that require reproducible behavior can pin a Git tag or commit in their own installation workflow and review changes before moving forward. Keep the technical plugin slug `mobile-app-builder` stable; the existing GitHub repository URL remains unchanged unless the repository is separately renamed.
 
 ### Uninstall
 
@@ -1482,7 +1485,7 @@ Many product goals are shared, but platform APIs, design conventions, build syst
 
 ### Why is the flagship name different from the repository slug?
 
-`expo-mobile-app-builder` is a stable technical slug for installs and links. **Mobile App Builder** is the human-facing display name, and **Develop Android & iOS Apps** is its 26-character store subtitle. `mobile-app-builder-ios-android` remains the flagship skill name for platform-specific discovery.
+`mobile-app-builder` is the technical plugin slug for installs. **Mobile App Builder** is the human-facing display name, and **Develop Android & iOS Apps** is its 26-character store subtitle. `mobile-app-builder-ios-android` remains the flagship skill name for platform-specific discovery. The GitHub repository currently retains its existing `expo-mobile-app-builder` URL.
 
 ### How do I report a bug?
 
@@ -1540,6 +1543,7 @@ The same canonical skills are packaged for several agent ecosystems. Direct inst
 | --- | --- | --- |
 | **GitHub** | [`khadinakbarlabs/expo-mobile-app-builder`](https://github.com/khadinakbarlabs/expo-mobile-app-builder) | Canonical public source and release assets |
 | **skills.sh / Agent Skills** | [`mobile-app-builder-ios-android`](https://skills.sh/khadinakbarlabs/expo-mobile-app-builder/mobile-app-builder-ios-android) | GitHub-backed portable skill route |
+| **Agent Plugins 1.0** | Root `plugin.json` plus `skills/` | Vendor-neutral portable package for compatible clients |
 | **Codex CLI** | `.agents/plugins/marketplace.json` | Direct repository marketplace metadata |
 | **Claude Code** | `.claude-plugin/marketplace.json` | Direct repository marketplace metadata; official directory review is separate |
 | **Cursor** | Skills CLI plus `.cursor-plugin/plugin.json` | Portable install and native manifest; official marketplace review is separate |

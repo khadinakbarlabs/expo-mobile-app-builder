@@ -1,7 +1,6 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mobile-app-builder",
-  "displayName": "Mobile App Builder",
   "version": "1.0.8",
   "description": "Develop Android & iOS Apps",
   "author": {
@@ -22,6 +21,5 @@
     "mobile-app-builder",
     "ios-app-builder",
     "android-app-builder"
-  ],
-  "skills": "./skills/"
+  ]
 }

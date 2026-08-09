@@ -1,4 +1,4 @@
 interface:
-  display_name: "Command Build Onboarding"
-  short_description: "Help with Command Build Onboarding tasks"
-  default_prompt: "Use $command-build-onboarding to help with this mobile app task."
+  display_name: "Build Mobile Onboarding"
+  short_description: "Build and verify activation-first onboarding"
+  default_prompt: "Use $command-build-onboarding to implement and verify an activation-first Expo onboarding flow."

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Design Onboarding Quiz"
-  short_description: "Help with Design Onboarding Quiz tasks"
-  default_prompt: "Use $design-onboarding-quiz to help with this mobile app task."
+  display_name: "Activation-First Onboarding"
+  short_description: "Design activation-first mobile onboarding"
+  default_prompt: "Use $design-onboarding-quiz to design the shortest trustworthy path to a meaningful first result."

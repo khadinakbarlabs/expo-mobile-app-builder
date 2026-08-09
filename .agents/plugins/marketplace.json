@@ -1,12 +1,12 @@
 {
-  "name": "expo-mobile-app-builder",
+  "name": "mobile-app-builder",
   "interface": {
     "displayName": "Mobile App Builder"
   },
   "plugins": [
     {
-      "name": "expo-mobile-app-builder",
-      "version": "1.0.4",
+      "name": "mobile-app-builder",
+      "version": "1.0.8",
       "source": {
         "source": "local",
         "path": "../.."

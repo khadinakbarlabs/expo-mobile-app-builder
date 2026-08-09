@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "expo-mobile-app-builder",
+  "name": "mobile-app-builder",
   "description": "Develop Android & iOS Apps",
   "owner": {
     "name": "Khadin Akbar",
@@ -8,9 +8,9 @@
   },
   "plugins": [
     {
-      "name": "expo-mobile-app-builder",
+      "name": "mobile-app-builder",
       "displayName": "Mobile App Builder",
-      "version": "1.0.4",
+      "version": "1.0.8",
       "source": "./",
       "description": "Develop Android & iOS Apps",
       "category": "Development",

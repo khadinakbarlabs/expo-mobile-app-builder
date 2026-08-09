@@ -1,63 +1,105 @@
 ---
 name: "design-onboarding-quiz"
-description: "Design Cal AI-style multi-step quiz onboarding (8-15 questions to personalized paywall). Use when the user says 'design onboarding', 'quiz onboarding', 'Cal AI pattern', 'onboarding flow'."
+description: "Design or audit activation-first mobile onboarding that reaches a meaningful result quickly. Use for onboarding flows, first-run experience, personalization quizzes, activation mapping, permission sequencing, or onboarding conversion work."
 ---
 
-# Design Onboarding Quiz
+# Design activation-first onboarding
 
-Cal AI ran 61 paywall experiments and grew MRR 3x in 10 months with this pattern.
+Treat onboarding as the shortest trustworthy path from first launch to a meaningful product result. A quiz is optional. Use the fewest screens and questions the product actually needs.
 
-## Why it works
-- Personalization makes user feel seen
-- Sunk-cost commitment (12 questions answered = invested)
-- Segmentation data for analytics
-- Anchors them for the price by surfacing depth of problem
+## Start with the activation contract
 
-## 7-step flow
-1. **Welcome / Promise** — single dream-outcome sentence + Continue
-2. **Identity question** — "What's your goal?" 3-4 options. Segments + personalizes.
-3. **Pain point question** — "What's stopped you before?" Acknowledges past failures, builds empathy.
-4. **Aspiration question** — "Where do you want to be in 6 months?" Visualizes the win.
-5. **(more 5-12 questions if appropriate)**
-6. **Personalization output** — animated transition: "Building your plan..." (engineered 2-3s delay)
-7. **Social proof** — "47,000 people like you started this week" + 3 testimonials
-8. **Paywall** — references quiz answers ("Your personalized plan to [their answer]")
+Before drawing screens, define:
 
-## Code skeleton (Expo Router + Zustand)
-```tsx
-// state/onboarding.ts
-export const useOnboarding = create<{
-  step: number;
-  answers: Record<string, string>;
-  next: () => void;
-  setAnswer: (key: string, value: string) => void;
-}>((set) => ({
-  step: 0,
-  answers: {},
-  next: () => set((s) => ({ step: s.step + 1 })),
-  setAnswer: (key, value) => set((s) => ({ answers: { ...s.answers, [key]: value } })),
-}));
-
-// app/(onboarding)/[step].tsx
-const STEPS = [WelcomeStep, GoalStep, PainStep, AspirationStep, PersonalizingStep, SocialStep, PaywallStep];
+```yaml
+target_user: "Who is arriving, and in what situation?"
+desired_outcome: "What progress are they hiring the app to make?"
+activation_event: "What observable user action demonstrates value?"
+meaningful_result: "What useful output or changed state exists at the end?"
+time_to_value_target: "How quickly should a new user reach it?"
+required_inputs: []
+required_permissions: []
+required_account_or_payment: false
 ```
 
-## Animated personalization
-```tsx
-import Animated, { withTiming, useSharedValue, useAnimatedStyle } from 'react-native-reanimated';
+Do not use account creation, onboarding completion, or paywall views as the activation event unless one of those actions is the product's actual value. Prefer events such as completing a first workout, generating a useful plan, saving a first project, or hearing a first personalized session.
 
-const progress = useSharedValue(0);
-useEffect(() => { progress.value = withTiming(1, { duration: 2500 }); }, []);
+## Design the shortest value path
+
+1. **Promise relevant value.** State the immediate outcome in specific language. Let users continue with one obvious action.
+2. **Show value before effort.** Demonstrate the experience, provide a useful preview, or start the core task before requesting optional profile data, notification access, tracking access, an account, or payment.
+3. **Ask only consequential questions.** Every answer must alter content, defaults, recommendations, navigation, or the final result. Delete questions whose answers are merely collected.
+4. **Keep one primary action per screen.** Make the question, reason, response options, and next action instantly understandable. Keep Back and Skip predictable where the input is optional.
+5. **Make progress feel responsive.** Use selection feedback, short transitions, purposeful motion, and subtle haptics when supported. Never add fake processing time. Respect reduced-motion, screen-reader, text-scaling, and haptics settings.
+6. **Apply answers visibly.** Tell the user what changed because of their choices. Avoid cosmetic personalization that only repeats their name or answer.
+7. **End with a meaningful result.** Show the created plan, configured workspace, first recommendation, projected path, or ready-to-start core action. Give one clear next step into the product.
+
+Read [the activation-first reference](references/activation-first-onboarding.md) for the source principles, decision rules, screen specification, and measurement model. If onboarding includes a subscription, also read [mobile monetization and purchase safety](references/03-monetization.md).
+
+## Use a question-utility ledger
+
+For every proposed question, fill this table before keeping it:
+
+| Question | Why it is needed now | Product change caused by answer | Optional? | Data sensitivity | Retention |
+| --- | --- | --- | --- | --- | --- |
+| Example: preferred session length | Selects a safe default duration | Player and plan default to the chosen duration | Yes | Low | Local profile |
+
+Remove or defer a question when the product cannot name a visible consequence. Collect sensitive data only when necessary, disclose why, minimize retention, and use an appropriate secure boundary.
+
+## Sequence gates at the moment of need
+
+- Request notification, microphone, camera, health, tracking, or location permission immediately before the feature that needs it. Explain the user benefit before the system dialog.
+- Require an account early only when identity is necessary for the first result, such as cross-device data or protected remote work.
+- Place a paywall where the user understands the paid value. That may be before an expensive operation or after a useful preview; it is not automatically the last onboarding screen.
+- Provide truthful trial, billing, restore, cancellation, close, and free-path behavior. Do not use fake social proof, fabricated scarcity, misleading progress, confirmshaming, or surprise discounts.
+
+## Produce these artifacts
+
+Return:
+
+1. The activation contract and assumptions.
+2. A shortest-path flow plus optional branches.
+3. A screen table with purpose, one primary action, input, visible output, Back/Skip behavior, and accessibility notes.
+4. The question-utility ledger and answer-to-experience mapping.
+5. Permission, account, and monetization timing with rationale.
+6. A typed state model covering fresh, partial, completed, resumed, and reset onboarding.
+7. An analytics plan that measures progress without collecting answer text or sensitive personal data by default.
+8. A test matrix for iOS and Android.
+9. One falsifiable experiment with a guardrail metric.
+
+## Measure the journey
+
+Use a compact, stable event vocabulary adapted to the app's existing analytics provider:
+
+```text
+onboarding_started
+onboarding_step_viewed {step_id, step_index}
+onboarding_step_completed {step_id, step_index}
+onboarding_step_skipped {step_id, step_index}
+permission_pre_prompt_viewed {permission}
+permission_result {permission, result}
+meaningful_result_viewed {result_type}
+activation_completed {activation_type, elapsed_ms}
+onboarding_abandoned {last_step_id}
 ```
 
-## Apple compliance
-- Don't gate functional content behind login (5.1.1 reject)
-- No fake progress bars implying payment processed (2.3.1)
-- No "skip → reduced version" with hidden free tier
-- Restore button reachable from paywall
+Never send free-form answers, health details, or other sensitive values as analytics properties by default. Measure median time to activation, step-to-step completion, meaningful-result reach, next-action completion, day-one return, and permission denial. A higher onboarding-completion rate is not a win if activation or trust declines.
 
-## Post-close 24h discount
-Critical pattern: show discounted annual offer banner when user dismisses paywall. Recovers 10-20% of bouncers.
+## Quality gate
 
-## Reference
-`references/03-monetization.md`
+Reject or revise the flow when any of these are true:
+
+- the activation moment is vague or unobservable;
+- a required step does not help create or safely deliver the meaningful result;
+- an answer does not change the experience;
+- a screen presents competing primary actions;
+- a system permission appears without benefit context;
+- motion delays progress or ignores reduced-motion;
+- proof, progress, scarcity, or personalization is fabricated;
+- the final screen says only "You're all set" or lands on an empty state;
+- Back, Skip, resume, reset, offline, small-screen, keyboard, screen-reader, or Android system-back behavior is undefined;
+- the plan assumes one universal number of onboarding screens or makes an unsupported conversion promise.
+
+## Implementation boundary
+
+Before writing Expo code, read the exact Expo SDK documentation for the project's installed version. Reuse the app's navigation, state, analytics, design tokens, and test stack. Add a dependency only when the product behavior cannot be implemented clearly with the existing stack. Write focused tests before changing the flow, then verify the activation path on both iOS and Android.
