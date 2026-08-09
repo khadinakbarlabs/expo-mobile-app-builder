@@ -7,6 +7,8 @@ description: "Design or audit activation-first mobile onboarding that reaches a 
 
 Treat onboarding as the shortest trustworthy path from first launch to a meaningful product result. A quiz is optional. Use the fewest screens and questions the product actually needs.
 
+> **Posture choice.** This is the *activation-first / honest default* archetype. For paid consumer subscription apps where the goal is maximum trial-start and trial-to-paid conversion, the deliberate alternative is the **sales-funnel archetype** (`design-onboarding-funnel`) — longer, quiz-based, with psychological levers (effort investment, pain amplification, anchoring). Read both and choose deliberately; neither is universally correct. The conversion data is unambiguous that the sales-funnel archetype wins for paid single-purpose consumer apps (Cal AI: $50M ARR).
+
 ## Start with the activation contract
 
 Before drawing screens, define:

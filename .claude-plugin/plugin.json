@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "mobile-app-builder",
   "displayName": "Mobile App Builder",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Develop Android & iOS Apps",
   "author": {
     "name": "Khadin Akbar Ventures LLC",

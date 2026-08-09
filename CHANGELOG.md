@@ -2,6 +2,26 @@
 
 ## Unreleased
 
+## 1.1.0 — 2026-08-09
+
+Added 14 growth/conversion/virality/retention skills (165 → 179 total), filling the layer that makes apps successful rather than merely shippable. Researched across X/Twitter (Cal AI growth playbook), Reddit iOS/Android/RN communities, and the routed review-collection technique.
+
+- `design-onboarding-funnel` — the sales-funnel onboarding archetype (Cal AI / Jake Castillo pattern), the deliberate conversion-maximizing counterpart to the existing activation-first `design-onboarding-quiz`. Both postures now offered; builder chooses.
+- `build-review-routing` + `command-build-review-prompt` — routed/smart review collection: ask satisfaction in-app, route happy users to the native App Store / Google Play review prompt, route unhappy users to private feedback. The technique that raises the public rating by changing who reaches the review surface.
+- `design-shareable-result-card` — viral share artifacts (Wordle / Cal AI / Spotify Wrapped pattern), 1080×1920 Story format, implemented with `react-native-view-shot` + `expo-sharing`.
+- `build-creator-program` — creator-led TikTok/Spark-Ads acquisition (the Cal AI model: seed organic creators, repurpose viral organic content as paid Spark Ads).
+- `design-viral-loop` — K-factor (K = i × c), give-get referrals, invite-to-unlock mechanics.
+- `design-retention-loop` — D1/D7/D30 benchmarks, the Hook Model, streaks, investments.
+- `build-win-back-flow` — lapsed/expired-trial/inactive recovery with Apple StoreKit 2 win-back offers and RevenueCat web checkout.
+- `design-lifecycle-messaging` — coordinated push + email + in-app cadence with frequency capping (55% higher 90-day retention when coordinated).
+- `build-cancellation-flow` — cancel survey + reason-matched save offers (saves 10–35% of cancellations).
+- `instrument-growth-funnel` — the canonical install→activate→trial→convert→retain→refer funnel, event vocabulary, cohort discipline, 2026 RevenueCat benchmarks.
+- `set-up-ab-testing` — experimentation infrastructure (the #1 cited growth lever; Cal AI ran 5 real experiments/month across 46 trigger points).
+- `design-push-strategy` — earning the one-shot permission (pre-prompt → contextual → 55–65% opt-in), re-engagement content.
+- `run-paid-acquisition` — Apple Search Ads (intent capture), TikTok Spark Ads, Meta Advantage+; CAC:LTV discipline.
+
+Updated `mobile-app-builder-ios-android` (flagship router) to route growth/retention/virality work to the matching skill. Cross-referenced `design-onboarding-quiz` to the new sales-funnel alternative so both postures are discoverable. Default analytics recommendation is now PostHog (privacy-safe, no ATT trigger).
+
 ## 1.0.8 — 2026-08-07
 
 - Renamed the cross-client plugin install identifier from `expo-mobile-app-builder` to `mobile-app-builder` while keeping the public title **Mobile App Builder** and the existing GitHub repository URL.

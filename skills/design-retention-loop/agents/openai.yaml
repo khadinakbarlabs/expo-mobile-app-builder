@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Retention Loop"
+  short_description: "Help with Design Retention Loop tasks"
+  default_prompt: "Use $design-retention-loop to help with this mobile app task."
