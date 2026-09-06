@@ -1,0 +1,22 @@
+{
+  "name": "mobile-app-builder-mcp",
+  "private": true,
+  "version": "1.1.3",
+  "description": "Credential-free stateless MCP adapter for Mobile App Builder on Cloudflare Workers.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "agents": "^0.21.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260822.1",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.129.0"
+  }
+}

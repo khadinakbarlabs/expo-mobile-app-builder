@@ -10,6 +10,6 @@ The same canonical skills are packaged for several agent ecosystems. A native ma
 | Codex CLI | `.agents/plugins/marketplace.json` | Direct repository marketplace |
 | Claude Code | `.claude-plugin/marketplace.json` | Direct repository marketplace; official directory is separately reviewed |
 | Cursor | `.cursor-plugin/plugin.json` | Direct portable skill install; official marketplace is separately reviewed |
-| ChatGPT and Codex | `.codex-plugin/plugin.json`, packaged alongside root `plugin.json` | One universal Plugins Directory submission, review, and later publish step |
+| ChatGPT plugin directory | Remote MCP at `https://app-builder.khadinakbar.dev/mcp` | The dashboard scans the live MCP tools and annotations; review and later publication are separate platform steps |
 
 Official directory status can change independently of a GitHub release. Verify the live platform surface before describing a listing as approved or published.

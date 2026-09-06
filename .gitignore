@@ -20,3 +20,10 @@ dist/
 coverage/
 *.log
 .DS_Store
+
+# Cloudflare Workers local state and credentials
+cloudflare/node_modules/
+cloudflare/.wrangler/
+cloudflare/.dev.vars
+cloudflare/.env*
+cloudflare/dist/

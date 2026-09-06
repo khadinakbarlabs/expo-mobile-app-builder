@@ -19,3 +19,19 @@ jobs:
           node-version: 22
       - run: node scripts/validate-release.mjs
       - run: node scripts/audit-public-package.mjs .
+
+  worker:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cloudflare
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: cloudflare/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - run: npm audit --omit=dev --audit-level=high

@@ -7,13 +7,33 @@
 [![license](https://img.shields.io/badge/license-MIT-2154D8)](LICENSE)
 [![Expo SDK 54](https://img.shields.io/badge/Expo-SDK%2054-000020)](https://docs.expo.dev/versions/v54.0.0/)
 [![iOS + Android](https://img.shields.io/badge/platforms-iOS%20%2B%20Android-2154D8)](#iosandroid-parity-by-default)
-[![165 Agent Skills](https://img.shields.io/badge/Agent%20Skills-165-16A34A)](#the-skill-library)
+[![179 Agent Skills](https://img.shields.io/badge/Agent%20Skills-179-16A34A)](#the-skill-library)
 
 **Turn a mobile app idea, an existing Expo repository, or a release blocker into a clear plan and a verified iOS and Android implementation.**
 
 Mobile App Builder is a public, open-source plugin for building mobile products with [Expo](https://expo.dev/) and [React Native](https://reactnative.dev/). Its store subtitle is **Develop Android & iOS Apps**. It covers the path from product research and planning through UI/UX, architecture, development, native platform work, testing, EAS, store submission, review response, and approval follow-through. The same skill library is packaged for ChatGPT and Codex's universal plugin format, direct Codex and Claude Code repository marketplaces, Cursor, and portable Agent Skills-compatible hosts.
 
-It is not a hosted no-code service and it does not hide your project behind a proprietary editor. The package is a portable library of **165 focused Agent Skills** that work with your files, your repository, and your chosen coding agent. Start with one flagship skill for complete app-building work, or install the full catalog and let the agent load only the workflow relevant to the task.
+It is not a hosted no-code service and it does not hide your project behind a proprietary editor. The package is a portable library of **179 focused Agent Skills** that work with your files, your repository, and your chosen coding agent. Start with one flagship skill for complete app-building work, or install the full catalog and let the agent load only the workflow relevant to the task.
+
+## A professional app builder, not only a code generator
+
+Mobile App Builder covers the full product lifecycle. Its workflows are organized into eleven professional capability groups so an agent can load the smallest relevant playbook instead of mixing research, engineering, marketing, and release work into one vague prompt.
+
+| Capability group | What it covers | Representative workflows |
+| --- | --- | --- |
+| Discovery and research | Niche discovery, competitor analysis, review mining, market validation | `find-niche`, `mine-competitor-reviews`, `competitor-feature-matrix` |
+| Product strategy | Positioning, MVP scope, requirements, roadmap, pricing | `position-pitch`, `pricing-strategy`, `mobile-app-builder-ios-android` |
+| Experience design | User journeys, onboarding, accessibility, platform-native UX | `design-onboarding-funnel`, `accessibility-audit`, `accessibility-audit-android` |
+| Expo engineering | Expo SDK 54, React Native, navigation, data, offline behavior, native integrations | `command-scaffold-app`, `choose-backend`, `choose-storage` |
+| Quality and security | Tests, performance, privacy, configuration and release audits | `pre-submission-audit`, `command-audit-rn`, `add-expo-secure-store` |
+| Monetization | Subscriptions, pricing, paywalls, billing compliance, cancellation, win-back | `design-paywall`, `pricing-strategy`, `build-cancellation-flow` |
+| Organic growth | ASO, referrals, viral loops, creator programs, lifecycle messaging | `aso-keywords`, `design-viral-loop`, `build-creator-program` |
+| Paid acquisition | Apple Ads, Google App campaigns, Meta app campaigns, TikTok Spark Ads | `run-paid-acquisition`, `asa-to-aso`, `asa-to-aso-android` |
+| Analytics and experimentation | Activation, retention, revenue funnels, cohorts, attribution, A/B tests | `instrument-growth-funnel`, `set-up-ab-testing`, `add-posthog-rn` |
+| Store launch | EAS, TestFlight, Google Play, listing metadata, review readiness | `eas-submit-testflight`, `custom-store-listings`, `pre-submission-audit` |
+| Post-launch operations | Monitoring, reviews, retention, feedback loops, release iteration | `build-review-routing`, `design-retention-loop`, `add-sentry-rn` |
+
+Growth and advertising workflows are planning and implementation guidance by default. They can analyze funnels, design experiments, write campaign briefs, and prepare tracking, but they do not create campaigns, change budgets, buy ads, publish releases, or spend money without a separate, explicit authorization for that external action.
 
 **Credential-free by design.** This repository contains no Expo access token, Apple signing key, Android keystore, Play service-account file, API key, private account identifier, hosted backend, telemetry collector, or remote executor. Local implementation may edit your app when you ask it to. Builds, uploads, submissions, publication, pricing changes, and paid actions stay behind explicit user authorization.
 
@@ -27,7 +47,7 @@ It is not a hosted no-code service and it does not hide your project behind a pr
 | **Platforms** | iOS and Android, with platform parity treated as a first-class requirement |
 | **Mobile stack** | Expo SDK 54 and React Native, with Expo Router and TypeScript used when they fit the project |
 | **Coverage** | Research and validation through implementation, QA, EAS, submission, review response, and approval follow-through |
-| **Library** | 165 narrowly triggered, independently installable Agent Skills |
+| **Library** | 179 narrowly triggered, independently installable Agent Skills |
 | **Default entry point** | `mobile-app-builder-ios-android` |
 | **Configuration** | None required for the plugin itself; optional project guidance improves repeatability |
 | **Runtime** | Static Markdown guidance plus small credential-free local planning and validation scripts |
@@ -41,6 +61,7 @@ You do not need to understand the plugin format before using it.
 | If you are... | Start here | What happens next |
 | --- | --- | --- |
 | **A founder or product owner** | [Human quickstart](#human-quickstart) | Describe the user, problem, and first release; the agent turns that into scope, screens, risks, and an implementation sequence |
+| **Not sure how to prompt an agent** | [Prompt kit](docs/PROMPTS.md) | Choose a ready-to-run workflow brief for planning, implementation, audits, debugging, offline behavior, conversion, or release preparation |
 | **A developer with an existing Expo app** | [Existing-project prompt](#2-adopt-or-audit-an-existing-expo-app) | The agent inspects the repository, identifies the current architecture, and proposes the smallest safe change |
 | **An AI coding agent** | [Agent operating contract](#agent-operating-contract) | Follow an explicit discovery, planning, implementation, verification, and handoff protocol |
 | **A team lead** | [Project configuration](#optional-project-configuration) | Add durable repository rules for Expo versioning, platform parity, credentials, tests, and release gates |
@@ -58,6 +79,7 @@ You do not need to understand the plugin format before using it.
 - [Using it as a human](#using-it-as-a-human)
 - [Using it as an AI agent](#using-it-as-an-ai-agent)
 - [Optional project configuration](#optional-project-configuration)
+- [Prompt kit](docs/PROMPTS.md)
 - [Prompt cookbook](#prompt-cookbook)
 - [Skill routing guide](#skill-routing-guide)
 - [From planning and research to store approval](#from-planning-and-research-to-store-approval)
@@ -101,7 +123,7 @@ To browse before installing:
 npx skills add khadinakbarlabs/expo-mobile-app-builder --list
 ```
 
-To install all 165 skills:
+To install all 179 skills:
 
 ```bash
 npx skills add khadinakbarlabs/expo-mobile-app-builder \
@@ -147,11 +169,11 @@ npx skills add khadinakbarlabs/expo-mobile-app-builder \
 
 The repository also includes a native Cursor manifest for directory packaging. A manifest does not by itself mean that an official marketplace listing has been reviewed or approved.
 
-### ChatGPT and the universal Plugins Directory
+### ChatGPT plugin directory
 
-The package includes OpenAI's required `.codex-plugin/plugin.json` manifest with the public title **Mobile App Builder** and the 26-character subtitle **Develop Android & iOS Apps**. Both fit the 30-character listing limit. It also includes the vendor-neutral Agent Plugins 1.0 `plugin.json` at the repository root so compatible clients can discover the same 165 skills through the portable protocol.
+The public ChatGPT submission is backed by the credential-free remote MCP at [`https://app-builder.khadinakbar.dev/mcp`](https://app-builder.khadinakbar.dev/mcp). The dashboard scans that endpoint and stores the advertised tool schemas and annotations for review. The six public tools create plans, validation results, and release checklists only; they never receive provider credentials, run builds, upload binaries, or submit to stores.
 
-Marketplace ZIPs retain both manifests: OpenAI reads `.codex-plugin/plugin.json`, while Agent Plugins-compatible clients read the root `plugin.json`. Distribution, installation, permissions, and marketplace review remain client-specific.
+The repository also retains portable skills and manifests for Codex, Claude Code, Cursor, and Agent Plugins-compatible clients. Those local-installation surfaces are separate from the remote-MCP review path and do not imply an official listing.
 
 After an official listing is reviewed and published, users can search that directory by the public name. Until then, GitHub, skills.sh, Codex CLI, Claude Code, Cursor, and portable Agent Skills installation remain separate routes. See [distribution status](#distribution-status) for the honest current boundary.
 
@@ -162,6 +184,8 @@ git clone https://github.com/khadinakbarlabs/expo-mobile-app-builder.git
 cd expo-mobile-app-builder
 node scripts/validate-release.mjs
 node scripts/audit-public-package.mjs .
+node scripts/validate-openai-upload.mjs releases/mobile-app-builder-openai-1.1.2-upload-v4.zip
+node scripts/verify-public-mcp.mjs https://app-builder.khadinakbar.dev/mcp
 ```
 
 Cloning is useful when you want to audit the package, contribute a skill, pin a Git revision, or inspect every instruction before installation.
@@ -273,7 +297,7 @@ Each skill is a small instruction package with a precise trigger and workflow. W
 
 The package does not send your repository to a plugin-owned server. It does not provide a remote build queue, inject an analytics SDK, create an account, or obtain provider credentials. Your chosen coding-agent host controls model execution and repository access according to its own settings. The plugin contributes domain guidance and local, inspectable scripts.
 
-### Why 165 focused skills instead of one enormous prompt?
+### Why 179 focused skills instead of one enormous prompt?
 
 Mobile product work spans several disciplines:
 
@@ -646,6 +670,8 @@ Never solve a configuration problem by publishing the secret. The agent can iden
 ## Prompt cookbook
 
 These prompts are starting points. Replace bracketed text with your product context. Each prompt states a useful authority boundary so it works for humans and agents without accidental provider-side actions.
+
+For a shorter, task-first set of copy-and-paste briefs, use the [prompt kit](docs/PROMPTS.md). It gives each workflow an operating mode, outcome, constraints, required proof, and an external-action boundary.
 
 ### 1. Turn an idea into an MVP
 
@@ -1021,14 +1047,14 @@ npx skills add khadinakbarlabs/expo-mobile-app-builder \
 
 Change the skill name and agent profile as needed. Installing only the specialist is useful for a narrow audit or a team that already has its own broader mobile workflow.
 
-### Complete catalog: 165 skills
+### Complete catalog: 179 skills
 
 The table is alphabetical so exact install names are easy to copy. The canonical live source remains [`skills/`](skills/).
 
 <!-- markdownlint-disable MD033 -->
 
 <details>
-<summary><strong>View all 165 installable skill names</strong></summary>
+<summary><strong>View all 179 installable skill names</strong></summary>
 
 | | | | |
 | --- | --- | --- | --- |
@@ -1241,8 +1267,10 @@ mobile-app-builder/
 ├── scripts/
 │   ├── plan-expo-project.mjs
 │   ├── validate-release.mjs
-│   └── audit-public-package.mjs
-├── skills/                  165 portable Agent Skills
+│   ├── audit-public-package.mjs
+│   ├── validate-openai-upload.mjs
+│   └── verify-public-mcp.mjs
+├── skills/                  179 portable Agent Skills
 ├── AGENTS.md                Public package contribution and safety rules
 ├── CONTRIBUTING.md          Contributor workflow
 ├── PRIVACY.md               Plugin privacy policy
@@ -1287,6 +1315,7 @@ Run the dependency-free package gates from the repository root:
 ```bash
 node scripts/validate-release.mjs
 node scripts/audit-public-package.mjs .
+node scripts/verify-public-mcp.mjs https://app-builder.khadinakbar.dev/mcp
 ```
 
 ### Release validator
@@ -1302,6 +1331,13 @@ node scripts/audit-public-package.mjs .
 - standalone relative-link safety;
 - parity between the root and standalone scaffold planners;
 - absence of symbolic links in the public package.
+
+`validate-openai-upload.mjs` is the strict OpenAI skills-only gate. It checks the
+ZIP itself, including archive integrity, root/manifest unambiguity, compressed
+and extracted size limits, path traversal and collision rules, supported
+metadata limits, normalized starter prompts, legal URLs, brand assets, the
+skills-only MCP/app boundary, skill frontmatter, and `agents/openai.yaml`
+metadata. It should be run against the exact ZIP selected in the upload dialog.
 
 ### Public-package audit
 
@@ -1524,7 +1560,7 @@ Ask:
 - Do not claim guaranteed approval, compliance, performance, revenue, or ranking.
 - Run package validation, the public audit, skill validation, and archive round-trip checks.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md), and the [release checklist](RELEASE-CHECKLIST.md) before proposing a public release.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/AGENTS.md), and the [release checklist](RELEASE-CHECKLIST.md) before proposing a public release.
 
 ### Documentation contributions
 
@@ -1534,6 +1570,12 @@ Documentation should serve two readers at once:
 - the agent deciding when a skill triggers, which files or surfaces to inspect, what sequence to follow, and how to report evidence.
 
 Prefer concrete prompts, decision rules, expected outputs, failure modes, and honest boundaries over vague superlatives. Do not add fabricated testimonials, download counts, store approvals, usage metrics, benchmarks, or partner claims.
+
+## Cloudflare MCP deployment
+
+This package includes a credential-free Cloudflare Workers MCP adapter in [`cloudflare/`](https://github.com/khadinakbarlabs/expo-mobile-app-builder/tree/main/cloudflare/). It uses stateless Streamable HTTP and exposes planning, research, validation, private-build handoff, and store-submission checklist tools at `/mcp` after deployment. The Worker does not contain Expo, Apple, Google, EAS, or other provider credentials and does not upload or submit binaries. Keep signing and account operations in an authenticated private runner with explicit owner approval.
+
+See [`docs/CLOUDFLARE-MCP.md`](docs/CLOUDFLARE-MCP.md) for deployment and tool details.
 
 ## Distribution status
 
@@ -1547,7 +1589,7 @@ The same canonical skills are packaged for several agent ecosystems. Direct inst
 | **Codex CLI** | `.agents/plugins/marketplace.json` | Direct repository marketplace metadata |
 | **Claude Code** | `.claude-plugin/marketplace.json` | Direct repository marketplace metadata; official directory review is separate |
 | **Cursor** | Skills CLI plus `.cursor-plugin/plugin.json` | Portable install and native manifest; official marketplace review is separate |
-| **ChatGPT and Codex** | `.codex-plugin/plugin.json` | Universal Plugins Directory package; official submission, review, and publication are separate platform steps |
+| **ChatGPT plugin directory** | Remote MCP at `app-builder.khadinakbar.dev/mcp` | Dashboard tool scan, review, and publication are separate platform steps |
 
 See [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md) for the canonical distinction. Never infer approval from the presence of a manifest. Directory status can change after a GitHub release, so verify the live surface before saying a listing is available.
 

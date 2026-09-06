@@ -3,10 +3,12 @@
 ## Local package
 
 - [ ] Run `node scripts/validate-release.mjs` and `node scripts/audit-public-package.mjs .`.
+- [ ] Run `node scripts/verify-public-mcp.mjs <mcp-url>` after deployment and record the returned version and endpoint.
 - [ ] Validate every skill frontmatter and referenced resource.
 - [ ] Install at least one skill with the public Skills CLI and audit every skill as a standalone directory.
 - [ ] Run the Plugin Creator and Codex Plugin Builder validators.
 - [ ] Create and round-trip validate the root-layout ZIP.
+- [ ] Run `node scripts/validate-openai-upload.mjs <exact-openai-zip>` against the exact ZIP selected in the OpenAI uploader; confirm the strict skills-only root, manifest, metadata, archive, asset, and size gates pass.
 - [ ] Re-scan the final archive and Git history for credential artifacts and private paths.
 - [ ] Confirm all listing copy matches actual package behavior and does not promise store approval or current policy facts.
 

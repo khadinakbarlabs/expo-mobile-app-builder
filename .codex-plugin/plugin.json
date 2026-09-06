@@ -1,7 +1,7 @@
 {
   "name": "mobile-app-builder",
-  "version": "1.1.0",
-  "description": "Develop Android & iOS Apps",
+  "version": "1.1.3",
+  "description": "Build iOS and Android apps with Expo",
   "author": {
     "name": "Khadin Akbar Ventures LLC",
     "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
@@ -19,29 +19,34 @@
     "agent-skills",
     "mobile-app-builder",
     "ios-app-builder",
-    "android-app-builder"
+    "android-app-builder",
+    "app-growth",
+    "app-marketing",
+    "apple-search-ads",
+    "mobile-monetization"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Mobile App Builder",
     "shortDescription": "Develop Android & iOS Apps",
-    "longDescription": "Plan, build, test, and prepare production-ready iOS and Android mobile apps with Expo SDK 54 and React Native. Includes 179 focused workflows for product strategy, UI/UX, onboarding and paywall conversion, virality, retention, growth instrumentation, implementation, native features, testing, EAS, App Store, Google Play, and Codex-managed ChatGPT Apps submission readiness. It has no hosted backend, telemetry, account system, or embedded credentials.",
+    "longDescription": "A skills-only, end-to-end mobile app builder for Expo SDK 54 and React Native. Research and validate an idea, define the smallest useful release, design the experience, implement and test iOS and Android, handle permissions and offline states, prepare monetization and analytics, improve ASO and retention, plan paid acquisition, and prepare EAS builds and store submissions. It provides guidance and local project workflows only: no embedded credentials, hosted execution, telemetry, account system, ad spend, or store submission is performed by the package.",
     "developerName": "Khadin Akbar Ventures LLC",
     "category": "Developer Tools",
     "capabilities": [
-      "Read",
-      "Write"
+      "Plan Expo iOS and Android apps",
+      "Build and audit React Native features",
+      "Prepare testing, growth, and store releases"
     ],
     "websiteURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder",
     "privacyPolicyURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md",
     "termsOfServiceURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md",
     "defaultPrompt": [
-      "Build a production-ready iOS and Android app with Expo and React Native.",
-      "Audit my Expo app for iOS and Android release readiness.",
-      "Debug this Expo, EAS, iOS, or Android build issue safely."
+      "Plan my Expo app for iOS and Android: scope, architecture, risks, and proof.",
+      "Build or audit one Expo feature with loading, empty, error, offline, accessibility, and platform checks.",
+      "Plan app growth across activation, retention, monetization, ASO, and paid acquisition."
     ],
     "brandColor": "#2154D8",
-    "composerIcon": "./assets/composer-icon.png",
-    "logo": "./assets/composer-icon.png"
+    "composerIcon": "./assets/mobile-app-builder-icon-v5-1024.png",
+    "logo": "./assets/mobile-app-builder-icon-v5-1024.png"
   }
 }

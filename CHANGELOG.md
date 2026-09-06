@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.1.3 — 2026-09-06
+
+- Added the credential-free Cloudflare Workers MCP source, deployment guide, submission data, and a repeatable live-contract verifier for `https://app-builder.khadinakbar.dev/mcp`.
+- Hardened metadata validation to flag nested credential-shaped field names without returning submitted values; added a 100 KB request-body guard and safe error handling.
+- Updated Worker runtime compatibility, redacted-query observability, dependency audit remediation, CI validation, privacy disclosure, manifests, and public documentation to match the remote MCP service.
+
 ## 1.1.0 — 2026-08-09
 
 Added 14 growth/conversion/virality/retention skills (165 → 179 total), filling the layer that makes apps successful rather than merely shippable. Researched across X/Twitter (Cal AI growth playbook), Reddit iOS/Android/RN communities, and the routed review-collection technique.
