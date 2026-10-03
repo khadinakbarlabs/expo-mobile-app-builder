@@ -1,6 +1,6 @@
 # Agency release preparation
 
-Version 1.3.1 is a validated local package candidate, not a submitted or published directory update.
+Version 1.3.2 is a validated local package candidate, not a submitted or published directory update.
 
 ## Prepared
 
@@ -26,3 +26,13 @@ No account, country availability, review attestations, live submission, installe
 Four independently usable workflows and specialist roles now cover Apple/Google Play intelligence, TikTok/Instagram/YouTube creators and influencer marketing, TikTok/Meta/Google ads, and app website SEO. The [public Actor catalog](../skills/apify-mobile-research/references/actor-catalog.json) contains 15 real `khadinakbar/` routes whose public metadata and latest-build input schemas were checked through the Apify CLI on 2026-10-03. These checks establish routing and schema availability, not paid-run results or runtime reliability. Re-inspect exact schemas, pricing and source coverage before execution; no paid runs or execution authority ship in the package.
 
 TikTok commercial-library country coverage follows its checked European/UK enum, not a global promise. Cross-platform creator analysis accepts known targets; discovery uses platform-specific Actors. Provider keyword metrics are estimates and can require separate credentials/costs. Web SEO and store ASO remain distinct. See [the starting guide](START-HERE.md) for new-app, existing-app and focused-task entry points.
+
+## Portal validation evidence — 2026-10-03
+
+The first portal validation of 1.3.1 fetched the exact native `claude-release` commit 83e9d3c and passed with no blocking findings, six warnings and five policy-hold findings. Name/publisher checks passed; 189 skills and 16 agents were recognized. Directory-only metadata warnings explicitly require no action.
+
+The next 1.3.2 payload excludes three obsolete, unselected images from every distribution bundle while retaining them in source. The legacy image printable-byte hold and two unused-image references motivated an explicit current-art allowlist; no image bytes were modified or hidden.
+
+Reviewer context for retained findings: the local preparation checker reads image headers/format markers and JSON metadata, and never invokes an image as executable code. AI-streaming and deletion snippets are inert consuming-app examples: the deployed app’s own provider secret and its user’s session token are independent of the plugin installer, and the AI consent storage key belongs to a separate app feature. Preserve authentication/consent controls and same-provider secret boundaries. The research reference’s flagged shell patterns are explicit prohibitions, not runtime downloads; no startup hook or MCP executes them.
+
+Read-only Claude workflow smoke/comparison attempts were blocked by an expired local OAuth login. They are not passed behavior/evaluation tests. Capture new portal validation against the exact updated native commit before continuing.

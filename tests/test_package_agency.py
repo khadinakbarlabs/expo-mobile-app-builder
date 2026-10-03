@@ -48,6 +48,21 @@ class PackageTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Credential'):
                 PACKAGE.collect_files(root, 'openai')
 
+    def test_only_current_brand_art_ships_and_older_art_remains_in_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            for name in ['mobile-app-builder-logo-v8.png', 'mobile-app-builder-banner.png', 'composer-icon.png', 'mobile-app-builder-icon-v5-1024.png', 'mobile-app-builder-logo-v6.png']:
+                (root / 'assets' / name).write_text('art')
+            for surface in PACKAGE.SURFACES:
+                paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
+                self.assertIn('assets/mobile-app-builder-logo-v8.png', paths)
+                self.assertIn('assets/mobile-app-builder-banner.png', paths)
+                self.assertNotIn('assets/composer-icon.png', paths)
+                self.assertNotIn('assets/mobile-app-builder-icon-v5-1024.png', paths)
+                self.assertNotIn('assets/mobile-app-builder-logo-v6.png', paths)
+            self.assertTrue((root / 'assets/mobile-app-builder-logo-v6.png').exists())
+
     def test_bundle_refuses_overwrite(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
