@@ -1,63 +1,26 @@
 ---
 name: "add-app-clips"
-description: "Add an App Clip (instant launch via QR/NFC, 15MB max) via expo-apple-targets. Use when the user says 'App Clip', 'instant app', 'QR launch'."
+description: "Plan and implement an iOS App Clip with preserved native work, validated invocation URLs and verified target constraints. Use for App Clips, QR/NFC launch, or lightweight app experiences."
 ---
 
-# Add App Clips
+# Add an App Clip
 
-Lightweight app slice that launches in seconds without install. 15 MB max. iOS-only.
+Plan a small iOS App Clip for an owner-selected QR, NFC or URL entry point. Inspect the existing Expo SDK, Xcode project, targets and signing configuration. Use Apple's current documentation at https://developer.apple.com/documentation/appclip/creating-an-app-clip-with-xcode and the maintained Expo integration at https://github.com/EvanBacon/expo-apple-targets. Verify size and capability restrictions for the chosen deployment target instead of assuming a universal size limit.
 
-## When to use
-- Physical-world entry: QR / NFC / App Clip Code
-- One-shot transaction (pay, order, check-in)
-- Location-bound flows (parking, museum, restaurant)
+## Preserve the existing app
 
-## Install
-```bash
-npm install @bacons/apple-targets
-npm exec --no -- expo prebuild --clean
-```
+Review the current target configuration and native changes before proposing a dependency or prebuild. Present the exact compatible package version, files affected and regeneration risk. Follow existing user authorization for dependency changes; obtain missing authorization before installation or native regeneration. Do not automatically run a clean prebuild: it can overwrite native work. Use a recoverable snapshot and review the diff before adopting generated changes.
 
-## app.json
-```json
-{
-  "expo": {
-    "plugins": [
-      ["@bacons/apple-targets", { "targets": ["./targets/clip"] }]
-    ],
-    "ios": {
-      "associatedDomains": ["appclips:yourapp.com"]
-    }
-  }
-}
-```
+Create an App Clip target through the maintained package's documented target configuration, typically `targets/clip/expo-target.config.js` with `type: 'clip'`, or the owner's Xcode workflow. Keep credentials, signing keys and provisioning material out of generated source and logs. Do not enable capabilities or change developer accounts silently.
 
-## Host AASA at https://yourapp.com/.well-known/apple-app-site-association
-```json
-{
-  "appclips": {
-    "apps": ["TEAMID.com.example.myapp.Clip"]
-  },
-  "applinks": {
-    "details": [{ "appID": "TEAMID.com.example.myapp", "paths": ["*"] }]
-  }
-}
-```
+## Invocation and security
 
-## Constraints
-- 15 MB binary max
-- No BackgroundTasks
-- No widgets in App Clip target
-- Limited app group access
+Prepare associated domains and an AASA document only for domains the owner controls. Reuse verified bundle/team identifiers; do not invent them. Publishing AASA files or configuring App Store Connect experiences requires the owner's authorization for those external changes.
 
-## Upgrade path
-Show "Get the full app" overlay mid-flow:
-```swift
-import StoreKit
-let config = SKOverlay.AppClipConfiguration(position: .bottom)
-let overlay = SKOverlay(configuration: config)
-overlay.present(in: scene)
-```
+Treat invocation URLs and parameters as untrusted input. Allow only documented HTTPS hosts, known paths and validated identifiers; reject unknown destinations. An App Clip must enforce ordinary authentication and authorization before account actions. Avoid sensitive values in URLs. Payment, location and other permission-dependent functionality needs its own approved flow; adding an App Clip does not authorize transactions or personal-data access.
 
-## App Clip Code generation
-App Store Connect → your app → App Clip Codes. Generate codes for specific URLs. Scannable AND NFC-tappable.
+## Verification and handoff
+
+Build the correct target and test valid/invalid invocation links, cold launch, denied permissions, offline behavior and the transition to the full app on a supported physical device. Measure the actual binary against the applicable Apple limit. Record entitlements, build evidence, unresolved errors and any domain/store step awaiting authorization. A local build does not prove App Store approval or a working production invocation.
+
+Pair with `add-expo-apple-targets`, `add-deep-links`, `code-signing` and `pre-submission-audit`.

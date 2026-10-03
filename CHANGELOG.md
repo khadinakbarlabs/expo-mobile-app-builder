@@ -18,6 +18,11 @@
 
 # Changelog
 
+## 1.3.4 — 2026-10-03
+
+- Preserve native project changes during App Clip setup; require scoped regeneration authorization and validate invocation routes.
+- Replace obsolete App Clip size assumptions with current target-specific constraints.
+
 ## 1.3.3 — 2026-10-03
 
 - Address seven OpenAI workflow warnings with scoped dependency authorization, allowlisted shortcut routing, verified on-device AI/toolchain guidance and anonymized public research.
