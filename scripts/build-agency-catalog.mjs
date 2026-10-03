@@ -14,7 +14,7 @@ for (const department of catalog.departments) {
   }
   lines.push('');
 }
-const markdown = `${lines.join('\n')}\n`;
+const markdown = `${lines.join('\n').trimEnd()}\n`;
 const outputs = [['agency/catalog.json', json], ['docs/SKILL-CATALOG.md', markdown]];
 if (process.argv.includes('--check')) {
   for (const [file, content] of outputs) if (!fs.existsSync(path.join(root, file)) || fs.readFileSync(path.join(root, file), 'utf8') !== content) throw new Error(`Stale generated catalog: ${file}`);
