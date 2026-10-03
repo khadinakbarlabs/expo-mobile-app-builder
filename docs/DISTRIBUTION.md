@@ -18,7 +18,7 @@ Official directory status can change independently of a GitHub release. Verify t
 
 GitHub release 1.3.4 is published. Anthropic follows the already-submitted `claude-release` 1.3.2 commit: security scan passed, In review, Live not yet, with a component-inventory policy hold requiring reviewer interpretation. The latest 1.3.4 Claude ZIP is available for direct installation; the tracked branch was preserved to avoid resetting the existing human review.
 
-OpenAI has the skills-only 1.3.4 draft under Khadin Akbar Ventures. Revised uploads saved despite generic error responses; changed skills must finish their scans and the owner must confirm the six OpenAI attestations before review submission. No live OpenAI directory listing is claimed.
+OpenAI has a fully checked skills-only 1.3.4 draft under Khadin Akbar Ventures: all 189 skills passed, with no security warning. Revised uploads saved despite generic errors; the main upload route created the working draft and completed checks. Submit only the working draft after the owner confirms the six OpenAI attestations. The privacy-policy assessment notice explicitly permits additional review. No OpenAI review submission or live listing is claimed.
 
 ## Earlier agency candidate — 2026-10-03
 
