@@ -15,7 +15,7 @@ Lightweight app slice that launches in seconds without install. 15 MB max. iOS-o
 ## Install
 ```bash
 npm install @bacons/apple-targets
-npx expo prebuild --clean
+npm exec --no -- expo prebuild --clean
 ```
 
 ## app.json

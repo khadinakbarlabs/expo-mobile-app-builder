@@ -14,7 +14,7 @@ This checklist prepares a release. TestFlight upload, App Store submission, phas
 ## Code health
 - [ ] `npm test` — all unit tests pass
 - [ ] `npm run lint` — no errors
-- [ ] `npx tsc --noEmit` — no TS errors
+- [ ] `npm exec --no -- tsc --noEmit` — no TS errors
 - [ ] No console.log in production code (search: `grep -r console.log src/`)
 - [ ] Maestro smoke flow passes (critical user journey)
 

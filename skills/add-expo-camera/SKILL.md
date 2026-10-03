@@ -9,7 +9,7 @@ In-app camera for photo, video, barcode/QR.
 
 ## Install
 ```bash
-npx expo install expo-camera
+npm exec --no -- expo install expo-camera
 ```
 
 ## app.json

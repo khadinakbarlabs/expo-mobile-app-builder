@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Creator Program"
+  short_description: "Help with Build Creator Program tasks"
+  default_prompt: "Use $build-creator-program to help with this mobile app task."

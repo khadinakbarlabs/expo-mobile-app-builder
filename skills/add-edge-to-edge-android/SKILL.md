@@ -9,7 +9,7 @@ Android 15+ defaults to edge-to-edge — content extends under status bar + nav 
 
 ## Install
 ```bash
-npx expo install react-native-edge-to-edge react-native-safe-area-context
+npm exec --no -- expo install react-native-edge-to-edge react-native-safe-area-context
 ```
 
 `app.json`:

@@ -36,7 +36,7 @@ const id = storage.getString('user.id');
 
 ## expo-sqlite + drizzle
 ```bash
-npx expo install expo-sqlite
+npm exec --no -- expo install expo-sqlite
 npm install drizzle-orm
 npm install -D drizzle-kit
 ```

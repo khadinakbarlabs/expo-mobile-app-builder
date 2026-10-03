@@ -1,0 +1,705 @@
+{
+  "schemaVersion": 1,
+  "departments": [
+    {
+      "id": "research",
+      "title": "Research & intelligence",
+      "agents": [
+        "market-researcher",
+        "store-intelligence-analyst",
+        "creator-researcher",
+        "ads-intelligence-analyst"
+      ],
+      "outcome": "Evidence for demand, competitors, user pain, ads and inspiration."
+    },
+    {
+      "id": "strategy",
+      "title": "Product & business strategy",
+      "agents": [
+        "product-strategist"
+      ],
+      "outcome": "A focused brief, MVP, positioning and monetization contract."
+    },
+    {
+      "id": "design",
+      "title": "UX, visual design & inspiration",
+      "agents": [
+        "ux-designer",
+        "visual-designer"
+      ],
+      "outcome": "Accessible journeys, coherent visuals and an implementation-ready design handoff."
+    },
+    {
+      "id": "engineering",
+      "title": "Architecture & development",
+      "agents": [
+        "mobile-architect",
+        "expo-engineer"
+      ],
+      "outcome": "A complete tested vertical slice with clear data, native and platform boundaries."
+    },
+    {
+      "id": "quality",
+      "title": "QA, security & performance",
+      "agents": [
+        "qa-engineer",
+        "security-reviewer"
+      ],
+      "outcome": "Reproducible behavioral evidence and reviewed security/privacy boundaries."
+    },
+    {
+      "id": "launch",
+      "title": "Store production & release",
+      "agents": [
+        "store-producer",
+        "release-manager"
+      ],
+      "outcome": "Verified metadata, screenshots, localization and owner-authorized release preparation."
+    },
+    {
+      "id": "growth",
+      "title": "Marketing, ads & experimentation",
+      "agents": [
+        "growth-strategist",
+        "seo-strategist"
+      ],
+      "outcome": "Measurable activation, retention, acquisition and revenue experiments."
+    },
+    {
+      "id": "operations",
+      "title": "Agency direction & operations",
+      "agents": [
+        "agency-director",
+        "release-manager"
+      ],
+      "outcome": "Clear ownership, coordination, continuity and release evidence."
+    }
+  ],
+  "groups": [
+    {
+      "department": "research",
+      "id": "market-discovery",
+      "title": "Markets & demand",
+      "skills": [
+        "find-niche",
+        "find-niche-android",
+        "market-validation",
+        "market-validation-android",
+        "mine-reddit-pain-points",
+        "mine-reddit-android-pain-points"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "competitor-intelligence",
+      "title": "Competitors & reviews",
+      "skills": [
+        "dissect-competitor-app",
+        "dissect-competitor-android-app",
+        "competitor-feature-matrix",
+        "competitor-aso-teardown",
+        "competitor-onboarding-teardown",
+        "competitor-paywall-analysis",
+        "competitor-paywall-analysis-android",
+        "mine-competitor-reviews",
+        "mine-play-reviews"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "user-research",
+      "title": "User research",
+      "skills": [
+        "interview-users",
+        "jtbd-interview",
+        "mom-test"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "actor-research",
+      "title": "Apify & evidence",
+      "skills": [
+        "apify-mobile-research",
+        "command-research",
+        "command-research-android"
+      ]
+    },
+    {
+      "department": "strategy",
+      "id": "positioning",
+      "title": "Naming & positioning",
+      "skills": [
+        "app-naming",
+        "app-naming-android",
+        "position-pitch",
+        "position-pitch-android"
+      ]
+    },
+    {
+      "department": "strategy",
+      "id": "monetization",
+      "title": "Pricing & monetization",
+      "skills": [
+        "pricing-strategy",
+        "pricing-strategy-android",
+        "google-play-15-percent-tier",
+        "play-pass-application"
+      ]
+    },
+    {
+      "department": "design",
+      "id": "platform-design",
+      "title": "Platform design & principles",
+      "skills": [
+        "apply-hig",
+        "apply-liquid-glass",
+        "apply-material3",
+        "apply-material-you-dynamic-colors",
+        "mobile-design-references"
+      ]
+    },
+    {
+      "department": "design",
+      "id": "journeys-conversion",
+      "title": "Journeys & conversion",
+      "skills": [
+        "design-onboarding-quiz",
+        "design-onboarding-funnel",
+        "design-paywall",
+        "design-paywall-android",
+        "design-shareable-result-card",
+        "design-splash-screen"
+      ]
+    },
+    {
+      "department": "design",
+      "id": "design-handoff",
+      "title": "Design-to-code handoff",
+      "skills": [
+        "figma-to-rn",
+        "figma-to-rn-android",
+        "command-build-onboarding",
+        "command-build-paywall",
+        "command-build-paywall-android"
+      ]
+    },
+    {
+      "department": "engineering",
+      "id": "architecture-tooling",
+      "title": "Architecture & environment",
+      "skills": [
+        "command-scaffold-app",
+        "choose-backend",
+        "choose-storage",
+        "install-node-stack",
+        "install-cli-tools",
+        "install-android-cli-tools",
+        "install-android-studio",
+        "install-jdk-gradle",
+        "install-cursor-vscode"
+      ]
+    },
+    {
+      "department": "engineering",
+      "id": "state-storage",
+      "title": "State, queries & storage",
+      "skills": [
+        "add-zustand",
+        "add-tanstack-query",
+        "add-drizzle-sqlite",
+        "add-expo-secure-store",
+        "add-expo-secure-store-keystore"
+      ]
+    },
+    {
+      "department": "engineering",
+      "id": "auth-backend",
+      "title": "Authentication & backend",
+      "skills": [
+        "add-supabase-auth",
+        "add-supabase-auth-android",
+        "add-firebase-android",
+        "add-google-signin-credential-manager",
+        "add-app-attestation"
+      ]
+    },
+    {
+      "department": "engineering",
+      "id": "interface-media",
+      "title": "UI, media & navigation",
+      "skills": [
+        "add-image",
+        "add-image-android",
+        "add-flashlist",
+        "add-reanimated",
+        "add-haptics",
+        "add-haptics-android",
+        "add-expo-camera",
+        "add-expo-camera-android",
+        "add-nativewind-android",
+        "add-deep-links",
+        "add-edge-to-edge-android",
+        "add-predictive-back",
+        "add-android-foldable-tablet",
+        "add-app-icon-launch-screen",
+        "design-app-icon-adaptive"
+      ]
+    },
+    {
+      "department": "engineering",
+      "id": "native-extensions",
+      "title": "Native platform extensions",
+      "skills": [
+        "add-expo-apple-targets",
+        "add-widgets",
+        "add-live-activity",
+        "add-watch-app",
+        "add-app-clips",
+        "add-android-widget-glance",
+        "add-android-quick-actions",
+        "add-app-actions-slices",
+        "add-android-foreground-service",
+        "add-android-pip",
+        "add-wear-os-app"
+      ]
+    },
+    {
+      "department": "engineering",
+      "id": "ai-capabilities",
+      "title": "AI integrations",
+      "skills": [
+        "add-foundation-models",
+        "add-gemini-nano",
+        "add-openai-streaming-rn"
+      ]
+    },
+    {
+      "department": "engineering",
+      "id": "notifications-billing",
+      "title": "Notifications & subscriptions",
+      "skills": [
+        "add-expo-notifications",
+        "add-expo-notifications-fcm",
+        "add-onesignal-push",
+        "integrate-revenuecat-rn",
+        "integrate-revenuecat-rn-android",
+        "app-store-server-notifications",
+        "app-store-server-notifications-android"
+      ]
+    },
+    {
+      "department": "quality",
+      "id": "behavior-device",
+      "title": "Behavior & device QA",
+      "skills": [
+        "command-audit-rn",
+        "command-audit-android",
+        "e2e-checklist",
+        "e2e-checklist-android",
+        "pair-physical-device",
+        "pair-android-device"
+      ]
+    },
+    {
+      "department": "quality",
+      "id": "accessibility",
+      "title": "Accessibility verification",
+      "skills": [
+        "accessibility-audit",
+        "accessibility-audit-android"
+      ]
+    },
+    {
+      "department": "quality",
+      "id": "privacy-compliance",
+      "title": "Privacy & compliance",
+      "skills": [
+        "account-deletion-flow",
+        "account-deletion-flow-android",
+        "generate-privacy-policy",
+        "generate-privacy-policy-android",
+        "generate-terms-of-service",
+        "paywall-compliance",
+        "paywall-compliance-play",
+        "data-safety-form",
+        "5-1-2-i-ai-disclosure",
+        "play-ai-disclosure"
+      ]
+    },
+    {
+      "department": "quality",
+      "id": "performance",
+      "title": "Performance & reliability",
+      "skills": [
+        "optimize-bundle-size",
+        "optimize-aab-size",
+        "enable-r8-proguard",
+        "handle-anr-android"
+      ]
+    },
+    {
+      "department": "launch",
+      "id": "metadata-assets",
+      "title": "Metadata, screenshots & localization",
+      "skills": [
+        "aso-keywords",
+        "aso-keywords-play",
+        "command-aso-pass",
+        "command-aso-pass-play",
+        "design-screenshots",
+        "design-screenshots-play",
+        "mobile-store-asset-production",
+        "localize-figs-j",
+        "localize-figs-j-android",
+        "custom-product-pages",
+        "custom-store-listings",
+        "play-listing-experiments"
+      ]
+    },
+    {
+      "department": "launch",
+      "id": "build-signing",
+      "title": "Builds & signing",
+      "skills": [
+        "eas-build-profiles",
+        "eas-build-profiles-android",
+        "code-signing",
+        "code-signing-android",
+        "configure-aab-build",
+        "enroll-apple-developer",
+        "enroll-google-play-developer"
+      ]
+    },
+    {
+      "department": "launch",
+      "id": "submission-rollout",
+      "title": "Submission & rollout",
+      "skills": [
+        "eas-submit-testflight",
+        "eas-submit-play",
+        "command-eas-deploy",
+        "command-eas-deploy-android",
+        "command-ship-it",
+        "pre-submission-audit",
+        "pre-submission-audit-play",
+        "phased-release",
+        "phased-release-play",
+        "internal-testing-track",
+        "eas-update-rollout",
+        "eas-update-rollout-android",
+        "prepare-chatgpt-app-submission",
+        "prepare-anthropic-plugin"
+      ]
+    },
+    {
+      "department": "launch",
+      "id": "launch-planning",
+      "title": "Launch planning",
+      "skills": [
+        "plan-launch",
+        "plan-launch-android",
+        "pre-registration-campaign"
+      ]
+    },
+    {
+      "department": "growth",
+      "id": "paid-acquisition",
+      "title": "Advertising & acquisition",
+      "skills": [
+        "run-paid-acquisition",
+        "asa-to-aso",
+        "asa-to-aso-android"
+      ]
+    },
+    {
+      "department": "growth",
+      "id": "organic-creators",
+      "title": "Organic, creators & referrals",
+      "skills": [
+        "build-creator-program",
+        "build-affiliate-program",
+        "design-viral-loop",
+        "build-in-public-x",
+        "launch-on-hacker-news"
+      ]
+    },
+    {
+      "department": "growth",
+      "id": "retention-lifecycle",
+      "title": "Retention & lifecycle",
+      "skills": [
+        "design-retention-loop",
+        "design-lifecycle-messaging",
+        "design-push-strategy",
+        "build-cancellation-flow",
+        "build-win-back-flow",
+        "build-review-routing",
+        "command-build-review-prompt"
+      ]
+    },
+    {
+      "department": "growth",
+      "id": "analytics-experiments",
+      "title": "Analytics & experiments",
+      "skills": [
+        "instrument-growth-funnel",
+        "set-up-ab-testing",
+        "add-posthog-rn",
+        "add-posthog-rn-android"
+      ]
+    },
+    {
+      "department": "operations",
+      "id": "agency-coordination",
+      "title": "Coordination & workflow",
+      "skills": [
+        "mobile-app-agency",
+        "mobile-app-builder-ios-android",
+        "engineering-workflow-guard",
+        "set-up-project-guidance"
+      ]
+    },
+    {
+      "department": "operations",
+      "id": "reference-library",
+      "title": "Technical reference library",
+      "skills": [
+        "ios-research-library",
+        "android-research-library"
+      ]
+    },
+    {
+      "department": "operations",
+      "id": "observability",
+      "title": "Monitoring & feedback",
+      "skills": [
+        "add-sentry-rn",
+        "add-sentry-rn-android"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "store-intelligence",
+      "title": "Store Intelligence",
+      "skills": [
+        "mobile-store-intelligence"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "influencer-intelligence",
+      "title": "Influencer Intelligence",
+      "skills": [
+        "mobile-influencer-intelligence"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "ad-intelligence",
+      "title": "Ad Intelligence",
+      "skills": [
+        "mobile-ad-intelligence"
+      ]
+    },
+    {
+      "department": "growth",
+      "id": "seo-intelligence",
+      "title": "SEO Intelligence",
+      "skills": [
+        "mobile-seo-intelligence"
+      ]
+    }
+  ],
+  "platforms": {
+    "5-1-2-i-ai-disclosure": "ios",
+    "accessibility-audit": "ios",
+    "accessibility-audit-android": "android",
+    "account-deletion-flow": "ios",
+    "account-deletion-flow-android": "android",
+    "add-android-foldable-tablet": "android",
+    "add-android-foreground-service": "android",
+    "add-android-pip": "android",
+    "add-android-quick-actions": "android",
+    "add-android-widget-glance": "android",
+    "add-app-actions-slices": "android",
+    "add-app-attestation": "ios",
+    "add-app-clips": "ios",
+    "add-app-icon-launch-screen": "ios",
+    "add-deep-links": "shared",
+    "add-drizzle-sqlite": "android",
+    "add-edge-to-edge-android": "android",
+    "add-expo-apple-targets": "ios",
+    "add-expo-camera": "shared",
+    "add-expo-camera-android": "android",
+    "add-expo-notifications": "shared",
+    "add-expo-notifications-fcm": "android",
+    "add-expo-secure-store": "ios",
+    "add-expo-secure-store-keystore": "android",
+    "add-firebase-android": "android",
+    "add-flashlist": "shared",
+    "add-foundation-models": "ios",
+    "add-gemini-nano": "android",
+    "add-google-signin-credential-manager": "android",
+    "add-haptics": "shared",
+    "add-haptics-android": "android",
+    "add-image": "shared",
+    "add-image-android": "android",
+    "add-live-activity": "ios",
+    "add-nativewind-android": "android",
+    "add-onesignal-push": "shared",
+    "add-openai-streaming-rn": "shared",
+    "add-posthog-rn": "shared",
+    "add-posthog-rn-android": "android",
+    "add-predictive-back": "android",
+    "add-reanimated": "shared",
+    "add-sentry-rn": "shared",
+    "add-sentry-rn-android": "android",
+    "add-supabase-auth": "shared",
+    "add-supabase-auth-android": "android",
+    "add-tanstack-query": "shared",
+    "add-watch-app": "ios",
+    "add-wear-os-app": "android",
+    "add-widgets": "ios",
+    "add-zustand": "shared",
+    "android-research-library": "android",
+    "apify-mobile-research": "shared",
+    "app-naming": "ios",
+    "app-naming-android": "android",
+    "app-store-server-notifications": "ios",
+    "app-store-server-notifications-android": "android",
+    "apply-hig": "ios",
+    "apply-liquid-glass": "ios",
+    "apply-material-you-dynamic-colors": "android",
+    "apply-material3": "android",
+    "asa-to-aso": "ios",
+    "asa-to-aso-android": "android",
+    "aso-keywords": "ios",
+    "aso-keywords-play": "android",
+    "build-affiliate-program": "shared",
+    "build-cancellation-flow": "shared",
+    "build-creator-program": "shared",
+    "build-in-public-x": "shared",
+    "build-review-routing": "shared",
+    "build-win-back-flow": "shared",
+    "choose-backend": "shared",
+    "choose-storage": "shared",
+    "code-signing": "ios",
+    "code-signing-android": "android",
+    "command-aso-pass": "ios",
+    "command-aso-pass-play": "android",
+    "command-audit-android": "android",
+    "command-audit-rn": "shared",
+    "command-build-onboarding": "shared",
+    "command-build-paywall": "ios",
+    "command-build-paywall-android": "android",
+    "command-build-review-prompt": "shared",
+    "command-eas-deploy": "shared",
+    "command-eas-deploy-android": "android",
+    "command-research": "shared",
+    "command-research-android": "android",
+    "command-scaffold-app": "shared",
+    "command-ship-it": "shared",
+    "competitor-aso-teardown": "ios",
+    "competitor-feature-matrix": "shared",
+    "competitor-onboarding-teardown": "shared",
+    "competitor-paywall-analysis": "shared",
+    "competitor-paywall-analysis-android": "android",
+    "configure-aab-build": "android",
+    "custom-product-pages": "ios",
+    "custom-store-listings": "android",
+    "data-safety-form": "android",
+    "design-app-icon-adaptive": "android",
+    "design-lifecycle-messaging": "shared",
+    "design-onboarding-funnel": "shared",
+    "design-onboarding-quiz": "shared",
+    "design-paywall": "ios",
+    "design-paywall-android": "android",
+    "design-push-strategy": "shared",
+    "design-retention-loop": "shared",
+    "design-screenshots": "ios",
+    "design-screenshots-play": "android",
+    "design-shareable-result-card": "shared",
+    "design-splash-screen": "android",
+    "design-viral-loop": "shared",
+    "dissect-competitor-android-app": "android",
+    "dissect-competitor-app": "ios",
+    "e2e-checklist": "ios",
+    "e2e-checklist-android": "android",
+    "eas-build-profiles": "shared",
+    "eas-build-profiles-android": "android",
+    "eas-submit-play": "android",
+    "eas-submit-testflight": "ios",
+    "eas-update-rollout": "ios",
+    "eas-update-rollout-android": "android",
+    "enable-r8-proguard": "android",
+    "engineering-workflow-guard": "shared",
+    "enroll-apple-developer": "ios",
+    "enroll-google-play-developer": "android",
+    "figma-to-rn": "shared",
+    "figma-to-rn-android": "android",
+    "find-niche": "ios",
+    "find-niche-android": "android",
+    "generate-privacy-policy": "ios",
+    "generate-privacy-policy-android": "android",
+    "generate-terms-of-service": "ios",
+    "google-play-15-percent-tier": "android",
+    "handle-anr-android": "android",
+    "install-android-cli-tools": "android",
+    "install-android-studio": "android",
+    "install-cli-tools": "ios",
+    "install-cursor-vscode": "shared",
+    "install-jdk-gradle": "android",
+    "install-node-stack": "shared",
+    "instrument-growth-funnel": "shared",
+    "integrate-revenuecat-rn": "shared",
+    "integrate-revenuecat-rn-android": "android",
+    "internal-testing-track": "android",
+    "interview-users": "shared",
+    "ios-research-library": "ios",
+    "jtbd-interview": "shared",
+    "launch-on-hacker-news": "shared",
+    "localize-figs-j": "ios",
+    "localize-figs-j-android": "android",
+    "market-validation": "shared",
+    "market-validation-android": "android",
+    "mine-competitor-reviews": "ios",
+    "mine-play-reviews": "android",
+    "mine-reddit-android-pain-points": "android",
+    "mine-reddit-pain-points": "shared",
+    "mobile-app-agency": "shared",
+    "mobile-app-builder-ios-android": "android",
+    "mobile-design-references": "shared",
+    "mobile-store-asset-production": "shared",
+    "mom-test": "shared",
+    "optimize-aab-size": "android",
+    "optimize-bundle-size": "ios",
+    "pair-android-device": "android",
+    "pair-physical-device": "ios",
+    "paywall-compliance": "ios",
+    "paywall-compliance-play": "android",
+    "phased-release": "ios",
+    "phased-release-play": "android",
+    "plan-launch": "shared",
+    "plan-launch-android": "android",
+    "play-ai-disclosure": "android",
+    "play-listing-experiments": "android",
+    "play-pass-application": "android",
+    "position-pitch": "ios",
+    "position-pitch-android": "android",
+    "pre-registration-campaign": "android",
+    "pre-submission-audit": "ios",
+    "pre-submission-audit-play": "android",
+    "prepare-chatgpt-app-submission": "shared",
+    "pricing-strategy": "shared",
+    "pricing-strategy-android": "android",
+    "run-paid-acquisition": "shared",
+    "set-up-ab-testing": "shared",
+    "set-up-project-guidance": "shared",
+    "prepare-anthropic-plugin": "shared",
+    "mobile-store-intelligence": "shared",
+    "mobile-influencer-intelligence": "shared",
+    "mobile-ad-intelligence": "shared",
+    "mobile-seo-intelligence": "shared"
+  }
+}

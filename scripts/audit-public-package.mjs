@@ -8,8 +8,8 @@ import { fileURLToPath } from "node:url";
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
 const packageRoot = path.resolve(process.argv[2] ?? path.join(scriptDirectory, ".."));
 const ignoredDirectories = new Set([".git", "node_modules", ".expo", "dist", "coverage"]);
-const credentialFilePattern = /(^|\/)(?:\.env(?:\..+)?|GoogleService-Info\.plist|google-services\.json|credentials\.json|service-account[^/]*\.json|[^/]+\.(?:p8|p12|pem|key|jks|keystore))$/i;
-const textExtensions = new Set([".md", ".mjs", ".js", ".cjs", ".json", ".yaml", ".yml", ".txt", ".svg", ".toml", ".sh"]);
+const credentialFilePattern = /(^|\/)(?:\.env(?:\..+)?|\.dev\.vars(?:\..+)?|GoogleService-Info\.plist|google-services\.json|credentials\.json|service-account[^/]*\.json|[^/]+\.(?:p8|p12|pem|key|jks|keystore))$/i;
+const textExtensions = new Set([".md", ".mjs", ".js", ".cjs", ".py", ".html", ".json", ".yaml", ".yml", ".txt", ".svg", ".toml", ".sh"]);
 const contentRules = [
   ["private-key-block", /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/],
   ["openai-key", /\bsk-[A-Za-z0-9_-]{16,}\b/],
@@ -59,7 +59,9 @@ function auditFile(filePath, findings) {
     if (!safeValuePattern.test(value)) findings.push({ path: relativePath, rule: `credential-assignment:${key}` });
   }
 
-  for (const link of content.matchAll(/\]\((?!https?:|mailto:|#)([^)\s]+)\)/g)) {
+  // Markdown link syntax applies to documents, not JavaScript regex literals.
+  const documentContent = path.extname(filePath).toLowerCase() === '.md' ? content : '';
+  for (const link of documentContent.matchAll(/\]\((?!https?:|mailto:|#)([^)\s]+)\)/g)) {
     const reference = link[1].replace(/^<|>$/g, "");
     const target = path.resolve(path.dirname(filePath), reference.split("#", 1)[0]);
     if (!target.startsWith(packageRoot + path.sep) || !fs.existsSync(target)) {

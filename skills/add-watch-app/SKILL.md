@@ -16,7 +16,7 @@ Apple Watch companion. **Watch UI is SwiftUI only — cannot be written in JS.**
 ## Install
 ```bash
 npm install @bacons/apple-targets react-native-watch-connectivity
-npx expo prebuild --clean
+npm exec --no -- expo prebuild --clean
 ```
 
 ## app.json

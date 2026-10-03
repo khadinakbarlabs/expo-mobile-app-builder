@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "state": "not-run",
+  "question": null,
+  "cliVersion": null,
+  "actorId": null,
+  "schemaReviewedAt": null,
+  "inputFileHash": null,
+  "requestedBuild": null,
+  "runId": null,
+  "buildId": null,
+  "buildVersion": null,
+  "datasetId": null,
+  "startedAt": null,
+  "finishedAt": null,
+  "status": null,
+  "approvedBudgetUsd": null,
+  "authorizationReference": null,
+  "chargeReadback": {
+    "checkedAt": null,
+    "settlementStatus": "unknown",
+    "fields": {},
+    "source": null
+  },
+  "coverage": {
+    "market": null,
+    "locale": null,
+    "from": null,
+    "to": null,
+    "requestedLimit": null,
+    "exportedCount": null,
+    "datasetTotal": null,
+    "pagination": []
+  },
+  "quality": {
+    "uniqueCount": null,
+    "duplicateCount": null,
+    "deduplicationRule": null,
+    "missingFields": [],
+    "limitations": []
+  },
+  "provenanceRecords": [],
+  "retentionExpiry": null
+}

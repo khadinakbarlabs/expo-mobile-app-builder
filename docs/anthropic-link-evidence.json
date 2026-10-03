@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-03",
+  "anonymousAccess": true,
+  "contentInspected": true,
+  "checks": [
+    {
+      "field": "documentationUrl",
+      "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder#readme",
+      "finalUrl": "https://github.com/khadinakbarlabs/expo-mobile-app-builder#readme",
+      "status": 200,
+      "repositoryIdentityPresent": true
+    },
+    {
+      "field": "supportUrl",
+      "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/issues",
+      "finalUrl": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/issues",
+      "status": 200,
+      "repositoryIdentityPresent": true
+    },
+    {
+      "field": "privacyPolicyUrl",
+      "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md",
+      "finalUrl": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md",
+      "status": 200,
+      "repositoryIdentityPresent": true,
+      "publicContentMatchesCandidate": false
+    },
+    {
+      "field": "termsOfServiceUrl",
+      "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md",
+      "finalUrl": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md",
+      "status": 200,
+      "repositoryIdentityPresent": true,
+      "publicContentMatchesCandidate": true
+    }
+  ],
+  "publicationGate": "README and privacy text require approved source publication and fresh readback; URL access is not content freshness proof."
+}

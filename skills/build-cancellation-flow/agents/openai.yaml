@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Cancellation Flow"
+  short_description: "Help with Build Cancellation Flow tasks"
+  default_prompt: "Use $build-cancellation-flow to help with this mobile app task."

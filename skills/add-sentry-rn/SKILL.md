@@ -21,8 +21,8 @@ Creating a Sentry project, running its wizard, uploading source maps, or storing
 ## Install (Expo)
 
 ```bash
-npx expo install @sentry/react-native
-npx @sentry/wizard@latest -i reactNative
+npm exec --no -- expo install @sentry/react-native
+npx @sentry/wizard@8.0.0 -i reactNative
 # Wizard prompts for Sentry org + project, configures everything
 ```
 

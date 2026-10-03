@@ -29,10 +29,10 @@ Same panel: check "Connect via network". After this, you can debug over WiFi whe
 ### 5. Run RN/Expo app on device
 ```bash
 # Expo
-npx expo run:ios --device
+npm exec --no -- expo run:ios --device
 
 # Bare RN
-npx react-native run-ios --device "the user's iPhone"
+npm exec --no -- react-native run-ios --device "the user's iPhone"
 ```
 
 ## Common gotchas

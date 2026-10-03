@@ -9,7 +9,7 @@ CameraX-backed camera with permission handling.
 
 ## Install
 ```bash
-npx expo install expo-camera
+npm exec --no -- expo install expo-camera
 ```
 
 ## Permissions in app.json

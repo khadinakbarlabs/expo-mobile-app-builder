@@ -23,6 +23,6 @@ Expo SDK 54 apps can use native iOS targets when the product genuinely benefits 
 
 ## Guardrails
 
-- Do not run `npx expo prebuild --clean` or remove native directories without explaining the overwrite risk and getting confirmation.
+- Do not run `npm exec --no -- expo prebuild --clean` or remove native directories without explaining the overwrite risk and getting confirmation.
 - Do not generate or request Apple certificates, App Group identifiers, provisioning profiles, or private signing keys.
 - Treat lock-screen visibility as a privacy boundary, not merely a design choice.

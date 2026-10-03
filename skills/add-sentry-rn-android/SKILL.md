@@ -9,8 +9,8 @@ Same as iOS plugin. Android-specific notes.
 
 ## Install
 ```bash
-npx expo install @sentry/react-native
-npx @sentry/wizard@latest -i reactNative
+npm exec --no -- expo install @sentry/react-native
+npx @sentry/wizard@8.0.0 -i reactNative
 ```
 
 ## Source maps in EAS

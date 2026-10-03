@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Workflow Guard"
+  short_description: "Keep mobile work clean and traceable"
+  default_prompt: "Use $engineering-workflow-guard to inspect this app's Git, session, build, and QA state before making changes."

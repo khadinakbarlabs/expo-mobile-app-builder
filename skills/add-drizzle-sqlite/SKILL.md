@@ -11,7 +11,7 @@ Type-safe ORM over SQLite. Perfect for offline-first apps.
 ```bash
 pnpm add drizzle-orm
 pnpm add -D drizzle-kit
-npx expo install expo-sqlite
+npm exec --no -- expo install expo-sqlite
 ```
 
 ## Schema
@@ -53,7 +53,7 @@ export default {
 
 Generate:
 ```bash
-npx drizzle-kit generate
+npm exec --no -- drizzle-kit generate
 ```
 
 Apply on app start:

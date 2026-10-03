@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up Ab Testing"
+  short_description: "Help with Set Up Ab Testing tasks"
+  default_prompt: "Use $set-up-ab-testing to help with this mobile app task."

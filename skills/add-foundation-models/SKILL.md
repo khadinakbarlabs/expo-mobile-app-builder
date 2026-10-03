@@ -9,8 +9,8 @@ On-device LLM via Apple Foundation Models. **Free, private, offline, zero MB to 
 
 ## Install
 ```bash
-npx expo install expo-apple-intelligence
-npx expo prebuild --clean
+npm exec --no -- expo install expo-apple-intelligence
+npm exec --no -- expo prebuild --clean
 ```
 
 ## Availability gate (do this first)

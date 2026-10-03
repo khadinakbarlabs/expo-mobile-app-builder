@@ -1,0 +1,1804 @@
+{
+  "schemaVersion": 1,
+  "departments": [
+    {
+      "id": "research",
+      "title": "Research & intelligence",
+      "agents": [
+        "market-researcher",
+        "store-intelligence-analyst",
+        "creator-researcher",
+        "ads-intelligence-analyst"
+      ],
+      "outcome": "Evidence for demand, competitors, user pain, ads and inspiration."
+    },
+    {
+      "id": "strategy",
+      "title": "Product & business strategy",
+      "agents": [
+        "product-strategist"
+      ],
+      "outcome": "A focused brief, MVP, positioning and monetization contract."
+    },
+    {
+      "id": "design",
+      "title": "UX, visual design & inspiration",
+      "agents": [
+        "ux-designer",
+        "visual-designer"
+      ],
+      "outcome": "Accessible journeys, coherent visuals and an implementation-ready design handoff."
+    },
+    {
+      "id": "engineering",
+      "title": "Architecture & development",
+      "agents": [
+        "mobile-architect",
+        "expo-engineer"
+      ],
+      "outcome": "A complete tested vertical slice with clear data, native and platform boundaries."
+    },
+    {
+      "id": "quality",
+      "title": "QA, security & performance",
+      "agents": [
+        "qa-engineer",
+        "security-reviewer"
+      ],
+      "outcome": "Reproducible behavioral evidence and reviewed security/privacy boundaries."
+    },
+    {
+      "id": "launch",
+      "title": "Store production & release",
+      "agents": [
+        "store-producer",
+        "release-manager"
+      ],
+      "outcome": "Verified metadata, screenshots, localization and owner-authorized release preparation."
+    },
+    {
+      "id": "growth",
+      "title": "Marketing, ads & experimentation",
+      "agents": [
+        "growth-strategist",
+        "seo-strategist"
+      ],
+      "outcome": "Measurable activation, retention, acquisition and revenue experiments."
+    },
+    {
+      "id": "operations",
+      "title": "Agency direction & operations",
+      "agents": [
+        "agency-director",
+        "release-manager"
+      ],
+      "outcome": "Clear ownership, coordination, continuity and release evidence."
+    }
+  ],
+  "categories": [
+    {
+      "department": "research",
+      "id": "market-discovery",
+      "title": "Markets & demand",
+      "count": 6
+    },
+    {
+      "department": "research",
+      "id": "competitor-intelligence",
+      "title": "Competitors & reviews",
+      "count": 9
+    },
+    {
+      "department": "research",
+      "id": "user-research",
+      "title": "User research",
+      "count": 3
+    },
+    {
+      "department": "research",
+      "id": "actor-research",
+      "title": "Apify & evidence",
+      "count": 3
+    },
+    {
+      "department": "strategy",
+      "id": "positioning",
+      "title": "Naming & positioning",
+      "count": 4
+    },
+    {
+      "department": "strategy",
+      "id": "monetization",
+      "title": "Pricing & monetization",
+      "count": 4
+    },
+    {
+      "department": "design",
+      "id": "platform-design",
+      "title": "Platform design & principles",
+      "count": 5
+    },
+    {
+      "department": "design",
+      "id": "journeys-conversion",
+      "title": "Journeys & conversion",
+      "count": 6
+    },
+    {
+      "department": "design",
+      "id": "design-handoff",
+      "title": "Design-to-code handoff",
+      "count": 5
+    },
+    {
+      "department": "engineering",
+      "id": "architecture-tooling",
+      "title": "Architecture & environment",
+      "count": 9
+    },
+    {
+      "department": "engineering",
+      "id": "state-storage",
+      "title": "State, queries & storage",
+      "count": 5
+    },
+    {
+      "department": "engineering",
+      "id": "auth-backend",
+      "title": "Authentication & backend",
+      "count": 5
+    },
+    {
+      "department": "engineering",
+      "id": "interface-media",
+      "title": "UI, media & navigation",
+      "count": 15
+    },
+    {
+      "department": "engineering",
+      "id": "native-extensions",
+      "title": "Native platform extensions",
+      "count": 11
+    },
+    {
+      "department": "engineering",
+      "id": "ai-capabilities",
+      "title": "AI integrations",
+      "count": 3
+    },
+    {
+      "department": "engineering",
+      "id": "notifications-billing",
+      "title": "Notifications & subscriptions",
+      "count": 7
+    },
+    {
+      "department": "quality",
+      "id": "behavior-device",
+      "title": "Behavior & device QA",
+      "count": 6
+    },
+    {
+      "department": "quality",
+      "id": "accessibility",
+      "title": "Accessibility verification",
+      "count": 2
+    },
+    {
+      "department": "quality",
+      "id": "privacy-compliance",
+      "title": "Privacy & compliance",
+      "count": 10
+    },
+    {
+      "department": "quality",
+      "id": "performance",
+      "title": "Performance & reliability",
+      "count": 4
+    },
+    {
+      "department": "launch",
+      "id": "metadata-assets",
+      "title": "Metadata, screenshots & localization",
+      "count": 12
+    },
+    {
+      "department": "launch",
+      "id": "build-signing",
+      "title": "Builds & signing",
+      "count": 7
+    },
+    {
+      "department": "launch",
+      "id": "submission-rollout",
+      "title": "Submission & rollout",
+      "count": 14
+    },
+    {
+      "department": "launch",
+      "id": "launch-planning",
+      "title": "Launch planning",
+      "count": 3
+    },
+    {
+      "department": "growth",
+      "id": "paid-acquisition",
+      "title": "Advertising & acquisition",
+      "count": 3
+    },
+    {
+      "department": "growth",
+      "id": "organic-creators",
+      "title": "Organic, creators & referrals",
+      "count": 5
+    },
+    {
+      "department": "growth",
+      "id": "retention-lifecycle",
+      "title": "Retention & lifecycle",
+      "count": 7
+    },
+    {
+      "department": "growth",
+      "id": "analytics-experiments",
+      "title": "Analytics & experiments",
+      "count": 4
+    },
+    {
+      "department": "operations",
+      "id": "agency-coordination",
+      "title": "Coordination & workflow",
+      "count": 4
+    },
+    {
+      "department": "operations",
+      "id": "reference-library",
+      "title": "Technical reference library",
+      "count": 2
+    },
+    {
+      "department": "operations",
+      "id": "observability",
+      "title": "Monitoring & feedback",
+      "count": 2
+    },
+    {
+      "department": "research",
+      "id": "store-intelligence",
+      "title": "Store Intelligence",
+      "count": 1
+    },
+    {
+      "department": "research",
+      "id": "influencer-intelligence",
+      "title": "Influencer Intelligence",
+      "count": 1
+    },
+    {
+      "department": "research",
+      "id": "ad-intelligence",
+      "title": "Ad Intelligence",
+      "count": 1
+    },
+    {
+      "department": "growth",
+      "id": "seo-intelligence",
+      "title": "SEO Intelligence",
+      "count": 1
+    }
+  ],
+  "skills": [
+    {
+      "id": "5-1-2-i-ai-disclosure",
+      "description": "Implement 5.1.2(i) third-party AI disclosure: name provider explicitly + explicit consent modal before first call. Use when the user says '5.1.2(i)', 'AI disclosure', 'third-party AI consent', 'OpenAI consent', 'Anthropic disclosure'.",
+      "path": "skills/5-1-2-i-ai-disclosure/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "accessibility-audit",
+      "description": "Audit RN/Expo app for VoiceOver, Dynamic Type, 44pt taps, color contrast, Reduce Motion. Use when the user says 'accessibility', 'VoiceOver', 'WCAG', 'a11y audit'.",
+      "path": "skills/accessibility-audit/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "accessibility"
+    },
+    {
+      "id": "accessibility-audit-android",
+      "description": "Run Android accessibility audit: TalkBack, contrast, touch targets, content descriptions. Use when the user says 'a11y audit android', 'accessibility android', 'talkback', 'screen reader android'.",
+      "path": "skills/accessibility-audit-android/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "accessibility"
+    },
+    {
+      "id": "account-deletion-flow",
+      "description": "Implement in-app account deletion (5.1.1(v) requirement) with server-side hard delete + Sign in with Apple revocation. Use when the user says 'account deletion', '5.1.1(v)', 'delete account in-app', 'revoke Sign in with Apple'.",
+      "path": "skills/account-deletion-flow/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "account-deletion-flow-android",
+      "description": "Implement Google Play required account deletion: in-app AND on website. Use when the user says 'account deletion android', 'delete account play', 'play account deletion requirement'.",
+      "path": "skills/account-deletion-flow-android/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "add-android-foldable-tablet",
+      "description": "Optimize Android layout for foldables (Pixel Fold, Galaxy Fold) and tablets using window size classes. Use when the user says 'foldable android', 'tablet layout android', 'large screen android'.",
+      "path": "skills/add-android-foldable-tablet/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-android-foreground-service",
+      "description": "Add an Android foreground service (for music, fitness tracking, downloads). Requires FGSTYPE declaration in Android 14+. Use when the user says 'foreground service android', 'background tracking android', 'persistent notification android'.",
+      "path": "skills/add-android-foreground-service/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-android-pip",
+      "description": "Add Picture-in-Picture mode for Android (Android 8+). Use when the user says 'pip android', 'picture in picture android', 'floating window android'.",
+      "path": "skills/add-android-pip/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-android-quick-actions",
+      "description": "Add Android app shortcuts (long-press launcher icon menu) using expo-quick-actions. Use when the user says 'app shortcuts android', 'long press menu android', 'quick actions android'.",
+      "path": "skills/add-android-quick-actions/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-android-widget-glance",
+      "description": "Add an Android home screen widget using Glance (Compose for widgets). Native Kotlin module via expo-modules-core. Use when the user says 'add widget android', 'glance widget', 'home screen widget android'.",
+      "path": "skills/add-android-widget-glance/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-app-actions-slices",
+      "description": "Add Google Assistant App Actions and Slices for Android (equivalent of iOS Siri Shortcuts). Use when the user says 'app actions android', 'google assistant integration', 'slices android'.",
+      "path": "skills/add-app-actions-slices/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-app-attestation",
+      "description": "Plan Apple App Attest for a React Native backend without turning illustrative pseudocode into an insecure cryptographic implementation. Use when the user says 'app attestation', 'devicecheck api', or 'prevent api abuse'.",
+      "path": "skills/add-app-attestation/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "auth-backend"
+    },
+    {
+      "id": "add-app-clips",
+      "description": "Add an App Clip (instant launch via QR/NFC, 15MB max) via expo-apple-targets. Use when the user says 'App Clip', 'instant app', 'QR launch'.",
+      "path": "skills/add-app-clips/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-app-icon-launch-screen",
+      "description": "Generate iOS app icon (all sizes), launch screen, and SF Symbols configuration for an Expo app. Use when the user says 'app icon', 'launch screen', 'splash screen', 'icon generator', 'ios icon sizes', 'ios splash'.",
+      "path": "skills/add-app-icon-launch-screen/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-deep-links",
+      "description": "Set up Universal Links + custom URL schemes for deep linking into Expo Router screens. Use when the user says 'deep links', 'Universal Links', 'URL scheme', 'open from web'.",
+      "path": "skills/add-deep-links/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-drizzle-sqlite",
+      "description": "Add Drizzle ORM with expo-sqlite for offline-first Android storage. Use when the user says 'add drizzle', 'offline sqlite android', 'local database rn'.",
+      "path": "skills/add-drizzle-sqlite/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "state-storage"
+    },
+    {
+      "id": "add-edge-to-edge-android",
+      "description": "Add edge-to-edge layout support (Android 15+ default) using react-native-edge-to-edge with safe area handling. Use when the user says 'edge to edge android', 'full screen android', 'status bar android', 'system bars'.",
+      "path": "skills/add-edge-to-edge-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-expo-apple-targets",
+      "description": "Plan native Apple targets in an Expo SDK 54 app, including widgets, App Clips, watch apps, share extensions, and notification extensions. Use when the user needs an Apple-only extension and wants to preserve Expo compatibility.",
+      "path": "skills/add-expo-apple-targets/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-expo-camera",
+      "description": "Add expo-camera for in-app camera, video recording, barcode scanning. Use when the user says 'camera', 'expo-camera', 'take photo', 'barcode scan', 'QR scanner'.",
+      "path": "skills/add-expo-camera/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-expo-camera-android",
+      "description": "Add expo-camera with Android-specific permission handling and CameraX-backed performance. Use when the user says 'add camera android', 'expo camera', 'qr scanner android'.",
+      "path": "skills/add-expo-camera-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-expo-notifications",
+      "description": "Add push + local notifications via expo-notifications, register APNs token, handle taps. Use when the user says 'push notifications', 'expo-notifications', 'APNs', 'notification permission'.",
+      "path": "skills/add-expo-notifications/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "notifications-billing"
+    },
+    {
+      "id": "add-expo-notifications-fcm",
+      "description": "Set up Firebase Cloud Messaging (FCM) push notifications via expo-notifications for Android. Use when the user says 'add fcm', 'push notifications android', 'expo notifications android', 'firebase push'.",
+      "path": "skills/add-expo-notifications-fcm/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "notifications-billing"
+    },
+    {
+      "id": "add-expo-secure-store",
+      "description": "Use expo-secure-store for secrets (tokens, API keys) backed by iOS Keychain. Use when the user says 'secure storage', 'Keychain', 'store token', 'API key storage'.",
+      "path": "skills/add-expo-secure-store/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "state-storage"
+    },
+    {
+      "id": "add-expo-secure-store-keystore",
+      "description": "Add expo-secure-store backed by Android Keystore for storing auth tokens and secrets. Use when the user says 'secure store android', 'keystore android', 'store token secure'.",
+      "path": "skills/add-expo-secure-store-keystore/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "state-storage"
+    },
+    {
+      "id": "add-firebase-android",
+      "description": "Add Firebase Android SDK for Crashlytics, FCM, Test Lab. Use when the user says 'add firebase android'.",
+      "path": "skills/add-firebase-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "auth-backend"
+    },
+    {
+      "id": "add-flashlist",
+      "description": "Replace FlatList with FlashList v2 for high-performance lists. Use when the user says 'FlashList', 'FlatList performance', 'long list', 'scroll performance'.",
+      "path": "skills/add-flashlist/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-foundation-models",
+      "description": "Use Apple Foundation Models (on-device LLM, iOS 26+) via expo-apple-intelligence config plugin. Use when the user says 'Foundation Models', 'Apple Intelligence', 'on-device LLM', 'free AI'.",
+      "path": "skills/add-foundation-models/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "ai-capabilities"
+    },
+    {
+      "id": "add-gemini-nano",
+      "description": "Add on-device LLM via Gemini Nano (Pixel 8+, Galaxy S24+) using MediaPipe LLM Inference or ML Kit. Use when the user says 'gemini nano', 'on-device ai android', 'on-device llm android', 'no-cloud llm'.",
+      "path": "skills/add-gemini-nano/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "ai-capabilities"
+    },
+    {
+      "id": "add-google-signin-credential-manager",
+      "description": "Add Google Sign-In via Credential Manager API (modern Android auth, replaces deprecated Google Sign-In SDK). Use when the user says 'google sign in android', 'credential manager android', 'auth android'.",
+      "path": "skills/add-google-signin-credential-manager/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "auth-backend"
+    },
+    {
+      "id": "add-haptics",
+      "description": "Add haptic feedback (impact, notification, selection) via expo-haptics. Use when the user says 'haptics', 'haptic feedback', 'vibration', 'tap feedback'.",
+      "path": "skills/add-haptics/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-haptics-android",
+      "description": "Add expo-haptics for tactile feedback on Android (vibration motor). Use when the user says 'add haptics android', 'vibration android', 'tactile feedback android'.",
+      "path": "skills/add-haptics-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-image",
+      "description": "Use expo-image for performant image loading + caching, never react-native Image. Use when the user says 'images', 'expo-image', 'image caching', 'image loading'.",
+      "path": "skills/add-image/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-image-android",
+      "description": "Add expo-image for high-performance image loading on Android with caching, blurhash, and lazy loading. Use when the user says 'add expo-image', 'fast images rn android', 'image cache android'.",
+      "path": "skills/add-image-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-live-activity",
+      "description": "Add a Live Activity for Lock Screen + Dynamic Island via expo-live-activity. Use when the user says 'Live Activity', 'Dynamic Island', 'Lock Screen widget', 'live updates'.",
+      "path": "skills/add-live-activity/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-nativewind-android",
+      "description": "Add NativeWind v5 (Tailwind for RN) to an Expo Android app. Use when the user says 'add nativewind', 'tailwind rn', 'tailwind android'.",
+      "path": "skills/add-nativewind-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-onesignal-push",
+      "description": "Add advanced push notifications via OneSignal in RN + Expo with segmentation, A/B testing, and re-engagement campaigns. Use when the user says 'add onesignal', 'better push notifications', 'push segmentation', 'push a/b test', 'reengagement push'.",
+      "path": "skills/add-onesignal-push/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "notifications-billing"
+    },
+    {
+      "id": "add-openai-streaming-rn",
+      "description": "Add authenticated, rate-limited AI streaming to an Expo app without exposing a provider key. Use when the user says 'add openai', 'streaming chat rn', 'gpt in app', 'ai chat ios', or 'openai streaming'.",
+      "path": "skills/add-openai-streaming-rn/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "ai-capabilities"
+    },
+    {
+      "id": "add-posthog-rn",
+      "description": "Add PostHog analytics, feature flags, and session recordings to React Native + Expo. Use when the user says 'add analytics', 'add posthog', 'product analytics', 'feature flags rn', 'session replay rn'.",
+      "path": "skills/add-posthog-rn/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "analytics-experiments"
+    },
+    {
+      "id": "add-posthog-rn-android",
+      "description": "Add PostHog analytics + feature flags + session replay on Android. Use when the user says 'posthog android', 'analytics android', 'feature flags android'.",
+      "path": "skills/add-posthog-rn-android/SKILL.md",
+      "platform": "android",
+      "department": "growth",
+      "category": "analytics-experiments"
+    },
+    {
+      "id": "add-predictive-back",
+      "description": "Enable Android 14+ predictive back gesture support in Expo Router. Use when the user says 'predictive back android', 'back gesture android', 'android 14 back'.",
+      "path": "skills/add-predictive-back/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-reanimated",
+      "description": "Add Reanimated 4 for spring animations, gestures, shared element transitions. Use when the user says 'animations', 'Reanimated', 'spring animation', 'gesture handler', 'shared element'.",
+      "path": "skills/add-reanimated/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "add-sentry-rn",
+      "description": "Add Sentry crash reporting and error monitoring to a React Native + Expo app, including source map upload and release tracking. Use when the user says 'add sentry', 'crash reporting', 'error monitoring', 'sentry expo', 'rn crash tracking'.",
+      "path": "skills/add-sentry-rn/SKILL.md",
+      "platform": "shared",
+      "department": "operations",
+      "category": "observability"
+    },
+    {
+      "id": "add-sentry-rn-android",
+      "description": "Add Sentry for crash reporting + source map upload on Android. Use when the user says 'sentry android', 'crash reports android'.",
+      "path": "skills/add-sentry-rn-android/SKILL.md",
+      "platform": "android",
+      "department": "operations",
+      "category": "observability"
+    },
+    {
+      "id": "add-supabase-auth",
+      "description": "Add Supabase Auth to a React Native + Expo app with Apple Sign In, email magic link, and session management. Use when the user says 'add supabase auth', 'apple sign in supabase', 'magic link rn', 'auth setup', 'supabase login'.",
+      "path": "skills/add-supabase-auth/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "auth-backend"
+    },
+    {
+      "id": "add-supabase-auth-android",
+      "description": "Add Supabase Auth with Google Sign-In + email magic link on Android. Use when the user says 'supabase auth android', 'add auth android'.",
+      "path": "skills/add-supabase-auth-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "auth-backend"
+    },
+    {
+      "id": "add-tanstack-query",
+      "description": "Add TanStack Query (React Query) for server state in an Expo app. Use when the user says 'TanStack Query', 'React Query', 'server state', 'data fetching', 'API calls'.",
+      "path": "skills/add-tanstack-query/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "state-storage"
+    },
+    {
+      "id": "add-watch-app",
+      "description": "Add an Apple Watch app via expo-apple-targets + react-native-watch-connectivity. Use when the user says 'Apple Watch', 'watchOS', 'companion app', 'Watch Connectivity'.",
+      "path": "skills/add-watch-app/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-wear-os-app",
+      "description": "Add a Wear OS companion app (Compose for Wear). Always native Kotlin - RN doesn't run on Wear. Use when the user says 'wear os app', 'android watch app', 'wearable companion'.",
+      "path": "skills/add-wear-os-app/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-widgets",
+      "description": "Design and add iOS home-screen or lock-screen widgets to an Expo SDK 54 app. Use when the user asks for a WidgetKit, home-screen, lock-screen, or StandBy widget and needs a safe native-extension plan.",
+      "path": "skills/add-widgets/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "native-extensions"
+    },
+    {
+      "id": "add-zustand",
+      "description": "Add Zustand state management to an Expo app for UI state. Use when the user says 'add Zustand', 'state management', 'global state', 'app store'.",
+      "path": "skills/add-zustand/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "state-storage"
+    },
+    {
+      "id": "android-research-library",
+      "description": "Find the package's versioned Expo, EAS, monetization, product-design, listing, and Android release-readiness references. Use before giving high-stakes Android or Expo SDK 54 implementation and release guidance.",
+      "path": "skills/android-research-library/SKILL.md",
+      "platform": "android",
+      "department": "operations",
+      "category": "reference-library"
+    },
+    {
+      "id": "apify-mobile-research",
+      "description": "Collect mobile market, review, Reddit, ad, web, and design-inspiration evidence with configured Apify Actors through the CLI. Use for budgeted research with source provenance and reproducible run records.",
+      "path": "skills/apify-mobile-research/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "actor-research"
+    },
+    {
+      "id": "app-naming",
+      "description": "Pick an iOS app name that's brandable, memorable, trademark-clear, domain-available. Use when the user says 'app name', 'naming', 'pick a name', 'brand name'.",
+      "path": "skills/app-naming/SKILL.md",
+      "platform": "ios",
+      "department": "strategy",
+      "category": "positioning"
+    },
+    {
+      "id": "app-naming-android",
+      "description": "Pick an Android app name with trademark + package-name (irreversible!) strategy. Use when the user says 'name android app', 'package name android', 'irreversible android name'.",
+      "path": "skills/app-naming-android/SKILL.md",
+      "platform": "android",
+      "department": "strategy",
+      "category": "positioning"
+    },
+    {
+      "id": "app-store-server-notifications",
+      "description": "Set up a signature-verified Apple App Store Server Notifications V2 webhook for subscription events. Use when the user says 'app store server notifications', 'assn', 'subscription webhook', or 'iap webhook'.",
+      "path": "skills/app-store-server-notifications/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "notifications-billing"
+    },
+    {
+      "id": "app-store-server-notifications-android",
+      "description": "Set up Google Play Real-Time Developer Notifications (RTDN) - equivalent of Apple's ASSN - to receive subscription events. Use when the user says 'rtdn android', 'play subscription webhook', 'real time developer notifications'.",
+      "path": "skills/app-store-server-notifications-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "notifications-billing"
+    },
+    {
+      "id": "apply-hig",
+      "description": "Apply Apple Human Interface Guidelines to a React Native screen. Use when the user says 'HIG compliance', 'iOS native feel', 'Apple guidelines', '44pt taps', 'Dynamic Type'.",
+      "path": "skills/apply-hig/SKILL.md",
+      "platform": "ios",
+      "department": "design",
+      "category": "platform-design"
+    },
+    {
+      "id": "apply-liquid-glass",
+      "description": "Adopt iOS 26 Liquid Glass material in React Native via expo-glass-effect or @callstack/liquid-glass. Use when the user says 'Liquid Glass', 'iOS 26 design', 'glass effect', 'modern UI', 'translucent material'.",
+      "path": "skills/apply-liquid-glass/SKILL.md",
+      "platform": "ios",
+      "department": "design",
+      "category": "platform-design"
+    },
+    {
+      "id": "apply-material-you-dynamic-colors",
+      "description": "Wire up Material You dynamic colors (user's wallpaper drives app theme) in RN+Expo on Android 12+. Use when the user says 'material you', 'dynamic colors android', 'wallpaper theming', 'monet theming'.",
+      "path": "skills/apply-material-you-dynamic-colors/SKILL.md",
+      "platform": "android",
+      "department": "design",
+      "category": "platform-design"
+    },
+    {
+      "id": "apply-material3",
+      "description": "Apply Material Design 3 (Material You) components, type scale, color tokens, motion principles to your Android app. Use when the user says 'apply material 3', 'material design android', 'm3 components', 'follow material guidelines'.",
+      "path": "skills/apply-material3/SKILL.md",
+      "platform": "android",
+      "department": "design",
+      "category": "platform-design"
+    },
+    {
+      "id": "asa-to-aso",
+      "description": "Run the Apple Search Ads to ASO loop: paid Discovery campaign reveals converting queries, promote winners to organic Title/Subtitle/Keywords. Use when the user says 'ASA to ASO', 'Apple Search Ads strategy', 'paid to organic'.",
+      "path": "skills/asa-to-aso/SKILL.md",
+      "platform": "ios",
+      "department": "growth",
+      "category": "paid-acquisition"
+    },
+    {
+      "id": "asa-to-aso-android",
+      "description": "Use Google App Campaigns + Apple Search Ads attribution data to discover winning keywords for Play ASO. Use when the user says 'asa to aso android', 'google app campaigns', 'paid traffic to aso android'.",
+      "path": "skills/asa-to-aso-android/SKILL.md",
+      "platform": "android",
+      "department": "growth",
+      "category": "paid-acquisition"
+    },
+    {
+      "id": "aso-keywords",
+      "description": "Research and place keywords across App Store Name + Subtitle + Keywords field for max search ranking. Use when the user says 'ASO keywords', 'keyword research', 'App Store SEO', 'title and keywords'.",
+      "path": "skills/aso-keywords/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "aso-keywords-play",
+      "description": "Optimize Play Store ASO using title + short description (80 chars INDEXED) + long description (4000 chars NLP-indexed). Use when the user says 'play store aso', 'android aso keywords', 'play store seo'.",
+      "path": "skills/aso-keywords-play/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "build-affiliate-program",
+      "description": "Build a referral / affiliate program for an iOS app to drive viral growth. Use when the user says 'affiliate program', 'referral program', 'invite friends feature', 'viral growth', 'creator program app'.",
+      "path": "skills/build-affiliate-program/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "organic-creators"
+    },
+    {
+      "id": "build-cancellation-flow",
+      "description": "Build a cancellation / churn-interception flow with an exit survey, reason-matched save offers, and graceful exit — preserving rating and recovering 10–35% of cancellations. Use when the user says 'cancellation flow', 'cancel survey', 'save offer', 'prevent churn', 'subscription cancel', 'downgrade flow', or 'retention offer'.",
+      "path": "skills/build-cancellation-flow/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "retention-lifecycle"
+    },
+    {
+      "id": "build-creator-program",
+      "description": "Build a creator-led TikTok/Reels/Shorts marketing program — the Cal AI acquisition model (seed organic creators, repurpose top-performing organic content as paid Spark Ads). Use when the user says 'creator marketing', 'influencer program', 'TikTok growth', 'UGC program', 'Spark Ads', 'creator deals', or wants app growth via creators.",
+      "path": "skills/build-creator-program/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "organic-creators"
+    },
+    {
+      "id": "build-in-public-x",
+      "description": "Run an X (Twitter) build-in-public weekly cadence proven for indie iOS founders (Marc Lou, Pieter Levels). Use when the user says 'build in public', 'X strategy', 'Twitter for indie', 'tweet revenue'.",
+      "path": "skills/build-in-public-x/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "organic-creators"
+    },
+    {
+      "id": "build-review-routing",
+      "description": "Build neutral, milestone-based native App Store and Google Play review requests with optional feedback available to everyone. Use for review prompts, rating requests, review routing, or replacing satisfaction gates with a policy-aligned flow.",
+      "path": "skills/build-review-routing/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "retention-lifecycle"
+    },
+    {
+      "id": "build-win-back-flow",
+      "description": "Build a win-back flow for lapsed and churning subscribers using Apple StoreKit 2 win-back offers, RevenueCat campaigns, and segmented messaging. Use when the user says 'win-back', 'lapsed users', 'churn recovery', 'bring users back', 'expired trial', 'canceled subscription', 'reactivation', or 'promotional offer'.",
+      "path": "skills/build-win-back-flow/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "retention-lifecycle"
+    },
+    {
+      "id": "choose-backend",
+      "description": "Decision matrix for choosing an Expo app backend: Supabase vs Firebase vs Convex vs custom. Use when the user says 'which backend', 'choose backend', 'supabase or firebase', 'backend decision', or 'pick database'.",
+      "path": "skills/choose-backend/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "choose-storage",
+      "description": "Decide storage layer for an Expo app: expo-sqlite + drizzle vs MMKV vs SecureStore vs AsyncStorage vs Zustand persist. Use when the user says 'storage', 'database', 'where to save data', 'AsyncStorage vs MMKV', 'expo-sqlite'.",
+      "path": "skills/choose-storage/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "code-signing",
+      "description": "Manage iOS code signing: ASC API key, Distribution Certificate, Provisioning Profiles via EAS managed credentials. Use when the user says 'code signing', 'provisioning profile', 'distribution certificate', 'ASC API key'.",
+      "path": "skills/code-signing/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "build-signing"
+    },
+    {
+      "id": "code-signing-android",
+      "description": "Manage Android signing keys: upload key (you), signing key (Play), keystore generation, EAS credentials, SHA hash extraction. Use when the user says 'android signing', 'keystore', 'signing key android'.",
+      "path": "skills/code-signing-android/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "build-signing"
+    },
+    {
+      "id": "command-aso-pass",
+      "description": "Coordinate the cross-platform /aso-pass workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-aso-pass/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "command-aso-pass-play",
+      "description": "Coordinate the cross-platform /aso-pass-play workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-aso-pass-play/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "command-audit-android",
+      "description": "Coordinate the cross-platform /audit-android workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-audit-android/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "behavior-device"
+    },
+    {
+      "id": "command-audit-rn",
+      "description": "Coordinate the cross-platform /audit-rn workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-audit-rn/SKILL.md",
+      "platform": "shared",
+      "department": "quality",
+      "category": "behavior-device"
+    },
+    {
+      "id": "command-build-onboarding",
+      "description": "Plan, implement, and verify activation-first onboarding for an Expo iOS and Android app. Use when the user asks to build, redesign, fix, or instrument a first-run or personalized onboarding flow.",
+      "path": "skills/command-build-onboarding/SKILL.md",
+      "platform": "shared",
+      "department": "design",
+      "category": "design-handoff"
+    },
+    {
+      "id": "command-build-paywall",
+      "description": "Coordinate the cross-platform /build-paywall workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-build-paywall/SKILL.md",
+      "platform": "ios",
+      "department": "design",
+      "category": "design-handoff"
+    },
+    {
+      "id": "command-build-paywall-android",
+      "description": "Coordinate the cross-platform /build-paywall-android workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-build-paywall-android/SKILL.md",
+      "platform": "android",
+      "department": "design",
+      "category": "design-handoff"
+    },
+    {
+      "id": "command-build-review-prompt",
+      "description": "Coordinate the cross-platform /build-review-prompt workflow for Expo projects: neutral milestone-based native review requests, shared cooldowns, and optional feedback for everyone. Use when implementing or correcting review prompts.",
+      "path": "skills/command-build-review-prompt/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "retention-lifecycle"
+    },
+    {
+      "id": "command-eas-deploy",
+      "description": "Coordinate the cross-platform /eas-deploy workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-eas-deploy/SKILL.md",
+      "platform": "shared",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "command-eas-deploy-android",
+      "description": "Coordinate the cross-platform /eas-deploy-android workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-eas-deploy-android/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "command-research",
+      "description": "Coordinate the cross-platform /research workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-research/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "actor-research"
+    },
+    {
+      "id": "command-research-android",
+      "description": "Coordinate the cross-platform /research-android workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-research-android/SKILL.md",
+      "platform": "android",
+      "department": "research",
+      "category": "actor-research"
+    },
+    {
+      "id": "command-scaffold-app",
+      "description": "Plan and scaffold a new Expo SDK 54 mobile app for both iOS and Android. Use when the user asks to create, bootstrap, or start an Expo or React Native app with TypeScript, navigation, local state, testing, and a safe release foundation.",
+      "path": "skills/command-scaffold-app/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "command-ship-it",
+      "description": "Coordinate the cross-platform /ship-it workflow for Expo projects. Use when the user asks for this outcome.",
+      "path": "skills/command-ship-it/SKILL.md",
+      "platform": "shared",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "competitor-aso-teardown",
+      "description": "Reverse-engineer competitor App Store listings: keywords they target, screenshot order, CPP variants, ratings strategy. Use when the user says 'competitor aso', 'analyze their app store page', 'what keywords do they rank for', 'screenshot teardown', 'aso research'.",
+      "path": "skills/competitor-aso-teardown/SKILL.md",
+      "platform": "ios",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "competitor-feature-matrix",
+      "description": "Build a feature comparison matrix across multiple competitors to find your wedge and feature gaps. Use when the user says 'feature matrix', 'feature comparison', 'compare competitors', 'feature gap analysis', 'positioning grid'.",
+      "path": "skills/competitor-feature-matrix/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "competitor-onboarding-teardown",
+      "description": "Tear down a competitor's onboarding flow: questions asked, friction points, time-to-value, aha moment timing, permission asks. Use when the user says 'analyze onboarding', 'how do they onboard', 'first run experience', 'onboarding teardown', 'cal ai style quiz'.",
+      "path": "skills/competitor-onboarding-teardown/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "competitor-paywall-analysis",
+      "description": "Screenshot competitor paywalls, decode their offer, pricing, copy, urgency tactics, and trial structure. Use when the user says 'analyze paywall', 'how do competitors price', 'paywall research', 'screenshot paywalls', 'pricing intel'.",
+      "path": "skills/competitor-paywall-analysis/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "competitor-paywall-analysis-android",
+      "description": "Screenshot competitor Android paywalls, decode their offer, pricing structure, base plans + offers, urgency tactics, and trial structure. Use when the user says 'analyze android paywall', 'how do android competitors price', 'play billing paywall research'.",
+      "path": "skills/competitor-paywall-analysis-android/SKILL.md",
+      "platform": "android",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "configure-aab-build",
+      "description": "Configure Android App Bundle (AAB) build settings: ProGuard/R8 minification, resource shrinking, ABI filters. Use when the user says 'configure aab', 'shrink android app', 'proguard android', 'r8 minification'.",
+      "path": "skills/configure-aab-build/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "build-signing"
+    },
+    {
+      "id": "custom-product-pages",
+      "description": "Build Custom Product Pages (CPPs) for use cases, ad sources, and search-intent clusters. Use when the user says 'CPP', 'Custom Product Page', or 'ASC product page'.",
+      "path": "skills/custom-product-pages/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "custom-store-listings",
+      "description": "Use Play custom store listings (per-country variants) to localize positioning. Use when the user says 'custom store listing', 'per country listing play', 'localized listing play'.",
+      "path": "skills/custom-store-listings/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "data-safety-form",
+      "description": "Complete Google Play Data Safety form correctly to avoid rejection or misrepresentation flags. Use when the user says 'data safety form', 'play data safety', 'declare data collection android'.",
+      "path": "skills/data-safety-form/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "design-app-icon-adaptive",
+      "description": "Generate Android adaptive app icon (foreground + background), monochrome icon for themed icons (Android 13+), and Play Store 512x512 icon. Use when the user says 'android icon', 'adaptive icon', 'app icon android', 'launcher icon android'.",
+      "path": "skills/design-app-icon-adaptive/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "interface-media"
+    },
+    {
+      "id": "design-lifecycle-messaging",
+      "description": "Design the cross-channel (push + email + in-app) lifecycle messaging cadence that drives retention without spamming — frequency capping, first-72-hours, re-engagement, and win-back coordination. Use when the user says 'lifecycle messaging', 'retention emails', 'push cadence', 're-engagement', 'frequency capping', 'onboarding emails', or 'lifecycle automation'.",
+      "path": "skills/design-lifecycle-messaging/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "retention-lifecycle"
+    },
+    {
+      "id": "design-onboarding-funnel",
+      "description": "Design onboarding as a conversion sales funnel (the Cal AI / Jake Castillo pattern) — the deliberate alternative to activation-first onboarding. Use when the user says 'high-converting onboarding', 'sales funnel onboarding', 'quiz onboarding', 'personalization onboarding', 'Cal AI style onboarding', or wants to maximize trial-start and trial-to-paid conversion.",
+      "path": "skills/design-onboarding-funnel/SKILL.md",
+      "platform": "shared",
+      "department": "design",
+      "category": "journeys-conversion"
+    },
+    {
+      "id": "design-onboarding-quiz",
+      "description": "Design or audit activation-first mobile onboarding that reaches a meaningful result quickly. Use for onboarding flows, first-run experience, personalization quizzes, activation mapping, permission sequencing, or onboarding conversion work.",
+      "path": "skills/design-onboarding-quiz/SKILL.md",
+      "platform": "shared",
+      "department": "design",
+      "category": "journeys-conversion"
+    },
+    {
+      "id": "design-paywall",
+      "description": "Build Apple-compliant React Native paywalls with RevenueCat Paywalls v2, visible pricing, billing frequency, a trial timeline, and restore purchases. Use when the user says 'design paywall', 'build paywall', 'subscription screen', or 'RevenueCat paywall'.",
+      "path": "skills/design-paywall/SKILL.md",
+      "platform": "ios",
+      "department": "design",
+      "category": "journeys-conversion"
+    },
+    {
+      "id": "design-paywall-android",
+      "description": "Design an Android paywall that's Play-compliant and converts: trial timeline, plan comparison, restore button, cancel link visibility. Use when the user says 'design paywall android', 'play compliant paywall', 'paywall ui android'.",
+      "path": "skills/design-paywall-android/SKILL.md",
+      "platform": "android",
+      "department": "design",
+      "category": "journeys-conversion"
+    },
+    {
+      "id": "design-push-strategy",
+      "description": "Design a push notification strategy that earns opt-in (permission priming, contextual ask), converts re-engagement without spamming, and respects the one-shot system prompt. Use when the user says 'push notifications', 'notification strategy', 'push opt-in', 'permission priming', 're-engagement', 'notification copy', or 'reminders'.",
+      "path": "skills/design-push-strategy/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "retention-lifecycle"
+    },
+    {
+      "id": "design-retention-loop",
+      "description": "Design the habit-forming retention loop that moves D1/D7/D30 retention — the Hook Model, streaks, investments, daily-use triggers. Use when the user says 'retention', 'D1 retention', 'habit-forming', 'streaks', 'stickiness', 'keep users coming back', 'DAU/MAU', or wants to stop the greater than 90%-churn-by-day-30 problem.",
+      "path": "skills/design-retention-loop/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "retention-lifecycle"
+    },
+    {
+      "id": "design-screenshots",
+      "description": "Plan and write copy for App Store screenshots that maximize tap-to-install conversion. Use when the user says 'App Store screenshots', 'screenshot copy', 'screenshot order', 'marketing screenshots'.",
+      "path": "skills/design-screenshots/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "design-screenshots-play",
+      "description": "Design Play Store screenshots that convert: hook + benefit, text overlay, 8 screenshots, multi-device sizes. Use when the user says 'play store screenshots', 'design android screenshots', 'screenshot hook android'.",
+      "path": "skills/design-screenshots-play/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "design-shareable-result-card",
+      "description": "Design and implement a shareable result card that turns an in-app outcome into organic marketing — the Wordle grid / Cal AI calorie card / Spotify Wrapped pattern. Use when the user says 'shareable card', 'viral share', 'Instagram Story share', 'result card', 'share image', 'make my app viral', or wants organic word-of-mouth.",
+      "path": "skills/design-shareable-result-card/SKILL.md",
+      "platform": "shared",
+      "department": "design",
+      "category": "journeys-conversion"
+    },
+    {
+      "id": "design-splash-screen",
+      "description": "Design Android splash screen using SplashScreen API (Android 12+) and expo-splash-screen for older. Use when the user says 'splash screen android', 'launch screen android', 'first screen android'.",
+      "path": "skills/design-splash-screen/SKILL.md",
+      "platform": "android",
+      "department": "design",
+      "category": "journeys-conversion"
+    },
+    {
+      "id": "design-viral-loop",
+      "description": "Design a viral growth loop with a measurable viral coefficient (K-factor), give-get referrals, and invite-to-unlock mechanics — the Dropbox/Wordle/Duolingo pattern. Use when the user says 'viral coefficient', 'K-factor', 'referral mechanic', 'give-get', 'invite-to-unlock', 'make my app go viral', or wants engineered word-of-mouth.",
+      "path": "skills/design-viral-loop/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "organic-creators"
+    },
+    {
+      "id": "dissect-competitor-android-app",
+      "description": "Deep teardown of a competitor Android app: install, screen-record onboarding, document every screen, identify aha moment, time-to-value, friction points, monetization pattern. Use when the user says 'tear down android app', 'analyze android competitor', 'how does their android onboarding work'.",
+      "path": "skills/dissect-competitor-android-app/SKILL.md",
+      "platform": "android",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "dissect-competitor-app",
+      "description": "Deep teardown of a competitor iOS app: install, screen-record onboarding, document every screen, identify aha moment, time-to-value, friction points, monetization pattern. Use when the user says 'analyze competitor app', 'tear down their app', 'how does their onboarding work', 'why is competitor x successful', 'install and analyze'.",
+      "path": "skills/dissect-competitor-app/SKILL.md",
+      "platform": "ios",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "e2e-checklist",
+      "description": "Pre-release smoke test checklist for an iOS RN app. Use when the user says 'pre-release checklist', 'smoke test', 'before submit', 'release checklist'.",
+      "path": "skills/e2e-checklist/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "behavior-device"
+    },
+    {
+      "id": "e2e-checklist-android",
+      "description": "The list of E2E flows every Android app should test before submission. Use when the user says 'e2e checklist android', 'what to test android', 'ship checklist tests'.",
+      "path": "skills/e2e-checklist-android/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "behavior-device"
+    },
+    {
+      "id": "eas-build-profiles",
+      "description": "Configure EAS build profiles (development, preview, production) with environment variables and resource classes. Use when the user says 'EAS build profiles', 'build configurations', 'env vars EAS'.",
+      "path": "skills/eas-build-profiles/SKILL.md",
+      "platform": "shared",
+      "department": "launch",
+      "category": "build-signing"
+    },
+    {
+      "id": "eas-build-profiles-android",
+      "description": "Define EAS build profiles for Android: development, preview, production with proper signing and AAB vs APK. Use when the user says 'eas build profiles android', 'eas android profile'.",
+      "path": "skills/eas-build-profiles-android/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "build-signing"
+    },
+    {
+      "id": "eas-submit-play",
+      "description": "Prepare a controlled AAB upload to Google Play Console via EAS Submit. Use when the user asks to submit an Android build to Play.",
+      "path": "skills/eas-submit-play/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "eas-submit-testflight",
+      "description": "Prepare a controlled iOS build and TestFlight upload with EAS Submit. Use when the user asks to submit an iOS build to TestFlight.",
+      "path": "skills/eas-submit-testflight/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "eas-update-rollout",
+      "description": "Use EAS Update to ship JS-only OTA updates with channels and rollouts. Use when the user says 'EAS Update', 'OTA update', 'over the air', 'rollout percentage'.",
+      "path": "skills/eas-update-rollout/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "eas-update-rollout-android",
+      "description": "Use EAS Update to ship OTA JS bundle updates on Android (no Play resubmission for JS-only changes). Use when the user says 'eas update android', 'ota android', 'over the air android'.",
+      "path": "skills/eas-update-rollout-android/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "enable-r8-proguard",
+      "description": "Enable R8/ProGuard with proper keep rules for RN+Expo Android. Use when the user says 'enable r8', 'proguard rules', 'minify android'.",
+      "path": "skills/enable-r8-proguard/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "performance"
+    },
+    {
+      "id": "engineering-workflow-guard",
+      "description": "Keep existing mobile-app repositories clean, attributable, secure, and testable across AI sessions, Git branches, worktrees, and simulator builds. Use for implementation, debugging, code-health, native-build, or workflow-recovery work; not for pure product research.",
+      "path": "skills/engineering-workflow-guard/SKILL.md",
+      "platform": "shared",
+      "department": "operations",
+      "category": "agency-coordination"
+    },
+    {
+      "id": "enroll-apple-developer",
+      "description": "Plan Apple Developer Program enrollment for an individual or organization without exposing identity documents, payment details, signing files, or account credentials. Use when the user asks about Apple developer enrollment or D-U-N-S preparation.",
+      "path": "skills/enroll-apple-developer/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "build-signing"
+    },
+    {
+      "id": "enroll-google-play-developer",
+      "description": "Plan Google Play Console enrollment for an individual or organization without exposing identity documents, payment details, or account credentials. Use when the user asks about Play developer enrollment or account setup.",
+      "path": "skills/enroll-google-play-developer/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "build-signing"
+    },
+    {
+      "id": "figma-to-rn",
+      "description": "Convert Figma designs to React Native code with theme tokens, accessibility, and 4 states (happy/empty/loading/error). Use when the user says 'Figma to React Native', 'design to code', 'implement Figma'.",
+      "path": "skills/figma-to-rn/SKILL.md",
+      "platform": "shared",
+      "department": "design",
+      "category": "design-handoff"
+    },
+    {
+      "id": "figma-to-rn-android",
+      "description": "Convert Figma designs to React Native + Expo Android code using Material 3 components and dynamic theming. Use when the user says 'figma to rn android', 'convert figma android', 'design to code android'.",
+      "path": "skills/figma-to-rn-android/SKILL.md",
+      "platform": "android",
+      "department": "design",
+      "category": "design-handoff"
+    },
+    {
+      "id": "find-niche",
+      "description": "Find profitable underserved iOS App Store niches by analyzing competitor density, pain signals, and ASO opportunity. Use when the user says 'find an app niche', 'what should I build', 'underserved category', 'app idea'.",
+      "path": "skills/find-niche/SKILL.md",
+      "platform": "ios",
+      "department": "research",
+      "category": "market-discovery"
+    },
+    {
+      "id": "find-niche-android",
+      "description": "Find a profitable, underserved Play Store niche. Identify gaps using install vs rating analysis, category density, and demand-supply mismatches. Use when the user says 'find android niche', 'play store opportunity', 'gap analysis android', 'underserved category', 'what app to build'.",
+      "path": "skills/find-niche-android/SKILL.md",
+      "platform": "android",
+      "department": "research",
+      "category": "market-discovery"
+    },
+    {
+      "id": "generate-privacy-policy",
+      "description": "Generate a Privacy Policy for an iOS app that satisfies App Store requirements, GDPR, CCPA, COPPA. Use when the user says 'privacy policy', 'generate privacy policy', 'app privacy policy', 'privacy policy template', 'gdpr policy ios'.",
+      "path": "skills/generate-privacy-policy/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "generate-privacy-policy-android",
+      "description": "Generate Privacy Policy that satisfies Play Data Safety + GDPR + CCPA. Use when the user says 'privacy policy android', 'play privacy policy', 'data safety policy'.",
+      "path": "skills/generate-privacy-policy-android/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "generate-terms-of-service",
+      "description": "Generate a Terms of Service for an iOS app. Use when the user says 'terms of service', 'tos generate', 'eula', 'terms and conditions', 'app legal terms'.",
+      "path": "skills/generate-terms-of-service/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "google-play-15-percent-tier",
+      "description": "Google Play's automatic 15% commission tier on first $1M annual revenue (no application needed unlike Apple). Use when the user says 'play 15 percent', 'play small business program', 'google play commission'.",
+      "path": "skills/google-play-15-percent-tier/SKILL.md",
+      "platform": "android",
+      "department": "strategy",
+      "category": "monetization"
+    },
+    {
+      "id": "handle-anr-android",
+      "description": "Diagnose and fix ANRs (Application Not Responding) which Play penalizes at above 0.47% threshold. Use when the user says 'fix anr', 'anr android', 'app not responding'.",
+      "path": "skills/handle-anr-android/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "performance"
+    },
+    {
+      "id": "install-android-cli-tools",
+      "description": "Plan an owner-confirmed Android and Expo CLI toolchain without exposing service-account credentials or running remote installer scripts. Use when the user says 'install android clis', 'install bundletool', 'install adb', or 'android command line tools'.",
+      "path": "skills/install-android-cli-tools/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "install-android-studio",
+      "description": "Install Android Studio IDE (Google's official Android IDE, not this plugin) with the right plugins, themes, and config for RN+Expo work. Use when the user says 'install android studio', 'set up android ide', 'install jetbrains', 'android studio plugins'.",
+      "path": "skills/install-android-studio/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "install-cli-tools",
+      "description": "Plan an owner-confirmed iOS and Expo CLI toolchain without exposing account credentials or running remote installer scripts. Use when the user says 'install CLIs', 'install eas cli', 'install fastlane', or 'install ios cli tools'.",
+      "path": "skills/install-cli-tools/SKILL.md",
+      "platform": "ios",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "install-cursor-vscode",
+      "description": "Install and configure Cursor or VSCode for RN/Expo development with the right extensions and terminal-based coding-agent workflow. Use when the user says 'install cursor', 'set up vscode', 'best ide for react native', 'cursor vs vscode', or 'editor setup'.",
+      "path": "skills/install-cursor-vscode/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "install-jdk-gradle",
+      "description": "Install JDK 21 and configure Gradle for RN+Expo Android builds with the right wrapper version and AGP. Use when the user says 'install jdk', 'jdk 21', 'gradle setup', 'install gradle', 'fix gradle version'.",
+      "path": "skills/install-jdk-gradle/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "install-node-stack",
+      "description": "Plan a safe Node.js, package-manager, and Expo development setup. Use when the user says 'install node', 'set up nvm', 'install pnpm', 'node version manager', or 'I need newer node'.",
+      "path": "skills/install-node-stack/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "architecture-tooling"
+    },
+    {
+      "id": "instrument-growth-funnel",
+      "description": "Instrument the full mobile growth funnel — install → activate → trial → convert → retain → refer — with the right events, cohort analysis, and the 2026 RevenueCat benchmarks to beat. Use when the user says 'what should I track', 'analytics events', 'growth metrics', 'funnel tracking', 'cohort analysis', 'instrumentation', 'KPI dashboard', or 'how do I measure my app'.",
+      "path": "skills/instrument-growth-funnel/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "analytics-experiments"
+    },
+    {
+      "id": "integrate-revenuecat-rn",
+      "description": "Integrate RevenueCat 8.x React Native SDK with Expo config plugin. Use when the user says 'integrate RevenueCat', 'add subscriptions', 'set up IAP', 'react-native-purchases'.",
+      "path": "skills/integrate-revenuecat-rn/SKILL.md",
+      "platform": "shared",
+      "department": "engineering",
+      "category": "notifications-billing"
+    },
+    {
+      "id": "integrate-revenuecat-rn-android",
+      "description": "Integrate RevenueCat 8.x SDK in Expo Android with Play Billing 7+. Use when the user says 'integrate revenuecat android', 'rc android setup', 'play billing rn'.",
+      "path": "skills/integrate-revenuecat-rn-android/SKILL.md",
+      "platform": "android",
+      "department": "engineering",
+      "category": "notifications-billing"
+    },
+    {
+      "id": "internal-testing-track",
+      "description": "Use Play Console internal testing track for fast iteration with up to 100 testers. Use when the user says 'internal testing play', 'internal track', 'beta testing internal'.",
+      "path": "skills/internal-testing-track/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "interview-users",
+      "description": "Run JTBD-style user interviews following Mom Test rules. Use when the user says 'interview users', 'customer interview', 'user research', 'JTBD', 'Mom Test'.",
+      "path": "skills/interview-users/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "user-research"
+    },
+    {
+      "id": "ios-research-library",
+      "description": "Find the package's versioned Expo, EAS, monetization, product-design, listing, and iOS release-readiness references. Use before giving high-stakes iOS or Expo SDK 54 implementation and release guidance.",
+      "path": "skills/ios-research-library/SKILL.md",
+      "platform": "ios",
+      "department": "operations",
+      "category": "reference-library"
+    },
+    {
+      "id": "jtbd-interview",
+      "description": "Run a Jobs To Be Done switch interview. Use when the user says 'JTBD interview', 'switch interview', 'Jobs To Be Done', 'why they switched'.",
+      "path": "skills/jtbd-interview/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "user-research"
+    },
+    {
+      "id": "launch-on-hacker-news",
+      "description": "Post your iOS app launch on Hacker News (Show HN) for technical credibility and 1k-50k visit spikes. Use when the user says 'launch on hn', 'show hn', 'hacker news submission', 'post to hn', 'hn launch strategy'.",
+      "path": "skills/launch-on-hacker-news/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "organic-creators"
+    },
+    {
+      "id": "localize-figs-j",
+      "description": "Localize ASO + paywall + onboarding for FIGS+J (French, Italian, German, Spanish, Japanese). Each locale unlocks +160 indexed chars. Use when the user says 'localize', 'FIGS J', 'translate app', 'multi-language'.",
+      "path": "skills/localize-figs-j/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "localize-figs-j-android",
+      "description": "Localize Play Store listing + in-app content to FIGS + Hindi + Brazilian Portuguese + Indonesian. Use when the user says 'localize android', 'figs localization', 'translate to hindi', 'play store localization'.",
+      "path": "skills/localize-figs-j-android/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "market-validation",
+      "description": "Validate market demand BEFORE building via waitlist + interviews + small bets. Use when the user says 'validate market', 'pre-launch validation', 'waitlist', 'before building'.",
+      "path": "skills/market-validation/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "market-discovery"
+    },
+    {
+      "id": "market-validation-android",
+      "description": "Validate market size and willingness to pay for an Android app idea. Use when the user says 'validate market', 'tam sam som android', 'market sizing android', 'willingness to pay android'.",
+      "path": "skills/market-validation-android/SKILL.md",
+      "platform": "android",
+      "department": "research",
+      "category": "market-discovery"
+    },
+    {
+      "id": "mine-competitor-reviews",
+      "description": "Pull App Store reviews for competitor apps, categorize complaints (love/hate/bug/feature-request) and extract gold for your positioning. Use when the user says 'mine reviews', 'analyze app store reviews', 'what do users hate about competitor', 'review research', 'extract user pain'.",
+      "path": "skills/mine-competitor-reviews/SKILL.md",
+      "platform": "ios",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "mine-play-reviews",
+      "description": "Pull Play Store reviews for competitor apps, categorize complaints (love/hate/bug/feature-request) and extract positioning gold. Use when the user says 'mine play reviews', 'analyze play store reviews', 'what do users hate about play app', 'review research android'.",
+      "path": "skills/mine-play-reviews/SKILL.md",
+      "platform": "android",
+      "department": "research",
+      "category": "competitor-intelligence"
+    },
+    {
+      "id": "mine-reddit-android-pain-points",
+      "description": "Mine Reddit for Android users complaining about competitor apps or describing unmet needs. Use when the user says 'reddit research android', 'mine reddit android', 'find user pain reddit android', 'r/android research'.",
+      "path": "skills/mine-reddit-android-pain-points/SKILL.md",
+      "platform": "android",
+      "department": "research",
+      "category": "market-discovery"
+    },
+    {
+      "id": "mine-reddit-pain-points",
+      "description": "Mine Reddit for users complaining about competitor apps or describing unmet needs in your category. Use when the user says 'reddit research', 'find user pain', 'mine reddit', 'what do people complain about', 'reddit pain points', 'user research from reddit'.",
+      "path": "skills/mine-reddit-pain-points/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "market-discovery"
+    },
+    {
+      "id": "mobile-ad-intelligence",
+      "description": "Research TikTok, Meta and Google competitor ads through portfolio Apify Actors and turn observed creative into mobile acquisition experiments. Use for creative libraries, ad angles and campaign research.",
+      "path": "skills/mobile-ad-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "ad-intelligence"
+    },
+    {
+      "id": "mobile-app-agency",
+      "description": "Coordinate a mobile product through research, strategy, design, Expo engineering, QA, launch, and growth using explicit role ownership and evidence-based handoffs. Use for multi-stage app work or organizing an app team.",
+      "path": "skills/mobile-app-agency/SKILL.md",
+      "platform": "shared",
+      "department": "operations",
+      "category": "agency-coordination"
+    },
+    {
+      "id": "mobile-app-builder-ios-android",
+      "description": "Research, plan, design, build, test, monetize, grow, and prepare production-ready mobile apps for iOS and Android with Expo SDK 54 and React Native. Use for end-to-end professional app development, cross-platform features, release readiness, ASO, retention, growth analytics, and paid acquisition planning without exposing credentials or spending money.",
+      "path": "skills/mobile-app-builder-ios-android/SKILL.md",
+      "platform": "android",
+      "department": "operations",
+      "category": "agency-coordination"
+    },
+    {
+      "id": "mobile-design-references",
+      "description": "Build a source-backed mobile design direction with Apple HIG, Material, Fluent, inclusive design, accessibility, and licensed inspiration. Use for UX research, visual direction, design tokens, and developer handoffs.",
+      "path": "skills/mobile-design-references/SKILL.md",
+      "platform": "shared",
+      "department": "design",
+      "category": "platform-design"
+    },
+    {
+      "id": "mobile-influencer-intelligence",
+      "description": "Discover and vet TikTok, Instagram and YouTube creators using portfolio Apify Actors, then prepare measurable influencer marketing pilots. Use for creator shortlists, audience fit and campaign briefs.",
+      "path": "skills/mobile-influencer-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "influencer-intelligence"
+    },
+    {
+      "id": "mobile-seo-intelligence",
+      "description": "Research mobile-app website keywords, SERPs and technical SEO using portfolio Apify Actors. Use for app marketing sites, content opportunities, crawl audits and measurable organic acquisition alongside ASO.",
+      "path": "skills/mobile-seo-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "seo-intelligence"
+    },
+    {
+      "id": "mobile-store-asset-production",
+      "description": "Produce App Store and Google Play screenshot sets, listing metadata, and localized assets from real mobile runtime captures. Use for truthful store storyboards, capture manifests, asset QA, and export handoffs.",
+      "path": "skills/mobile-store-asset-production/SKILL.md",
+      "platform": "shared",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "mobile-store-intelligence",
+      "description": "Research Apple App Store and Google Play competitors, listings, reviews, chart positions and ASO opportunities with public Apify Actors. Use before positioning, design or store optimization.",
+      "path": "skills/mobile-store-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "store-intelligence"
+    },
+    {
+      "id": "mom-test",
+      "description": "Apply Rob Fitzpatrick's Mom Test rules to user research conversations. Use when the user says 'Mom Test', 'how to interview without leading', 'avoid biased interviews'.",
+      "path": "skills/mom-test/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "user-research"
+    },
+    {
+      "id": "optimize-aab-size",
+      "description": "Reduce Android AAB size from 50MB+ to below 20MB via ProGuard, R8, asset optimization, ABI filters. Use when the user says 'optimize aab size', 'shrink android app', 'reduce android download'.",
+      "path": "skills/optimize-aab-size/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "performance"
+    },
+    {
+      "id": "optimize-bundle-size",
+      "description": "Reduce React Native + Expo iOS app bundle size from 100MB to 30MB. Use when the user says 'reduce bundle size', 'app too big', 'optimize app size', 'app store download size', 'bundle size rn'.",
+      "path": "skills/optimize-bundle-size/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "performance"
+    },
+    {
+      "id": "pair-android-device",
+      "description": "Pair a physical Android phone or tablet via USB or wireless ADB for on-device testing. Use when the user says 'pair android phone', 'usb debugging', 'wireless adb', 'connect physical device android', 'test on real android'.",
+      "path": "skills/pair-android-device/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "behavior-device"
+    },
+    {
+      "id": "pair-physical-device",
+      "description": "Pair an iPhone or iPad with Xcode for on-device testing and debugging. Use when the user says 'pair iphone', 'test on real device', 'connect physical device', 'wireless debug', 'developer mode iphone'.",
+      "path": "skills/pair-physical-device/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "behavior-device"
+    },
+    {
+      "id": "paywall-compliance",
+      "description": "Audit a paywall against Apple App Review Guidelines 3.1.1 and 3.1.2 for visible pricing, billing frequency, a trial timeline, and restore purchases. Use when the user says 'paywall compliance', 'paywall audit', 'paywall rejection', or 'toggle paywall'.",
+      "path": "skills/paywall-compliance/SKILL.md",
+      "platform": "ios",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "paywall-compliance-play",
+      "description": "Ensure paywall complies with Google Play's subscription policy: clear terms, restore, cancel, no dark patterns. Use when the user says 'paywall compliance play', 'play subscription policy'.",
+      "path": "skills/paywall-compliance-play/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "phased-release",
+      "description": "Set up Apple's Phased Release for App Store updates: 1% to 100% over 7 days, with pause and expedited review options. Use when the user says 'phased release', 'gradual rollout', 'expedited review', 'rollback'.",
+      "path": "skills/phased-release/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "phased-release-play",
+      "description": "Use Play Console staged rollouts (1% to 5% to 20% to 100%) with crash monitoring. Use when the user says 'staged rollout play', 'phased release android', 'gradual release android'.",
+      "path": "skills/phased-release-play/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "plan-launch",
+      "description": "Plan a 4-week launch sequence: BetaList to IndieHackers to Reddit to ProductHunt + X build-in-public + podcast tour. Use when the user says 'plan launch', 'ProductHunt launch', 'launch strategy', 'go-to-market'.",
+      "path": "skills/plan-launch/SKILL.md",
+      "platform": "shared",
+      "department": "launch",
+      "category": "launch-planning"
+    },
+    {
+      "id": "plan-launch-android",
+      "description": "Plan the full Android launch sequence: pre-launch hype to launch day to 30-day follow-up. Use when the user says 'plan launch android', 'launch sequence android', 'android launch day'.",
+      "path": "skills/plan-launch-android/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "launch-planning"
+    },
+    {
+      "id": "play-ai-disclosure",
+      "description": "Implement Google Play's Generative AI policy: in-app flagging, content moderation, listing disclosure. Use when the user says 'play ai policy', 'gen ai disclosure android', 'ai generated content android'.",
+      "path": "skills/play-ai-disclosure/SKILL.md",
+      "platform": "android",
+      "department": "quality",
+      "category": "privacy-compliance"
+    },
+    {
+      "id": "play-listing-experiments",
+      "description": "Run Play Store native A/B listing experiments (titles, screenshots, icons, descriptions). Use when the user says 'listing experiment play', 'a/b test play listing', 'play store experiments'.",
+      "path": "skills/play-listing-experiments/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "metadata-assets"
+    },
+    {
+      "id": "play-pass-application",
+      "description": "Apply to Google Play Pass (Google's app subscription bundle). Use when the user says 'play pass android', 'google play pass', 'apply to play pass'.",
+      "path": "skills/play-pass-application/SKILL.md",
+      "platform": "android",
+      "department": "strategy",
+      "category": "monetization"
+    },
+    {
+      "id": "position-pitch",
+      "description": "Craft an irresistible offer + positioning for an iOS app using Hormozi's Value Equation. Use when the user says 'positioning', 'pitch', 'value prop', 'tagline', 'App Store description copy'.",
+      "path": "skills/position-pitch/SKILL.md",
+      "platform": "ios",
+      "department": "strategy",
+      "category": "positioning"
+    },
+    {
+      "id": "position-pitch-android",
+      "description": "Craft a one-line positioning statement and elevator pitch for an Android app. Use when the user says 'position my app', 'pitch my app', 'one-liner android', 'how to describe my app'.",
+      "path": "skills/position-pitch-android/SKILL.md",
+      "platform": "android",
+      "department": "strategy",
+      "category": "positioning"
+    },
+    {
+      "id": "pre-registration-campaign",
+      "description": "Run a Play pre-registration campaign to build install pipeline before launch. Use when the user says 'pre registration play', 'pre register android', 'pre launch hype android'.",
+      "path": "skills/pre-registration-campaign/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "launch-planning"
+    },
+    {
+      "id": "pre-submission-audit",
+      "description": "Pre-submission rejection-prevention audit. Pattern-matches against top 15 rejection reasons including 5.1.2(i) AI disclosure. Use when the user says 'pre-submission audit', 'will Apple reject', 'audit before submit', 'rejection check'.",
+      "path": "skills/pre-submission-audit/SKILL.md",
+      "platform": "ios",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "pre-submission-audit-play",
+      "description": "Run the complete pre-submission audit for Google Play before uploading. Use when the user says 'pre submission play', 'audit before play submit', 'is my android app ready'.",
+      "path": "skills/pre-submission-audit-play/SKILL.md",
+      "platform": "android",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "prepare-anthropic-plugin",
+      "description": "Prepare a Claude plugin's Anthropic listing, brand assets, policy links, native manifest, local preflight and owner review pack before submission. Use when finalizing a plugin for the Claude directory or diagnosing recurring publication blockers.",
+      "path": "skills/prepare-anthropic-plugin/SKILL.md",
+      "platform": "shared",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "prepare-chatgpt-app-submission",
+      "description": "Prepare a reviewed chatgpt-app-submission.json draft for a ChatGPT Apps MCP server by delegating to OpenAI Developers' official chatgpt-app-submission skill, checking tool annotations, test coverage, sensitive inputs, and submission gates. Use when a user asks to submit an MCP server to ChatGPT, fill the ChatGPT Apps form, generate submission JSON, or add Codex-managed OpenAI app submission support.",
+      "path": "skills/prepare-chatgpt-app-submission/SKILL.md",
+      "platform": "shared",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "pricing-strategy",
+      "description": "Decide subscription pricing tiers, trial length, packaging using 2026 market benchmarks (Adapty, RevenueCat). Use when the user says 'what should I charge', 'pricing strategy', 'subscription tiers', 'trial length', 'weekly vs annual'.",
+      "path": "skills/pricing-strategy/SKILL.md",
+      "platform": "shared",
+      "department": "strategy",
+      "category": "monetization"
+    },
+    {
+      "id": "pricing-strategy-android",
+      "description": "Set Android subscription pricing tuned to per-country purchasing power (PPP). Use when the user says 'pricing android', 'play store pricing', 'subscription tiers android'.",
+      "path": "skills/pricing-strategy-android/SKILL.md",
+      "platform": "android",
+      "department": "strategy",
+      "category": "monetization"
+    },
+    {
+      "id": "run-paid-acquisition",
+      "description": "Run paid acquisition for a mobile app — Apple Search Ads (intent capture), TikTok Spark Ads (demand generation from creator content), and Meta Advantage+ app campaigns. Use when the user says 'Apple Search Ads', 'ASA', 'TikTok ads', 'Spark Ads', 'Meta app install ads', 'paid acquisition', 'paid CPI', 'app install campaign', or 'user acquisition'.",
+      "path": "skills/run-paid-acquisition/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "paid-acquisition"
+    },
+    {
+      "id": "set-up-ab-testing",
+      "description": "Set up A/B testing infrastructure for an Expo/React Native app — the single most-cited growth lever (Cal AI ran 5 real experiments/month across 46 trigger points). Use when the user says 'A/B testing', 'experiment', 'split test', 'feature flag', 'experimentation', 'test paywall variants', or 'optimize conversion'.",
+      "path": "skills/set-up-ab-testing/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "analytics-experiments"
+    },
+    {
+      "id": "set-up-project-guidance",
+      "description": "Create a concise AGENTS.md contract for an Expo SDK 54 mobile app. Use when the user wants durable project instructions covering TypeScript, iOS, Android, privacy, testing, and release confirmation boundaries.",
+      "path": "skills/set-up-project-guidance/SKILL.md",
+      "platform": "shared",
+      "department": "operations",
+      "category": "agency-coordination"
+    }
+  ]
+}

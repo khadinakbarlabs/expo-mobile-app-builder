@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "status": "planned",
+  "app": {
+    "version": null,
+    "buildId": null,
+    "commit": null,
+    "associationVerified": false
+  },
+  "requirements": [
+    {
+      "platform": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "deviceClass": null,
+      "width": null,
+      "height": null,
+      "format": null,
+      "requirementLevel": null
+    }
+  ],
+  "captures": [],
+  "captureRecordTemplate": {
+    "originalPath": null,
+    "sha256": null,
+    "capturedAt": null,
+    "platform": null,
+    "deviceOrSimulator": null,
+    "osVersion": null,
+    "isPhysicalDevice": false,
+    "locale": null,
+    "orientation": null,
+    "theme": null,
+    "textScale": null,
+    "route": null,
+    "fixture": null,
+    "interactionVerified": false,
+    "width": null,
+    "height": null
+  },
+  "compositions": [],
+  "compositionRecordTemplate": {
+    "outputPath": null,
+    "originalCapturePaths": [],
+    "decorativeAssets": [],
+    "caption": null,
+    "claimEvidence": [],
+    "locale": null,
+    "width": null,
+    "height": null,
+    "format": null,
+    "alphaPresent": null,
+    "qaStatus": "pending"
+  },
+  "pendingCaptures": [],
+  "pendingReviews": [],
+  "uploaded": false
+}

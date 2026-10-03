@@ -9,7 +9,7 @@ description: "Use expo-image for performant image loading + caching, never react
 
 ## Install
 ```bash
-npx expo install expo-image
+npm exec --no -- expo install expo-image
 ```
 
 ## Basic usage

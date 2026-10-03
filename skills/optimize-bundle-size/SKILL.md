@@ -45,7 +45,7 @@ Your app code + dependencies bundled.
 
 ```bash
 # Inspect bundle composition
-npx expo export --platform ios
+npm exec --no -- expo export --platform ios
 ls -lh dist/_expo/static/js/ios
 ```
 
@@ -112,7 +112,7 @@ In Xcode: assign resources to specific iOS device targets so users only download
 ls -lh build/*.ipa
 
 # 2. Check JS bundle size
-npx expo export --platform ios --dump-assetmap
+npm exec --no -- expo export --platform ios --dump-assetmap
 # Should be <5MB for indie apps
 
 # 3. Check native module count
@@ -120,7 +120,7 @@ grep "expo-" package.json | wc -l
 # Each expo module = 1-3MB native code
 
 # 4. Check unused deps
-npx depcheck
+npx depcheck@1.4.7
 # Remove anything in "unused dependencies"
 
 # 5. Check large assets

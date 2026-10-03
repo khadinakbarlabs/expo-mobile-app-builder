@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Win Back Flow"
+  short_description: "Help with Build Win Back Flow tasks"
+  default_prompt: "Use $build-win-back-flow to help with this mobile app task."

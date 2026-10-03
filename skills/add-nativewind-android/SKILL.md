@@ -11,7 +11,7 @@ Tailwind utility classes for RN. v5 (2025) is Server Components compatible.
 ```bash
 pnpm add nativewind
 pnpm add -D tailwindcss@3.3.2
-npx tailwindcss init
+npm exec --no -- tailwindcss init
 ```
 
 ## Tailwind config

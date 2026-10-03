@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile Store Asset Production"
+  short_description: "Real captures, listing copy, localized assets"
+  default_prompt: "Use $mobile-store-asset-production to help with this mobile app task."

@@ -9,7 +9,7 @@ Drop-in `<Image>` replacement with caching, blurhash, WebP support, and SVG.
 
 ## Install
 ```bash
-npx expo install expo-image
+npm exec --no -- expo install expo-image
 ```
 
 ## Use

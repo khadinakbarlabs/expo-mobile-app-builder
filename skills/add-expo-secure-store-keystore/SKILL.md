@@ -9,7 +9,7 @@ Hardware-backed encrypted key-value store. Uses Android Keystore on Android.
 
 ## Install
 ```bash
-npx expo install expo-secure-store
+npm exec --no -- expo install expo-secure-store
 ```
 
 ## Basic use
