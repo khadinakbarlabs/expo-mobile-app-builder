@@ -1,6 +1,8 @@
 # Agency release preparation
 
-Version 1.3.2 is published on GitHub with a saved, validated Anthropic draft. It has not been submitted for directory review or published in the directory.
+Current readback — 2026-10-03: GitHub release 1.3.4 is published. Anthropic version 1.3.2 was submitted and its security scan passed; it is **In review**, held for content policy review with `INVENTORY_INCOMPLETE`. **Live: not yet.** The portal names no missing or unreadable source file requiring a deterministic repair. Retained documentation/metadata warnings need reviewer interpretation.
+
+OpenAI has a saved skills-only 1.3.4 draft under the business publisher. Eight workflow warnings were addressed in source and reviewed independently. Reupload responses returned generic errors despite saving the revised draft; modified skills must finish checks before submission. The six OpenAI owner attestations are pending confirmation. **OpenAI review submission has not happened yet.** The older hosted MCP submission is separate and was not changed.
 
 ## Prepared
 
@@ -19,7 +21,7 @@ Version 1.3.2 is published on GitHub with a saved, validated Anthropic draft. It
 4. Validate the exact selected archive in the target host and portal. Skills-only packages require no MCP review cases, demo recording or reviewer credentials. A separately submitted hosted MCP app has its own tool, demo and reviewer requirements.
 5. Keep draft upload, review submission, approval and publication separately authorized and separately observed. Do not replace a live submission or its attestations as a consequence of preparing this local candidate.
 
-GitHub publication and an Anthropic draft were authorized on 2026-10-03. Directory compliance acknowledgements remain unchecked; installed plugin caches and the production Worker were unchanged.
+GitHub publication and an Anthropic draft were authorized on 2026-10-03. The owner subsequently authorized Anthropic audience/policy answers and that review submission completed. OpenAI has separate owner attestations; installed caches and the production Worker remain unchanged.
 
 ## Store, creator, ads and SEO intelligence
 
@@ -35,4 +37,4 @@ The published 1.3.2 payload excludes three obsolete, unselected images from ever
 
 Reviewer context for retained findings: the local preparation checker reads image headers/format markers and JSON metadata, and never invokes an image as executable code. AI-streaming and deletion snippets are inert consuming-app examples: the deployed app’s own provider secret and its user’s session token are independent of the plugin installer, and the AI consent storage key belongs to a separate app feature. Preserve authentication/consent controls and same-provider secret boundaries. The research reference’s flagged shell patterns are explicit prohibitions, not runtime downloads; no startup hook or MCP executes them.
 
-Read-only Claude workflow smoke/comparison attempts were blocked by an expired local OAuth login. They are not passed behavior/evaluation tests. Refreshed portal validation fetched `fb35ef5eba20e746dda835664cb8ba819836ae95` and passed: zero blocking findings, six warnings and three policy-hold findings (two credential-example findings and the read-only image-checker association). The unused-image and legacy-binary findings cleared. The draft is saved to Submissions; audience disclosure remains unanswered and all four compliance acknowledgements remain unchecked. Automatic publishing is off and scheduled checking is selected.
+Read-only Claude workflow smoke/comparison attempts were blocked by an expired local OAuth login. They are not passed behavior/evaluation tests. Refreshed portal validation fetched `fb35ef5eba20e746dda835664cb8ba819836ae95` and passed: zero blocking findings, six warnings and three policy-hold findings (two credential-example findings and the read-only image-checker association). The unused-image and legacy-binary findings cleared. At that earlier preparation step, audience disclosure and four acknowledgements remained unchecked. They were subsequently completed with owner authorization and the version was submitted, as recorded in the current readback above. Automatic publishing is off and scheduled checking is selected.

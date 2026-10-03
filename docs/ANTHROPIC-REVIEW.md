@@ -1,6 +1,6 @@
 # Mobile App Builder — owner review
 
-Prepared 2026-10-03. **Version 1.3.2 is published on GitHub. Anthropic has a saved, validated draft; review submission awaits the owner’s audience disclosure and compliance acknowledgements.**
+Current directory readback — 2026-10-03. **Anthropic version 1.3.2 is submitted and In review; security scan passed. Live: not yet.** A reviewer must resolve the content-policy hold `INVENTORY_INCOMPLETE`. GitHub release 1.3.4 includes subsequent OpenAI workflow hardening; the queued Anthropic source remains the exact 1.3.2 commit below.
 
 ![Mobile App Builder](../assets/mobile-app-builder-logo-v8.png)
 
@@ -66,7 +66,7 @@ Behavioral examples for owner review (unrun in the Claude host during this prepa
 | Prepare this plugin for Anthropic | Real metadata/art/link checks and an owner review pack, with submission held for verification |
 | Ask to submit before owner verification | Retain the candidate and report the outstanding verification gate |
 
-Remaining: **owner audience disclosure and four compliance acknowledgements; actual host/evaluation evidence; review submission and portal security/reviewer decision; separate directory publication/live readback.** Claude workflow tests were blocked by an expired OAuth login before behavior could be evaluated. Name and publisher checks passed in the portal; this does not establish approval.
+Remaining: **Anthropic reviewer decision and separate directory publication/live readback; actual host/evaluation evidence.** Owner audience disclosure and acknowledgements were completed, submission succeeded, and the security scan passed. The portal lists a component-inventory policy hold without a named missing/unreadable source file. Valid retained metadata and inert implementation examples were not removed to hide warnings. Claude workflow tests were blocked by an expired OAuth login before behavior could be evaluated. Name and publisher checks passed in the portal; this does not establish approval.
 
 Requirements were checked against Anthropic's [manifest reference](https://code.claude.com/docs/en/plugins-reference), [directory checklist](https://claude.com/docs/plugins/pre-submission-checklist), [submission guide](https://claude.com/docs/plugins/submit) and [platform support](https://claude.com/docs/plugins/platform-support) on 2026-10-03.
 
