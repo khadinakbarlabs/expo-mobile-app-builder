@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apify Mobile Research"
+  short_description: "Collect bounded mobile evidence with Apify"
+  default_prompt: "Use $apify-mobile-research to help with this mobile app task."

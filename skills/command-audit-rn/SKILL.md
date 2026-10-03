@@ -20,10 +20,10 @@ Run the full pre-submission audit on the current Expo project.
 
 ## Workflow
 
-1. Spawn `app-review-specialist` sub-agent.
+1. Assign the `qa-engineer` role; include `security-reviewer` for relevant trust boundaries. Delegate only when the user asks or active host instructions permit it; otherwise perform the checks sequentially and identify that mode.
 2. Run `pre-submission-audit` skill against the codebase.
 3. Run `5-1-2-i-ai-disclosure` check — is there explicit AI provider naming + consent modal?
-4. Run `privacy-manifest-rn` check — is `PrivacyInfo.xcprivacy` present with required reasons?
+4. Inspect privacy manifests and required-reason APIs against the current Apple requirements and actual SDKs. Do not claim a separate `privacy-manifest-rn` skill exists in this package.
 5. Run `account-deletion-flow` check — is in-app deletion implemented?
 6. Run `paywall-compliance` check — exact price, billing freq, trial timeline, restore button visible?
 7. Run `accessibility-audit` — VoiceOver, Dynamic Type, 44pt taps.

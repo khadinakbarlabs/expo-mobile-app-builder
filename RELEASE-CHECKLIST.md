@@ -3,7 +3,8 @@
 ## Local package
 
 - [ ] Run `node scripts/validate-release.mjs` and `node scripts/audit-public-package.mjs .`.
-- [ ] Run `node scripts/verify-public-mcp.mjs <mcp-url>` after deployment and record the returned version and endpoint.
+- [ ] Run catalog freshness, agency validation, JavaScript and Python regression tests; verify all skills independently.
+- [ ] If separately changing the hosted MCP, run `node scripts/verify-public-mcp.mjs <mcp-url>` after authorized deployment and record its version and endpoint.
 - [ ] Validate every skill frontmatter and referenced resource.
 - [ ] Install at least one skill with the public Skills CLI and audit every skill as a standalone directory.
 - [ ] Run the Plugin Creator and Codex Plugin Builder validators.
@@ -18,6 +19,6 @@
 - [ ] Select a verified OpenAI developer or business identity.
 - [ ] Choose approved countries or regions.
 - [ ] Upload the final skills-only archive and run portal checks.
-- [ ] Supply exactly five positive and three negative reviewer cases.
+- [ ] For a new MCP app review, supply exactly five positive and three negative cases plus a verified demo. Skills-only bundles require no MCP cases, demo or reviewer credentials.
 - [ ] Obtain an explicit owner instruction: `SUBMIT FOR REVIEW`.
 - [ ] After review approval, obtain a separate explicit instruction before publishing.

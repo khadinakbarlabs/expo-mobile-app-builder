@@ -70,11 +70,18 @@ for (const [file, manifest] of manifests) {
 
 const portableManifest = manifests.get("plugin.json");
 const openAiManifest = manifests.get(".codex-plugin/plugin.json");
+for (const [file, manifest] of manifests) {
+  const version = manifest.version ?? manifest.plugins?.[0]?.version;
+  if (version !== openAiManifest?.version) failures.push(`${file}: version must match .codex-plugin/plugin.json`);
+}
 if (portableManifest?.$schema !== "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json") {
   failures.push("plugin.json: expected the canonical Agent Plugins 1.0 schema identifier");
 }
 if (portableManifest?.version !== openAiManifest?.version) {
   failures.push("plugin.json: version must match .codex-plugin/plugin.json");
+}
+if (JSON.stringify(portableManifest?.extensions?.["com.openai"]?.interface) !== JSON.stringify(openAiManifest?.interface)) {
+  failures.push("plugin.json: portable OpenAI presentation must match the compatibility manifest");
 }
 for (const field of ["name", "version", "description", "author", "homepage", "repository", "license", "keywords"]) {
   if (JSON.stringify(portableManifest?.[field]) !== JSON.stringify(openAiManifest?.[field])) {

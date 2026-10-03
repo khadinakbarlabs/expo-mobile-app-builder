@@ -1,6 +1,6 @@
 ---
 name: "design-retention-loop"
-description: "Design the habit-forming retention loop that moves D1/D7/D30 retention — the Hook Model, streaks, investments, daily-use triggers. Use when the user says 'retention', 'D1 retention', 'habit-forming', 'streaks', 'stickiness', 'keep users coming back', 'DAU/MAU', or wants to stop the >90%-churn-by-day-30 problem."
+description: "Design the habit-forming retention loop that moves D1/D7/D30 retention — the Hook Model, streaks, investments, daily-use triggers. Use when the user says 'retention', 'D1 retention', 'habit-forming', 'streaks', 'stickiness', 'keep users coming back', 'DAU/MAU', or wants to stop the greater than 90%-churn-by-day-30 problem."
 ---
 
 # Design a retention loop

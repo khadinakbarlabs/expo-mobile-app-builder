@@ -19,6 +19,11 @@ jobs:
           node-version: 22
       - run: node scripts/validate-release.mjs
       - run: node scripts/audit-public-package.mjs .
+      - run: node --test tests/*.test.mjs
+      - run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - run: node scripts/build-agency-catalog.mjs --check
+      - run: node scripts/validate-agency.mjs
+      - run: python3 scripts/package-agency.py
 
   worker:
     runs-on: ubuntu-latest

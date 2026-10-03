@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile App Agency"
+  short_description: "Coordinate research, design, build, QA, and launch"
+  default_prompt: "Use $mobile-app-agency to organize my mobile app work into clear roles, deliverables, and verified handoffs."

@@ -1,65 +1,39 @@
 ---
 name: "command-build-review-prompt"
-description: "Coordinate the cross-platform /build-review-prompt workflow for Expo projects — implement a routed review-collection flow (satisfaction gate → store or feedback). Use when the user asks for this outcome."
+description: "Coordinate the cross-platform /build-review-prompt workflow for Expo projects: neutral milestone-based native review requests, shared cooldowns, and optional feedback for everyone. Use when implementing or correcting review prompts."
 ---
 
 # Command workflow: /build-review-prompt
 
-Use this as a host-agnostic workflow. Adapt command names and capabilities to the active coding-agent host.
-
-## Workflow contract
-
-```yaml
-description: "Build a routed review-collection flow: satisfaction gate → native store prompt (happy) or private feedback (unhappy)"
-argument-hint: "<context>"
-```
-
-# /build-review-prompt
-
-Build a review/rating collection system that protects the store rating by routing happy users to the native App Store / Google Play prompt and unhappy users to private feedback — so complaints become support tickets, not 1-star reviews.
+Use this host-agnostic workflow to implement native review requests without satisfaction gates or rating manipulation. Retain the existing command and skill names for compatibility.
 
 ## Workflow
 
-1. Run `build-review-routing` to define the satisfaction gate, routing logic, timing triggers, cooldown rules, and the unhappy-path destination.
-2. Confirm the review library choice for the project:
-   - `expo-store-review` for Expo/managed apps (default).
-   - `react-native-in-app-review` for bare RN.
-   - Add `react-native-rate` only if an explicit Settings "Rate us" button with a store fallback is needed.
-3. Implement the multi-condition gate (sessions ≥ 3 AND daysSinceInstall ≥ 7 AND success-event-just-happened AND cooldown ≥ 90d). Persist `installDate`, `sessions`, `lastAsked`, `satisfaction`, and `promptedStoreReview` in `expo-secure-store` (iOS) or encrypted storage (Android).
-4. Build the satisfaction step as your own brand UI (3-point emoji or thumbs — one tap, dismissible, never the native dialog). Use neutral copy: "How are you enjoying AppName?" Not "Will you rate us 5 stars?"
-5. Wire the happy path → `StoreReview.requestReview()` (iOS) / `launchReviewFlow()` (Android). Add the store write-review deep-link fallback for when the native prompt is unavailable or suppressed.
-6. Wire the unhappy path → in-app feedback form, `mailto:` with prefilled diagnostics, or a support SDK (Intercom/Helpshift/Crisp/Sentry user-report). Never send the unhappy path to the store.
-7. On Android, keep the satisfaction question a **standalone, separate moment** from the review card to respect Google's no-preconditioning rule. On iOS the inline ask-then-route pattern is fine.
-8. Instrument the funnel via `instrument-growth-funnel`: `review_gate_shown`, `review_gate_answered`, `review_route_store_called`, `review_route_store_fallback`, `review_route_feedback_opened`, `review_cooldown_skipped`.
-9. Add an explicit "Rate us" entry in Settings that deep-links to the store write-review page — never burns a system-prompt attempt on a button.
-10. Write focused tests: gating logic (all conditions), each route, cooldown reset, version-bump re-arm, and offline feedback fallback.
-11. Verify on both platforms: iOS (remember Apple may suppress; 3/365-day cap), Android (opaque quota; no display signal).
-
-## Hard rules (non-negotiable)
-
-- **Never incentivize reviews** (no "rate for coins/unlock/ads-off"). Banned by both stores; most common takedown cause.
-- **Never mimic the native review dialog.** Your satisfaction step is brand UI only.
-- **Never show "Thanks for rating!"** — neither API confirms a rating was left.
-- **Never prompt on first launch, during onboarding, after a paywall rejection, or after an error.**
-- **Never block features behind a review.**
-- Keep "continue cancelling"-style graceful exits. No dark patterns.
+1. Apply `build-review-routing` and its official Apple/Google references. Inspect the current app before changing code.
+2. Define a usage milestone, a calm presentation point, a shared cooldown and acceptance behavior. Eligibility must not depend on sentiment, predicted stars, purchases, support history or survey answers.
+3. Select the SDK-compatible `expo-store-review` integration, or preserve the existing native library when appropriate. Use the Expo reference shipped with this package and confirm platform support.
+4. Remove custom pre-review satisfaction dialogs and any delayed filtering based on their answers. Keep optional feedback separate and available to everyone.
+5. Persist request-attempt time, prevent duplicate requests and preserve cooldown across restarts and version changes. Request native UI only when supported; resume normally on suppression, failure or completion.
+6. Add clearly labeled Settings entries for a user-initiated store link and optional feedback. Do not automatically redirect to the store when native UI fails or does not appear.
+7. Instrument attempts, technical skips/errors and user-initiated link actions. Do not emit “review submitted,” infer stars, or thank users for rating from an API completion callback.
+8. Write focused tests for eligibility independence, shared cooldown, concurrent triggers, unavailable APIs, failure behavior and feedback accessibility. Verify the integration on iOS and Android with appropriate builds and platform testing routes.
 
 ## Minimum acceptance checks
 
 ```text
-[ ] Satisfaction gate is your own UI, one-tap, dismissible
-[ ] Happy path calls the native review API with a store deep-link fallback
-[ ] Unhappy path routes to a private channel (form / mailto / support SDK)
-[ ] Multi-condition gate enforced (sessions, days, success event, cooldown)
-[ ] Cooldown persisted across sessions and app restarts
-[ ] "Rate us" button deep-links to store, does not call requestReview()
-[ ] Funnel events instrumented
-[ ] No incentivized, preconditioned, or native-dialog-mimicking UI
-[ ] iOS and Android both verified (with platform quota/suppression behavior understood)
+[ ] No satisfaction question, sentiment filter or predicted-rating targeting
+[ ] One documented usage milestone and cooldown applied to everyone
+[ ] Cooldown persists across restart/version changes; duplicate attempts prevented
+[ ] Platform review UI used without customization, overlay or interception
+[ ] Suppression/errors/completion resume the ordinary app journey
+[ ] No automatic store fallback or unsupported review-success claims
+[ ] User-initiated store link and optional feedback available to everyone
+[ ] No incentives, purchased reviews, required reviews or score pressure
+[ ] Focused behavior checks and iOS/Android integration evidence recorded
 ```
 
-## Pair with
+## Handoff
 
-- `build-review-routing` — the full technique reference.
-- `instrument-growth-funnel`, `add-posthog-rn` — analytics.
-- `mine-competitor-reviews` / `mine-play-reviews` — complementary review reading.
+Report the eligible milestone, cooldown policy, removed gating, verification results and any unverified platform behavior. Separate request attempts from confirmed store-side outcomes. Store submission and publication follow the user's external-action authority; this workflow does not grant it.
+
+Pair with `build-review-routing`, `instrument-growth-funnel`, `mine-competitor-reviews` and `mine-play-reviews`.

@@ -10,18 +10,18 @@ Use this as a host-agnostic workflow. Adapt command names and capabilities to th
 ## Workflow contract
 
 ```yaml
-description: "Dispatch the app-researcher sub-agent for market, competitor, keyword, or user-pain research"
+description: "Coordinate market-researcher work for market, competitor, keyword, or user-pain evidence"
 argument-hint: "<context>"
 ```
 
 # /research
 
-Dispatch a deep-research sub-agent in isolated context.
+Use the `market-researcher` agency role for evidence collection. Delegate only when the user asks or applicable host instructions permit it and the host has dispatch tools; otherwise complete the same role sequentially.
 
 ## Workflow
 
-1. Ask user the research scope: market | competitor | keyword | user-pain | app-name.
-2. Spawn `app-researcher` sub-agent with the scope and any seed terms.
-3. Sub-agent runs WebSearch + WebFetch in isolated context (no main thread pollution).
-4. Sub-agent returns: top findings, named sources, recommended next actions.
+1. Infer the research scope from the request: market | competitor | keyword | user-pain | app-name. Clarify only choices that block collection.
+2. Assign the `market-researcher` role the decision question, sources, seeds, sample limits and acceptance. Use `apify-mobile-research` when installed for Actor configuration and CLI research.
+3. Collect evidence with available authorized tools. Check current schemas and budget before any billable run; preserve source/run provenance and sample limits.
+4. Return findings, named sources, limitations and recommended next actions. Record whether a separate agent ran or the work was sequential.
 5. Main thread persists the result to `research/[scope]-[date].md` for later reference.

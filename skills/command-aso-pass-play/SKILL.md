@@ -20,7 +20,7 @@ Full Play ASO refresh: keywords, screenshots, listing experiments, custom store 
 
 ## Workflow
 
-This command orchestrates the relevant skills + sub-agents. Run from project root.
+Run from the project root. Assign the relevant agency role; delegate only when the user asks or active host instructions permit it and dispatch tools are available. Otherwise perform the same role sequentially and identify that mode. Reuse session authorization; role assignment does not authorize paid runs or external publication.
 
 Steps depend on subcommand context (see relevant skills in the plugin).
 

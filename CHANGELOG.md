@@ -1,3 +1,13 @@
+# 1.2.0 — Mobile App Agency (local candidate, 2026-10-03)
+
+- Preserve the existing 179 workflows; add agency coordination, engineering ownership guard, Apify CLI research, design references and store asset production (184 total).
+- Classify every workflow across eight departments and 31 subcategories; add twelve native specialist roles and portable role cards.
+- Add evidence-based stage gates, file ownership, reusable handoffs, configurable Actor research and actual screenshot capture manifests.
+- Polish the entry-point README while preserving the detailed workflow guide.
+- Correct inherited review guidance to use neutral milestones and independent feedback; minimize analytics properties.
+- Add tested catalog tools, synchronized native manifests and isolated release bundles. Hosted MCP source and deployment are unchanged.
+- Local candidate only; public source integration, directory submission and availability remain separate actions.
+
 # Changelog
 
 ## Unreleased

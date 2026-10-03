@@ -1,7 +1,7 @@
 {
   "name": "mobile-app-builder",
-  "version": "1.1.3",
-  "description": "Build iOS and Android apps with Expo",
+  "version": "1.2.0",
+  "description": "A mobile app agency for iOS and Android",
   "author": {
     "name": "Khadin Akbar Ventures LLC",
     "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
@@ -23,19 +23,24 @@
     "app-growth",
     "app-marketing",
     "apple-search-ads",
-    "mobile-monetization"
+    "mobile-monetization",
+    "mobile-agency",
+    "apify-research",
+    "ux-design",
+    "agent-teams",
+    "store-assets"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Mobile App Builder",
     "shortDescription": "Develop Android & iOS Apps",
-    "longDescription": "A skills-only, end-to-end mobile app builder for Expo SDK 54 and React Native. Research and validate an idea, define the smallest useful release, design the experience, implement and test iOS and Android, handle permissions and offline states, prepare monetization and analytics, improve ASO and retention, plan paid acquisition, and prepare EAS builds and store submissions. It provides guidance and local project workflows only: no embedded credentials, hosted execution, telemetry, account system, ad spend, or store submission is performed by the package.",
+    "longDescription": "An organized mobile app agency with eight departments, twelve specialist roles and 184 workflows. Coordinate Apify CLI research, product strategy, UI/UX and design inspiration, Expo engineering, QA and security, screenshot and metadata production, store release preparation, marketing, ads and growth measurement. Portable role cards work sequentially in any skill-capable host; native agents depend on host support. Credentials and billable execution stay in the user's authorized environment. The package provides local guidance and validation; it does not host execution or submit apps.",
     "developerName": "Khadin Akbar Ventures LLC",
     "category": "Developer Tools",
     "capabilities": [
-      "Plan Expo iOS and Android apps",
-      "Build and audit React Native features",
-      "Prepare testing, growth, and store releases"
+      "Coordinate research, design, development and QA",
+      "Plan Apify CLI research with traceable evidence",
+      "Prepare screenshots, metadata, release and growth"
     ],
     "websiteURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder",
     "privacyPolicyURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md",
@@ -47,6 +52,7 @@
     ],
     "brandColor": "#2154D8",
     "composerIcon": "./assets/mobile-app-builder-icon-v5-1024.png",
-    "logo": "./assets/mobile-app-builder-icon-v5-1024.png"
+    "logo": "./assets/mobile-app-builder-icon-v5-1024.png",
+    "supportURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/SUPPORT.md"
   }
 }

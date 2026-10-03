@@ -10,17 +10,17 @@ Use this as a host-agnostic workflow. Adapt command names and capabilities to th
 ## Workflow contract
 
 ```yaml
-description: "Dispatch researcher sub-agent for market/competitor/keyword/user-pain research (Play Store + Reddit)"
+description: "Coordinate the market-researcher role for market/competitor/keyword/user-pain evidence (Play Store + Reddit)"
 argument-hint: "<context>"
 ```
 
 # /research-android
 
-Dispatch researcher sub-agent for market/competitor/keyword/user-pain research (Play Store + Reddit)
+Coordinate the market-researcher role for market/competitor/keyword/user-pain evidence (Play Store + Reddit)
 
 ## Workflow
 
-This command orchestrates the relevant skills + sub-agents. Run from project root.
+Run from the project root. Assign the relevant agency role; delegate only when the user asks or active host instructions permit it and dispatch tools are available. Otherwise perform the same role sequentially and identify that mode. Reuse session authorization; role assignment does not authorize paid runs or external publication.
 
 Steps depend on subcommand context (see relevant skills in the plugin).
 

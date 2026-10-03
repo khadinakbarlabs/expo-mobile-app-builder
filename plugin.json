@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mobile-app-builder",
-  "version": "1.1.3",
-  "description": "Build iOS and Android apps with Expo",
+  "version": "1.2.0",
+  "description": "A mobile app agency for iOS and Android",
   "author": {
     "name": "Khadin Akbar Ventures LLC",
     "url": "https://github.com/khadinakbarlabs/expo-mobile-app-builder"
@@ -24,6 +24,42 @@
     "app-growth",
     "app-marketing",
     "apple-search-ads",
-    "mobile-monetization"
-  ]
+    "mobile-monetization",
+    "mobile-agency",
+    "apify-research",
+    "ux-design",
+    "agent-teams",
+    "store-assets"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Mobile App Builder",
+        "shortDescription": "Develop Android & iOS Apps",
+        "longDescription": "An organized mobile app agency with eight departments, twelve specialist roles and 184 workflows. Coordinate Apify CLI research, product strategy, UI/UX and design inspiration, Expo engineering, QA and security, screenshot and metadata production, store release preparation, marketing, ads and growth measurement. Portable role cards work sequentially in any skill-capable host; native agents depend on host support. Credentials and billable execution stay in the user's authorized environment. The package provides local guidance and validation; it does not host execution or submit apps.",
+        "developerName": "Khadin Akbar Ventures LLC",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Coordinate research, design, development and QA",
+          "Plan Apify CLI research with traceable evidence",
+          "Prepare screenshots, metadata, release and growth"
+        ],
+        "websiteURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder",
+        "privacyPolicyURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md",
+        "defaultPrompt": [
+          "Plan my Expo app for iOS and Android: scope, architecture, risks, and proof.",
+          "Build or audit one Expo feature with loading, empty, error, offline, accessibility, and platform checks.",
+          "Plan app growth across activation, retention, monetization, ASO, and paid acquisition."
+        ],
+        "brandColor": "#2154D8",
+        "composerIcon": "./assets/mobile-app-builder-icon-v5-1024.png",
+        "logo": "./assets/mobile-app-builder-icon-v5-1024.png",
+        "supportURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/SUPPORT.md"
+      },
+      "publication": {
+        "release_notes": "Organized 184 workflows into eight departments and twelve specialist roles; added Apify CLI research, design resources, screenshot production, ownership and handoffs, and corrected neutral review-prompt guidance."
+      }
+    }
+  }
 }

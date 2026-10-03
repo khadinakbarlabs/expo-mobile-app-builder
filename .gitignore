@@ -18,6 +18,8 @@ service-account*.json
 node_modules/
 dist/
 coverage/
+__pycache__/
+*.pyc
 *.log
 .DS_Store
 

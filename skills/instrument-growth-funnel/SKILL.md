@@ -73,14 +73,14 @@ share_card_shared              {surface}
 invite_sent                    {channel}
 referred_install                                           // deferred attribution
 
-// Review routing
-review_gate_shown              {trigger}
-review_gate_answered           {value}
-review_route_store_called
-review_route_feedback_opened
+// Neutral review eligibility; feedback is independent of ratings
+review_eligibility_checked     {milestone, eligible, reason}
+review_prompt_requested        {platform, milestone}
+feedback_opened                {surface}
+// A request is not proof the native UI appeared or a rating was submitted.
 ```
 
-**Never** send free-form answers, health details, or other sensitive values as analytics properties by default. Aggregate or hash first.
+**Never** send free-form answers, health details, or other sensitive values as analytics properties by default. Use a documented consent and data-minimization contract; hashing a sensitive value does not make it anonymous.
 
 ## Cohort analysis (mandatory, not optional)
 
