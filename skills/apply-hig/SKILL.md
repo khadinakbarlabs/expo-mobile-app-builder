@@ -3,56 +3,18 @@ name: "apply-hig"
 description: "Apply Apple Human Interface Guidelines to a React Native screen. Use when the user says 'HIG compliance', 'iOS native feel', 'Apple guidelines', '44pt taps', 'Dynamic Type'."
 ---
 
-# Apply HIG
+# Apply Apple Human Interface Guidelines
 
-Apple HIG essentials for RN devs. Non-negotiable for shipping a native-feeling iOS app.
+Review the requested React Native screens against Apple's current HIG: https://developer.apple.com/design/human-interface-guidelines. Limit changes to the app's UI and preserve the product's existing visual direction. Read `references/05-product-design.md` for the package's design context.
 
-## Touch targets: 44x44 pt minimum
-- Set `minWidth: 44, minHeight: 44` on every Pressable
-- Wrap small icons in transparent hit area: `<Pressable hitSlop={{top: 12, bottom: 12, left: 12, right: 12}}>`
+## Screen improvements
 
-## Dynamic Type
-- All `<Text>` has `allowFontScaling` (default true) — leave it
-- Don't hardcode heights on text containers — use `flex` or `minHeight`
-- Test at largest size: Settings → Accessibility → Larger Text → Accessibility XXXL
+Use at least 44 by 44 point touch targets, clear labels and appropriate spacing. Respect font scaling and avoid fixed text heights that clip large Dynamic Type sizes. Use semantic colors, sufficient contrast and Reduce Motion preferences. Keep accessibility roles, labels, hints and selected/disabled states accurate.
 
-## Semantic colors
-```tsx
-import { PlatformColor } from 'react-native';
+Prefer existing compatible app components and icon assets. If additional symbols support is needed, inspect the current Expo SDK and official Expo Symbols guidance at https://docs.expo.dev/versions/latest/sdk/symbols/ before proposing a dependency. Do not automatically install third-party icon packages or download assets with unclear usage rights.
 
-const styles = StyleSheet.create({
-  text: { color: PlatformColor('label') },           // adapts to light/dark + contrast
-  secondary: { color: PlatformColor('secondaryLabel') },
-  bg: { backgroundColor: PlatformColor('systemBackground') },
-});
-```
-Available iOS semantic colors via `PlatformColor`: `label`, `secondaryLabel`, `tertiaryLabel`, `systemBackground`, `secondarySystemBackground`, `separator`, `link`, `systemBlue`, `systemRed`, etc.
+## Verification
 
-## SF Symbols
-```bash
-npm install react-native-sfsymbols
-```
-```tsx
-import { SFSymbol } from 'react-native-sfsymbols';
-<SFSymbol name="heart.fill" size={24} color="systemRed" />
-```
+Have the owner enable VoiceOver, large text and increased contrast on their test device or simulator. These are test instructions; do not alter their personal device settings automatically. Exercise focus order, labels, tappable areas, light/dark appearance and truncation. Restore any temporary test preferences the owner chose to change.
 
-## Accessibility labels
-Every interactive element:
-```tsx
-<Pressable
-  accessibilityRole="button"
-  accessibilityLabel="Like"
-  accessibilityHint="Adds this post to favorites"
-  accessibilityState={{ selected: liked }}
-  onPress={onPress}
->
-```
-
-## Test before ship
-- Settings → Accessibility → VoiceOver → On. Swipe through every screen.
-- Settings → Display & Text Size → Larger Text → Accessibility XXXL. Open every screen.
-- Settings → Accessibility → Display & Text Size → Increase Contrast → On.
-
-## Reference
-`references/05-product-design.md`
+Deliver annotated findings, scoped UI changes and actual accessibility results. Name unresolved behavior instead of claiming HIG certification.

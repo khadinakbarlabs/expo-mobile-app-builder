@@ -1,62 +1,26 @@
 ---
 name: "add-gemini-nano"
-description: "Add on-device LLM via Gemini Nano (Pixel 8+, Galaxy S24+) using MediaPipe LLM Inference or ML Kit. Use when the user says 'gemini nano', 'on-device ai android', 'on-device llm android', 'no-cloud llm'."
+description: "Plan a privacy-aware Android on-device AI integration using verified ML Kit GenAI APIs and explicit availability checks. Use for Gemini Nano, offline Android AI, or on-device inference."
 ---
 
-# Add Gemini Nano (On-Device LLM)
+# Add On-Device AI with Gemini Nano
 
-Android's equivalent of Apple Foundation Models. Free, offline, private.
+Assess the app's task and device support before promising offline AI. Start with Google's official ML Kit GenAI documentation: https://developers.google.com/ml-kit/genai and the selected API's Android setup guide. Gemini Nano via AICore and downloadable MediaPipe models are distinct approaches; do not label an arbitrary local model as Gemini Nano.
 
-## Hardware required
-- Pixel 8 Pro / 8a / 9 / 9 Pro
-- Samsung Galaxy S24 / S25 series
-- Some OnePlus 12+
-- ~4GB+ RAM for model
+## Choose an integration
 
-## Options
+Inspect the Expo SDK, native build and supported Android versions. Select an official ML Kit task API or Prompt API where currently supported, then plan a narrow Kotlin bridge through Expo Modules. Verify documented dependency versions, permissions, model availability and licensing before proposing changes. Third-party wrappers require a separate maintainer, source and compatibility review; do not automatically install an unverified package.
 
-### Option A: MediaPipe LLM Inference (recommended)
-```bash
-# Add to expo prebuild via config plugin
-pnpm add @1mt/expo-on-device-ai
-```
+Check feature status using the selected API's documented runtime availability method. Handle unavailable, downloadable, downloading and available states. A phone model name alone does not prove API availability. Model downloads may require connectivity, storage and user approval; describe this before starting them.
 
-```tsx
-import { generateText } from '@1mt/expo-on-device-ai';
-const result = await generateText({ prompt: 'Summarize: ...' });
-```
+## Privacy and fallback
 
-### Option B: AI Edge SDK (Google native)
-Requires native Kotlin module — drop down via expo-modules-core.
+Keep prompts and outputs out of diagnostics by default. Test whether the chosen integration sends telemetry or data before describing it as private. On-device processing does not remove applicable AI content, disclosure or reporting requirements.
 
-### Option C: ML Kit GenAI (newer, 2025+)
-For specific tasks: summarization, image description, etc.
+For unsupported devices, show a useful unavailable state. A cloud fallback is a separate user choice: identify the provider and data transferred, obtain applicable consent, authenticate through a backend and enforce rate limits. Never send a prompt to the cloud automatically after a local failure. Never place provider credentials in mobile code.
 
-## When to use vs cloud LLM
-- Privacy-sensitive (no data leaves device)
-- Offline functionality required
-- Cost reduction (no API bill)
-- Avoid Google Play AI policy disclosure (no third-party transfer)
+## Deliver and verify
 
-## Cross-platform pattern
-- iOS: Foundation Models (skill: `add-foundation-models`)
-- Android: Gemini Nano
-- Wrapper: `@1mt/expo-on-device-ai` covers both with same API
+Produce an integration plan with exact dependencies, supported API states and privacy boundaries. Test supported and unsupported physical devices, denied downloads, low storage, cancellation, error handling and a network-disconnected inference after model readiness. Record measured latency and output quality without invented device coverage or speed estimates.
 
-## Limitations
-- Smaller context window than cloud (~1k-4k tokens)
-- Generation speed: 10-30 tok/sec
-- Only ~50% of Android devices support
-- Quality below GPT-4 — good for summarization, classification, simple chat
-
-## Fallback for unsupported devices
-```tsx
-if (await isGeminiNanoAvailable()) {
-  return await generateText({ prompt });
-}
-return await callCloudLLM({ prompt });  // with 5.1.2(i) consent
-```
-
-## Pair with
-- `add-openai-streaming-android` for cloud fallback
-- `play-ai-disclosure` for compliance (still needed even for on-device if it's AI-generated content)
+Pair with `play-ai-disclosure`, `add-foundation-models` and `add-openai-streaming-rn` as applicable.
