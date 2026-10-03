@@ -5,7 +5,10 @@
       "id": "research",
       "title": "Research & intelligence",
       "agents": [
-        "market-researcher"
+        "market-researcher",
+        "store-intelligence-analyst",
+        "creator-researcher",
+        "ads-intelligence-analyst"
       ],
       "outcome": "Evidence for demand, competitors, user pain, ads and inspiration."
     },
@@ -57,7 +60,8 @@
       "id": "growth",
       "title": "Marketing, ads & experimentation",
       "agents": [
-        "growth-strategist"
+        "growth-strategist",
+        "seo-strategist"
       ],
       "outcome": "Measurable activation, retention, acquisition and revenue experiments."
     },
@@ -257,6 +261,30 @@
       "id": "observability",
       "title": "Monitoring & feedback",
       "count": 2
+    },
+    {
+      "department": "research",
+      "id": "store-intelligence",
+      "title": "Store Intelligence",
+      "count": 1
+    },
+    {
+      "department": "research",
+      "id": "influencer-intelligence",
+      "title": "Influencer Intelligence",
+      "count": 1
+    },
+    {
+      "department": "research",
+      "id": "ad-intelligence",
+      "title": "Ad Intelligence",
+      "count": 1
+    },
+    {
+      "department": "growth",
+      "id": "seo-intelligence",
+      "title": "SEO Intelligence",
+      "count": 1
     }
   ],
   "skills": [
@@ -1501,6 +1529,14 @@
       "category": "market-discovery"
     },
     {
+      "id": "mobile-ad-intelligence",
+      "description": "Research TikTok, Meta and Google competitor ads through portfolio Apify Actors and turn observed creative into mobile acquisition experiments. Use for creative libraries, ad angles and campaign research.",
+      "path": "skills/mobile-ad-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "ad-intelligence"
+    },
+    {
       "id": "mobile-app-agency",
       "description": "Coordinate a mobile product through research, strategy, design, Expo engineering, QA, launch, and growth using explicit role ownership and evidence-based handoffs. Use for multi-stage app work or organizing an app team.",
       "path": "skills/mobile-app-agency/SKILL.md",
@@ -1525,12 +1561,36 @@
       "category": "platform-design"
     },
     {
+      "id": "mobile-influencer-intelligence",
+      "description": "Discover and vet TikTok, Instagram and YouTube creators using portfolio Apify Actors, then prepare measurable influencer marketing pilots. Use for creator shortlists, audience fit and campaign briefs.",
+      "path": "skills/mobile-influencer-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "influencer-intelligence"
+    },
+    {
+      "id": "mobile-seo-intelligence",
+      "description": "Research mobile-app website keywords, SERPs and technical SEO using portfolio Apify Actors. Use for app marketing sites, content opportunities, crawl audits and measurable organic acquisition alongside ASO.",
+      "path": "skills/mobile-seo-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "growth",
+      "category": "seo-intelligence"
+    },
+    {
       "id": "mobile-store-asset-production",
       "description": "Produce App Store and Google Play screenshot sets, listing metadata, and localized assets from real mobile runtime captures. Use for truthful store storyboards, capture manifests, asset QA, and export handoffs.",
       "path": "skills/mobile-store-asset-production/SKILL.md",
       "platform": "shared",
       "department": "launch",
       "category": "metadata-assets"
+    },
+    {
+      "id": "mobile-store-intelligence",
+      "description": "Research Apple App Store and Google Play competitors, listings, reviews, chart positions and ASO opportunities with public Apify Actors. Use before positioning, design or store optimization.",
+      "path": "skills/mobile-store-intelligence/SKILL.md",
+      "platform": "shared",
+      "department": "research",
+      "category": "store-intelligence"
     },
     {
       "id": "mom-test",

@@ -110,3 +110,9 @@ Creative research classifies hook, problem, promise, format, visual pattern, off
 | Analytics/crash/subscription services | Needed first-party integrations | Local contract and test fixtures; no fabricated telemetry or entitlement proof |
 
 This package does not require paid inspiration libraries, ad budgets, Azure subscriptions, Figma seats, or hosted analytics to plan and build locally. Accounts, tool installs, network runs, and external actions are selected only when the user task needs them.
+
+## Store, creator, ads and SEO intelligence
+
+Four independently usable workflows and specialist roles now cover Apple/Google Play intelligence, TikTok/Instagram/YouTube creators and influencer marketing, TikTok/Meta/Google ads, and app website SEO. The [public Actor catalog](../skills/apify-mobile-research/references/actor-catalog.json) contains 15 real `khadinakbar/` routes whose public metadata and latest-build input schemas were checked through the Apify CLI on 2026-10-03. These checks establish routing and schema availability, not paid-run results or runtime reliability. Re-inspect exact schemas, pricing and source coverage before execution; no paid runs or execution authority ship in the package.
+
+TikTok commercial-library country coverage follows its checked European/UK enum, not a global promise. Cross-platform creator analysis accepts known targets; discovery uses platform-specific Actors. Provider keyword metrics are estimates and can require separate credentials/costs. Web SEO and store ASO remain distinct. See [the starting guide](START-HERE.md) for new-app, existing-app and focused-task entry points.

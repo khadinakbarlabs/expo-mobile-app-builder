@@ -1,0 +1,1253 @@
+{
+  "schemaVersion": 1,
+  "verifiedDate": "2026-10-03",
+  "verificationMethod": "Read-only Apify CLI actors info JSON; public identity and tagged latest build input schema. No Actor runs started.",
+  "executionEnabled": false,
+  "notes": [
+    "Public Actor slugs identify portfolio integrations, not bundled Actor code or a managed execution service.",
+    "Snapshots can drift; re-inspect exact live schemas, nested types, output contract, build and pricing before constructing inputs. Schema summaries are discovery cues, not complete input validators.",
+    "schemaSha256 hashes the full latest build schema serialized with sorted keys and compact JSON separators.",
+    "No account credentials, paid-run authority, run results or confirmed prices are included."
+  ],
+  "actors": [
+    {
+      "actor": "khadinakbar/apple-app-store-all-in-one-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/apple-app-store-all-in-one-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~apple-app-store-all-in-one-scraper",
+      "verifiedAt": "2026-10-03T07:45:30+00:00",
+      "isPublic": true,
+      "description": "Scrape Apple App Store app details, reviews, keyword search, top charts and developer portfolios in one Actor, using Apple's public iTunes and RSS endpoints. Works with Apify MCP and the API.",
+      "latestBuildId": "yMKHtvAOBkbdiHYm0",
+      "latestBuildNumber": "0.2.3",
+      "schemaSha256": "145dda9e050deabb365be734a3d9b98603500e6ed5e10ad99a6dbb93b0ec0a85",
+      "schemaRequired": [],
+      "schemaFields": {
+        "queries": {
+          "type": "array"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "app-detail",
+            "search",
+            "developer-apps",
+            "charts"
+          ],
+          "default": "auto"
+        },
+        "country": {
+          "type": "string",
+          "default": "us"
+        },
+        "includeReviews": {
+          "type": "boolean",
+          "default": false
+        },
+        "maxReviewsPerApp": {
+          "type": "integer",
+          "default": 200,
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "reviewsSort": {
+          "type": "string",
+          "enum": [
+            "mostRecent",
+            "mostHelpful"
+          ],
+          "default": "mostRecent"
+        },
+        "maxResults": {
+          "type": "integer",
+          "default": 50,
+          "minimum": 1,
+          "maximum": 200
+        },
+        "chartType": {
+          "type": "string",
+          "enum": [
+            "top-free",
+            "top-paid",
+            "top-grossing"
+          ],
+          "default": "top-free"
+        },
+        "chartGenre": {
+          "type": "string",
+          "enum": [
+            "all",
+            "6014",
+            "6016",
+            "6017",
+            "6015",
+            "6023",
+            "6018",
+            "6000",
+            "6026",
+            "6013",
+            "6012",
+            "6020",
+            "6011",
+            "6010",
+            "6009",
+            "6008",
+            "6007",
+            "6006",
+            "6024",
+            "6005",
+            "6004",
+            "6003",
+            "6002",
+            "6001"
+          ],
+          "default": "all"
+        },
+        "proxyConfiguration": {
+          "type": "object",
+          "default": {
+            "useApifyProxy": true
+          }
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "apple-app-store"
+      ]
+    },
+    {
+      "actor": "khadinakbar/google-play-all-in-one-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/google-play-all-in-one-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~google-play-all-in-one-scraper",
+      "verifiedAt": "2026-10-03T07:45:30+00:00",
+      "isPublic": true,
+      "description": "Scrape Google Play: app details, reviews, keyword search, top charts, similar apps and developer portfolios. Auto-detects mode from URL or query. MCP-ready, HTTP-only.",
+      "latestBuildId": "KkBWXkLGmX8NffDjX",
+      "latestBuildNumber": "1.0.9",
+      "schemaSha256": "311962ad4531c3193a9e3e01f7579a487c75c0c35e5d80f6bab745b62898c039",
+      "schemaRequired": [],
+      "schemaFields": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "app-details",
+            "reviews",
+            "search",
+            "list",
+            "similar",
+            "developer"
+          ],
+          "default": "auto"
+        },
+        "appIds": {
+          "type": "array"
+        },
+        "startUrls": {
+          "type": "array"
+        },
+        "searchQuery": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string",
+          "default": "us"
+        },
+        "language": {
+          "type": "string",
+          "default": "en"
+        },
+        "maxReviews": {
+          "type": "integer",
+          "default": 100,
+          "minimum": 0,
+          "maximum": 50000
+        },
+        "reviewsSort": {
+          "type": "string",
+          "enum": [
+            "newest",
+            "rating",
+            "helpfulness"
+          ],
+          "default": "newest"
+        },
+        "maxSearchResults": {
+          "type": "integer",
+          "default": 30,
+          "minimum": 1,
+          "maximum": 250
+        },
+        "listCollection": {
+          "type": "string",
+          "enum": [
+            "TOP_FREE",
+            "TOP_PAID",
+            "GROSSING"
+          ],
+          "default": "TOP_FREE"
+        },
+        "listCategory": {
+          "type": "string"
+        },
+        "maxListResults": {
+          "type": "integer",
+          "default": 50,
+          "minimum": 1,
+          "maximum": 500
+        },
+        "fullDetails": {
+          "type": "boolean",
+          "default": false
+        },
+        "includeReviews": {
+          "type": "boolean",
+          "default": false
+        },
+        "includeSimilar": {
+          "type": "boolean",
+          "default": false
+        },
+        "maxResults": {
+          "type": "integer",
+          "default": 1000,
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "proxyConfiguration": {
+          "type": "object",
+          "default": {
+            "useApifyProxy": true
+          }
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "google-play"
+      ]
+    },
+    {
+      "actor": "khadinakbar/influencer-marketing-intelligence-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/influencer-marketing-intelligence-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~influencer-marketing-intelligence-scraper",
+      "verifiedAt": "2026-10-03T07:45:30+00:00",
+      "isPublic": true,
+      "description": "Analyze known Instagram, TikTok, and YouTube creators. Export profile snapshots, recent-content metrics, engagement estimates, sponsorship cues, and source links for creator vetting and performance review.",
+      "latestBuildId": "GopHqern7Ob011S57",
+      "latestBuildNumber": "0.3.3",
+      "schemaSha256": "46e46e83ea328e3fa2fbc196ad164ea2e8df5f6f2738a8026dfa649105d499d2",
+      "schemaRequired": [
+        "creatorTargets"
+      ],
+      "schemaFields": {
+        "creatorTargets": {
+          "type": "array"
+        },
+        "maxRecentPosts": {
+          "type": "integer",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 20
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "instagram",
+        "tiktok",
+        "youtube"
+      ]
+    },
+    {
+      "actor": "khadinakbar/instagram-niche-influencer-finder",
+      "storeUrl": "https://apify.com/khadinakbar/instagram-niche-influencer-finder",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~instagram-niche-influencer-finder",
+      "verifiedAt": "2026-10-03T07:45:30+00:00",
+      "isPublic": true,
+      "description": "Find Instagram influencers by topic: describe a niche like 'vegan skincare' and get a ranked shortlist of public creators. Each creator has recent-post engagement rate, niche score, follower tier and public contact details, with no cookies needed.",
+      "latestBuildId": "YeXIO5Yauw00dxd3H",
+      "latestBuildNumber": "1.0.5",
+      "schemaSha256": "34a48ea49870d21b53575392ffdde4766caa9f8f5dd82bf54573e507b851489d",
+      "schemaRequired": [
+        "topics"
+      ],
+      "schemaFields": {
+        "topics": {
+          "type": "array"
+        },
+        "maxInfluencers": {
+          "type": "integer",
+          "default": 25,
+          "minimum": 1,
+          "maximum": 500
+        },
+        "minFollowers": {
+          "type": "integer",
+          "default": 1000,
+          "minimum": 0
+        },
+        "maxFollowers": {
+          "type": "integer",
+          "default": 500000,
+          "minimum": 1
+        },
+        "minEngagementRatePct": {
+          "type": "number",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 100
+        },
+        "requireEmail": {
+          "type": "boolean",
+          "default": false
+        },
+        "requireVerified": {
+          "type": "boolean",
+          "default": false
+        },
+        "sortBy": {
+          "type": "string",
+          "enum": [
+            "engagement-rate",
+            "followers",
+            "niche-score"
+          ],
+          "default": "engagement-rate"
+        },
+        "postsPerInfluencer": {
+          "type": "integer",
+          "default": 12,
+          "minimum": 6,
+          "maximum": 24
+        },
+        "maxSearchPagesPerTopic": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "outputMode": {
+          "type": "string",
+          "enum": [
+            "full",
+            "compact"
+          ],
+          "default": "full"
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "actor": "khadinakbar/instagram-profile-stats-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/instagram-profile-stats-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~instagram-profile-stats-scraper",
+      "verifiedAt": "2026-10-03T07:45:34+00:00",
+      "isPublic": true,
+      "description": "Bulk-scrape public Instagram follower, following, and post counts from usernames, @handles, or profile URLs. One dataset row per profile with verified and private flags. Cookieless and MCP-ready.",
+      "latestBuildId": "X4wJC4ij20F0d3gkw",
+      "latestBuildNumber": "0.0.2",
+      "schemaSha256": "632b61ac3b32b8c978aee8428acc8ae0bcf488b124d6cce824fc34196266901e",
+      "schemaRequired": [
+        "usernames"
+      ],
+      "schemaFields": {
+        "usernames": {
+          "type": "array"
+        },
+        "deduplicate": {
+          "type": "boolean",
+          "default": true
+        },
+        "maxItems": {
+          "type": "integer",
+          "default": 500,
+          "minimum": 1
+        },
+        "maxRequestRetries": {
+          "type": "integer",
+          "default": 2,
+          "minimum": 0,
+          "maximum": 10
+        },
+        "requestTimeoutSecs": {
+          "type": "integer",
+          "default": 30,
+          "minimum": 10,
+          "maximum": 120
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "actor": "khadinakbar/tiktok-user-search-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/tiktok-user-search-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~tiktok-user-search-scraper",
+      "verifiedAt": "2026-10-03T07:45:34+00:00",
+      "isPublic": true,
+      "description": "Search TikTok users by keyword and extract public creator profiles with handles, bios, follower counts, verification, avatars, and profile URLs. Provider-backed, no cookies, MCP ready.",
+      "latestBuildId": "vYlZ4HPl3S14tHKBe",
+      "latestBuildNumber": "0.1.3",
+      "schemaSha256": "1902fa7de86e4570a113acce32aed54c8d88dfda3255c80872e4321b9156fbc3",
+      "schemaRequired": [
+        "searchQueries"
+      ],
+      "schemaFields": {
+        "searchQueries": {
+          "type": "array"
+        },
+        "maxProfilesPerQuery": {
+          "type": "integer",
+          "default": 50,
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "maxPagesPerQuery": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 500
+        },
+        "maxTotalProfiles": {
+          "type": "integer",
+          "default": 5000,
+          "minimum": 1,
+          "maximum": 50000
+        },
+        "minFollowerCount": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0
+        },
+        "verifiedOnly": {
+          "type": "boolean",
+          "default": false
+        },
+        "excludePrivateAccounts": {
+          "type": "boolean",
+          "default": false
+        },
+        "trim": {
+          "type": "boolean",
+          "default": false
+        },
+        "includeRawData": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "tiktok"
+      ]
+    },
+    {
+      "actor": "khadinakbar/tiktok-profile-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/tiktok-profile-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~tiktok-profile-scraper",
+      "verifiedAt": "2026-10-03T07:45:35+00:00",
+      "isPublic": true,
+      "description": "Vet TikTok creators in one run: each username becomes one row with followers, hearts, videos, bio link, verification and a 0\u201380 Influencer Score for ranking a shortlist. Profiles that are not found are free.",
+      "latestBuildId": "G8QedfKHVLYf2bxc7",
+      "latestBuildNumber": "1.3.6",
+      "schemaSha256": "407dcb837d3165fd8e3eb5720b833fdba25111475e5ad041ee6665cc778cdfda",
+      "schemaRequired": [
+        "profiles"
+      ],
+      "schemaFields": {
+        "profiles": {
+          "type": "array"
+        },
+        "maxResults": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "scrapeRecentVideos": {
+          "type": "boolean",
+          "default": true
+        },
+        "maxVideosPerProfile": {
+          "type": "integer",
+          "default": 24,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "proxyConfiguration": {
+          "type": "object",
+          "default": {
+            "useApifyProxy": true
+          }
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "tiktok"
+      ]
+    },
+    {
+      "actor": "khadinakbar/youtube-search-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/youtube-search-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~youtube-search-scraper",
+      "verifiedAt": "2026-10-03T07:45:35+00:00",
+      "isPublic": true,
+      "description": "Scrape YouTube search results for videos, channels, playlists and movies with title, channel, views, duration, publish date and thumbnails. Every YouTube search filter is supported, with no cookies or API key. Works with Apify MCP and the API.",
+      "latestBuildId": "9R0zOV0eMu9qfDCgr",
+      "latestBuildNumber": "0.2.3",
+      "schemaSha256": "cd84e82d616d2aaa4ed8826a1987ba2aeae4adbc87e4bdc20b2a4161d6dd88b7",
+      "schemaRequired": [
+        "searchQueries"
+      ],
+      "schemaFields": {
+        "searchQueries": {
+          "type": "array"
+        },
+        "maxResultsPerQuery": {
+          "type": "integer",
+          "default": 50,
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "resultType": {
+          "type": "string",
+          "enum": [
+            "all",
+            "video",
+            "channel",
+            "playlist",
+            "movie"
+          ],
+          "default": "all"
+        },
+        "sortBy": {
+          "type": "string",
+          "enum": [
+            "relevance",
+            "uploadDate",
+            "viewCount",
+            "rating"
+          ],
+          "default": "relevance"
+        },
+        "uploadDate": {
+          "type": "string",
+          "enum": [
+            "any",
+            "lastHour",
+            "today",
+            "thisWeek",
+            "thisMonth",
+            "thisYear"
+          ],
+          "default": "any"
+        },
+        "duration": {
+          "type": "string",
+          "enum": [
+            "any",
+            "short",
+            "medium",
+            "long"
+          ],
+          "default": "any"
+        },
+        "features": {
+          "type": "array",
+          "default": []
+        },
+        "country": {
+          "type": "string",
+          "default": "US"
+        },
+        "language": {
+          "type": "string",
+          "default": "en"
+        },
+        "rawSpToken": {
+          "type": "string",
+          "default": ""
+        },
+        "fallbackMode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "never",
+            "always"
+          ],
+          "default": "auto"
+        },
+        "proxyConfiguration": {
+          "type": "object",
+          "default": {
+            "useApifyProxy": true,
+            "apifyProxyGroups": [
+              "RESIDENTIAL"
+            ]
+          }
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "youtube"
+      ]
+    },
+    {
+      "actor": "khadinakbar/tiktok-ads-library-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/tiktok-ads-library-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~tiktok-ads-library-scraper",
+      "verifiedAt": "2026-10-03T07:45:39+00:00",
+      "isPublic": true,
+      "description": "Search TikTok's public Ads Library by advertiser, keyword, business ID or copied library URL for EU/EEA competitor ad research. Returns creative media, advertiser, status, dates, audience estimates, targeting details and source links.",
+      "latestBuildId": "d8IwM1dThflvqFeqH",
+      "latestBuildNumber": "1.1.5",
+      "schemaSha256": "de532891d416a166ca0a0e0dd0fdd4437cf3a83048f5d98361ded9d87eec4323",
+      "schemaRequired": [],
+      "schemaFields": {
+        "libraryUrl": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string",
+          "enum": [
+            "AT",
+            "BE",
+            "BG",
+            "CH",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "EE",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "HR",
+            "HU",
+            "IE",
+            "IS",
+            "IT",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MT",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RO",
+            "SE",
+            "SI",
+            "SK"
+          ],
+          "default": "DE"
+        },
+        "searchQuery": {
+          "type": "string",
+          "default": "adidas"
+        },
+        "searchType": {
+          "type": "string",
+          "enum": [
+            "keyword",
+            "advertiser"
+          ],
+          "default": "keyword"
+        },
+        "advertiserBusinessId": {
+          "type": "string"
+        },
+        "dateFrom": {
+          "type": "string"
+        },
+        "dateTo": {
+          "type": "string"
+        },
+        "maxResults": {
+          "type": "integer",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 200
+        },
+        "includeDetails": {
+          "type": "boolean",
+          "default": false
+        },
+        "requestTimeoutSecs": {
+          "type": "integer",
+          "default": 60,
+          "minimum": 20,
+          "maximum": 120
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "tiktok-ads"
+      ]
+    },
+    {
+      "actor": "khadinakbar/facebook-ads-library-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/facebook-ads-library-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~facebook-ads-library-scraper",
+      "verifiedAt": "2026-10-03T07:45:39+00:00",
+      "isPublic": true,
+      "description": "Scrape public Facebook Ad Library ads by keyword, page ID, company name or ad ID, with advertiser, ad copy, CTA, landing page, media URLs, status, platforms and run dates. No Facebook login needed.",
+      "latestBuildId": "TO6HeBH7oClwL4chN",
+      "latestBuildNumber": "1.0.6",
+      "schemaSha256": "d3d85e58e8f4dae3c9ddf5d36b62f63cb7159c4c6968165b9027329dcfb55091",
+      "schemaRequired": [],
+      "schemaFields": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "search",
+            "companyAds",
+            "adDetails"
+          ],
+          "default": "auto"
+        },
+        "searchTerms": {
+          "type": "array"
+        },
+        "companyPageIds": {
+          "type": "array"
+        },
+        "companyNames": {
+          "type": "array"
+        },
+        "adIds": {
+          "type": "array"
+        },
+        "adUrls": {
+          "type": "array"
+        },
+        "country": {
+          "type": "string",
+          "default": "ALL"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "INACTIVE",
+            "ALL"
+          ],
+          "default": "ACTIVE"
+        },
+        "mediaType": {
+          "type": "string",
+          "enum": [
+            "ALL",
+            "IMAGE",
+            "VIDEO",
+            "MEME",
+            "IMAGE_AND_MEME",
+            "NONE"
+          ],
+          "default": "ALL"
+        },
+        "adType": {
+          "type": "string",
+          "enum": [
+            "all",
+            "political_and_issue_ads"
+          ],
+          "default": "all"
+        },
+        "searchType": {
+          "type": "string",
+          "enum": [
+            "keyword_unordered",
+            "keyword_exact_phrase"
+          ],
+          "default": "keyword_unordered"
+        },
+        "sortBy": {
+          "type": "string",
+          "enum": [
+            "total_impressions",
+            "relevancy_monthly_grouped"
+          ],
+          "default": "total_impressions"
+        },
+        "language": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string"
+        },
+        "endDate": {
+          "type": "string"
+        },
+        "maxResults": {
+          "type": "integer",
+          "default": 100,
+          "minimum": 1,
+          "maximum": 5000
+        },
+        "maxPagesPerSearch": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "enrichDetails": {
+          "type": "boolean",
+          "default": false
+        },
+        "includeRawData": {
+          "type": "boolean",
+          "default": false
+        },
+        "requestTimeoutSecs": {
+          "type": "integer",
+          "default": 30,
+          "minimum": 5,
+          "maximum": 120
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "meta-ads"
+      ]
+    },
+    {
+      "actor": "khadinakbar/google-ads-transparency-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/google-ads-transparency-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~google-ads-transparency-scraper",
+      "verifiedAt": "2026-10-03T07:45:40+00:00",
+      "isPublic": true,
+      "description": "Scrape Google Ads Transparency Center ads by domain or advertiser name, with advertiser, ad ID, format, preview image, regions and first and last shown dates. Works with Apify MCP and the API.",
+      "latestBuildId": "raiLYK7Ov5mqBD4Xf",
+      "latestBuildNumber": "1.5.7",
+      "schemaSha256": "be14ee8efaafdb1400b557f7da233b98017881c28962c45bf711c5129cbee9a1",
+      "schemaRequired": [],
+      "schemaFields": {
+        "searchQuery": {
+          "type": "string"
+        },
+        "searchType": {
+          "type": "string",
+          "enum": [
+            "domain",
+            "advertiserName"
+          ],
+          "default": "domain"
+        },
+        "countryCode": {
+          "type": "string",
+          "default": "US"
+        },
+        "adFormat": {
+          "type": "string",
+          "enum": [
+            "ALL",
+            "TEXT",
+            "IMAGE",
+            "VIDEO"
+          ],
+          "default": "ALL"
+        },
+        "maxResults": {
+          "type": "integer",
+          "default": 50,
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "startUrls": {
+          "type": "array",
+          "default": []
+        },
+        "enrichDetails": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "google-ads"
+      ]
+    },
+    {
+      "actor": "khadinakbar/keyword-search-volume-api",
+      "storeUrl": "https://apify.com/khadinakbar/keyword-search-volume-api",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~keyword-search-volume-api",
+      "verifiedAt": "2026-10-03T07:45:40+00:00",
+      "isPublic": true,
+      "description": "Bulk Google keyword search volume, CPC, competition, and bid estimates via DataForSEO. Free tier (25 keywords) or bulk paid (up to 1,000). One row per keyword, MCP-ready.",
+      "latestBuildId": "ly03LpqPpeEfhE5fO",
+      "latestBuildNumber": "0.1.6",
+      "schemaSha256": "ed2fef4dc31a18ae50bc81566b8efc3e2dd1c1811e6f8259073c207a66eab715",
+      "schemaRequired": [
+        "keywords"
+      ],
+      "schemaFields": {
+        "keywords": {
+          "type": "array"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "free_tier",
+            "bulk_paid"
+          ],
+          "default": "free_tier"
+        },
+        "countryName": {
+          "type": "string",
+          "default": "United States"
+        },
+        "languageName": {
+          "type": "string",
+          "default": "English"
+        },
+        "includeCompetition": {
+          "type": "boolean",
+          "default": true
+        },
+        "includeLowTopOfPageBid": {
+          "type": "boolean",
+          "default": true
+        },
+        "includeHighTopOfPageBid": {
+          "type": "boolean",
+          "default": true
+        },
+        "maxKeywordsPerBatch": {
+          "type": "integer",
+          "default": 700,
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "onPartialFailure": {
+          "type": "string",
+          "enum": [
+            "return_partial",
+            "fail_if_any_batch_fails"
+          ],
+          "default": "return_partial"
+        },
+        "dataforSeoLogin": {
+          "type": "string"
+        },
+        "dataforSeoPassword": {
+          "type": "string"
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "seo"
+      ]
+    },
+    {
+      "actor": "khadinakbar/google-serp-all-in-one-scraper",
+      "storeUrl": "https://apify.com/khadinakbar/google-serp-all-in-one-scraper",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~google-serp-all-in-one-scraper",
+      "verifiedAt": "2026-10-03T07:45:45+00:00",
+      "isPublic": true,
+      "description": "Get Google SERP features in one structured record: organic results, ads, AI Overviews with citations, People Also Ask, Featured Snippet, Knowledge Panel, Local Pack, videos and images. Covers 40 countries on desktop or mobile, with an optional SerpApi key.",
+      "latestBuildId": "amkOXeykaJIN9FtPS",
+      "latestBuildNumber": "0.2.5",
+      "schemaSha256": "c262615792f05229c4f209f31ba5f7799fb6f1965b60b19f3784661888debded",
+      "schemaRequired": [
+        "queries",
+        "countryCode"
+      ],
+      "schemaFields": {
+        "queries": {
+          "type": "array"
+        },
+        "countryCode": {
+          "type": "string",
+          "enum": [
+            "us",
+            "gb",
+            "ca",
+            "au",
+            "de",
+            "fr",
+            "es",
+            "it",
+            "nl",
+            "br",
+            "mx",
+            "ar",
+            "in",
+            "jp",
+            "kr",
+            "sg",
+            "ae",
+            "sa",
+            "za",
+            "ng",
+            "pl",
+            "se",
+            "no",
+            "dk",
+            "fi",
+            "ie",
+            "be",
+            "ch",
+            "at",
+            "pt",
+            "gr",
+            "tr",
+            "ph",
+            "id",
+            "my",
+            "th",
+            "vn",
+            "il",
+            "cl",
+            "co",
+            "pe"
+          ],
+          "default": "us"
+        },
+        "languageCode": {
+          "type": "string",
+          "enum": [
+            "en",
+            "es",
+            "fr",
+            "de",
+            "it",
+            "pt",
+            "nl",
+            "ru",
+            "ja",
+            "ko",
+            "zh",
+            "ar",
+            "hi",
+            "tr",
+            "pl",
+            "sv",
+            "no",
+            "da",
+            "fi"
+          ],
+          "default": "en"
+        },
+        "device": {
+          "type": "string",
+          "enum": [
+            "desktop",
+            "mobile"
+          ],
+          "default": "desktop"
+        },
+        "extractFeatures": {
+          "type": "array",
+          "default": [
+            "organic",
+            "ads",
+            "aiOverview",
+            "peopleAlsoAsk",
+            "featuredSnippet",
+            "knowledgePanel",
+            "localPack",
+            "relatedSearches",
+            "videos",
+            "images"
+          ]
+        },
+        "maxOrganicResults": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "forceCamoufox": {
+          "type": "boolean",
+          "default": false
+        },
+        "maxRetries": {
+          "type": "integer",
+          "default": 3,
+          "minimum": 0,
+          "maximum": 10
+        },
+        "proxyConfiguration": {
+          "type": "object",
+          "default": {
+            "useApifyProxy": true,
+            "apifyProxyGroups": [
+              "RESIDENTIAL"
+            ]
+          }
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "seo"
+      ]
+    },
+    {
+      "actor": "khadinakbar/complete-seo-audit",
+      "storeUrl": "https://apify.com/khadinakbar/complete-seo-audit",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~complete-seo-audit",
+      "verifiedAt": "2026-10-03T07:45:44+00:00",
+      "isPublic": true,
+      "description": "Audit one public website for crawlability, indexation, metadata, headings, links, images, structured data, hreflang, security, response-time and optional AI-crawler signals. Returns a prioritized, source-linked report. It does not query AI answers or claim rankings.",
+      "latestBuildId": "pfWwzArSnjo3ffSZw",
+      "latestBuildNumber": "1.0.5",
+      "schemaSha256": "a88593eb56b2d9ef0c6543e79e143450309db43775f199b98a1a6b41cfc7c776",
+      "schemaRequired": [
+        "siteUrl"
+      ],
+      "schemaFields": {
+        "siteUrl": {
+          "type": "string"
+        },
+        "maxPages": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 50
+        },
+        "checkLinks": {
+          "type": "boolean",
+          "default": true
+        },
+        "maxLinksPerPage": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 1,
+          "maximum": 50
+        },
+        "maxInternalLinksPerPage": {
+          "type": "integer",
+          "default": 25,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "includeExternalLinks": {
+          "type": "boolean",
+          "default": false
+        },
+        "checkAiReadiness": {
+          "type": "boolean",
+          "default": true
+        },
+        "respectRobotsTxt": {
+          "type": "boolean",
+          "default": true
+        },
+        "requestTimeoutMs": {
+          "type": "integer",
+          "default": 15000,
+          "minimum": 3000,
+          "maximum": 30000
+        },
+        "previousSnapshot": {
+          "type": "object",
+          "default": {}
+        },
+        "demoMode": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "seo"
+      ]
+    },
+    {
+      "actor": "khadinakbar/website-seo-spider",
+      "storeUrl": "https://apify.com/khadinakbar/website-seo-spider",
+      "metadataUrl": "https://api.apify.com/v2/acts/khadinakbar~website-seo-spider",
+      "verifiedAt": "2026-10-03T07:45:45+00:00",
+      "isPublic": true,
+      "description": "Crawl public website pages and export structured SEO data. Review page URLs, titles, descriptions, headings, canonicals, links, and response details for page-level audits, migration checks, or downstream reporting.",
+      "latestBuildId": "oTVEPXakTNc2ZdbaG",
+      "latestBuildNumber": "0.2.4",
+      "schemaSha256": "00c9b113f3b2ef951f71509501ef6cbdb26508ab324648071dcb63480c336111",
+      "schemaRequired": [
+        "startUrls"
+      ],
+      "schemaFields": {
+        "startUrls": {
+          "type": "array"
+        },
+        "crawlScope": {
+          "type": "string",
+          "enum": [
+            "same-hostname",
+            "same-domain",
+            "page-only"
+          ],
+          "default": "same-hostname"
+        },
+        "maxPages": {
+          "type": "integer",
+          "default": 100,
+          "minimum": 1,
+          "maximum": 2000
+        },
+        "maxDepth": {
+          "type": "integer",
+          "default": 10,
+          "minimum": 0,
+          "maximum": 20
+        },
+        "seedFromSitemap": {
+          "type": "boolean",
+          "default": false
+        },
+        "respectRobotsTxt": {
+          "type": "boolean",
+          "default": true
+        },
+        "ignoreUrlParameters": {
+          "type": "boolean",
+          "default": false
+        },
+        "maxConcurrency": {
+          "type": "integer",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 20
+        },
+        "fetchMode": {
+          "type": "string",
+          "enum": [
+            "direct",
+            "residential"
+          ],
+          "default": "direct"
+        },
+        "proxyConfiguration": {
+          "type": "object"
+        }
+      },
+      "verification": "metadata-and-latest-build-input-schema-only",
+      "executionVerified": false,
+      "channels": [
+        "seo"
+      ]
+    }
+  ]
+}

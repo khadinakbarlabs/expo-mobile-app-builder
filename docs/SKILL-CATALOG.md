@@ -8,7 +8,7 @@ Generated from `agency/taxonomy.json`; regenerate with `node scripts/build-agenc
 
 Evidence for demand, competitors, user pain, ads and inspiration.
 
-Specialists: `market-researcher`.
+Specialists: `market-researcher`, `store-intelligence-analyst`, `creator-researcher`, `ads-intelligence-analyst`.
 
 | Subcategory | Workflow | Platform |
 | --- | --- | --- |
@@ -32,6 +32,9 @@ Specialists: `market-researcher`.
 | competitor-intelligence | [mine-play-reviews](../skills/mine-play-reviews/SKILL.md) | android |
 | market-discovery | [mine-reddit-android-pain-points](../skills/mine-reddit-android-pain-points/SKILL.md) | android |
 | market-discovery | [mine-reddit-pain-points](../skills/mine-reddit-pain-points/SKILL.md) | shared |
+| ad-intelligence | [mobile-ad-intelligence](../skills/mobile-ad-intelligence/SKILL.md) | shared |
+| influencer-intelligence | [mobile-influencer-intelligence](../skills/mobile-influencer-intelligence/SKILL.md) | shared |
+| store-intelligence | [mobile-store-intelligence](../skills/mobile-store-intelligence/SKILL.md) | shared |
 | user-research | [mom-test](../skills/mom-test/SKILL.md) | shared |
 
 ## Product & business strategy
@@ -220,7 +223,7 @@ Specialists: `store-producer`, `release-manager`.
 
 Measurable activation, retention, acquisition and revenue experiments.
 
-Specialists: `growth-strategist`.
+Specialists: `growth-strategist`, `seo-strategist`.
 
 | Subcategory | Workflow | Platform |
 | --- | --- | --- |
@@ -241,6 +244,7 @@ Specialists: `growth-strategist`.
 | organic-creators | [design-viral-loop](../skills/design-viral-loop/SKILL.md) | shared |
 | analytics-experiments | [instrument-growth-funnel](../skills/instrument-growth-funnel/SKILL.md) | shared |
 | organic-creators | [launch-on-hacker-news](../skills/launch-on-hacker-news/SKILL.md) | shared |
+| seo-intelligence | [mobile-seo-intelligence](../skills/mobile-seo-intelligence/SKILL.md) | shared |
 | paid-acquisition | [run-paid-acquisition](../skills/run-paid-acquisition/SKILL.md) | shared |
 | analytics-experiments | [set-up-ab-testing](../skills/set-up-ab-testing/SKILL.md) | shared |
 

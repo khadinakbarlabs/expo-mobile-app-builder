@@ -7,6 +7,18 @@ description: Coordinate a mobile product through research, strategy, design, Exp
 
 Turn the user's outcome into a small, accountable delivery team. Organize the work into departments and roles without changing the approved product direction, repository workflow, or authorization scope. For a narrow request, use only the relevant role and gate; do not force a full agency ceremony.
 
+## Choose the starting point
+
+The user can start from research, design, engineering, QA, launch or growth. Do not require them to know role or skill names. Infer the useful path from their request and available project context; state the next concrete action in plain language.
+
+- **Idea or research first:** clarify audience/problem/market only when needed, inspect existing evidence, research demand and Apple/Play competitors, identify uncertainties, then deliver a concise opportunity brief and proposed first useful feature. Do not jump to scaffolding before a usable product direction exists. If platforms are unspecified, assume iOS and Android for planning and label that assumption; check before platform-specific work.
+- **Existing app:** inspect repository guidance, stack/version, current changes and affected flow. Preserve working features and product direction. Reproduce a reported bug where tools permit; make a focused change and verify its behavior. For design, launch or growth, start with the actual app, listing/site and available evidence. Do not replace the app, force a migration, scaffold a second project or repeat full discovery automatically.
+- **One focused use case:** deliver the requested research brief, design improvement, feature/fix, QA assessment, store assets, creator/ad intelligence or SEO result using only relevant roles. Each entry point can stand alone; offer a next step only when it follows from the result.
+
+Existing repositories may use native iOS/Android, Flutter or another stack. Inspect first; use Expo playbooks only when compatible with the actual app. Name unsupported framework tooling and use current primary documentation rather than applying incompatible commands. Ask at most the critical short question needed for the next action, after checking available context. Continue preparation that does not depend on the answer.
+
+For any path, return a useful first deliverable with sources or behavior evidence, clear unknowns and a suggested next action. Keep progress and completion in plain language; put implementation details behind the outcome. Preserve the user's authorization across stages and show real external gates separately.
+
 ## Begin with the request
 
 1. Identify the intended outcome, target users, iOS/Android scope, existing app or new app, constraints, and the evidence needed to call the work complete. Inspect repository guidance and preserve existing changes.
@@ -32,13 +44,13 @@ Do not equate local validation with a deployed backend, uploaded binary, install
 
 | Department | Start here | Typical receiving role |
 | --- | --- | --- |
-| Research | [Market researcher](references/roles.md#market-researcher) | Product strategist |
+| Research | [Market researcher](references/roles.md#market-researcher), [store analyst](references/roles.md#store-intelligence-analyst), [creator researcher](references/roles.md#creator-researcher), [ads analyst](references/roles.md#ads-intelligence-analyst) | Product strategist |
 | Strategy | [Product strategist](references/roles.md#product-strategist) | UX designer, mobile architect |
 | Design | [UX designer](references/roles.md#ux-designer), [visual designer](references/roles.md#visual-designer) | Expo engineer |
 | Engineering | [Mobile architect](references/roles.md#mobile-architect), [Expo engineer](references/roles.md#expo-engineer) | QA engineer |
 | Quality | [QA engineer](references/roles.md#qa-engineer), [security reviewer](references/roles.md#security-reviewer) | Release manager |
 | Launch | [Store producer](references/roles.md#store-producer) | Release manager |
-| Growth | [Growth strategist](references/roles.md#growth-strategist) | Product strategist, release manager |
+| Growth | [Growth strategist](references/roles.md#growth-strategist), [SEO strategist](references/roles.md#seo-strategist) | Product strategist, release manager |
 | Operations | [Agency director](references/roles.md#agency-director), [release manager](references/roles.md#release-manager) | User/project owner |
 
 ## Completion

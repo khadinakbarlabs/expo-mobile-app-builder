@@ -7,11 +7,23 @@ description: "Research, plan, design, build, test, monetize, grow, and prepare p
 
 Guide a mobile product from idea to a tested Expo and React Native implementation. Preserve iOS and Android parity unless a capability is intentionally platform-specific. Keep external actions within the user's explicit authorization; authorization already given for the same action persists through the session.
 
+## Start from your current situation
+
+Users can describe their goal in ordinary language without naming agents or skills. Select the smallest useful path and state the next concrete action.
+
+- **New idea or research-first request:** inspect any existing evidence, then research the audience, problem, market/locale and competitors. Return an opportunity brief and uncertainties before choosing features or scaffolding. Move into positioning, design and one working slice only when that direction is usable.
+- **Already-built app:** inspect repository guidance, actual stack/version, current changes and the affected flow. Preserve product direction and working features. Start with the requested fix, design improvement, feature, audit, launch or growth task; do not scaffold a replacement or automatically repeat full discovery. Apply Expo guidance only to a compatible Expo app and name tooling gaps for other frameworks.
+- **Focused result:** use a single relevant workflow for research, UI/UX, development, QA, store assets, influencer/ad intelligence or website SEO. A full agency cycle is optional.
+
+Read available context before asking for it again. Ask only the critical short question that affects the next step and continue independent preparation. Keep the first deliverable and progress messages in plain language, with technical detail only where useful. Preserve the user's cost/account/publication authorization across stages.
+
 ## Agency routing and engineering ownership
 
-For a coordinated product request, use `mobile-app-agency` when installed. It supplies eight departments, twelve specialist roles, stage gates, a task ownership protocol and structured handoffs. Use `apify-mobile-research` for Actor-backed research, `mobile-design-references` for principles and inspiration, and `mobile-store-asset-production` for real screenshot capture and metadata production. If a specialist skill is unavailable, complete that stage sequentially with a compact evidence-based handoff instead of claiming an agent or tool ran.
+For a coordinated product request, use `mobile-app-agency` when installed. It supplies eight departments, sixteen specialist roles, stage gates, a task ownership protocol and structured handoffs. Use `apify-mobile-research` for Actor-backed research, `mobile-design-references` for principles and inspiration, and `mobile-store-asset-production` for real screenshot capture and metadata production. If a specialist skill is unavailable, complete that stage sequentially with a compact evidence-based handoff instead of claiming an agent or tool ran.
 
 Before changes to an existing app, use `engineering-workflow-guard` when installed. Inspect existing work, respect the user's branch policy, assign one writer per file and record verification separately from remote integration or installed-binary proof. Delegate only when the user asks or applicable host instructions permit it.
+
+For growth intelligence, use optional installed `mobile-store-intelligence` (Apple/Play), `mobile-influencer-intelligence` (TikTok/Instagram/YouTube), `mobile-ad-intelligence` (TikTok/Meta/Google), and `mobile-seo-intelligence` (app website search). Each supplies its own collection and evidence procedure; inspect live portfolio Actors before authorized paid runs.
 
 ## Professional capability routing
 

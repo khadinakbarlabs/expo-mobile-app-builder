@@ -1,8 +1,8 @@
 # Mobile App Builder — owner review
 
-Prepared 2026-10-03. **Version 1.2.1 is a local review candidate. Owner verification comes before source publication or submission.**
+Prepared 2026-10-03. **Version 1.3.0 is a local review candidate. Owner verification comes before source publication or submission.**
 
-![Mobile App Builder](../assets/mobile-app-builder-logo-v6.png)
+![Mobile App Builder](../assets/mobile-app-builder-logo-v8.png)
 
 ## Proposed listing
 
@@ -17,13 +17,13 @@ Prepared 2026-10-03. **Version 1.2.1 is a local review candidate. Owner verifica
 | Support | [GitHub Issues](https://github.com/khadinakbarlabs/expo-mobile-app-builder/issues) |
 | Privacy | [Published policy](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/PRIVACY.md) |
 | Terms | [Published terms](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md) |
-| Icon and logo | New 1254-pixel phone/M/UI-tile artwork shown above; [brand guide](BRAND.md) |
+| Icon and logo | New 1254-pixel minimal phone/code artwork shown above; [brand guide](BRAND.md) |
 
 The candidate's five directory fields live in the native plugin manifest, not the marketplace entry. Public URLs must be checked for anonymous access and agreement with the final package after approved source publication. Their currently published text can lag this local candidate.
 
 ## What the agency delivers
 
-**185 workflows · 12 specialist roles · 8 departments.** Research uses configurable Apify Actors through the user's CLI. Product strategy, UX, visual inspiration and design systems feed engineering. QA/security and performance produce evidence. Store production covers genuine screenshots, metadata and localization. Release and growth cover preparation, advertising, acquisition, retention and experiments. All original 179 skills remain present.
+**189 workflows · 16 specialist roles · 8 departments.** Research uses configurable Apify Actors through the user's CLI. Product strategy, UX, visual inspiration and design systems feed engineering. QA/security and performance produce evidence. Store production covers genuine screenshots, metadata and localization. Release and growth cover preparation, advertising, acquisition, retention and experiments. All original 179 skills remain present.
 
 The new Anthropic preparation workflow creates a review pack, listing metadata and brand guide, guides actual artwork generation when required, checks native source structure and records publication blockers. Its bundled local checker performs no network requests or external mutations.
 
@@ -42,7 +42,7 @@ The owner should review the native package and actual intended workflow behavior
 | Blocker | Repair in this candidate |
 | --- | --- |
 | Old CLI rejects valid directory fields | Keep correct fields; validate with isolated pinned Claude Code 2.1.287 |
-| Missing icon and policy/documentation metadata | Add the regenerated phone/M logo, contained icon and four directory URL fields |
+| Missing icon and policy/documentation metadata | Add the regenerated minimal phone/code logo, contained icon and four directory URL fields |
 | Latest/unpinned launchers and wrong Expo doctor | Pin external tools; run existing project tools with no-download execution; use the separate Expo doctor CLI |
 | SDK baseline differs from generated project | Pin the SDK 54 template separately from the generator and inspect generated dependencies |
 | Mixed source versus native upload | Stage the exact Claude allowlist separately; count the submitted tree, not only a ZIP |
@@ -69,3 +69,9 @@ Behavioral examples for owner review (unrun in the Claude host during this prepa
 Remaining: **owner verifies branding/listing/package; authorized native source and policy publication; actual host/evaluation evidence; connected-org GitHub access and exact source validation; owner contact/attestations; portal security/reviewer decision; separate publication/live readback.** Name availability and any generic-name review hold cannot be established by local tests; stable identity is preserved pending the real portal check.
 
 Requirements were checked against Anthropic's [manifest reference](https://code.claude.com/docs/en/plugins-reference), [directory checklist](https://claude.com/docs/plugins/pre-submission-checklist), [submission guide](https://claude.com/docs/plugins/submit) and [platform support](https://claude.com/docs/plugins/platform-support) on 2026-10-03.
+
+## Store, creator, ads and SEO intelligence
+
+Four independently usable workflows and specialist roles now cover Apple/Google Play intelligence, TikTok/Instagram/YouTube creators and influencer marketing, TikTok/Meta/Google ads, and app website SEO. The [public Actor catalog](../skills/apify-mobile-research/references/actor-catalog.json) contains 15 real `khadinakbar/` routes whose public metadata and latest-build input schemas were checked through the Apify CLI on 2026-10-03. These checks establish routing and schema availability, not paid-run results or runtime reliability. Re-inspect exact schemas, pricing and source coverage before execution; no paid runs or execution authority ship in the package.
+
+TikTok commercial-library country coverage follows its checked European/UK enum, not a global promise. Cross-platform creator analysis accepts known targets; discovery uses platform-specific Actors. Provider keyword metrics are estimates and can require separate credentials/costs. Web SEO and store ASO remain distinct. See [the starting guide](START-HERE.md) for new-app, existing-app and focused-task entry points.

@@ -32,3 +32,12 @@ An ad swipe file records hook, problem, promise, format, visual device, offer, C
 ## Source pointers
 
 Checked 2026-10-03: [Actor runs/builds](https://docs.apify.com/actors/running/runs-and-builds), [usage/resources](https://docs.apify.com/actors/running/usage-and-resources), and [CLI reference](https://docs.apify.com/cli/docs/reference). Recheck prices, schemas, data access, and limits on each collection date.
+
+## Expanded intelligence routes
+
+- Store: Apple and Google Play listings, reviews, chart/search snapshots; keep country and store separate.
+- Creators: Instagram niche discovery, TikTok user search and YouTube search feed a known-creator shortlist; cross-platform profile analysis is not keyword discovery.
+- Ads: TikTok commercial library, Meta ad library and Google transparency; visibility/persistence cannot establish private ROAS or spend.
+- SEO: web SERPs, provider keyword estimates and bounded authorized technical crawls; live indexing requires owner property evidence.
+
+Consult the public `actor-catalog.json` beside this reference, then re-inspect the selected live Actor. Catalog schema summaries are discovery hints, not full validation schemas or runtime proof.

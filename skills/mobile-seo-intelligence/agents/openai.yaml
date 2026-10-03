@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile SEO Intelligence"
+  short_description: "Research keywords, search and app website SEO"
+  default_prompt: "Use $mobile-seo-intelligence to prepare a dated, source-backed intelligence brief and bounded Apify collection plan."

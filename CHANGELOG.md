@@ -18,6 +18,14 @@
 
 # Changelog
 
+## 1.3.0 — 2026-10-03
+
+- Added four intelligence workflows and specialist roles for Apple/Google Play, TikTok/Instagram/YouTube creators, TikTok/Meta/Google ads, and website SEO.
+- Included 15 public portfolio Actor routes with CLI-verified metadata and latest-build input-schema snapshots; execution remains disabled by default.
+- Added new-app, existing-app and focused-task entry paths with plain-language guidance and preservation of current apps.
+- Simplified the brand toward a sleek minimal phone/developer symbol. Retained owner verification before publication and submission.
+
+
 ## Unreleased
 
 ## 1.1.3 — 2026-09-06

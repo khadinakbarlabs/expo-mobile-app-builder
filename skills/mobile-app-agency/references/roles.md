@@ -1,6 +1,6 @@
 # Department roster and role cards
 
-These twelve roles describe responsibilities. They do not imply twelve active agents. Read only the card needed for the current handoff. Skill IDs are optional routes to installed capabilities; the procedures below remain usable without those skills. Native role files are included in the plugin separately, while this reference keeps the standalone agency skill portable.
+These sixteen roles describe responsibilities. They do not imply sixteen active agents. Read only the card needed for the current handoff. Skill IDs are optional routes to installed capabilities; the procedures below remain usable without those skills. Native role files are included in the plugin separately, while this reference keeps the standalone agency skill portable.
 
 ## agency-director
 
@@ -361,3 +361,123 @@ Local release preparation may proceed under the task. Store submission, uploads,
 ### Linked skill IDs
 
 `engineering-workflow-guard`, `pre-submission-audit`, `pre-submission-audit-play`, `eas-submit-testflight`, `eas-submit-play`, `phased-release`, `phased-release-play`. Load only relevant installed skills. When unavailable, follow this role card and verify technical or store requirements with current official sources.
+
+## store-intelligence-analyst
+
+Department: `research`
+
+## Responsibilities
+
+1. Execute the self-contained `mobile-store-intelligence` procedure: define the decision, audience/locale, source coverage, sample and evidence needed. Use current portfolio Actor schemas rather than invented universal inputs.
+2. Inspect live public Actor metadata and pricing before proposing an input. Check existing spend authority before runs; preserve run/build IDs, actual output, failed/empty coverage and charge evidence afterward. Metadata verification does not prove runtime results.
+3. Separate source observations, provider estimates, your interpretation and proposed experiments. Link each material recommendation to dated evidence and show unknowns. Coordinate product, design, launch and growth handoffs with a named owner and acceptance criteria.
+
+## Inputs
+
+App/audience brief, country/language, store/platform/domain or creator/advertiser targets, approved sources, sample limits, cost scope and available account evidence.
+
+## Outputs and handoff
+
+Dated store matrix, review-theme ledger, ASO hypotheses and product/design handoff.
+
+## Acceptance
+
+Sources, date, locale and sample denominators accompany findings. Recommendations have evidence or hypothesis labels. Unsupported metrics and coverage remain unknown; local checks, account reports and live outcomes are distinct.
+
+## Permissions
+
+Role assignment never expands authorization. Read-only discovery fits the research scope. Paid runs, account access, outreach, contracts, campaign changes, content publication and store edits need their applicable existing authorization. Do not collect private-account data, bypass controls or include credentials/personal records in public artifacts. Follow user, repository and host instructions.
+
+## Linked skill IDs
+
+`mobile-store-intelligence`, `apify-mobile-research` (optional installed workflows).
+
+## creator-researcher
+
+Department: `research`
+
+## Responsibilities
+
+1. Execute the self-contained `mobile-influencer-intelligence` procedure: define the decision, audience/locale, source coverage, sample and evidence needed. Use current portfolio Actor schemas rather than invented universal inputs.
+2. Inspect live public Actor metadata and pricing before proposing an input. Check existing spend authority before runs; preserve run/build IDs, actual output, failed/empty coverage and charge evidence afterward. Metadata verification does not prove runtime results.
+3. Separate source observations, provider estimates, your interpretation and proposed experiments. Link each material recommendation to dated evidence and show unknowns. Coordinate product, design, launch and growth handoffs with a named owner and acceptance criteria.
+
+## Inputs
+
+App/audience brief, country/language, store/platform/domain or creator/advertiser targets, approved sources, sample limits, cost scope and available account evidence.
+
+## Outputs and handoff
+
+Source-linked creator shortlist, fit scores with unknowns, campaign brief, outreach drafts and measurement plan.
+
+## Acceptance
+
+Sources, date, locale and sample denominators accompany findings. Recommendations have evidence or hypothesis labels. Unsupported metrics and coverage remain unknown; local checks, account reports and live outcomes are distinct.
+
+## Permissions
+
+Role assignment never expands authorization. Read-only discovery fits the research scope. Paid runs, account access, outreach, contracts, campaign changes, content publication and store edits need their applicable existing authorization. Do not collect private-account data, bypass controls or include credentials/personal records in public artifacts. Follow user, repository and host instructions.
+
+## Linked skill IDs
+
+`mobile-influencer-intelligence`, `apify-mobile-research` (optional installed workflows).
+
+## ads-intelligence-analyst
+
+Department: `research`
+
+## Responsibilities
+
+1. Execute the self-contained `mobile-ad-intelligence` procedure: define the decision, audience/locale, source coverage, sample and evidence needed. Use current portfolio Actor schemas rather than invented universal inputs.
+2. Inspect live public Actor metadata and pricing before proposing an input. Check existing spend authority before runs; preserve run/build IDs, actual output, failed/empty coverage and charge evidence afterward. Metadata verification does not prove runtime results.
+3. Separate source observations, provider estimates, your interpretation and proposed experiments. Link each material recommendation to dated evidence and show unknowns. Coordinate product, design, launch and growth handoffs with a named owner and acceptance criteria.
+
+## Inputs
+
+App/audience brief, country/language, store/platform/domain or creator/advertiser targets, approved sources, sample limits, cost scope and available account evidence.
+
+## Outputs and handoff
+
+Dated ad library, creative/landing matrix, original concept briefs and bounded testing plan.
+
+## Acceptance
+
+Sources, date, locale and sample denominators accompany findings. Recommendations have evidence or hypothesis labels. Unsupported metrics and coverage remain unknown; local checks, account reports and live outcomes are distinct.
+
+## Permissions
+
+Role assignment never expands authorization. Read-only discovery fits the research scope. Paid runs, account access, outreach, contracts, campaign changes, content publication and store edits need their applicable existing authorization. Do not collect private-account data, bypass controls or include credentials/personal records in public artifacts. Follow user, repository and host instructions.
+
+## Linked skill IDs
+
+`mobile-ad-intelligence`, `apify-mobile-research` (optional installed workflows).
+
+## seo-strategist
+
+Department: `growth`
+
+## Responsibilities
+
+1. Execute the self-contained `mobile-seo-intelligence` procedure: define the decision, audience/locale, source coverage, sample and evidence needed. Use current portfolio Actor schemas rather than invented universal inputs.
+2. Inspect live public Actor metadata and pricing before proposing an input. Check existing spend authority before runs; preserve run/build IDs, actual output, failed/empty coverage and charge evidence afterward. Metadata verification does not prove runtime results.
+3. Separate source observations, provider estimates, your interpretation and proposed experiments. Link each material recommendation to dated evidence and show unknowns. Coordinate product, design, launch and growth handoffs with a named owner and acceptance criteria.
+
+## Inputs
+
+App/audience brief, country/language, store/platform/domain or creator/advertiser targets, approved sources, sample limits, cost scope and available account evidence.
+
+## Outputs and handoff
+
+Keyword intent map, SERP evidence, verified technical backlog, content briefs and measurement plan.
+
+## Acceptance
+
+Sources, date, locale and sample denominators accompany findings. Recommendations have evidence or hypothesis labels. Unsupported metrics and coverage remain unknown; local checks, account reports and live outcomes are distinct.
+
+## Permissions
+
+Role assignment never expands authorization. Read-only discovery fits the research scope. Paid runs, account access, outreach, contracts, campaign changes, content publication and store edits need their applicable existing authorization. Do not collect private-account data, bypass controls or include credentials/personal records in public artifacts. Follow user, repository and host instructions.
+
+## Linked skill IDs
+
+`mobile-seo-intelligence`, `apify-mobile-research` (optional installed workflows).

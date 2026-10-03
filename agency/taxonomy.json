@@ -5,7 +5,10 @@
       "id": "research",
       "title": "Research & intelligence",
       "agents": [
-        "market-researcher"
+        "market-researcher",
+        "store-intelligence-analyst",
+        "creator-researcher",
+        "ads-intelligence-analyst"
       ],
       "outcome": "Evidence for demand, competitors, user pain, ads and inspiration."
     },
@@ -57,7 +60,8 @@
       "id": "growth",
       "title": "Marketing, ads & experimentation",
       "agents": [
-        "growth-strategist"
+        "growth-strategist",
+        "seo-strategist"
       ],
       "outcome": "Measurable activation, retention, acquisition and revenue experiments."
     },
@@ -473,6 +477,38 @@
         "add-sentry-rn",
         "add-sentry-rn-android"
       ]
+    },
+    {
+      "department": "research",
+      "id": "store-intelligence",
+      "title": "Store Intelligence",
+      "skills": [
+        "mobile-store-intelligence"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "influencer-intelligence",
+      "title": "Influencer Intelligence",
+      "skills": [
+        "mobile-influencer-intelligence"
+      ]
+    },
+    {
+      "department": "research",
+      "id": "ad-intelligence",
+      "title": "Ad Intelligence",
+      "skills": [
+        "mobile-ad-intelligence"
+      ]
+    },
+    {
+      "department": "growth",
+      "id": "seo-intelligence",
+      "title": "SEO Intelligence",
+      "skills": [
+        "mobile-seo-intelligence"
+      ]
     }
   ],
   "platforms": {
@@ -660,6 +696,10 @@
     "run-paid-acquisition": "shared",
     "set-up-ab-testing": "shared",
     "set-up-project-guidance": "shared",
-    "prepare-anthropic-plugin": "shared"
+    "prepare-anthropic-plugin": "shared",
+    "mobile-store-intelligence": "shared",
+    "mobile-influencer-intelligence": "shared",
+    "mobile-ad-intelligence": "shared",
+    "mobile-seo-intelligence": "shared"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "mobile-app-builder",
   "displayName": "Mobile App Builder",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "A mobile app agency for iOS and Android",
   "author": {
     "name": "Khadin Akbar Ventures LLC"
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/khadinakbarlabs/expo-mobile-app-builder#readme",
   "repository": "https://github.com/khadinakbarlabs/expo-mobile-app-builder",
   "license": "MIT",
-  "logo": "assets/mobile-app-builder-logo-v6.png",
+  "logo": "assets/mobile-app-builder-logo-v8.png",
   "keywords": [
     "expo",
     "react-native",

@@ -1,6 +1,6 @@
 {
   "name": "mobile-app-builder",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "A mobile app agency for iOS and Android",
   "author": {
     "name": "Khadin Akbar Ventures LLC",
@@ -28,13 +28,17 @@
     "apify-research",
     "ux-design",
     "agent-teams",
-    "store-assets"
+    "store-assets",
+    "store-intelligence",
+    "influencer-marketing",
+    "ad-intelligence",
+    "seo"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Mobile App Builder",
     "shortDescription": "Develop Android & iOS Apps",
-    "longDescription": "An organized mobile app agency with eight departments, twelve specialist roles and 185 workflows. Coordinate Apify CLI research, product strategy, UI/UX and design inspiration, Expo engineering, QA and security, screenshot and metadata production, store release preparation, marketing, ads and growth measurement. Portable role cards work sequentially in any skill-capable host; native agents depend on host support. Credentials and billable execution stay in the user's authorized environment. The package provides local guidance and validation; it does not host execution or submit apps.",
+    "longDescription": "An organized mobile app agency with eight departments, sixteen specialist roles and 189 workflows. Coordinate Apple App Store and Google Play intelligence, TikTok/Instagram/YouTube creator research, TikTok/Meta/Google ad intelligence and website SEO through verified public Apify Actor routes, alongside product strategy, UI/UX, Expo development, QA/security and store assets. Portable role cards work sequentially; native agents depend on host support. Credentials, authorized paid runs and account operations stay in the user environment. This package guides local work and does not host execution or submit apps.",
     "developerName": "Khadin Akbar Ventures LLC",
     "category": "Developer Tools",
     "capabilities": [
@@ -48,11 +52,11 @@
     "defaultPrompt": [
       "Plan my Expo app for iOS and Android: scope, architecture, risks, and proof.",
       "Build or audit one Expo feature with loading, empty, error, offline, accessibility, and platform checks.",
-      "Plan app growth across activation, retention, monetization, ASO, and paid acquisition."
+      "Plan app growth with store intelligence, ASO, SEO, creators, ad research, activation, retention, and measurement."
     ],
     "brandColor": "#2154D8",
-    "composerIcon": "./assets/mobile-app-builder-logo-v6.png",
-    "logo": "./assets/mobile-app-builder-logo-v6.png",
+    "composerIcon": "./assets/mobile-app-builder-logo-v8.png",
+    "logo": "./assets/mobile-app-builder-logo-v8.png",
     "supportURL": "https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/SUPPORT.md"
   }
 }

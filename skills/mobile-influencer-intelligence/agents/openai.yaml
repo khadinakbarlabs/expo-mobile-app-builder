@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile Influencer Intelligence"
+  short_description: "Research creators and plan marketing pilots"
+  default_prompt: "Use $mobile-influencer-intelligence to prepare a dated, source-backed intelligence brief and bounded Apify collection plan."

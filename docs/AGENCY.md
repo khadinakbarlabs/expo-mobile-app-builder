@@ -1,6 +1,6 @@
 # Mobile App Agency
 
-The agency organizes the builder's capabilities into eight departments with twelve accountable roles. It adds ownership and handoffs to the existing skill library; the original 179 skills remain available. Use one role for a narrow task or coordinate a full product journey with `mobile-app-agency`.
+The agency organizes the builder's capabilities into eight departments with sixteen accountable roles. It adds ownership and handoffs to the existing skill library; the original 179 skills remain available. Use one role for a narrow task or coordinate a full product journey with `mobile-app-agency`.
 
 ## Package tree
 
@@ -8,6 +8,9 @@ The agency organizes the builder's capabilities into eight departments with twel
 agents/                              Native role definitions; no fixed model/tool overrides
   agency-director.md
   market-researcher.md
+  store-intelligence-analyst.md
+  creator-researcher.md
+  ads-intelligence-analyst.md
   product-strategist.md
   ux-designer.md
   visual-designer.md
@@ -17,6 +20,7 @@ agents/                              Native role definitions; no fixed model/too
   security-reviewer.md
   store-producer.md
   growth-strategist.md
+  seo-strategist.md
   release-manager.md
 agency/
   taxonomy.json                      Department/subcategory/role definitions
@@ -31,6 +35,10 @@ skills/
       stage-gates.md                 Practical acceptance and receiving owners
   engineering-workflow-guard/        Repo policy, source provenance, verification
   apify-mobile-research/             Actor/CLI research workflow
+  mobile-store-intelligence/        Apple/Play competitors, reviews and ASO
+  mobile-influencer-intelligence/   Creator research and influencer pilots
+  mobile-ad-intelligence/           TikTok, Meta and Google creative research
+  mobile-seo-intelligence/          App website search and technical SEO
   mobile-design-references/          UX principles, inspiration, platform references
   mobile-store-asset-production/     Metadata, screenshot production, export QA
   ...                                Existing specialized skill library
@@ -42,13 +50,13 @@ The taxonomy is an organization of resources, not a Git checkout layout. Calling
 
 | Department ID | Roles | Owned outcome |
 | --- | --- | --- |
-| `research` | `market-researcher` | Dated competitor, review, ad, market, and inspiration evidence |
+| `research` | `market-researcher`, `store-intelligence-analyst`, `creator-researcher`, `ads-intelligence-analyst` | Dated competitor, review, ad, market, and inspiration evidence |
 | `strategy` | `product-strategist` | Product brief, primary journey, scope, acceptance, measurement |
 | `design` | `ux-designer`, `visual-designer` | Interaction flows, states, accessibility, visual system, implementable specs |
 | `engineering` | `mobile-architect`, `expo-engineer` | Compatible architecture, focused implementation, behavior evidence |
 | `quality` | `qa-engineer`, `security-reviewer` | Observed interaction QA, regression checks, trust-boundary review |
 | `launch` | `store-producer` | Accurate metadata, screenshot sets, localization, disclosure drafts |
-| `growth` | `growth-strategist` | Measurable acquisition/retention experiments and readouts |
+| `growth` | `growth-strategist`, `seo-strategist` | Measurable acquisition/retention experiments and readouts |
 | `operations` | `agency-director`, `release-manager` | File ownership, dependency coordination, evidence and external-state closure |
 
 Native agents can be discovered by a host that supports the plugin's agent format. Codex's `agents/openai.yaml` is skill UI metadata, not a promise of native subagent execution. The standalone `mobile-app-agency` skill carries every role card locally so the same workflow works when only that skill is installed.
@@ -81,3 +89,9 @@ Use design references as decision aids with source/date and applicability. Disti
 Session authorization persists across roles and handoffs. A director or release manager should not ask again for an action already authorized in the same scope. Prepare concrete reviewable results before requesting a missing external approval. Research plans do not authorize spend; asset production does not authorize uploads; build readiness does not authorize store submission or availability changes.
 
 A completion receipt gives the result, changed artifacts, checks, source/build/device identity, exact external state, and any remaining owner action. A local pass, a simulator install, an upload, store review, and public availability each need their own evidence.
+
+## Store, creator, ads and SEO intelligence
+
+Four independently usable workflows and specialist roles now cover Apple/Google Play intelligence, TikTok/Instagram/YouTube creators and influencer marketing, TikTok/Meta/Google ads, and app website SEO. The [public Actor catalog](../skills/apify-mobile-research/references/actor-catalog.json) contains 15 real `khadinakbar/` routes whose public metadata and latest-build input schemas were checked through the Apify CLI on 2026-10-03. These checks establish routing and schema availability, not paid-run results or runtime reliability. Re-inspect exact schemas, pricing and source coverage before execution; no paid runs or execution authority ship in the package.
+
+TikTok commercial-library country coverage follows its checked European/UK enum, not a global promise. Cross-platform creator analysis accepts known targets; discovery uses platform-specific Actors. Provider keyword metrics are estimates and can require separate credentials/costs. Web SEO and store ASO remain distinct. See [the starting guide](START-HERE.md) for new-app, existing-app and focused-task entry points.
