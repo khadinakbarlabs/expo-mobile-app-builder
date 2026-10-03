@@ -2,7 +2,7 @@
 
 Current readback — 2026-10-03: GitHub release 1.3.4 is published. Anthropic version 1.3.2 was submitted and its security scan passed; it is **In review**, held for content policy review with `INVENTORY_INCOMPLETE`. **Live: not yet.** The portal names no missing or unreadable source file requiring a deterministic repair. Retained documentation/metadata warnings need reviewer interpretation.
 
-OpenAI has a saved skills-only 1.3.4 draft under the business publisher. Eight workflow warnings were addressed in source and reviewed independently. Reupload responses returned generic errors despite saving the revised draft; modified skills must finish checks before submission. The six OpenAI owner attestations are pending confirmation. **OpenAI review submission has not happened yet.** The older hosted MCP submission is separate and was not changed.
+OpenAI has a saved skills-only 1.3.4 draft under the business publisher. **All 189 skill checks passed with no security warnings.** Eight workflow warnings were addressed in source and reviewed independently. The privacy-policy assessment notice explicitly permits additional review and does not block submission. The final form has only the six OpenAI owner attestations pending confirmation. **OpenAI review submission has not happened yet.** The revised-draft route returned generic errors and left changed skills unchecked; the main upload route created a fresh, successfully checked draft. Only that working draft should be submitted; the stalled draft remains unsubmitted. The older hosted MCP submission is separate and was not changed.
 
 ## Prepared
 
