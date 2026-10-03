@@ -2,7 +2,7 @@
 
 ![Mobile App Builder — Research. Design. Build. Grow.](assets/mobile-app-builder-banner.png)
 
-[![Version](https://img.shields.io/badge/version-1.3.3-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.3) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
+[![Version](https://img.shields.io/badge/version-1.3.4-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.4) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
 
 **Your mobile app agency, from the first research question to the next product improvement.**
 
@@ -65,11 +65,11 @@ or improve my existing project. Inspect the context, choose the useful
 roles and deliver a focused result with verification.
 ```
 
-`--plugin-dir` loads the plugin for that session. For ZIP-based setup, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.3/mobile-app-builder-1.3.3-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
+`--plugin-dir` loads the plugin for that session. For ZIP-based setup, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.4/mobile-app-builder-1.3.4-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
 
 ### Other skill-capable agents
 
-Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.3), or inspect the GitHub-backed skills with:
+Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.4), or inspect the GitHub-backed skills with:
 
 ```bash
 npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list

@@ -386,7 +386,7 @@
     },
     {
       "id": "add-app-clips",
-      "description": "Add an App Clip (instant launch via QR/NFC, 15MB max) via expo-apple-targets. Use when the user says 'App Clip', 'instant app', 'QR launch'.",
+      "description": "Plan and implement an iOS App Clip with preserved native work, validated invocation URLs and verified target constraints. Use for App Clips, QR/NFC launch, or lightweight app experiences.",
       "path": "skills/add-app-clips/SKILL.md",
       "platform": "ios",
       "department": "engineering",
