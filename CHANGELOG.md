@@ -18,6 +18,13 @@
 
 # Changelog
 
+## 1.3.2 — 2026-10-03
+
+- Ship only the selected minimal logo and README banner; retain older artwork in development source.
+- Clarify that AI-streaming and account-deletion examples belong to the consuming app, with explicit server-secret and app-session boundaries.
+- Record actual Anthropic validation findings and distinguish image inspection from execution.
+
+
 ## 1.3.1 — 2026-10-03
 
 - Polished the public README with a compact brand header, plain-language use cases, intelligence desk routes and direct native installation guidance.

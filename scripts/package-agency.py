@@ -15,7 +15,9 @@ ROOT = Path(__file__).resolve().parent.parent
 COMMON = [
     'README.md', 'WORKFLOWS.md', 'LICENSE', 'PRIVACY.md', 'TERMS.md',
     'SUPPORT.md', 'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md',
-    'RELEASE-CHECKLIST.md', 'skills', 'assets', 'agency', 'docs',
+    'RELEASE-CHECKLIST.md', 'skills', 'agency', 'docs',
+    # Include only selected brand exports; retain prior candidates in source.
+    'assets/mobile-app-builder-logo-v8.png', 'assets/mobile-app-builder-banner.png',
     'scripts/agency-catalog.mjs', 'scripts/agency.mjs',
     'scripts/build-agency-catalog.mjs', 'scripts/plan-expo-project.mjs',
 ]

@@ -16,6 +16,10 @@ Never call an AI provider directly from a mobile client. Put the provider key in
 - Bound message count, message size, allowed roles, and request frequency.
 - Show a provider-specific disclosure and obtain consent before the first transfer of user content.
 
+## Implementation context
+
+This is inert example source for the consuming app’s deployed backend, not code executed by the plugin. The provider key below is configured explicitly in that app’s server-side secret store and sent only to its own provider. Do not read or reuse the installer’s machine credentials, and do not run this example as a plugin hook or local command. The mobile session token in the client example is the consuming app’s signed-in user session, not an installer token.
+
 ## Authenticated Supabase Edge Function
 
 The following pattern uses Supabase's authenticated user mode. It intentionally keeps the quota implementation server-side because its schema and atomic operation depend on the application's datastore.
