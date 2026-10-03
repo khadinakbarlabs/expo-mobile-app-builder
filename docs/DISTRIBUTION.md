@@ -25,3 +25,9 @@ Bundles use the current canonical source identity `mobile-app-builder`. Before u
 Version 1.3.0 adds the Anthropic preparation workflow (189 total), directory metadata, regenerated mobile-development branding, local structural checks and pinned launcher guidance. Its native Claude payload is staged at the versioned distribution directory's `anthropic-source` folder. That tree is intended for an approved branch root; the mixed canonical source now exceeds 512 files and should not be submitted as the directory plugin folder. The native tree omits other host manifests, tests, hosted-service source and source-only release tooling while retaining readable runtime helpers and all workflows.
 
 The owner must verify the candidate before source publication or submission. An authorized later publication must name the exact native branch/folder and read back its public commit and policy contents. Only then should the existing Anthropic submission, if one exists, be revalidated at that exact commit. No directory draft, webhook, submission, approval or live status has been changed or verified here.
+
+## Public source release 1.3.1 — 2026-10-03
+
+The canonical development source follows `main`; the native Claude payload follows `claude-release` at the repository root. Native release contents come from the checked package allowlist, including the README, policies, skills, roles, local user-facing helpers and selected artwork. Source-only build/release validators, other host manifests and hosted-service implementation are excluded from that branch. Both branches preserve repository identity; the native branch is the intended Anthropic source with an empty plugin path.
+
+For direct Claude Code use, clone that branch and load its root with `--plugin-dir`. Portal validation must read the exact published native commit. The directory's listing/review/security result is independent of GitHub publication. Do not duplicate an existing repository/folder submission.

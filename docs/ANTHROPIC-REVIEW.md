@@ -1,6 +1,6 @@
 # Mobile App Builder — owner review
 
-Prepared 2026-10-03. **Version 1.3.0 is a local review candidate. Owner verification comes before source publication or submission.**
+Prepared 2026-10-03. **Version 1.3.1 is a local review candidate. Owner verification comes before source publication or submission.**
 
 ![Mobile App Builder](../assets/mobile-app-builder-logo-v8.png)
 

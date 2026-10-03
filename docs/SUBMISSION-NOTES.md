@@ -1,6 +1,6 @@
 # Agency release preparation
 
-Version 1.3.0 is a validated local package candidate, not a submitted or published directory update.
+Version 1.3.1 is a validated local package candidate, not a submitted or published directory update.
 
 ## Prepared
 

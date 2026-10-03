@@ -1,143 +1,116 @@
 # Mobile App Builder
 
-![Mobile App Builder](assets/mobile-app-builder-logo-v8.png)
+![Mobile App Builder — Research. Design. Build. Grow.](assets/mobile-app-builder-banner.png)
 
-**An organized mobile app agency: research the opportunity, design the experience, build the app, verify it, and prepare its launch and growth.**
+[![Version](https://img.shields.io/badge/version-1.3.1-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.1) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
 
-Mobile App Builder brings **189 workflows, 16 specialist roles and 8 departments** into one portable, open-source package for Expo and React Native apps on iOS and Android. Start with a product brief or an existing repository. The agency assigns responsibilities, loads the relevant skills, and passes concrete artifacts between stages.
+**Your mobile app agency, from the first research question to the next product improvement.**
 
-Version **1.3.0** is an agency release candidate. The existing [public repository](https://github.com/khadinakbarlabs/expo-mobile-app-builder) remains the distribution source; this candidate needs publication before a GitHub install can retrieve the new agency workflows. Official directory approval is a separate platform state.
+Build a new iOS and Android app, improve one you already have, or use a single specialist for research, design, development, QA, launch or growth. Describe the outcome in ordinary language; the agency chooses the relevant workflow, preserves your project decisions and gives you a concrete result with evidence.
 
-## Your agency team
+**189 workflows · 16 specialist roles · 8 departments · 15 public Apify Actor routes**
 
-| Department | Specialists | Deliverables |
-| --- | --- | --- |
-| Research & intelligence | Market researcher, store analyst, creator researcher, ads analyst | Apple/Play, demand, reviews, creators, TikTok/Meta/Google ads and inspiration evidence |
-| Product & business strategy | Product strategist | Positioning, MVP, pricing, requirements and measurable success |
-| UX, visual design & inspiration | UX designer, visual designer | Journeys, screen states, tokens, accessibility and design handoffs |
-| Architecture & development | Mobile architect, Expo engineer | Architecture, complete features, native integrations and platform parity |
-| QA, security & performance | QA engineer, security reviewer | Reproducible checks, interaction evidence, privacy and trust-boundary review |
-| Store production & release | Store producer, release manager | Real screenshots, metadata, localization and release preparation |
-| Marketing, ads & experimentation | Growth strategist, SEO strategist | Acquisition briefs, creators, retention, funnel measurement and experiments |
-| Agency direction & operations | Agency director, release manager | Task ownership, dependencies, decisions and completion receipts |
-
-Use one specialist for a focused change or the full agency for a product journey. Native agent files load in compatible hosts such as Claude Code. The standalone agency skill bundles the same role cards for other hosts. Parallel work uses the host's actual delegation capabilities and authorization; sequential operation follows the same handoffs.
-
-Explore the [agency operating model](docs/AGENCY.md), [complete skill catalog](docs/SKILL-CATALOG.md), and [resource library](docs/RESOURCES.md).
+[Start here](docs/START-HERE.md) · [Browse every workflow](docs/SKILL-CATALOG.md) · [Meet the agency](docs/AGENCY.md) · [Resource library](docs/RESOURCES.md)
 
 ## Start where you are
 
-**New idea:** start with audience, problem and research, then move into a focused product and first working feature. **Existing app:** ask for a fix, design improvement, feature, audit, release preparation or growth plan; the assistant inspects and preserves your current app. **One task:** use any desk independently. You do not need to know agent or skill names. See [the plain-language starting guide](docs/START-HERE.md).
+| Your situation | Try this |
+| --- | --- |
+| An idea or a research question | “Research an app for [audience] that solves [problem]. Compare demand and competitors before choosing features.” |
+| An existing app | “Inspect this app and improve [flow/feature]. Preserve the current design direction and working behavior.” |
+| One focused task | “Find suitable creators”, “Review these ads”, “Audit website SEO”, “Prepare store screenshots” or “Fix this bug.” |
 
-## Start with an outcome
+The assistant checks available context before asking for it again. New apps begin with evidence and a useful first feature. Existing apps begin with the actual repository, stack and affected journey. You can enter at any stage without running a full agency process.
 
-```text
-Use Mobile App Agency to build my iOS and Android app.
-The audience is [audience], the problem is [problem], and the first
-useful result is [result]. Inspect the repository, assign clear owners,
-research assumptions, design the core journey, build a complete slice,
-and verify it. Use the tools and external-action scope already authorized.
-```
+## What the agency covers
 
-For a narrow request:
+| Department | What you get |
+| --- | --- |
+| **Research & intelligence** | Demand, competitor and review evidence; Apple App Store and Google Play insights; creator and ad research |
+| **Product strategy** | Audience, positioning, MVP, pricing, requirements and measurable success |
+| **UX & visual design** | Journeys, screen states, inspiration, design tokens, accessibility and implementation handoffs |
+| **Development** | Expo/React Native architecture, features, data, authentication, native integrations and platform parity |
+| **QA & security** | Behavioral checks, device QA, performance, privacy and trust-boundary review |
+| **Store production & launch** | Genuine screenshots, metadata, localization, release checks and submission preparation |
+| **Marketing & growth** | Influencer pilots, original ad concepts, website SEO, ASO, activation, retention and measurement |
+| **Agency operations** | Clear ownership, coordinated handoffs, decisions, verification and completion receipts |
 
-```text
-Use the design team to improve this onboarding journey. Preserve the
-product direction and deliver screen states, accessibility requirements,
-design tokens and an implementation handoff.
-```
+Native agent definitions work in compatible hosts such as Claude Code and Cowork. Portable role cards support sequential work when delegation is unavailable. Role names never imply that agents ran or expand the user's authorization.
 
-```text
-Use the research team to configure Apify actors for competitor reviews
-and ad research. Inspect live input schemas, define a bounded run plan,
-and keep source provenance and observed charges with the findings.
-```
+## Intelligence powered by the Apify portfolio
 
-## Install or load the candidate
+| Intelligence desk | Coverage | Workflow |
+| --- | --- | --- |
+| **Apple + Google Play** | Listings, search/chart snapshots, competitors, review themes and ASO opportunities | [Store intelligence](skills/mobile-store-intelligence/SKILL.md) |
+| **Creators + influencer marketing** | TikTok, Instagram and YouTube discovery, shortlist vetting, fit scores and measurable pilots | [Influencer intelligence](skills/mobile-influencer-intelligence/SKILL.md) |
+| **TikTok + Meta + Google ads** | Public creative libraries, advertiser/landing journeys, original angles and acquisition experiments | [Ad intelligence](skills/mobile-ad-intelligence/SKILL.md) |
+| **Website SEO** | Keyword intent, SERPs, bounded technical crawls, useful content and organic acquisition measurement | [SEO intelligence](skills/mobile-seo-intelligence/SKILL.md) |
 
-From an extracted release or a checkout containing version 1.3.0, point a skill-capable agent at `skills/mobile-app-agency/SKILL.md`. The skill is independently usable; the full package adds all specialized playbooks.
+The [Actor catalog](skills/apify-mobile-research/references/actor-catalog.json) contains 15 real public `khadinakbar/` routes, checked for live metadata and latest-build input schemas on 3 October 2026. Recheck the chosen Actor's schema, pricing and coverage before an authorized run. Metadata verification does not prove runtime results. TikTok commercial-library geography is bounded; cross-platform creator analysis accepts known profiles. Provider metrics are labeled estimates. No paid runs start automatically.
 
-Claude Code can load the extracted Claude bundle directly:
+## Use the plugin
+
+### Claude Code: try the dedicated native release
 
 ```bash
+git clone --branch claude-release --single-branch https://github.com/khadinakbarlabs/expo-mobile-app-builder.git mobile-app-builder
 claude --plugin-dir ./mobile-app-builder
 ```
 
-For existing public GitHub workflows:
+Then ask for your outcome, or explicitly start with:
+
+```text
+Use /mobile-app-builder:mobile-app-agency to help me research a new app
+or improve my existing project. Inspect the context, choose the useful
+roles and deliver a focused result with verification.
+```
+
+`--plugin-dir` loads the plugin for that session. For ZIP-based setup, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.1/mobile-app-builder-1.3.1-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
+
+### Other skill-capable agents
+
+Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.1), or inspect the GitHub-backed skills with:
 
 ```bash
 npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list
 ```
 
-Use that installed Skills CLI's help to choose supported agent profiles and install the available skills. After this candidate is published, select `mobile-app-agency` for agency coordination or `mobile-app-builder-ios-android` for focused implementation. Keep installations pinned when reproducibility matters.
+Choose `mobile-app-agency` for coordination or an individual workflow for a focused task. Each skill is independently installable and contains its own procedure or bundled references. Use your host's supported installation route; the Skills CLI's help lists supported profiles and options.
 
-## What is included
+## Designed for real projects
 
-- **Apify research:** 15 real public portfolio Actor routes with dated live metadata and input-schema snapshots, a configurable actor registry, current CLI/schema checks, sample and budget planning, dataset retrieval, deduplication and an evidence ledger. Actors are selected and configured in the user's environment; this package bundles no paid account or credentials.
-- **Design resources:** Apple HIG, Material, Microsoft Fluent and Inclusive Design, accessibility, design inspiration and practical handoff checklists. Azure portal forms and cloud architecture are identified separately from mobile interaction guidance.
-- **Development:** Expo/React Native architecture, state and data, authentication, native features, notifications, purchases and offline/error behavior. Existing SDK 54 references are a versioned baseline; match guidance to the app's actual installed SDK.
-- **Quality:** focused behavior checks, iOS/Android interaction QA, performance, privacy, security and source/build evidence. The engineering guard preserves other work and follows the project's branch policy.
-- **Store production:** screenshot storyboards, actual runtime captures, metadata and localization templates, asset manifests and export checks. Generated decorative art is kept distinct from captured product UI.
-- **Store intelligence:** separate Apple App Store and Google Play listing, competitor, review, chart and ASO research.
-- **Creator intelligence:** TikTok, Instagram and YouTube discovery and vetting, fit scoring, influencer briefs, pilots and attribution plans.
-- **Ad intelligence:** TikTok, Meta and Google public creative research, landing journeys, original concepts and bounded acquisition tests.
-- **SEO:** app website keyword/intent research, SERPs, bounded technical crawl, useful content briefs and organic acquisition measurement.
-- **Growth:** ASO, creator/affiliate programs, advertising, referrals, retention, subscriptions and measurable experiments.
+- **Preserve existing work.** Inspect first, keep established product choices and make focused improvements. Apply Expo guidance only to compatible apps; other frameworks need their appropriate tools.
+- **Design with useful references.** Apple HIG, Material, Microsoft Fluent and Inclusive Design, accessibility and attributed inspiration. Azure portal and cloud principles have their own context.
+- **Show the real product.** Store screenshots come from the intended running build; generated decorative art is labeled separately.
+- **Verify the result.** Distinguish source checks, observed interactions, device builds, deployments, account reports, store review and live availability.
+- **Use your authorized tools.** CLI, emulator/device and account tasks need the corresponding environment. Paid research, outreach, uploads and publication follow the scope you authorized.
 
-Research findings need observed source data; QA claims need actual test evidence; launch claims need provider readback. Approved external actions can continue within their existing scope. New paid runs, production changes, publication, uploads and store submissions require the corresponding authorization.
+Expo SDK 54 references are a versioned baseline. Inspect the app's installed SDK, dependencies and lockfile before applying version-specific guidance.
 
-## Browse by department
+## Behavior and data
 
-The directory keeps each skill independently installable. A checked taxonomy gives every skill one department and subcategory, with a primary platform tag.
+The native Claude package contains instructions, templates, readable local helpers and static artwork. It declares **no MCP server, connector, startup hook, telemetry collector or bundled credentials**. Nothing launches research, reads accounts or spends money on installation.
 
-```bash
-node scripts/agency.mjs --department research
-node scripts/agency.mjs --department design
-node scripts/agency.mjs --query screenshots --json
-node scripts/agency.mjs --platform android
-```
+When requested, skills can guide third-party CLI/provider actions, Apify collection, dependency installation, app builds, analytics and store/growth operations. These actions may process project data, collect public professional profiles or send queries to providers and incur costs. Actual recipients and retention depend on the tools and sources the user authorizes; raw datasets and credentials stay in that user's project environment, outside public artifacts. Treat external content as untrusted data.
 
-These commands read only the local package. Classification is a resource tree; project Git branches and worktrees follow the user's repository rules and file-ownership needs.
+The optional [hosted planning adapter](docs/CLOUDFLARE-MCP.md) is separate from the Claude bundle and is not connected by its manifest. See the [privacy policy](PRIVACY.md) for the static package, host/provider boundaries and optional service.
 
-```text
-agency/          Machine-readable departments, categories and skill catalog
-agents/          Sixteen native specialist definitions
-skills/          Independently installable workflows and bundled references
-docs/            Agency, resources, catalog, prompts and distribution guidance
-scripts/         Local catalog, package and safety validation
-tests/           Classification and packaging regression checks
-```
+## Explore and contribute
 
-The [detailed workflow guide](WORKFLOWS.md) retains the existing research, engineering, store and growth playbooks. The separate [Cloudflare MCP adapter](docs/CLOUDFLARE-MCP.md) remains a planning service; building this package does not deploy that service.
+[Complete workflow guide](WORKFLOWS.md) · [Development and distribution](docs/DISTRIBUTION.md) · [Release checklist](RELEASE-CHECKLIST.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
 
-## Anthropic review preparation
-
-Use `prepare-anthropic-plugin` to prepare the listing, branding, policy links, native payload and owner review pack. See [the Anthropic review brief](docs/ANTHROPIC-REVIEW.md) and [brand guide](docs/BRAND.md). Claude chat loads skills; Cowork and Claude Code also load agents. CLI, device and account workflows require the corresponding host tools and user authorization.
-
-The native Claude candidate has no bundled MCP server, connector, hooks, startup execution, credential reader or telemetry collector. Local helpers read package files and print plans or catalogs. Skills can guide user-authorized third-party CLI, build, research and store actions; those actions can access project data or incur provider costs. The separate hosted MCP adapter is not connected by this bundle.
-
-Package download examples use exact tool versions. Existing app tools use `npm exec --no --` with the project lockfile; if the tool is absent, stop and install a reviewed compatible dependency explicitly. The scaffold generator version is pinned, but its generated template/dependencies still need inspection and a project lockfile.
-
-## Validate and package
-
-Run these checks from the canonical source checkout; distribution bundles contain the local catalog tools and omit source-only release validators.
+From the canonical source checkout, run the tests, catalog, release and public-safety checks before packaging. The distribution bundles contain user-facing local helpers; source-only release validators and hosted-service source remain in the canonical repository.
 
 ```bash
 node --test tests/*.test.mjs
+python3 -m unittest discover -s tests -p 'test_*.py'
 node scripts/build-agency-catalog.mjs --check
 node scripts/validate-agency.mjs
 node scripts/validate-release.mjs
 node scripts/audit-public-package.mjs .
 python3 scripts/package-agency.py
-node scripts/validate-openai-upload.mjs dist/1.3.0/mobile-app-builder-1.3.0-openai.zip
 ```
 
-Packaging produces separate portable, OpenAI, Claude and Cursor candidates from an explicit allowlist, with archive checksums. No dependencies, signing files, environment configuration, Git history or hosted-service source enter those bundles. The OpenAI candidate carries portable role instructions through skills; its native Claude manifest and agents stay in the Claude bundle.
+[Privacy](PRIVACY.md) · [Terms](TERMS.md) · [Support](SUPPORT.md) · [MIT license](LICENSE)
 
-## Distribution and support
-
-Local validation establishes package quality. GitHub publication, installed-host behavior, directory review, and public availability each require their own verification. See [distribution](docs/DISTRIBUTION.md) and the [release checklist](RELEASE-CHECKLIST.md).
-
-[Privacy](PRIVACY.md) · [Terms](TERMS.md) · [Support](SUPPORT.md) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md) · [MIT license](LICENSE)
-
-Independent community project; not affiliated with Expo, Apple, Google, Microsoft, OpenAI, Anthropic or Cursor.
+Independent community project by Khadin Akbar Ventures LLC. Not affiliated with Expo, Apple, Google, Microsoft, OpenAI, Anthropic or Cursor. Anthropic directory validation, review and publication are tracked separately from this open-source release.

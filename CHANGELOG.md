@@ -18,6 +18,13 @@
 
 # Changelog
 
+## 1.3.1 — 2026-10-03
+
+- Polished the public README with a compact brand header, plain-language use cases, intelligence desk routes and direct native installation guidance.
+- Clarified user-directed research data/provider handling and the dedicated Claude source branch.
+- Prepared the GitHub release and Anthropic submission source with the same verified 189 workflows and 16 roles.
+
+
 ## 1.3.0 — 2026-10-03
 
 - Added four intelligence workflows and specialist roles for Apple/Google Play, TikTok/Instagram/YouTube creators, TikTok/Meta/Google ads, and website SEO.
