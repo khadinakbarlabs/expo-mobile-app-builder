@@ -18,6 +18,12 @@
 
 # Changelog
 
+## 1.3.3 — 2026-10-03
+
+- Address seven OpenAI workflow warnings with scoped dependency authorization, allowlisted shortcut routing, verified on-device AI/toolchain guidance and anonymized public research.
+- Add a regression test for external shortcut destinations and unknown IDs.
+- Preserve 189 skills, 16 roles and the selected minimal logo.
+
 ## 1.3.2 — 2026-10-03
 
 - Ship only the selected minimal logo and README banner; retain older artwork in development source.

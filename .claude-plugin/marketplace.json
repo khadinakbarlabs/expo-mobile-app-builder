@@ -10,7 +10,7 @@
     {
       "name": "mobile-app-builder",
       "displayName": "Mobile App Builder",
-      "version": "1.3.2",
+      "version": "1.3.3",
       "source": "./",
       "description": "Develop Android & iOS Apps",
       "category": "Development",
