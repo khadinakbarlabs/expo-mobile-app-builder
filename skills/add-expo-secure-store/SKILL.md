@@ -9,7 +9,7 @@ Encrypted at-rest storage backed by iOS Keychain. Use for auth tokens, API keys,
 
 ## Install
 ```bash
-npx expo install expo-secure-store
+npm exec --no -- expo install expo-secure-store
 ```
 
 ## Usage

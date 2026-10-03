@@ -36,7 +36,7 @@ Apple expanded App Store Connect from 39 → **50 supported localizations**. Mos
 ## In-app localization (i18n)
 For Expo apps:
 ```bash
-npx expo install expo-localization i18n-js
+npm exec --no -- expo install expo-localization i18n-js
 ```
 ```ts
 import { getLocales } from 'expo-localization';

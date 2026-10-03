@@ -24,7 +24,7 @@ PostHog wins for indie apps that want one tool for everything.
 
 ```bash
 pnpm add posthog-react-native posthog-react-native-session-replay
-npx expo install expo-application expo-device expo-localization expo-file-system
+npm exec --no -- expo install expo-application expo-device expo-localization expo-file-system
 ```
 
 For session replay specifically:

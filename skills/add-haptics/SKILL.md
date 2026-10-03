@@ -9,7 +9,7 @@ iOS Taptic Engine feedback via expo-haptics.
 
 ## Install
 ```bash
-npx expo install expo-haptics
+npm exec --no -- expo install expo-haptics
 ```
 
 ## Usage

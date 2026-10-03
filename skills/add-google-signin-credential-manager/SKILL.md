@@ -9,7 +9,7 @@ Modern Android auth API (Android 14+, backports to 4.4). Replaces deprecated Goo
 
 ## Install
 ```bash
-npx expo install @react-native-google-signin/google-signin
+npm exec --no -- expo install @react-native-google-signin/google-signin
 ```
 
 ## Configure

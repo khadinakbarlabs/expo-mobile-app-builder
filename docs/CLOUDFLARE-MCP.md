@@ -14,8 +14,8 @@ From this directory:
 
 ```bash
 npm install
-npx wrangler login
-npx wrangler deploy
+npx wrangler@4.129.0 login
+npx wrangler@4.129.0 deploy
 ```
 
 The default Worker name is `mobile-app-builder`. The primary public MCP endpoint is `https://app-builder.khadinakbar.dev/mcp`; `/health` is a non-MCP health check. The original `workers.dev` endpoint remains available as a fallback. New clients should use Streamable HTTP. The older SSE transport is not implemented.

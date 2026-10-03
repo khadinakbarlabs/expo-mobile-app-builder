@@ -213,6 +213,7 @@ Specialists: `store-producer`, `release-manager`.
 | launch-planning | [pre-registration-campaign](../skills/pre-registration-campaign/SKILL.md) | android |
 | submission-rollout | [pre-submission-audit](../skills/pre-submission-audit/SKILL.md) | ios |
 | submission-rollout | [pre-submission-audit-play](../skills/pre-submission-audit-play/SKILL.md) | android |
+| submission-rollout | [prepare-anthropic-plugin](../skills/prepare-anthropic-plugin/SKILL.md) | shared |
 | submission-rollout | [prepare-chatgpt-app-submission](../skills/prepare-chatgpt-app-submission/SKILL.md) | shared |
 
 ## Marketing, ads & experimentation

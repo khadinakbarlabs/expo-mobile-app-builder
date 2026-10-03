@@ -24,6 +24,8 @@ jobs:
       - run: node scripts/build-agency-catalog.mjs --check
       - run: node scripts/validate-agency.mjs
       - run: python3 scripts/package-agency.py
+      - run: npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate .claude-plugin/plugin.json --strict
+      - run: npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate .claude-plugin/marketplace.json --strict
 
   worker:
     runs-on: ubuntu-latest

@@ -26,7 +26,7 @@ Wordle was once-a-day and the same word worldwide, so sharing let people compare
 ## Implementation (React Native / Expo)
 
 ```bash
-npx expo install expo-sharing react-native-view-shot
+npm exec --no -- expo install expo-sharing react-native-view-shot
 ```
 
 ```tsx

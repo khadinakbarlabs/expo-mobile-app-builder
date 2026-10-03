@@ -11,7 +11,7 @@ Apple Sign In + magic link, persistent sessions, server-side route guards.
 
 ```bash
 pnpm add @supabase/supabase-js @react-native-async-storage/async-storage
-npx expo install expo-apple-authentication expo-web-browser
+npm exec --no -- expo install expo-apple-authentication expo-web-browser
 ```
 
 ## Client setup (`lib/supabase.ts`)

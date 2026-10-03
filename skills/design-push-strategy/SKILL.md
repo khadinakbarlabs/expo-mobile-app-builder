@@ -40,7 +40,7 @@ Android 13+ requires the runtime POST_NOTIFICATIONS permission. Same principle: 
 ## Implementation (Expo)
 
 ```bash
-npx expo install expo-notifications
+npm exec --no -- expo install expo-notifications
 ```
 
 Requires a **development build** (not Expo Go) for real push on SDK 54+, and `UIBackgroundModes: ["remote-notification"]` in app.json. Simulators can't fully register. See `add-expo-notifications`.

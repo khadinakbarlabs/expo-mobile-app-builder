@@ -9,7 +9,7 @@ Firebase Cloud Messaging — free, unlimited push for Android.
 
 ## Install
 ```bash
-npx expo install expo-notifications expo-device
+npm exec --no -- expo install expo-notifications expo-device
 ```
 
 ## Firebase project setup

@@ -103,7 +103,7 @@ You do not need to understand the plugin format before using it.
 The fastest path is to install the flagship skill. It covers the complete iOS and Android workflow while keeping the agent's context focused.
 
 ```bash
-npx skills add khadinakbarlabs/expo-mobile-app-builder \
+npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder \
   --skill mobile-app-builder-ios-android \
   --agent codex \
   --copy \
@@ -122,13 +122,13 @@ and stop before any build, upload, submission, publication, or paid action.
 To browse before installing:
 
 ```bash
-npx skills add khadinakbarlabs/expo-mobile-app-builder --list
+npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list
 ```
 
 To install all 179 skills:
 
 ```bash
-npx skills add khadinakbarlabs/expo-mobile-app-builder \
+npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder \
   --skill '*' \
   --agent codex \
   --copy \
@@ -162,7 +162,7 @@ The GitHub marketplace route is independent of any approval in a platform-operat
 Install the portable skills into Cursor:
 
 ```bash
-npx skills add khadinakbarlabs/expo-mobile-app-builder \
+npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder \
   --skill '*' \
   --agent cursor \
   --copy \
@@ -536,7 +536,7 @@ Use these rules when the prompt is underspecified:
 - If an assumption changes the product, data model, provider, billing, privacy posture, or release path, ask or present options before committing.
 - If the user asks for a broad build, start with the flagship skill and route to specialists only when a concrete capability appears.
 - If the user names a skill, follow that skill and keep the rest of the catalog out of context unless needed.
-- If a dependency is Expo-managed, prefer `npx expo install` so the installed version remains compatible with the target SDK.
+- If a dependency is Expo-managed, prefer `npm exec --no -- expo install` so the installed version remains compatible with the target SDK.
 - If a task can stay within Expo's managed model, do not introduce native maintenance merely because it is possible.
 - If the requirement needs native configuration or a development build, explain why Expo Go is insufficient.
 - If only one platform can be exercised, inspect parity but label the unobserved platform honestly.
@@ -605,7 +605,7 @@ Place a file named `AGENTS.md` at your repository root and adapt this template:
 - Support both iOS and Android. Document intentional platform differences.
 - Inspect existing architecture and preserve unrelated work before editing.
 - Use TypeScript and existing repository patterns.
-- Prefer `npx expo install` for Expo-managed dependencies.
+- Prefer `npm exec --no -- expo install` for Expo-managed dependencies.
 - Include loading, empty, error, offline, and accessible states where relevant.
 - Keep credentials, signing files, account IDs, private logs, and customer data
   out of source, prompts, fixtures, screenshots, and documentation.
@@ -1040,7 +1040,7 @@ The catalog follows a few practical rules:
 ### Install one specialist skill
 
 ```bash
-npx skills add khadinakbarlabs/expo-mobile-app-builder \
+npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder \
   --skill accessibility-audit \
   --agent codex \
   --copy \
@@ -1367,7 +1367,7 @@ The [release checklist](RELEASE-CHECKLIST.md) is the canonical operational refer
 Run the same installation command again against the GitHub repository. The host-specific Skills CLI determines how copied skills are refreshed. Review the repository diff or release notes before updating in environments with strict change control.
 
 ```bash
-npx skills add khadinakbarlabs/expo-mobile-app-builder \
+npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder \
   --skill mobile-app-builder-ios-android \
   --agent codex \
   --copy \
@@ -1391,7 +1391,7 @@ Use the host’s plugin removal command or remove the copied skill directories i
 ### The agent cannot see the skill
 
 1. Confirm the installation used the agent profile you actually run.
-2. List the repository skills with `npx skills add khadinakbarlabs/expo-mobile-app-builder --list`.
+2. List the repository skills with `npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list`.
 3. Install the flagship skill explicitly instead of relying on a wildcard.
 4. Restart or reload the coding-agent host if it only discovers skills at startup.
 5. Ask the host to list installed skills and look for `mobile-app-builder-ios-android`.

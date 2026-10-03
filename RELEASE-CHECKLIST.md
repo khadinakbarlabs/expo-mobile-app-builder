@@ -22,3 +22,13 @@
 - [ ] For a new MCP app review, supply exactly five positive and three negative cases plus a verified demo. Skills-only bundles require no MCP cases, demo or reviewer credentials.
 - [ ] Obtain an explicit owner instruction: `SUBMIT FOR REVIEW`.
 - [ ] After review approval, obtain a separate explicit instruction before publishing.
+
+## Anthropic candidate checks
+
+- [ ] Owner verifies the current brand, listing and exact package before external actions.
+- [ ] Publish the approved native source tree rather than the mixed canonical root; verify exact public commit and current policy contents.
+- [ ] Validate the exact native tree with Claude Code 2.1.281+ (current pinned check: 2.1.287).
+- [ ] Confirm plugin file count, per-file limits, platform-safe names, paths, Git attributes, supported binaries and no credential artifacts.
+- [ ] Load intended Claude surfaces and record actual behavior/evaluation evidence.
+- [ ] Reuse the existing source submission, verify organization/GitHub push access and revalidate the fetched commit.
+- [ ] Owner verifies compliance contact and completes attestations; portal validation, security scan, reviewer approval and live publication remain separate.

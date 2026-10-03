@@ -9,7 +9,7 @@ Tactile feedback via vibration motor. Android's haptic API is less capable than 
 
 ## Install
 ```bash
-npx expo install expo-haptics
+npm exec --no -- expo install expo-haptics
 ```
 
 ## Use

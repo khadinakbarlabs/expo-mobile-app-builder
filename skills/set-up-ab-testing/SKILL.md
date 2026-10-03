@@ -46,7 +46,7 @@ The recommended indie stack: **PostHog** for product/onboarding/retention experi
 ## Implementation (PostHog feature flag + experiment)
 
 ```bash
-npx expo install posthog-react-native expo-application expo-device expo-localization expo-file-system
+npm exec --no -- expo install posthog-react-native expo-application expo-device expo-localization expo-file-system
 ```
 
 ```tsx

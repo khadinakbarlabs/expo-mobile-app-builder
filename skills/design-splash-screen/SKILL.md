@@ -20,7 +20,7 @@ Android 11 and below: fallback to expo-splash-screen full-screen image.
 ## RN+Expo config
 
 ```bash
-npx expo install expo-splash-screen
+npm exec --no -- expo install expo-splash-screen
 ```
 
 `app.json`:

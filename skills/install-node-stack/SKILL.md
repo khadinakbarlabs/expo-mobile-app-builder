@@ -10,7 +10,7 @@ Installing runtimes modifies the user's workstation and shell profile. Explain t
 ## Expo SDK 54 baseline
 
 - Use a currently supported Node 20.19+ runtime, then verify the project's exact Expo SDK compatibility.
-- Use the package manager already approved for the project. Prefer `npx expo install` for Expo SDK-compatible dependencies.
+- Use the package manager already approved for the project. Prefer `npm exec --no -- expo install` for Expo SDK-compatible dependencies.
 - Keep runtime configuration local to the workstation; never place access tokens or private registry credentials in project source.
 
 ## Recommended installation paths
@@ -40,7 +40,7 @@ pnpm --version
 bun --version
 ```
 
-Pin a compatible runtime in a project-local `.nvmrc` only after confirming the project's toolchain. Then run `npx expo doctor` from the app root to catch SDK or native dependency drift.
+Pin a compatible runtime in a project-local `.nvmrc` only after confirming the project's toolchain. Then run `npx expo-doctor@1.20.4` from the app root to catch SDK or native dependency drift.
 
 ## Safety checks
 

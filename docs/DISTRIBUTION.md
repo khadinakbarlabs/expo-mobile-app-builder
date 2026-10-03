@@ -19,3 +19,9 @@ Official directory status can change independently of a GitHub release. Verify t
 Version 1.2.0 is prepared locally from the newer 179-workflow source, preserving its existing hardening and adding five agency/resource workflows. Public GitHub main was verified at 165 workflows during preparation; release v1.1.0 exists and PR #1 remains open. This local candidate has not changed public GitHub, directory availability, installed caches or the hosted Worker.
 
 Bundles use the current canonical source identity `mobile-app-builder`. Before updating a legacy OpenAI record, inspect its actual registered internal name: a record named `expo-mobile-app-builder` requires a matching native update adapter, independently validated, rather than a silent canonical identity rename. No live portal publication status was verified for this candidate.
+
+## Anthropic review candidate — 2026-10-03
+
+Version 1.2.1 adds the Anthropic preparation workflow (185 total), directory metadata, regenerated mobile-development branding, local structural checks and pinned launcher guidance. Its native Claude payload is staged at the versioned distribution directory's `anthropic-source` folder. That tree is intended for an approved branch root; the mixed canonical source now exceeds 512 files and should not be submitted as the directory plugin folder. The native tree omits other host manifests, tests, hosted-service source and source-only release tooling while retaining readable runtime helpers and all workflows.
+
+The owner must verify the candidate before source publication or submission. An authorized later publication must name the exact native branch/folder and read back its public commit and policy contents. Only then should the existing Anthropic submission, if one exists, be revalidated at that exact commit. No directory draft, webhook, submission, approval or live status has been changed or verified here.

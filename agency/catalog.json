@@ -208,7 +208,7 @@
       "department": "launch",
       "id": "submission-rollout",
       "title": "Submission & rollout",
-      "count": 13
+      "count": 14
     },
     {
       "department": "launch",
@@ -1681,6 +1681,14 @@
       "description": "Run the complete pre-submission audit for Google Play before uploading. Use when the user says 'pre submission play', 'audit before play submit', 'is my android app ready'.",
       "path": "skills/pre-submission-audit-play/SKILL.md",
       "platform": "android",
+      "department": "launch",
+      "category": "submission-rollout"
+    },
+    {
+      "id": "prepare-anthropic-plugin",
+      "description": "Prepare a Claude plugin's Anthropic listing, brand assets, policy links, native manifest, local preflight and owner review pack before submission. Use when finalizing a plugin for the Claude directory or diagnosing recurring publication blockers.",
+      "path": "skills/prepare-anthropic-plugin/SKILL.md",
+      "platform": "shared",
       "department": "launch",
       "category": "submission-rollout"
     },

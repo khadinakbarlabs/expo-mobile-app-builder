@@ -1,10 +1,12 @@
 # Mobile App Builder
 
+![Mobile App Builder](assets/mobile-app-builder-logo-v6.png)
+
 **An organized mobile app agency: research the opportunity, design the experience, build the app, verify it, and prepare its launch and growth.**
 
-Mobile App Builder brings **184 workflows, 12 specialist roles and 8 departments** into one portable, open-source package for Expo and React Native apps on iOS and Android. Start with a product brief or an existing repository. The agency assigns responsibilities, loads the relevant skills, and passes concrete artifacts between stages.
+Mobile App Builder brings **185 workflows, 12 specialist roles and 8 departments** into one portable, open-source package for Expo and React Native apps on iOS and Android. Start with a product brief or an existing repository. The agency assigns responsibilities, loads the relevant skills, and passes concrete artifacts between stages.
 
-Version **1.2.0** is an agency release candidate. The existing [public repository](https://github.com/khadinakbarlabs/expo-mobile-app-builder) remains the distribution source; this candidate needs publication before a GitHub install can retrieve the new agency workflows. Official directory approval is a separate platform state.
+Version **1.2.1** is an agency release candidate. The existing [public repository](https://github.com/khadinakbarlabs/expo-mobile-app-builder) remains the distribution source; this candidate needs publication before a GitHub install can retrieve the new agency workflows. Official directory approval is a separate platform state.
 
 ## Your agency team
 
@@ -49,7 +51,7 @@ and keep source provenance and observed charges with the findings.
 
 ## Install or load the candidate
 
-From an extracted release or a checkout containing version 1.2.0, point a skill-capable agent at `skills/mobile-app-agency/SKILL.md`. The skill is independently usable; the full package adds all specialized playbooks.
+From an extracted release or a checkout containing version 1.2.1, point a skill-capable agent at `skills/mobile-app-agency/SKILL.md`. The skill is independently usable; the full package adds all specialized playbooks.
 
 Claude Code can load the extracted Claude bundle directly:
 
@@ -60,7 +62,7 @@ claude --plugin-dir ./mobile-app-builder
 For existing public GitHub workflows:
 
 ```bash
-npx skills add khadinakbarlabs/expo-mobile-app-builder --list
+npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list
 ```
 
 Use that installed Skills CLI's help to choose supported agent profiles and install the available skills. After this candidate is published, select `mobile-app-agency` for agency coordination or `mobile-app-builder-ios-android` for focused implementation. Keep installations pinned when reproducibility matters.
@@ -100,6 +102,14 @@ tests/           Classification and packaging regression checks
 
 The [detailed workflow guide](WORKFLOWS.md) retains the existing research, engineering, store and growth playbooks. The separate [Cloudflare MCP adapter](docs/CLOUDFLARE-MCP.md) remains a planning service; building this package does not deploy that service.
 
+## Anthropic review preparation
+
+Use `prepare-anthropic-plugin` to prepare the listing, branding, policy links, native payload and owner review pack. See [the Anthropic review brief](docs/ANTHROPIC-REVIEW.md) and [brand guide](docs/BRAND.md). Claude chat loads skills; Cowork and Claude Code also load agents. CLI, device and account workflows require the corresponding host tools and user authorization.
+
+The native Claude candidate has no bundled MCP server, connector, hooks, startup execution, credential reader or telemetry collector. Local helpers read package files and print plans or catalogs. Skills can guide user-authorized third-party CLI, build, research and store actions; those actions can access project data or incur provider costs. The separate hosted MCP adapter is not connected by this bundle.
+
+Package download examples use exact tool versions. Existing app tools use `npm exec --no --` with the project lockfile; if the tool is absent, stop and install a reviewed compatible dependency explicitly. The scaffold generator version is pinned, but its generated template/dependencies still need inspection and a project lockfile.
+
 ## Validate and package
 
 Run these checks from the canonical source checkout; distribution bundles contain the local catalog tools and omit source-only release validators.
@@ -111,7 +121,7 @@ node scripts/validate-agency.mjs
 node scripts/validate-release.mjs
 node scripts/audit-public-package.mjs .
 python3 scripts/package-agency.py
-node scripts/validate-openai-upload.mjs dist/1.2.0/mobile-app-builder-1.2.0-openai.zip
+node scripts/validate-openai-upload.mjs dist/1.2.1/mobile-app-builder-1.2.1-openai.zip
 ```
 
 Packaging produces separate portable, OpenAI, Claude and Cursor candidates from an explicit allowlist, with archive checksums. No dependencies, signing files, environment configuration, Git history or hosted-service source enter those bundles. The OpenAI candidate carries portable role instructions through skills; its native Claude manifest and agents stay in the Claude bundle.

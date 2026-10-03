@@ -9,7 +9,7 @@ FlashList v2 — JS-only rewrite, no estimates needed, supports any-size horizon
 
 ## Install
 ```bash
-npx expo install @shopify/flash-list
+npm exec --no -- expo install @shopify/flash-list
 ```
 
 ## Replace FlatList

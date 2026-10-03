@@ -10,7 +10,7 @@ Same as iOS plugin's pattern. Android-specific notes.
 ## Install
 ```bash
 pnpm add @supabase/supabase-js @react-native-async-storage/async-storage
-npx expo install @react-native-google-signin/google-signin
+npm exec --no -- expo install @react-native-google-signin/google-signin
 ```
 
 ## Google Sign-In flow

@@ -45,10 +45,10 @@ adb devices
 ## Run RN/Expo on device
 ```bash
 # Expo dev build
-npx expo run:android --device
+npm exec --no -- expo run:android --device
 
 # OR just installed bundle
-npx expo start --dev-client
+npm exec --no -- expo start --dev-client
 # Then on phone: open the dev client app, scan QR
 ```
 

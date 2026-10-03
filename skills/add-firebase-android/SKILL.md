@@ -6,7 +6,7 @@ description: "Add Firebase Android SDK for Crashlytics, FCM, Test Lab. Use when 
 # Add Firebase (Android)
 
 ```bash
-npx expo install @react-native-firebase/app @react-native-firebase/crashlytics
+npm exec --no -- expo install @react-native-firebase/app @react-native-firebase/crashlytics
 ```
 
 `app.json` plugin config; place `google-services.json` in `android/app/`.

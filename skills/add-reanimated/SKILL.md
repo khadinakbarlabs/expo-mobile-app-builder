@@ -9,7 +9,7 @@ React Native Reanimated 4 (stable July 2025, New Architecture only). CSS-style d
 
 ## Install
 ```bash
-npx expo install react-native-reanimated react-native-gesture-handler react-native-worklets
+npm exec --no -- expo install react-native-reanimated react-native-gesture-handler react-native-worklets
 ```
 
 Add to `babel.config.js`:

@@ -13,7 +13,7 @@ Creating a RevenueCat project, accessing App Store Connect or Play credentials, 
 
 ## Install
 ```bash
-npx expo install react-native-purchases react-native-purchases-ui
+npm exec --no -- expo install react-native-purchases react-native-purchases-ui
 ```
 
 ## app.json

@@ -1,12 +1,12 @@
 # Agency release preparation
 
-Version 1.2.0 is a validated local package candidate, not a submitted or published directory update.
+Version 1.2.1 is a validated local package candidate, not a submitted or published directory update.
 
 ## Prepared
 
 - Existing source identity: `mobile-app-builder`; human name: **Mobile App Builder**; subtitle: **Develop Android & iOS Apps**; Developer Tools category.
-- Eight departments, twelve specialist roles and 184 workflows, retaining the original 179 skill directories.
-- Public website, support, privacy and terms URLs point to the existing public GitHub project; existing publisher text and icon are preserved. New agency copy reaches those pages only after source publication.
+- Eight departments, twelve specialist roles and 185 workflows, retaining the original 179 skill directories.
+- Public website, support, privacy and terms URLs point to the existing public GitHub project; existing publisher text is preserved and the user requested a regenerated minimal mobile-development logo. New agency copy reaches those pages only after source publication.
 - Portable OpenAI presentation and compatibility presentation are synchronized. Release notes describe actual changes; no new country targeting or translation declarations were invented.
 - Separate portable, OpenAI, Claude and Cursor bundles use allowlisted content. The OpenAI bundle is skills-only and provides portable role cards through skills. It has no MCP/app binding, native Claude manifest, credentials or hosted execution.
 - Local skill, taxonomy, regression, native manifest, safety and exact OpenAI archive checks are available. A planning-service deployment and installed-host QA are independent surfaces.

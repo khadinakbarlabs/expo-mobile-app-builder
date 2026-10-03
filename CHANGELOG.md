@@ -1,3 +1,11 @@
+# 1.2.1 — Anthropic review preparation (local candidate, 2026-10-03)
+
+- Add Anthropic directory metadata, regenerated phone/M/UI-tile logo, brand guide and owner review brief.
+- Add a standalone Anthropic preparation workflow and structural preflight (185 workflows total).
+- Pin downloadable tools and use project-local no-download execution for installed app tools; correct the Expo doctor command.
+- Add native folder file/size/name/path gates, regression checks and exact-package validation.
+- User verification and subsequent source publication, portal checks and submission remain pending.
+
 # 1.2.0 — Mobile App Agency (local candidate, 2026-10-03)
 
 - Preserve the existing 179 workflows; add agency coordination, engineering ownership guard, Apify CLI research, design references and store asset production (184 total).

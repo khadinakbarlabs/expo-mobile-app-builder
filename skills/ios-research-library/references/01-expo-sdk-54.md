@@ -16,9 +16,9 @@ These are compatibility facts, not a promise that Apple or Google will accept ev
 ## Project workflow
 
 1. Create a project with the [versioned Expo guidance](https://docs.expo.dev/versions/v54.0.0/), then inspect `package.json`, `app.json` or `app.config.*`, and the lockfile.
-2. Use `npx expo install <package>` for Expo SDK packages so dependency versions match the active SDK.
+2. Use `npm exec --no -- expo install <package>` for Expo SDK packages so dependency versions match the active SDK.
 3. Run the project's type, lint, and tests before prebuild or a native build.
-4. Treat `npx expo prebuild --clean` as potentially overwriting generated native work. Explain the impact and get the user's confirmation first.
+4. Treat `npm exec --no -- expo prebuild --clean` as potentially overwriting generated native work. Explain the impact and get the user's confirmation first.
 5. Keep app identifiers, domains, permissions, and provider configuration owner-controlled. Use documented placeholder values in examples, never copied credentials or real bundle identifiers.
 
 ## Capability choice

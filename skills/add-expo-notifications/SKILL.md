@@ -9,7 +9,7 @@ Local + push notifications. APNs registration, token capture, foreground/backgro
 
 ## Install
 ```bash
-npx expo install expo-notifications expo-device
+npm exec --no -- expo install expo-notifications expo-device
 ```
 
 ## app.json

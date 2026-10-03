@@ -2,6 +2,8 @@ import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+import subprocess
 
 SPEC = importlib.util.spec_from_file_location('package_agency', Path(__file__).parents[1] / 'scripts/package-agency.py')
 PACKAGE = importlib.util.module_from_spec(SPEC)
@@ -54,6 +56,42 @@ class PackageTests(unittest.TestCase):
             PACKAGE.create_bundle(root, 'openai', output)
             with self.assertRaises(FileExistsError):
                 PACKAGE.create_bundle(root, 'openai', output)
+
+    def test_cloudflare_local_credentials_are_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            (root / 'skills/.dev.vars.preview').write_text('placeholder')
+            with self.assertRaisesRegex(ValueError, 'Credential'):
+                PACKAGE.collect_files(root, 'claude')
+
+    def test_final_validation_failure_does_not_publish_or_block_retry(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            (root / 'plugin.json').write_text('{"version":"1.0.0"}')
+
+            def validate(arguments, **kwargs):
+                if 'scripts/validate-openai-upload.mjs' in arguments:
+                    raise subprocess.CalledProcessError(1, arguments)
+
+            with patch.object(PACKAGE, 'ROOT', root), patch.object(PACKAGE.subprocess, 'run', side_effect=validate):
+                with self.assertRaises(subprocess.CalledProcessError):
+                    PACKAGE.main()
+            self.assertFalse((root / 'dist/1.0.0').exists())
+            with patch.object(PACKAGE, 'ROOT', root), patch.object(PACKAGE.subprocess, 'run'):
+                PACKAGE.main()
+            self.assertTrue((root / 'dist/1.0.0/release-receipt.json').exists())
+
+    def test_release_version_cannot_escape_distribution_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            (root / 'plugin.json').write_text('{"version":"../outside"}')
+            with patch.object(PACKAGE, 'ROOT', root), patch.object(PACKAGE.subprocess, 'run'):
+                with self.assertRaisesRegex(ValueError, 'semantic version'):
+                    PACKAGE.main()
+            self.assertFalse((root / 'dist').exists())
 
 
 if __name__ == '__main__':

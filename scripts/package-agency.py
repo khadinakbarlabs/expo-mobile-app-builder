@@ -5,8 +5,10 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,7 +25,7 @@ SURFACES = {
     'claude': ['.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', 'agents'],
     'cursor': ['.cursor-plugin/plugin.json'],
 }
-EXCLUDED_NAMES = {'.git', '.DS_Store', 'node_modules', '__pycache__', 'dist', 'coverage'}
+EXCLUDED_NAMES = {'.git', '.DS_Store', 'Thumbs.db', 'desktop.ini', '__MACOSX', 'node_modules', '__pycache__', 'dist', 'coverage'}
 SECRET_SUFFIXES = {'.p8', '.p12', '.pem', '.key', '.jks', '.keystore'}
 SECRET_NAME = re.compile(r'^(?:GoogleService-Info\.plist|google-services\.json|credentials\.json|service-account.*\.json)$', re.IGNORECASE)
 
@@ -39,7 +41,7 @@ def collect_files(root, surface):
             raise ValueError('Symbolic links are not allowed in bundles')
         if file.name in EXCLUDED_NAMES:
             return
-        if file.name.startswith('.env') or file.suffix.lower() in SECRET_SUFFIXES or SECRET_NAME.fullmatch(file.name):
+        if file.name.startswith(('.env', '.dev.vars')) or file.name in {'.ssh', '.aws', 'secrets', 'credentials'} or file.suffix.lower() in SECRET_SUFFIXES or SECRET_NAME.fullmatch(file.name):
             raise ValueError('Credential-shaped file in allowlisted bundle content')
         if file.is_dir():
             for child in sorted(file.iterdir()):
@@ -75,27 +77,61 @@ def create_bundle(root, surface, destination):
     }
 
 
+def source_identity(root):
+    """Record commit/branch and dirty state without capturing changed filenames."""
+    values = []
+    for arguments in [
+        ['git', 'rev-parse', 'HEAD'],
+        ['git', 'branch', '--show-current'],
+        ['git', 'status', '--porcelain', '--untracked-files=normal'],
+    ]:
+        result = subprocess.run(arguments, cwd=root, capture_output=True, text=True)
+        if result.returncode != 0 or not isinstance(result.stdout, str):
+            return {'available': False}
+        values.append(result.stdout.strip())
+    if not re.fullmatch(r'[a-f0-9]{40,64}', values[0]):
+        return {'available': False}
+    return {'available': True, 'commit': values[0], 'branch': values[1] or None, 'dirty': bool(values[2])}
+
+
 def main():
     # Package only after repository safety and catalog freshness checks pass.
     for arguments in [
+        ['node', 'scripts/validate-release.mjs'],
         ['node', 'scripts/audit-public-package.mjs', '.'],
         ['node', 'scripts/build-agency-catalog.mjs', '--check'],
         ['node', 'scripts/validate-agency.mjs'],
     ]:
         subprocess.run(arguments, cwd=ROOT, check=True)
     version = json.loads((ROOT / 'plugin.json').read_text())['version']
+    if not isinstance(version, str) or not re.fullmatch(r'\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?', version):
+        raise ValueError('Release version must be a safe explicit semantic version')
     destination = ROOT / 'dist' / version
-    destination.mkdir(parents=True, exist_ok=True)
-    outputs = [(surface, destination / f'mobile-app-builder-{version}-{surface}.zip') for surface in SURFACES]
-    receipt_path = destination / 'release-receipt.json'
-    if receipt_path.exists() or any(file.exists() for _, file in outputs):
-        raise ValueError('Release artifacts already exist; choose a new version or explicitly remove only stale candidates')
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    if destination.exists():
+        raise ValueError('Release directory already exists; choose a new version or explicitly remove only stale candidates')
     # Preflight every surface before writing any output.
-    for surface, _ in outputs:
+    for surface in SURFACES:
         collect_files(ROOT, surface)
-    receipts = [create_bundle(ROOT, surface, file) for surface, file in outputs]
-    subprocess.run(['node', 'scripts/validate-openai-upload.mjs', str(destination / f'mobile-app-builder-{version}-openai.zip')], cwd=ROOT, check=True)
-    receipt_path.write_text(json.dumps({'version': version, 'status': 'validated-local-candidate', 'bundles': receipts}, indent=2) + '\n')
+    # Stage the entire release on the same filesystem. Failed validation leaves
+    # no final-looking archives or tree, so a fixed candidate can be retried.
+    with tempfile.TemporaryDirectory(prefix='release-preflight-', dir=destination.parent) as temporary:
+        staged = Path(temporary) / version
+        native_root = staged / 'anthropic-source'
+        native_root.mkdir(parents=True)
+        for file in collect_files(ROOT, 'claude'):
+            target = native_root / file.relative_to(ROOT)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(file, target)
+        subprocess.run(['node', str(ROOT / 'skills/prepare-anthropic-plugin/scripts/check-plugin.mjs'), str(native_root)], cwd=ROOT, check=True)
+        subprocess.run(['node', str(ROOT / 'scripts/audit-public-package.mjs'), str(native_root)], cwd=ROOT, check=True)
+        outputs = [(surface, staged / f'mobile-app-builder-{version}-{surface}.zip') for surface in SURFACES]
+        receipts = [create_bundle(ROOT, surface, file) for surface, file in outputs]
+        subprocess.run(['node', 'scripts/validate-openai-upload.mjs', str(staged / f'mobile-app-builder-{version}-openai.zip')], cwd=ROOT, check=True)
+        (staged / 'release-receipt.json').write_text(json.dumps({'version': version, 'status': 'validated-local-candidate', 'source': source_identity(ROOT), 'anthropicSource': 'anthropic-source', 'userVerified': False, 'portalValidated': False, 'submitted': False, 'bundles': receipts}, indent=2) + '\n')
+        if destination.exists():
+            raise ValueError('Release directory appeared during validation; refuse overwrite')
+        staged.rename(destination)
     for receipt in receipts:
         print(f"Built {receipt['file']}: {receipt['files']} files, SHA-256 {receipt['sha256']}")
 

@@ -9,7 +9,7 @@ iOS 26's defining material. Two libraries available; both fall back gracefully o
 
 ## Option A: expo-glass-effect (Expo SDK 54+)
 ```bash
-npx expo install expo-glass-effect
+npm exec --no -- expo install expo-glass-effect
 ```
 ```tsx
 import { GlassView } from 'expo-glass-effect';

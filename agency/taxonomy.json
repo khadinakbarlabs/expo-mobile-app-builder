@@ -384,7 +384,8 @@
         "internal-testing-track",
         "eas-update-rollout",
         "eas-update-rollout-android",
-        "prepare-chatgpt-app-submission"
+        "prepare-chatgpt-app-submission",
+        "prepare-anthropic-plugin"
       ]
     },
     {
@@ -658,6 +659,7 @@
     "pricing-strategy-android": "android",
     "run-paid-acquisition": "shared",
     "set-up-ab-testing": "shared",
-    "set-up-project-guidance": "shared"
+    "set-up-project-guidance": "shared",
+    "prepare-anthropic-plugin": "shared"
   }
 }

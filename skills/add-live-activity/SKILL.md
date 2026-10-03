@@ -10,7 +10,7 @@ Lock Screen + Dynamic Island updates via ActivityKit. Use for time-bound info: o
 ## Install
 ```bash
 npm install expo-live-activity
-npx expo prebuild --clean
+npm exec --no -- expo prebuild --clean
 ```
 
 (For more control, also see Voltra: `react-native-live-activity`.)
