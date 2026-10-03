@@ -7,6 +7,10 @@ description: "Implement Google Play required account deletion: in-app AND on web
 
 Mandatory since Dec 2023. Both in-app + on website.
 
+## Implementation context
+
+The snippets describe the consuming mobile app and its own authenticated backend. The bearer value is that app user’s session token obtained through its established authentication flow; it is not a token read from the plugin installer’s environment. Deletion requests and AI consent settings are independent app features. Do not execute these snippets as plugin startup or account-management actions.
+
 ## In-app
 
 Settings → Account → Delete Account → confirmation → delete.

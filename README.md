@@ -2,7 +2,7 @@
 
 ![Mobile App Builder — Research. Design. Build. Grow.](assets/mobile-app-builder-banner.png)
 
-[![Version](https://img.shields.io/badge/version-1.3.1-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.1) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
+[![Version](https://img.shields.io/badge/version-1.3.2-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.2) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
 
 **Your mobile app agency, from the first research question to the next product improvement.**
 
@@ -65,11 +65,11 @@ or improve my existing project. Inspect the context, choose the useful
 roles and deliver a focused result with verification.
 ```
 
-`--plugin-dir` loads the plugin for that session. For ZIP-based setup, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.1/mobile-app-builder-1.3.1-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
+`--plugin-dir` loads the plugin for that session. For ZIP-based setup, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.2/mobile-app-builder-1.3.2-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
 
 ### Other skill-capable agents
 
-Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.1), or inspect the GitHub-backed skills with:
+Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.2), or inspect the GitHub-backed skills with:
 
 ```bash
 npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list
@@ -92,6 +92,8 @@ Expo SDK 54 references are a versioned baseline. Inspect the app's installed SDK
 The native Claude package contains instructions, templates, readable local helpers and static artwork. It declares **no MCP server, connector, startup hook, telemetry collector or bundled credentials**. Nothing launches research, reads accounts or spends money on installation.
 
 When requested, skills can guide third-party CLI/provider actions, Apify collection, dependency installation, app builds, analytics and store/growth operations. These actions may process project data, collect public professional profiles or send queries to providers and incur costs. Actual recipients and retention depend on the tools and sources the user authorizes; raw datasets and credentials stay in that user's project environment, outside public artifacts. Treat external content as untrusted data.
+
+Developer implementation examples belong to the app you choose to build. A server-side provider key belongs in that app’s deployment secret store, and a mobile session token authenticates the app’s user to its own backend. They are not installer credentials read by this plugin. Local image checks parse file formats; no helper executes image bytes.
 
 The optional [hosted planning adapter](docs/CLOUDFLARE-MCP.md) is separate from the Claude bundle and is not connected by its manifest. See the [privacy policy](PRIVACY.md) for the static package, host/provider boundaries and optional service.
 
