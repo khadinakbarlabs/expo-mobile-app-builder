@@ -26,8 +26,12 @@ SURFACES = {
     'claude': ['.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', 'agents'],
     'cursor': ['.cursor-plugin/plugin.json'],
 }
-# The publisher's artwork preview belongs to source, not an installed workflow.
-SOURCE_ONLY_PATHS = {'docs/OWNER-REVIEW.html', 'skills/prepare-anthropic-plugin/scripts/check-plugin.mjs'}
+# Publisher instructions use tools absent from installed bundles; link to source.
+SOURCE_ONLY_PATHS = {
+    'docs/OWNER-REVIEW.html', 'skills/prepare-anthropic-plugin/scripts/check-plugin.mjs',
+    'CONTRIBUTING.md', 'RELEASE-CHECKLIST.md', 'docs/PUBLISHER-GUIDE.md',
+    'docs/CLOUDFLARE-MCP.md',
+}
 EXCLUDED_NAMES = {'.git', '.DS_Store', 'Thumbs.db', 'desktop.ini', '__MACOSX', 'node_modules', '__pycache__', 'dist', 'coverage'}
 SECRET_SUFFIXES = {'.p8', '.p12', '.pem', '.key', '.jks', '.keystore'}
 SECRET_NAME = re.compile(r'^(?:GoogleService-Info\.plist|google-services\.json|credentials\.json|service-account.*\.json)$', re.IGNORECASE)
@@ -128,7 +132,7 @@ def main():
             target = native_root / file.relative_to(ROOT)
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(file, target)
-        subprocess.run(['node', str(ROOT / 'scripts/check-anthropic-package.mjs'), str(native_root)], cwd=ROOT, check=True)
+        subprocess.run(['node', str(ROOT / 'scripts/check-anthropic-package.mjs'), str(native_root), '--report', str(staged / 'component-inventory.json')], cwd=ROOT, check=True)
         subprocess.run(['node', str(ROOT / 'scripts/validate-anthropic-media.mjs'), str(native_root)], cwd=ROOT, check=True)
         subprocess.run(['node', str(ROOT / 'scripts/audit-public-package.mjs'), str(native_root)], cwd=ROOT, check=True)
         outputs = [(surface, staged / f'mobile-app-builder-{version}-{surface}.zip') for surface in SURFACES]

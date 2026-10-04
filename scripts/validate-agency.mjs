@@ -15,8 +15,9 @@ for (const id of roles) {
 }
 if (agentFiles.length !== roles.size) throw new Error('Unclassified specialist file');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, '.claude-plugin/plugin.json'), 'utf8'));
-const expected = [...roles].sort().map(id => `./agents/${id}.md`);
-if (JSON.stringify([...manifest.agents ?? []].sort()) !== JSON.stringify(expected)) throw new Error('Claude agent routes differ from department registry');
+// Claude 2.1.287 details loses explicit agent-file routes for inline plugins.
+// The default agents/ scan discovers the complete registered team.
+if (manifest.agents !== undefined) throw new Error('Use standard agents/ discovery; verify the exact native host inventory before release');
 for (const skill of ['mobile-app-agency', 'apify-mobile-research', 'mobile-design-references', 'mobile-store-asset-production', 'engineering-workflow-guard']) {
   if (!catalog.skills.some(entry => entry.id === skill)) throw new Error(`Missing agency workflow: ${skill}`);
 }

@@ -5,7 +5,7 @@ import { loadCatalog, root } from './agency-catalog.mjs';
 
 const catalog = loadCatalog();
 const json = `${JSON.stringify(catalog, null, 2)}\n`;
-const lines = ['# Agency skill catalog', '', 'Every workflow has one department and subcategory. Platform tags describe the primary scope; shared workflows still require an iOS/Android parity decision.', '', 'Generated from `agency/taxonomy.json`. Maintainers regenerate with `node scripts/build-agency-catalog.mjs` in the canonical source checkout; installed browsing reads the prepared catalog.', ''];
+const lines = ['# Agency skill catalog', '', 'Every workflow has one department and subcategory. Platform tags describe the primary scope; shared workflows still require an iOS/Android parity decision.', '', 'Generated from `agency/taxonomy.json`. Installed browsing reads the prepared catalog. Maintainers use the [publisher guide](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/docs/PUBLISHER-GUIDE.md) in the canonical source checkout.', ''];
 for (const department of catalog.departments) {
   lines.push(`## ${department.title}`, '', department.outcome, '', `Specialists: ${department.agents.map(agent => `\`${agent}\``).join(', ')}.`, '', '| Subcategory | Workflow | Platform |', '| --- | --- | --- |');
   for (const skill of catalog.skills.filter(item => item.department === department.id)) {

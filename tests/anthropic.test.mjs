@@ -22,6 +22,34 @@ test('valid candidate reports local checks without claiming portal approval', ()
   assert.equal(report.status, 'local-checks-passed');
   assert.equal(report.portalValidated, false);
 }));
+test('inventory rejects installed commands whose helpers are absent', () => fixture(root => {
+  fs.appendFileSync(path.join(root, 'README.md'), '\nRun `node scripts/missing.mjs` before continuing.\n');
+  assert.match(inspectPlugin(root).errors.join('\n'), /missing.*executable reference/);
+}));
+test('inventory resolves standalone helpers and their local module dependencies', () => fixture(root => {
+  const scripts = path.join(root, 'skills/example/scripts');
+  fs.mkdirSync(scripts, {recursive: true});
+  fs.writeFileSync(path.join(root, 'skills/example/SKILL.md'), '---\nname: example\ndescription: Example\n---\nRun `node scripts/plan.mjs`.\n');
+  fs.writeFileSync(path.join(scripts, 'plan.mjs'), "import {plan} from './support.mjs';\n");
+  assert.match(inspectPlugin(root).errors.join('\n'), /support.*module reference/);
+  fs.writeFileSync(path.join(scripts, 'support.mjs'), 'export const plan = {};\n');
+  const report = inspectPlugin(root);
+  assert.deepEqual(report.errors, []);
+  assert.deepEqual(report.inventory.skills, ['skills/example/SKILL.md']);
+  assert.equal(report.inventory.executableFiles.length, 2);
+}));
+test('inventory rejects missing skill resources and manifest skill directories', () => fixture(root => {
+  const skill = path.join(root, 'skills/example');
+  fs.mkdirSync(skill, {recursive: true});
+  fs.writeFileSync(path.join(skill, 'SKILL.md'), 'Read `references/missing.md`.\n');
+  const file = path.join(root, '.claude-plugin/plugin.json');
+  const manifest = JSON.parse(fs.readFileSync(file));
+  manifest.skills = './extra-skills/';
+  fs.writeFileSync(file, JSON.stringify(manifest));
+  const errors = inspectPlugin(root).errors.join('\n');
+  assert.match(errors, /missing.*resource reference/);
+  assert.match(errors, /skills.*missing.*directory/);
+}));
 test('publisher structural helper leaves image bytes to the separate media gate', () => fixture(root => {
   const original = fs.readFileSync;
   fs.readFileSync = (file, ...args) => {

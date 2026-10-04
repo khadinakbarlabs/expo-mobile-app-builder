@@ -2,7 +2,7 @@
 
 Every workflow has one department and subcategory. Platform tags describe the primary scope; shared workflows still require an iOS/Android parity decision.
 
-Generated from `agency/taxonomy.json`. Maintainers regenerate with `node scripts/build-agency-catalog.mjs` in the canonical source checkout; installed browsing reads the prepared catalog.
+Generated from `agency/taxonomy.json`. Installed browsing reads the prepared catalog. Maintainers use the [publisher guide](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/docs/PUBLISHER-GUIDE.md) in the canonical source checkout.
 
 ## Research & intelligence
 

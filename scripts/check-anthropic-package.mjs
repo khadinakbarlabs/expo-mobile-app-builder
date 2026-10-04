@@ -58,6 +58,7 @@ export function inspectPlugin(inputRoot) {
   const errors = [];
   const notes = ['Local structural checks do not replace strict Claude validation, portal validation, security review, or host behavior tests.', 'Image bytes are not read by this publisher helper. Run separate source-only media validation and a full image decoder before releasing.'];
   const files = [];
+  const texts = new Map();
   const blockedFiles = new Set();
   if (!fs.existsSync(root) || !fs.lstatSync(root).isDirectory() || fs.lstatSync(root).isSymbolicLink()) throw new Error('Plugin root must be a regular directory');
   const names = new Set();
@@ -101,6 +102,7 @@ export function inspectPlugin(inputRoot) {
     catch { errors.push(`${relative}: Unsupported binary`); continue; }
     if (text.includes('\0')) errors.push(`${relative}: Unsupported binary`);
     if (size >= 256 * 1024) errors.push(`${relative}: text must be below 256 KiB`);
+    else texts.set(file, text);
     if (text.startsWith('version https://git-lfs.github.com/spec/')) errors.push(`${relative}: LFS pointer`);
     if (path.basename(file) === '.gitattributes' && /\b(?:export-ignore|export-subst|filter)\b/.test(text)) errors.push(`${relative}: archive-rewriting Git attribute`);
     // Only instructions and executable helpers are launcher-bearing. JSON fields are checked by the native validator.
@@ -131,18 +133,55 @@ export function inspectPlugin(inputRoot) {
   const agents = typeof manifest.agents === 'string' ? [manifest.agents] : manifest.agents ?? [];
   if (!Array.isArray(agents)) errors.push('agents: expected a file path or array');
   else for (const reference of agents) if (!containedFile(root, reference)) errors.push('agents: missing or escaping file route');
+  const available = new Set(files.map(file => path.relative(root, file).split(path.sep).join('/')));
+  const referenceEdges = [];
+  function reference(file, value, kind, allowRoot = false) {
+    const candidates = [path.resolve(path.dirname(file), value)];
+    if (allowRoot) candidates.push(path.resolve(root, value));
+    const target = candidates.find(candidate => available.has(path.relative(root, candidate).split(path.sep).join('/')));
+    const source = path.relative(root, file).split(path.sep).join('/');
+    if (!target) errors.push(`${source}: ${value}: unresolved ${kind} reference`);
+    else referenceEdges.push({source, target: path.relative(root, target).split(path.sep).join('/'), kind});
+  }
+  for (const [file, text] of texts) {
+    if (file.endsWith('.md')) {
+      for (const match of text.matchAll(/\b(?:node|python3)\s+["']?((?:\.\/)?scripts\/[A-Za-z0-9_./-]+\.(?:mjs|js|py|sh))/g)) reference(file, match[1], 'executable', true);
+      for (const match of text.matchAll(/`((?:references|scripts)\/[A-Za-z0-9_./-]+\.(?:md|json|yaml|mjs|js|py|sh))`/g)) reference(file, match[1], 'resource', true);
+    }
+    if (/\.(?:mjs|js)$/.test(file)) {
+      for (const match of text.matchAll(/(?:\bfrom\s*|\bimport\s*\(?\s*)["'](\.[^"']+)["']/g)) reference(file, match[1], 'module');
+    }
+  }
+  const skillPaths = typeof manifest.skills === 'string' ? [manifest.skills] : manifest.skills ?? [];
+  if (!Array.isArray(skillPaths)) errors.push('skills: expected a directory path or array');
+  else for (const value of skillPaths) {
+    if (typeof value !== 'string' || !value.startsWith('./') || value.includes('\\') || ![...available].some(file => file.startsWith(value.slice(2).replace(/\/$/, '') + '/'))) errors.push('skills: missing or escaping directory route');
+  }
+  const inventory = {
+    skills: [...available].filter(file => /^skills\/[^/]+\/SKILL\.md$/.test(file)).sort(),
+    agents: manifest.agents === undefined ? [...available].filter(file => /^agents\/.*\.md$/.test(file)).sort() : (Array.isArray(agents) ? agents.filter(value => typeof value === 'string').map(value => value.replace(/^\.\//, '')).sort() : []),
+    executableFiles: [...available].filter(file => /\.(?:mjs|js|py|sh)$/.test(file)).sort(),
+    references: referenceEdges,
+    files: files.map(file => ({path: path.relative(root, file).split(path.sep).join('/'), bytes: fs.statSync(file).size})).sort((a, b) => a.path.localeCompare(b.path)),
+  };
   const readme = containedFile(root, './README.md');
   const words = readme && fs.statSync(readme).size < 256 * 1024 ? fs.readFileSync(readme, 'utf8').replace(/```[\s\S]*?```/g, '').trim().split(/\s+/).length : 0;
   if (words < 40) errors.push('README needs at least 40 words outside code blocks');
   if (!containedFile(root, './LICENSE')) errors.push('LICENSE missing');
   if (manifest.mcpServers || fs.existsSync(path.join(root, '.mcp.json')) || manifest.hooks || fs.existsSync(path.join(root, 'hooks'))) notes.push('Runtime components present: review credential transport, pinned dependencies, permissions and every outbound destination separately.');
-  return {status: errors.length ? 'needs-fixes' : 'local-checks-passed', name: manifest.name, version: manifest.version, fileCount: files.length, unpackedBytes: totalBytes, errors, notes, mediaValidated: false, portalValidated: false, securityScanPassed: false, userVerified: false, externalActionPerformed: false};
+  return {status: errors.length ? 'needs-fixes' : 'local-checks-passed', name: manifest.name, version: manifest.version, fileCount: files.length, unpackedBytes: totalBytes, inventory, errors, notes, mediaValidated: false, portalValidated: false, securityScanPassed: false, userVerified: false, externalActionPerformed: false};
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     const report = inspectPlugin(process.argv[2] ?? '.');
-    console.log(JSON.stringify(report, null, 2));
+    const reportOption = process.argv.indexOf('--report');
+    if (reportOption !== -1) {
+      if (!process.argv[reportOption + 1]) throw new Error('Report file path required');
+      fs.writeFileSync(process.argv[reportOption + 1], JSON.stringify(report, null, 2) + '\n', {flag: 'wx'});
+    }
+    const output = reportOption === -1 ? report : {status: report.status, fileCount: report.fileCount, skills: report.inventory.skills.length, agents: report.inventory.agents.length, executableFiles: report.inventory.executableFiles.length, errors: report.errors};
+    console.log(JSON.stringify(output, null, 2));
     if (report.errors.length) process.exitCode = 1;
   } catch (error) { console.error(`Preflight failed: ${error.message}`); process.exitCode = 1; }
 }

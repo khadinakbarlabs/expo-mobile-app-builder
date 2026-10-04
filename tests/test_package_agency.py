@@ -67,6 +67,19 @@ class PackageTests(unittest.TestCase):
                 self.assertNotIn('docs/OWNER-REVIEW.html', paths)
                 self.assertIn('docs/BRAND.md', paths)
 
+    def test_publisher_instructions_are_excluded_from_installed_surfaces(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            publisher_docs = ['CONTRIBUTING.md', 'RELEASE-CHECKLIST.md', 'docs/PUBLISHER-GUIDE.md', 'docs/CLOUDFLARE-MCP.md']
+            for name in publisher_docs:
+                (root / name).write_text('Publisher source-only instructions')
+            for surface in PACKAGE.SURFACES:
+                paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
+                for name in publisher_docs:
+                    self.assertNotIn(name, paths)
+                self.assertIn('WORKFLOWS.md', paths)
+
     def test_symlinks_and_credentials_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

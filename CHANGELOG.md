@@ -18,6 +18,14 @@
 
 # Changelog
 
+## 1.3.8 — 2026-10-04
+
+- Fix Claude inline component discovery: use the standard agents directory so the pinned host lists all 16 specialists alongside all 189 skills.
+- Add a host inventory release gate and CI check; fail on omitted, unexpected or inconsistent component counts.
+- Move publisher-only command instructions into canonical source guides and remove them from installed bundles; preserve all user workflows, resources and branding.
+- Add static file/reference receipts and rejection of unresolved installed helper commands, local imports, resources and skill routes.
+- A new exact-commit Anthropic scan is required to confirm whether the inventory policy hold clears; local discovery is separate from directory approval.
+
 ## 1.3.7 — 2026-10-04
 
 - Keep the general Anthropic filesystem preflight and catalog generation in publisher source; preserve both as release gates and retain the installed preparation checklist/templates.

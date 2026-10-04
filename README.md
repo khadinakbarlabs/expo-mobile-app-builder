@@ -2,7 +2,7 @@
 
 ![Mobile App Builder — Research. Design. Build. Grow.](assets/mobile-app-builder-banner.png)
 
-[![Version](https://img.shields.io/badge/version-1.3.6-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.6) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
+[![Version](https://img.shields.io/badge/version-1.3.8-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.8) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
 
 **Your mobile app agency, from the first research question to the next product improvement.**
 
@@ -65,11 +65,11 @@ or improve my existing project. Inspect the context, choose the useful
 roles and deliver a focused result with verification.
 ```
 
-`--plugin-dir` loads the plugin for that session. The tracked branch carries the native release source that Anthropic scans. For the versioned 1.3.6 archive, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.6/mobile-app-builder-1.3.6-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
+`--plugin-dir` loads the plugin for that session. The tracked branch carries the native release source that Anthropic scans. For the versioned 1.3.8 archive, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.8/mobile-app-builder-1.3.8-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
 
 ### Other skill-capable agents
 
-Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.6), or inspect the GitHub-backed skills with:
+Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.8), or inspect the GitHub-backed skills with:
 
 ```bash
 npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list
@@ -95,23 +95,13 @@ When requested, skills can guide third-party CLI/provider actions, Apify collect
 
 Developer implementation examples belong to the app you choose to build. A server-side provider key belongs in that app’s deployment secret store, and a mobile session token authenticates the app’s user to its own backend. They are not installer credentials read by this plugin. The installed agency browser reads only a bounded, validated prepared catalog; the project planner prints commands. General filesystem scanners, catalog generation and artwork checks remain in source-only publisher tooling. No installed helper opens artwork, scans arbitrary project files or executes generated commands.
 
-The optional [hosted planning adapter](docs/CLOUDFLARE-MCP.md) is separate from the Claude bundle and is not connected by its manifest. See the [privacy policy](PRIVACY.md) for the static package, host/provider boundaries and optional service.
+The optional [hosted planning adapter](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/docs/CLOUDFLARE-MCP.md) is separate from the Claude bundle and is not connected by its manifest. See the [privacy policy](PRIVACY.md) for the static package, host/provider boundaries and optional service.
 
 ## Explore and contribute
 
-[Complete workflow guide](WORKFLOWS.md) · [Development and distribution](docs/DISTRIBUTION.md) · [Release checklist](RELEASE-CHECKLIST.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
+[Complete workflow guide](WORKFLOWS.md) · [Distribution](docs/DISTRIBUTION.md) · [Publisher guide](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/docs/PUBLISHER-GUIDE.md) · [Contributing](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/CONTRIBUTING.md) · [Security](SECURITY.md)
 
-From the canonical source checkout, run the tests, catalog, release and public-safety checks before packaging. The distribution bundles contain user-facing local helpers; source-only release validators and hosted-service source remain in the canonical repository.
-
-```bash
-node --test tests/*.test.mjs
-python3 -m unittest discover -s tests -p 'test_*.py'
-node scripts/build-agency-catalog.mjs --check
-node scripts/validate-agency.mjs
-node scripts/validate-release.mjs
-node scripts/audit-public-package.mjs .
-python3 scripts/package-agency.py
-```
+Installed bundles contain the complete workflow library, team and local user helpers. Publisher checks, tests and the optional hosted-service source live in the canonical GitHub checkout. Use the publisher guide there to audit or build a release.
 
 [Privacy](PRIVACY.md) · [Terms](TERMS.md) · [Support](SUPPORT.md) · [MIT license](LICENSE)
 
