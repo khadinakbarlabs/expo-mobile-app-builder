@@ -1,8 +1,8 @@
 # Agency release preparation
 
-Current readback — 2026-10-04: Anthropic 1.3.2 remains In review, security passed, Live not yet. Candidate 1.3.5 replaces ambient credential reads in AI guidance with an explicit consuming-app backend adapter and moves artwork-byte validation out of installed tooling into a mandatory source-only release gate. All 189 skills and 16 agents remain. The owner authorized shipping fixes; portal results must identify the exact new native commit.
+Directory readback before this release — 2026-10-04: Anthropic scanned v1.3.5 c98ff4e, security passed, In review, Live not yet. The named AI-secret and download/run findings cleared; INVENTORY_INCOMPLETE and broad manifest asset/credential associations remain with a reviewer. No missing or unreadable file is named. Valid icon and four listing URLs are explicitly informational/no-action findings. Release 1.3.6 removes the last ambient public-key example, fixes Supabase magic-link sessions and excludes the publisher-only HTML artwork preview from installed bundles. The owner authorized shipping; inspect the exact new native commit before claiming any finding cleared or publication.
 
-OpenAI v1.3.4 was submitted with owner authorization on 2026-10-03 after all 189 skills passed and all six declarations were accepted. The same-record upload guard confirmed that review had started, although the dashboard showed Unavailable. Publication remains unconfirmed. Preserve that pending record; 1.3.5 is a separate GitHub candidate and does not replace the queued OpenAI review.
+OpenAI v1.3.4 was submitted with owner authorization on 2026-10-03 after all 189 skills passed and all six declarations were accepted. The same-record upload guard confirmed that review had started, although the dashboard showed Unavailable. Publication remains unconfirmed. Preserve that pending record; 1.3.6 is a separate GitHub candidate and does not replace the queued OpenAI review.
 
 ## Prepared
 

@@ -27,6 +27,8 @@ SURFACES = {
     'claude': ['.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', 'agents'],
     'cursor': ['.cursor-plugin/plugin.json'],
 }
+# The publisher's artwork preview belongs to source, not an installed workflow.
+SOURCE_ONLY_PATHS = {'docs/OWNER-REVIEW.html'}
 EXCLUDED_NAMES = {'.git', '.DS_Store', 'Thumbs.db', 'desktop.ini', '__MACOSX', 'node_modules', '__pycache__', 'dist', 'coverage'}
 SECRET_SUFFIXES = {'.p8', '.p12', '.pem', '.key', '.jks', '.keystore'}
 SECRET_NAME = re.compile(r'^(?:GoogleService-Info\.plist|google-services\.json|credentials\.json|service-account.*\.json)$', re.IGNORECASE)
@@ -41,6 +43,8 @@ def collect_files(root, surface):
     def visit(file):
         if file.is_symlink():
             raise ValueError('Symbolic links are not allowed in bundles')
+        if file.relative_to(root).as_posix() in SOURCE_ONLY_PATHS:
+            return
         if file.name in EXCLUDED_NAMES:
             return
         if file.name.startswith(('.env', '.dev.vars')) or file.name in {'.ssh', '.aws', 'secrets', 'credentials'} or file.suffix.lower() in SECRET_SUFFIXES or SECRET_NAME.fullmatch(file.name):

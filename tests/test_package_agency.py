@@ -40,6 +40,17 @@ class PackageTests(unittest.TestCase):
                 paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
                 self.assertNotIn('scripts/validate-anthropic-media.mjs', paths)
 
+    def test_owner_artwork_preview_is_source_only_and_brand_docs_remain(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            (root / 'docs/OWNER-REVIEW.html').write_text('<img src="../assets/mobile-app-builder-logo-v8.png">')
+            (root / 'docs/BRAND.md').write_text('Brand guidance')
+            for surface in PACKAGE.SURFACES:
+                paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
+                self.assertNotIn('docs/OWNER-REVIEW.html', paths)
+                self.assertIn('docs/BRAND.md', paths)
+
     def test_symlinks_and_credentials_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
