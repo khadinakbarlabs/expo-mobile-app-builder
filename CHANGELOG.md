@@ -22,6 +22,7 @@
 
 - Keep the general Anthropic filesystem preflight and catalog generation in publisher source; preserve both as release gates and retain the installed preparation checklist/templates.
 - Make the installed agency browser read only prepared catalog metadata, with file-size, symlink, schema, route and classification checks. It no longer scans skill files or taxonomy at runtime.
+- Reject zero, negative, coerced or unsafe production App Store app IDs before constructing the signature verifier; use explicit consuming-app public identity configuration.
 - Preserve all 189 workflows, 16 specialists, intelligence resources, selected artwork and valid directory metadata.
 - Add installed CLI and malformed/symlinked catalog regression checks plus bundle exclusions across all four formats.
 - Anthropic review holds and live availability require a new scan of the exact published source; a local pass does not establish approval.
