@@ -1,4 +1,0 @@
-interface:
-  display_name: "Choose Backend"
-  short_description: "Help with Choose Backend tasks"
-  default_prompt: "Use $choose-backend to help with this mobile app task."

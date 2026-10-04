@@ -1,4 +1,0 @@
-interface:
-  display_name: "Figma to Rn"
-  short_description: "Help with Figma to Rn tasks"
-  default_prompt: "Use $figma-to-rn to help with this mobile app task."

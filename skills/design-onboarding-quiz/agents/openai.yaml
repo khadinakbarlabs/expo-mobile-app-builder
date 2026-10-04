@@ -1,4 +1,0 @@
-interface:
-  display_name: "Activation-First Onboarding"
-  short_description: "Design activation-first mobile onboarding"
-  default_prompt: "Use $design-onboarding-quiz to design the shortest trustworthy path to a meaningful first result."

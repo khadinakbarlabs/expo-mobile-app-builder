@@ -1,4 +1,0 @@
-interface:
-  display_name: "Design Lifecycle Messaging"
-  short_description: "Help with Design Lifecycle Messaging tasks"
-  default_prompt: "Use $design-lifecycle-messaging to help with this mobile app task."

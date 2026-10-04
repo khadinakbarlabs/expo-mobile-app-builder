@@ -1,4 +1,0 @@
-interface:
-  display_name: "Instrument Growth Funnel"
-  short_description: "Help with Instrument Growth Funnel tasks"
-  default_prompt: "Use $instrument-growth-funnel to help with this mobile app task."

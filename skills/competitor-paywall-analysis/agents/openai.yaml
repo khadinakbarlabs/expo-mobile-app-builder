@@ -1,4 +1,0 @@
-interface:
-  display_name: "Competitor Paywall Analysis"
-  short_description: "Help with Competitor Paywall Analysis tasks"
-  default_prompt: "Use $competitor-paywall-analysis to help with this mobile app task."

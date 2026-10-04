@@ -1,4 +1,0 @@
-interface:
-  display_name: "Mobile Store Intelligence"
-  short_description: "Research Apple and Google Play opportunities"
-  default_prompt: "Use $mobile-store-intelligence to prepare a dated, source-backed intelligence brief and bounded Apify collection plan."

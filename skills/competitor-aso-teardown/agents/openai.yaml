@@ -1,4 +1,0 @@
-interface:
-  display_name: "Competitor Aso Teardown"
-  short_description: "Help with Competitor Aso Teardown tasks"
-  default_prompt: "Use $competitor-aso-teardown to help with this mobile app task."

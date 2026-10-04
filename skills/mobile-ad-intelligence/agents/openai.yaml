@@ -1,4 +1,0 @@
-interface:
-  display_name: "Mobile Ad Intelligence"
-  short_description: "Research TikTok, Meta and Google ad creative"
-  default_prompt: "Use $mobile-ad-intelligence to prepare a dated, source-backed intelligence brief and bounded Apify collection plan."

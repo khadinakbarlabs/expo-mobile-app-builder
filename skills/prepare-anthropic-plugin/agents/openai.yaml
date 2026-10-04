@@ -1,4 +1,0 @@
-interface:
-  display_name: "Anthropic Plugin Preparation"
-  short_description: "Prepare branding, listing, and review evidence"
-  default_prompt: "Use $prepare-anthropic-plugin to finalize my Claude plugin's branding, metadata, native package, and owner review pack before submission."

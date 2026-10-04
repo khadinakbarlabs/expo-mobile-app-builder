@@ -1,4 +1,0 @@
-interface:
-  display_name: "Mobile Design References"
-  short_description: "Source-backed UI/UX direction and handoffs"
-  default_prompt: "Use $mobile-design-references to help with this mobile app task."

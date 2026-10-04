@@ -1,4 +1,0 @@
-interface:
-  display_name: "Design Onboarding Funnel"
-  short_description: "Help with Design Onboarding Funnel tasks"
-  default_prompt: "Use $design-onboarding-funnel to help with this mobile app task."

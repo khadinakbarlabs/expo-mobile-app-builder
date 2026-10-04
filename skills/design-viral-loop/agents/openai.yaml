@@ -1,4 +1,0 @@
-interface:
-  display_name: "Design Viral Loop"
-  short_description: "Help with Design Viral Loop tasks"
-  default_prompt: "Use $design-viral-loop to help with this mobile app task."

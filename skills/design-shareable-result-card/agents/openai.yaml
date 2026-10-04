@@ -1,4 +1,0 @@
-interface:
-  display_name: "Design Shareable Result Card"
-  short_description: "Help with Design Shareable Result Card tasks"
-  default_prompt: "Use $design-shareable-result-card to help with this mobile app task."

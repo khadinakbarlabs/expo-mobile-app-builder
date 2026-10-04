@@ -1274,10 +1274,11 @@ Other distributions use their own host manifest and role surface. Tests, publish
 ```text
 skills/example-skill/
 ├── SKILL.md                 Trigger, workflow, safety, and expected output
-├── agents/openai.yaml       OpenAI-facing skill metadata
 ├── references/              Optional self-contained supporting guidance
 └── scripts/                 Optional local, inspectable helper scripts
 ```
+
+OpenAI distributions also include per-skill UI metadata. Claude packages use native skill discovery and omit that metadata while retaining every workflow and supporting resource.
 
 Not every skill needs references or scripts. Every skill does need valid frontmatter, a useful trigger, a complete workflow, portable local links, and enough context to work when installed independently.
 
@@ -1499,7 +1500,7 @@ Ask:
 - Make the workflow ordered, decisive, and testable.
 - Include expected output, validation, or acceptance criteria.
 - Keep relative references inside the skill directory so standalone installs work.
-- Add `agents/openai.yaml` metadata.
+- For the OpenAI distribution, add per-skill UI metadata in the canonical source repository; the Claude distribution uses native skill discovery.
 - Do not add personal paths, internal URLs, account identifiers, live values, private logs, or signing material.
 - Do not use remote installer pipes or hidden install-time behavior.
 - Do not claim guaranteed approval, compliance, performance, revenue, or ranking.
