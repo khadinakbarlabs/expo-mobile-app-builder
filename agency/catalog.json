@@ -386,7 +386,7 @@
     },
     {
       "id": "add-app-clips",
-      "description": "Add an App Clip (instant launch via QR/NFC, 15MB max) via expo-apple-targets. Use when the user says 'App Clip', 'instant app', 'QR launch'.",
+      "description": "Plan and implement an iOS App Clip with preserved native work, validated invocation URLs and verified target constraints. Use for App Clips, QR/NFC launch, or lightweight app experiences.",
       "path": "skills/add-app-clips/SKILL.md",
       "platform": "ios",
       "department": "engineering",
@@ -506,7 +506,7 @@
     },
     {
       "id": "add-gemini-nano",
-      "description": "Add on-device LLM via Gemini Nano (Pixel 8+, Galaxy S24+) using MediaPipe LLM Inference or ML Kit. Use when the user says 'gemini nano', 'on-device ai android', 'on-device llm android', 'no-cloud llm'.",
+      "description": "Plan a privacy-aware Android on-device AI integration using verified ML Kit GenAI APIs and explicit availability checks. Use for Gemini Nano, offline Android AI, or on-device inference.",
       "path": "skills/add-gemini-nano/SKILL.md",
       "platform": "android",
       "department": "engineering",
@@ -1386,7 +1386,7 @@
     },
     {
       "id": "install-jdk-gradle",
-      "description": "Install JDK 21 and configure Gradle for RN+Expo Android builds with the right wrapper version and AGP. Use when the user says 'install jdk', 'jdk 21', 'gradle setup', 'install gradle', 'fix gradle version'.",
+      "description": "Diagnose and plan the Java, AGP and Gradle toolchain compatible with the existing Expo Android project. Use for JDK setup, Gradle compatibility, or Java version build failures.",
       "path": "skills/install-jdk-gradle/SKILL.md",
       "platform": "android",
       "department": "engineering",

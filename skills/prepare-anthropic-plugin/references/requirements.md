@@ -1,6 +1,6 @@
 # Anthropic requirements and recurring blockers
 
-Verified against current primary documentation on 2026-10-03. Refresh before a release; the local checker is a conservative preparation gate, not Anthropic's complete validator or policy decision.
+Verified against current primary documentation on 2026-10-04. Refresh before a release; the local checker is a conservative preparation gate, not Anthropic's complete validator or policy decision.
 
 ## Official sources
 
@@ -47,3 +47,7 @@ Keep credential delivery and outbound destinations explicit. Do not bundle real 
 The portal reads a GitHub repository, exact plugin folder and branch/tag. An eligible Claude plan, correct organization, connected GitHub push permissions and later public source are required. Explicit branch entry matters for slash-containing refs. Reuse the existing source submission when present. Contact verification and policy acknowledgments are owner decisions. Validation covers the fetched commit; a later push requires revalidation. Security scan, reviewer approval, owner publishing choices and live availability are distinct states.
 
 Skills load across chat, Cowork and Code; agents load in Cowork and Code. Tool-dependent operations still require the actual host environment. Local structural checks don't measure workflow quality; run realistic examples and compare outputs before claiming those benefits.
+
+## Source-only artwork validation
+
+The installed structural helper inventories text, paths and sizes and reports media as unvalidated. Run media-header checks and a full image decoder in the publisher’s source-only release pipeline. Keep these gates mandatory before packaging, while excluding their implementations from the installed payload. Preserve original artwork and valid listing metadata; this separates release tooling from installed behavior rather than treating static artwork as executable code.

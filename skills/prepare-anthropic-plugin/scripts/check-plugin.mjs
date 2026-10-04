@@ -53,20 +53,10 @@ function containedFile(root, reference) {
   return fs.statSync(file).isFile() ? file : null;
 }
 
-function imageInfo(bytes, extension) {
-  if (extension === '.png' && bytes.length >= 45 && bytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])) && bytes.toString('ascii', 12, 16) === 'IHDR' && bytes.toString('ascii', bytes.length - 8, bytes.length - 4) === 'IEND') {
-    return {width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20)};
-  }
-  if (['.jpg', '.jpeg'].includes(extension) && bytes[0] === 255 && bytes[1] === 216 && bytes.at(-2) === 255 && bytes.at(-1) === 217) return {};
-  if (extension === '.gif' && /^GIF8[79]a/.test(bytes.toString('ascii', 0, 6)) && bytes.at(-1) === 59) return {};
-  if (extension === '.webp' && bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP' && bytes.readUInt32LE(4) + 8 === bytes.length) return {};
-  return null;
-}
-
 export function inspectPlugin(inputRoot) {
   const root = path.resolve(inputRoot);
   const errors = [];
-  const notes = ['Local structural checks do not replace strict Claude validation, portal validation, security review, or host behavior tests.'];
+  const notes = ['Local structural checks do not replace strict Claude validation, portal validation, security review, or host behavior tests.', 'Image bytes are not read by this installed helper. Run separate source-only media validation and a full image decoder before releasing.'];
   const files = [];
   const blockedFiles = new Set();
   if (!fs.existsSync(root) || !fs.lstatSync(root).isDirectory() || fs.lstatSync(root).isSymbolicLink()) throw new Error('Plugin root must be a regular directory');
@@ -102,12 +92,9 @@ export function inspectPlugin(inputRoot) {
     totalBytes += size;
     if (blockedFiles.has(file)) continue;
     if (size >= 5 * 1024 * 1024) { errors.push(`${relative}: file must be below 5 MiB`); continue; }
-    const bytes = fs.readFileSync(file);
     const extension = path.extname(file).toLowerCase();
-    if (['.png', '.jpg', '.jpeg', '.gif', '.webp'].includes(extension)) {
-      if (!imageInfo(bytes, extension)) errors.push(`${relative}: invalid or incomplete image header/trailer`);
-      continue;
-    }
+    if (['.png', '.jpg', '.jpeg', '.gif', '.webp'].includes(extension)) continue;
+    const bytes = fs.readFileSync(file);
     // This conservative builder doesn't ship fonts; other binary formats need review.
     let text;
     try { text = new TextDecoder('utf-8', {fatal: true}).decode(bytes); }
@@ -140,11 +127,7 @@ export function inspectPlugin(inputRoot) {
   const icon = containedFile(root, manifest.icon);
   if (!icon) errors.push('icon: contained regular image file required');
   else if (fs.statSync(icon).size >= 5 * 1024 * 1024) errors.push('icon: file must be below 5 MiB');
-  else {
-    const info = imageInfo(fs.readFileSync(icon), path.extname(icon).toLowerCase());
-    if (!info) errors.push('icon: image header/trailer invalid');
-    else if (info.width && (info.width !== info.height || info.width < 256)) errors.push('icon: use a square PNG at least 256 pixels for this brand workflow');
-  }
+  else if (!['.png', '.jpg', '.jpeg', '.gif', '.webp'].includes(path.extname(icon).toLowerCase())) errors.push('icon: supported image extension required');
   const agents = typeof manifest.agents === 'string' ? [manifest.agents] : manifest.agents ?? [];
   if (!Array.isArray(agents)) errors.push('agents: expected a file path or array');
   else for (const reference of agents) if (!containedFile(root, reference)) errors.push('agents: missing or escaping file route');
@@ -153,7 +136,7 @@ export function inspectPlugin(inputRoot) {
   if (words < 40) errors.push('README needs at least 40 words outside code blocks');
   if (!containedFile(root, './LICENSE')) errors.push('LICENSE missing');
   if (manifest.mcpServers || fs.existsSync(path.join(root, '.mcp.json')) || manifest.hooks || fs.existsSync(path.join(root, 'hooks'))) notes.push('Runtime components present: review credential transport, pinned dependencies, permissions and every outbound destination separately.');
-  return {status: errors.length ? 'needs-fixes' : 'local-checks-passed', name: manifest.name, version: manifest.version, fileCount: files.length, unpackedBytes: totalBytes, errors, notes, portalValidated: false, securityScanPassed: false, userVerified: false, externalActionPerformed: false};
+  return {status: errors.length ? 'needs-fixes' : 'local-checks-passed', name: manifest.name, version: manifest.version, fileCount: files.length, unpackedBytes: totalBytes, errors, notes, mediaValidated: false, portalValidated: false, securityScanPassed: false, userVerified: false, externalActionPerformed: false};
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

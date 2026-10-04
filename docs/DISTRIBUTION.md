@@ -10,11 +10,17 @@ The same canonical skills are packaged for several agent ecosystems. A native ma
 | Codex CLI | `.agents/plugins/marketplace.json` | Direct repository marketplace |
 | Claude Code | `.claude-plugin/marketplace.json` | Direct repository marketplace; official directory is separately reviewed |
 | Cursor | `.cursor-plugin/plugin.json` | Direct portable skill install; official marketplace is separately reviewed |
-| ChatGPT plugin directory | Remote MCP at `https://app-builder.khadinakbar.dev/mcp` | The dashboard scans the live MCP tools and annotations; review and later publication are separate platform steps |
+| ChatGPT plugin directory | Skills-only OpenAI ZIP; optional remote MCP is separate | Native skills package draft and hosted service submission are distinct; review and publication are separate platform steps |
 
 Official directory status can change independently of a GitHub release. Verify the live platform surface before describing a listing as approved or published.
 
-## Agency candidate — 2026-10-03
+## Current directory status — 2026-10-03
+
+GitHub 1.3.4 is published; 1.3.5 is the publication-fix candidate. Anthropic 1.3.2 remains In review with security passed and a component-inventory hold. The owner authorized shipping 1.3.5 to the tracked native branch. Confirm its exact fetched commit and scan result before claiming the hold cleared or the plugin live.
+
+OpenAI v1.3.4 was submitted for review on 2026-10-03 with all 189 skills passed and all six owner declarations accepted. Its same-record upload guard confirmed In review while the dashboard displayed Unavailable. Publication is not confirmed; preserve the pending review and the separate older hosted MCP record.
+
+## Earlier agency candidate — 2026-10-03
 
 Version 1.2.0 is prepared locally from the newer 179-workflow source, preserving its existing hardening and adding five agency/resource workflows. Public GitHub main was verified at 165 workflows during preparation; release v1.1.0 exists and PR #1 remains open. This local candidate has not changed public GitHub, directory availability, installed caches or the hosted Worker.
 

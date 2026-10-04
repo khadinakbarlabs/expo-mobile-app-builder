@@ -1,6 +1,6 @@
 # Mobile App Builder — owner review
 
-Prepared 2026-10-03. **Version 1.3.2 is a local review candidate. Owner verification comes before source publication or submission.**
+Current directory readback — 2026-10-04: Anthropic 1.3.2 remains In review after a passed security scan, with an INVENTORY_INCOMPLETE policy hold. Release 1.3.5 addresses the reported environment-secret example and installed image-reading helper. It must be scanned at its exact new native commit before any cleared-findings or publication claim. The owner authorized shipping these fixes. Valid directory metadata is retained.
 
 ![Mobile App Builder](../assets/mobile-app-builder-logo-v8.png)
 
@@ -19,7 +19,7 @@ Prepared 2026-10-03. **Version 1.3.2 is a local review candidate. Owner verifica
 | Terms | [Published terms](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/TERMS.md) |
 | Icon and logo | New 1254-pixel minimal phone/code artwork shown above; [brand guide](BRAND.md) |
 
-The candidate's five directory fields live in the native plugin manifest, not the marketplace entry. Public URLs must be checked for anonymous access and agreement with the final package after approved source publication. Their currently published text can lag this local candidate.
+The five directory fields live in the native plugin manifest, not the marketplace entry. Public README, policy, support and artwork URLs were checked anonymously against the source after publication.
 
 ## What the agency delivers
 
@@ -53,7 +53,7 @@ The owner should review the native package and actual intended workflow behavior
 
 ## Verification and remaining gates
 
-Exact local archive/check receipts accompany the release under its versioned distribution directory. The candidate includes a dedicated native source tree intended for publication at an approved branch root. Publishing the full mixed canonical source can exceed the directory's 512-file threshold. Source publication is a later owner-authorized step; this preparation does not change GitHub, installed hosts, the hosted Worker or a portal listing.
+The [1.3.2 GitHub release](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.2) includes four archives and a provenance/hash receipt. Public main release commit: `6ca2fc4667bfb0560c6984b54396683c23926c83`. The exact 507-file native source is published at `claude-release`, commit `fb35ef5eba20e746dda835664cb8ba819836ae95`. All 19 tests and GitHub validation checks passed. Anthropic fetched that exact native commit and recognized 189 skills and 16 agents: no blocking findings, six warnings and three policy-hold findings. See [submission notes](SUBMISSION-NOTES.md) for reviewer context. Automatic publishing is off; updates use scheduled checks. The hosted Worker and installed plugin caches were unchanged.
 
 Behavioral examples for owner review (unrun in the Claude host during this preparation):
 
@@ -66,7 +66,7 @@ Behavioral examples for owner review (unrun in the Claude host during this prepa
 | Prepare this plugin for Anthropic | Real metadata/art/link checks and an owner review pack, with submission held for verification |
 | Ask to submit before owner verification | Retain the candidate and report the outstanding verification gate |
 
-Remaining: **owner verifies branding/listing/package; authorized native source and policy publication; actual host/evaluation evidence; connected-org GitHub access and exact source validation; owner contact/attestations; portal security/reviewer decision; separate publication/live readback.** Name availability and any generic-name review hold cannot be established by local tests; stable identity is preserved pending the real portal check.
+Remaining: **Anthropic reviewer decision and separate directory publication/live readback; actual host/evaluation evidence.** Owner audience disclosure and acknowledgements were completed, submission succeeded, and the security scan passed. The portal lists a component-inventory policy hold without a named missing/unreadable source file. Valid retained metadata and inert implementation examples were not removed to hide warnings. Claude workflow tests were blocked by an expired OAuth login before behavior could be evaluated. Name and publisher checks passed in the portal; this does not establish approval.
 
 Requirements were checked against Anthropic's [manifest reference](https://code.claude.com/docs/en/plugins-reference), [directory checklist](https://claude.com/docs/plugins/pre-submission-checklist), [submission guide](https://claude.com/docs/plugins/submit) and [platform support](https://claude.com/docs/plugins/platform-support) on 2026-10-03.
 

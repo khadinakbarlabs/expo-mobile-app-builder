@@ -1,12 +1,14 @@
 # Agency release preparation
 
-Version 1.3.2 is a validated local package candidate, not a submitted or published directory update.
+Current readback — 2026-10-04: Anthropic 1.3.2 remains In review, security passed, Live not yet. Candidate 1.3.5 replaces ambient credential reads in AI guidance with an explicit consuming-app backend adapter and moves artwork-byte validation out of installed tooling into a mandatory source-only release gate. All 189 skills and 16 agents remain. The owner authorized shipping fixes; portal results must identify the exact new native commit.
+
+OpenAI v1.3.4 was submitted with owner authorization on 2026-10-03 after all 189 skills passed and all six declarations were accepted. The same-record upload guard confirmed that review had started, although the dashboard showed Unavailable. Publication remains unconfirmed. Preserve that pending record; 1.3.5 is a separate GitHub candidate and does not replace the queued OpenAI review.
 
 ## Prepared
 
 - Existing source identity: `mobile-app-builder`; human name: **Mobile App Builder**; subtitle: **Develop Android & iOS Apps**; Developer Tools category.
 - Eight departments, sixteen specialist roles and 189 workflows, retaining the original 179 skill directories.
-- Public website, support, privacy and terms URLs point to the existing public GitHub project; existing publisher text is preserved and the user requested a regenerated minimal mobile-development logo. New agency copy reaches those pages only after source publication.
+- Public website, support, privacy and terms URLs point to the existing public GitHub project; existing publisher text is preserved and the user requested a regenerated minimal mobile-development logo. Current agency copy and policies are public and anonymously verified.
 - Portable OpenAI presentation and compatibility presentation are synchronized. Release notes describe actual changes; no new country targeting or translation declarations were invented.
 - Separate portable, OpenAI, Claude and Cursor bundles use allowlisted content. The OpenAI bundle is skills-only and provides portable role cards through skills. It has no MCP/app binding, native Claude manifest, credentials or hosted execution.
 - Local skill, taxonomy, regression, native manifest, safety and exact OpenAI archive checks are available. A planning-service deployment and installed-host QA are independent surfaces.
@@ -19,7 +21,7 @@ Version 1.3.2 is a validated local package candidate, not a submitted or publish
 4. Validate the exact selected archive in the target host and portal. Skills-only packages require no MCP review cases, demo recording or reviewer credentials. A separately submitted hosted MCP app has its own tool, demo and reviewer requirements.
 5. Keep draft upload, review submission, approval and publication separately authorized and separately observed. Do not replace a live submission or its attestations as a consequence of preparing this local candidate.
 
-No account, country availability, review attestations, live submission, installed plugin cache or production Worker was changed by this package preparation.
+GitHub publication and an Anthropic draft were authorized on 2026-10-03. The owner subsequently authorized Anthropic audience/policy answers and that review submission completed. The separately authorized OpenAI submission has completed; installed caches and the production Worker remain unchanged.
 
 ## Store, creator, ads and SEO intelligence
 
@@ -31,8 +33,8 @@ TikTok commercial-library country coverage follows its checked European/UK enum,
 
 The first portal validation of 1.3.1 fetched the exact native `claude-release` commit 83e9d3c and passed with no blocking findings, six warnings and five policy-hold findings. Name/publisher checks passed; 189 skills and 16 agents were recognized. Directory-only metadata warnings explicitly require no action.
 
-The next 1.3.2 payload excludes three obsolete, unselected images from every distribution bundle while retaining them in source. The legacy image printable-byte hold and two unused-image references motivated an explicit current-art allowlist; no image bytes were modified or hidden.
+The published 1.3.2 payload excludes three obsolete, unselected images from every distribution bundle while retaining them in source. The legacy image printable-byte hold and two unused-image references motivated an explicit current-art allowlist; no image bytes were modified or hidden.
 
 Reviewer context for retained findings: the local preparation checker reads image headers/format markers and JSON metadata, and never invokes an image as executable code. AI-streaming and deletion snippets are inert consuming-app examples: the deployed app’s own provider secret and its user’s session token are independent of the plugin installer, and the AI consent storage key belongs to a separate app feature. Preserve authentication/consent controls and same-provider secret boundaries. The research reference’s flagged shell patterns are explicit prohibitions, not runtime downloads; no startup hook or MCP executes them.
 
-Read-only Claude workflow smoke/comparison attempts were blocked by an expired local OAuth login. They are not passed behavior/evaluation tests. Capture new portal validation against the exact updated native commit before continuing.
+Read-only Claude workflow smoke/comparison attempts were blocked by an expired local OAuth login. They are not passed behavior/evaluation tests. Refreshed portal validation fetched `fb35ef5eba20e746dda835664cb8ba819836ae95` and passed: zero blocking findings, six warnings and three policy-hold findings (two credential-example findings and the read-only image-checker association). The unused-image and legacy-binary findings cleared. At that earlier preparation step, audience disclosure and four acknowledgements remained unchecked. They were subsequently completed with owner authorization and the version was submitted, as recorded in the current readback above. Automatic publishing is off and scheduled checking is selected.
