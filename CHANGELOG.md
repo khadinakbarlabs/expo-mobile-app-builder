@@ -18,6 +18,14 @@
 
 # Changelog
 
+## 1.3.6 — 2026-10-04
+
+- Replace the remaining Supabase environment-key example with explicit owner-supplied public app configuration; reject secret/service-role keys in the mobile client.
+- Fix magic-link session establishment with validated PKCE code exchange, cold/warm link handling, duplicate delivery protection and generic errors. Update session lifecycle and SDK 54 protected-route guidance.
+- Keep the publisher HTML artwork preview in development source only; retain Markdown brand guidance, the selected icon and README banner in every bundle.
+- Add behavioral regression tests for valid/invalid callbacks, provider failures, retries, duplicate deliveries and preview exclusion.
+- The latest observed Anthropic 1.3.5 scan passed security but retains reviewer holds; no cleared-hold or publication claim is made for a new commit before its scan.
+
 ## 1.3.5 — 2026-10-04
 
 - Replace the AI streaming example's ambient secret read with an explicit consuming-app provider adapter, retaining authentication, atomic quotas and bounded provider requirements.

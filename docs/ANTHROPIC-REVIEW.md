@@ -1,6 +1,6 @@
 # Mobile App Builder — owner review
 
-Current directory readback — 2026-10-04: Anthropic 1.3.2 remains In review after a passed security scan, with an INVENTORY_INCOMPLETE policy hold. Release 1.3.5 addresses the reported environment-secret example and installed image-reading helper. It must be scanned at its exact new native commit before any cleared-findings or publication claim. The owner authorized shipping these fixes. Valid directory metadata is retained.
+Directory readback before this release — 2026-10-04: Anthropic scanned v1.3.5 c98ff4e, security passed, In review, Live not yet. The named AI-secret and download/run findings cleared; INVENTORY_INCOMPLETE and broad manifest asset/credential associations remain with a reviewer. No missing or unreadable file is named. Valid icon and four listing URLs are explicitly informational/no-action findings. Release 1.3.6 removes the last ambient public-key example, fixes Supabase magic-link sessions and excludes the publisher-only HTML artwork preview from installed bundles. The owner authorized shipping; inspect the exact new native commit before claiming any finding cleared or publication.
 
 ![Mobile App Builder](../assets/mobile-app-builder-logo-v8.png)
 

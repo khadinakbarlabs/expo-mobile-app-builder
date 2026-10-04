@@ -14,9 +14,9 @@ The same canonical skills are packaged for several agent ecosystems. A native ma
 
 Official directory status can change independently of a GitHub release. Verify the live platform surface before describing a listing as approved or published.
 
-## Current directory status — 2026-10-03
+## Directory snapshot before 1.3.6 — 2026-10-04
 
-GitHub 1.3.4 is published; 1.3.5 is the publication-fix candidate. Anthropic 1.3.2 remains In review with security passed and a component-inventory hold. The owner authorized shipping 1.3.5 to the tracked native branch. Confirm its exact fetched commit and scan result before claiming the hold cleared or the plugin live.
+Directory readback before this release — 2026-10-04: Anthropic scanned v1.3.5 c98ff4e, security passed, In review, Live not yet. The named AI-secret and download/run findings cleared; INVENTORY_INCOMPLETE and broad manifest asset/credential associations remain with a reviewer. No missing or unreadable file is named. Valid icon and four listing URLs are explicitly informational/no-action findings. Release 1.3.6 removes the last ambient public-key example, fixes Supabase magic-link sessions and excludes the publisher-only HTML artwork preview from installed bundles. The owner authorized shipping; inspect the exact new native commit before claiming any finding cleared or publication.
 
 OpenAI v1.3.4 was submitted for review on 2026-10-03 with all 189 skills passed and all six owner declarations accepted. Its same-record upload guard confirmed In review while the dashboard displayed Unavailable. Publication is not confirmed; preserve the pending review and the separate older hosted MCP record.
 
@@ -37,3 +37,5 @@ The owner must verify the candidate before source publication or submission. An 
 The canonical development source follows `main`; the native Claude payload follows `claude-release` at the repository root. Native release contents come from the checked package allowlist, including the README, policies, skills, roles, local user-facing helpers and selected artwork. Source-only build/release validators, other host manifests and hosted-service implementation are excluded from that branch. Both branches preserve repository identity; the native branch is the intended Anthropic source with an empty plugin path.
 
 For direct Claude Code use, clone that branch and load its root with `--plugin-dir`. Portal validation must read the exact published native commit. The directory's listing/review/security result is independent of GitHub publication. Do not duplicate an existing repository/folder submission.
+
+The source-only publisher preview at docs/OWNER-REVIEW.html remains in the GitHub development repository and local review site. It is excluded from all installable packages; Markdown brand documentation and both selected images remain included.
