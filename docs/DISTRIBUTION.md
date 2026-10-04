@@ -14,9 +14,11 @@ The same canonical skills are packaged for several agent ecosystems. A native ma
 
 Official directory status can change independently of a GitHub release. Verify the live platform surface before describing a listing as approved or published.
 
-## Directory snapshot before 1.3.6 — 2026-10-04
+## Directory snapshot before 1.3.8 — 2026-10-04
 
-Directory readback before this release — 2026-10-04: Anthropic scanned v1.3.5 c98ff4e, security passed, In review, Live not yet. The named AI-secret and download/run findings cleared; INVENTORY_INCOMPLETE and broad manifest asset/credential associations remain with a reviewer. No missing or unreadable file is named. Valid icon and four listing URLs are explicitly informational/no-action findings. Release 1.3.6 removes the last ambient public-key example, fixes Supabase magic-link sessions and excludes the publisher-only HTML artwork preview from installed bundles. The owner authorized shipping; inspect the exact new native commit before claiming any finding cleared or publication.
+Anthropic fetched v1.3.7 at native commit d6ebc59: 504 files, security passed, In review and Live not yet. The image-reference association cleared; INVENTORY_INCOMPLETE and the broad credential association remain with a reviewer. No missing or unreadable file is named. Valid icon and four listing URLs remain informational/no-action findings.
+
+Version 1.3.8 fixes a reproduced Claude discovery mismatch: the previous explicit agent routes produced zero agents in the pinned host inventory, while standard discovery loads all 16. It also moves publisher-only command instructions into source documentation and checks every installed helper/resource reference. These are verified package fixes; only the exact new directory scan can establish whether either review hold cleared.
 
 OpenAI v1.3.4 was submitted for review on 2026-10-03 with all 189 skills passed and all six owner declarations accepted. Its same-record upload guard confirmed In review while the dashboard displayed Unavailable. Publication is not confirmed; preserve the pending review and the separate older hosted MCP record.
 

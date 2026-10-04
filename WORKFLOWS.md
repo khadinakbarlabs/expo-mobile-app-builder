@@ -184,13 +184,9 @@ After an official listing is reviewed and published, users can search that direc
 ```bash
 git clone https://github.com/khadinakbarlabs/expo-mobile-app-builder.git
 cd expo-mobile-app-builder
-node scripts/validate-release.mjs
-node scripts/audit-public-package.mjs .
-node scripts/validate-openai-upload.mjs releases/mobile-app-builder-openai-1.1.2-upload-v4.zip
-node scripts/verify-public-mcp.mjs https://app-builder.khadinakbar.dev/mcp
 ```
 
-Cloning is useful when you want to audit the package, contribute a skill, pin a Git revision, or inspect every instruction before installation.
+Cloning is useful when you want to audit the package, contribute a skill, pin a Git revision, or inspect every instruction before installation. Run source checks from the [publisher guide](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/docs/PUBLISHER-GUIDE.md) in that checkout; publishing tools are excluded from installed bundles.
 
 ## Human quickstart
 
@@ -1237,7 +1233,7 @@ If a credential may have been exposed, stop using it, rotate or revoke it throug
 
 ### What the public audit checks
 
-`scripts/audit-public-package.mjs` scans the current package tree for classes of release risk, including credential artifacts, common secret-shaped values, private filesystem paths, private-source markers, unsafe network-to-shell installers, and broken relative Markdown links. It reports file paths and rule names rather than echoing a detected value.
+The source-only [public audit](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/scripts/audit-public-package.mjs) scans the intended release tree for classes of release risk, including credential artifacts, common secret-shaped values, private filesystem paths, private-source markers, unsafe network-to-shell installers, and broken relative Markdown links. It reports file paths and rule names rather than echoing a detected value.
 
 The audit is a release gate, not a mathematical proof. It does not prove that:
 
@@ -1253,34 +1249,25 @@ That is why source review, history review when warranted, provider rotation, rel
 
 Use [GitHub's private vulnerability-reporting flow](https://github.com/khadinakbarlabs/expo-mobile-app-builder/security/advisories/new) for a security issue. Do not open a public issue containing a live credential, exploitable customer detail, signing artifact, or unredacted private log. See [SECURITY.md](SECURITY.md) for the supported process.
 
-## Repository architecture
+## Installed Claude package
 
 ```text
 mobile-app-builder/
-├── plugin.json              Vendor-neutral Agent Plugins 1.0 manifest
-├── .agents/plugins/         Direct Codex repository marketplace metadata
-├── .claude-plugin/          Claude Code plugin and marketplace manifests
-├── .codex-plugin/           OpenAI/Codex universal plugin manifest
-├── .cursor-plugin/          Cursor plugin manifest
-├── assets/                  Public package icon
-├── docs/
-│   ├── references/          Versioned Expo, platform, security, and release notes
-│   └── DISTRIBUTION.md      Publication routes and review boundaries
-├── scripts/
-│   ├── plan-expo-project.mjs
-│   ├── validate-release.mjs
-│   ├── audit-public-package.mjs
-│   ├── validate-openai-upload.mjs
-│   └── verify-public-mcp.mjs
-├── skills/                  179 portable Agent Skills
-├── AGENTS.md                Public package contribution and safety rules
-├── CONTRIBUTING.md          Contributor workflow
-├── PRIVACY.md               Plugin privacy policy
-├── SECURITY.md              Private vulnerability-reporting process
-├── SUPPORT.md               Support scope and safe reproduction format
-├── TERMS.md                 Terms of use
-└── README.md                Human and agent operating guide
+├── .claude-plugin/          Native plugin and marketplace manifests
+├── agents/                  16 specialist agents, discovered by Claude
+├── skills/                  189 portable Agent Skills with bundled resources
+├── agency/                  Prepared catalog, taxonomy, roles and contracts
+├── assets/                  Selected logo and banner
+├── docs/                    User guides and versioned references
+├── scripts/                 Catalog browser and scaffold planner
+├── PRIVACY.md
+├── SECURITY.md
+├── SUPPORT.md
+├── TERMS.md
+└── README.md
 ```
+
+Other distributions use their own host manifest and role surface. Tests, publisher scripts and the optional hosted adapter remain in the canonical source repository. Every installed helper and its local dependencies must be present in the exact bundle.
 
 ### A typical skill
 
@@ -1310,55 +1297,11 @@ node scripts/plan-expo-project.mjs example-mobile-app --json
 
 The project name must be lowercase, begin with a letter, and contain only lowercase letters, digits, and single hyphens. The helper prints an Expo SDK 54 scaffold sequence, next steps, and safety boundaries. It does not create a folder, install a package, log in, start a build, or change a provider account.
 
-## Validation
+## Package validation
 
-Run the dependency-free package gates from the repository root:
+The [publisher guide](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/docs/PUBLISHER-GUIDE.md) documents the complete source, security, component-inventory and archive gates. Run those gates from a canonical source checkout. Installed packages retain the user-facing helpers and resources needed by their workflows.
 
-```bash
-node scripts/validate-release.mjs
-node scripts/audit-public-package.mjs .
-node scripts/verify-public-mcp.mjs https://app-builder.khadinakbar.dev/mcp
-```
-
-### Release validator
-
-`validate-release.mjs` checks the package shape, including:
-
-- required public manifests and policy documents;
-- normalized package names across ecosystems;
-- the exact public display name;
-- the OpenAI display-name length limit;
-- valid skill frontmatter and directory/name agreement;
-- required OpenAI skill metadata;
-- standalone relative-link safety;
-- parity between the root and standalone scaffold planners;
-- absence of symbolic links in the public package.
-
-`validate-openai-upload.mjs` is the strict OpenAI skills-only gate. It checks the
-ZIP itself, including archive integrity, root/manifest unambiguity, compressed
-and extracted size limits, path traversal and collision rules, supported
-metadata limits, normalized starter prompts, legal URLs, brand assets, the
-skills-only MCP/app boundary, skill frontmatter, and `agents/openai.yaml`
-metadata. It should be run against the exact ZIP selected in the upload dialog.
-
-### Public-package audit
-
-`audit-public-package.mjs` checks the current tree for public-release hazards and broken relative Markdown links. It is intentionally safe to run in CI because findings identify the rule and path without printing the matching value.
-
-### Contributor release gate
-
-Before publishing a new package version, contributors should also:
-
-1. validate every changed skill with the relevant plugin/skill validator;
-2. run a secret scanner over the intended public tree;
-3. inspect the git diff for accidental private content;
-4. build the distributable archive from a clean, allowlisted staging directory;
-5. extract the archive into a temporary directory;
-6. rerun validation and the public audit against the extracted package;
-7. inspect the archive file list, size, and checksum;
-8. verify the pushed commit and CI result before describing the release as public.
-
-The [release checklist](RELEASE-CHECKLIST.md) is the canonical operational reference.
+A local release pass establishes package integrity. GitHub CI, Claude host discovery, directory validation, security review, reviewer approval and live publication require their own evidence.
 
 ## Updating and uninstalling
 
@@ -1562,7 +1505,7 @@ Ask:
 - Do not claim guaranteed approval, compliance, performance, revenue, or ranking.
 - Run package validation, the public audit, skill validation, and archive round-trip checks.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/AGENTS.md), and the [release checklist](RELEASE-CHECKLIST.md) before proposing a public release.
+Read [CONTRIBUTING.md](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/CONTRIBUTING.md), [AGENTS.md](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/AGENTS.md), and the [release checklist](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/RELEASE-CHECKLIST.md) before proposing a public release.
 
 ### Documentation contributions
 
@@ -1575,9 +1518,9 @@ Prefer concrete prompts, decision rules, expected outputs, failure modes, and ho
 
 ## Cloudflare MCP deployment
 
-This package includes a credential-free Cloudflare Workers MCP adapter in [`cloudflare/`](https://github.com/khadinakbarlabs/expo-mobile-app-builder/tree/main/cloudflare/). It uses stateless Streamable HTTP and exposes planning, research, validation, private-build handoff, and store-submission checklist tools at `/mcp` after deployment. The Worker does not contain Expo, Apple, Google, EAS, or other provider credentials and does not upload or submit binaries. Keep signing and account operations in an authenticated private runner with explicit owner approval.
+The canonical source repository contains a separate credential-free Cloudflare Workers MCP adapter in [`cloudflare/`](https://github.com/khadinakbarlabs/expo-mobile-app-builder/tree/main/cloudflare/). It uses stateless Streamable HTTP and exposes planning, research, validation, private-build handoff, and store-submission checklist tools at `/mcp` after deployment. The Worker does not contain Expo, Apple, Google, EAS, or other provider credentials and does not upload or submit binaries. Keep signing and account operations in an authenticated private runner with explicit owner approval.
 
-See [`docs/CLOUDFLARE-MCP.md`](docs/CLOUDFLARE-MCP.md) for deployment and tool details.
+See [`docs/CLOUDFLARE-MCP.md`](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/docs/CLOUDFLARE-MCP.md) for deployment and tool details.
 
 ## Distribution status
 
@@ -1601,8 +1544,8 @@ See [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md) for the canonical distinction. 
 - [Terms of use](TERMS.md)
 - [Support](SUPPORT.md)
 - [Security reporting](SECURITY.md)
-- [Contributing](CONTRIBUTING.md)
-- [Release checklist](RELEASE-CHECKLIST.md)
+- [Contributing](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/CONTRIBUTING.md)
+- [Release checklist](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/RELEASE-CHECKLIST.md)
 - [Distribution boundaries](docs/DISTRIBUTION.md)
 
 ## License
