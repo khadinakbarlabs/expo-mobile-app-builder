@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Local structural preflight. No network requests, execution, writes or portal claims.
+// Publisher-only structural preflight. Never included in an installed bundle.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -56,7 +56,7 @@ function containedFile(root, reference) {
 export function inspectPlugin(inputRoot) {
   const root = path.resolve(inputRoot);
   const errors = [];
-  const notes = ['Local structural checks do not replace strict Claude validation, portal validation, security review, or host behavior tests.', 'Image bytes are not read by this installed helper. Run separate source-only media validation and a full image decoder before releasing.'];
+  const notes = ['Local structural checks do not replace strict Claude validation, portal validation, security review, or host behavior tests.', 'Image bytes are not read by this publisher helper. Run separate source-only media validation and a full image decoder before releasing.'];
   const files = [];
   const blockedFiles = new Set();
   if (!fs.existsSync(root) || !fs.lstatSync(root).isDirectory() || fs.lstatSync(root).isSymbolicLink()) throw new Error('Plugin root must be a regular directory');

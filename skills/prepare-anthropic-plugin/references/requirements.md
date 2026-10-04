@@ -48,6 +48,6 @@ The portal reads a GitHub repository, exact plugin folder and branch/tag. An eli
 
 Skills load across chat, Cowork and Code; agents load in Cowork and Code. Tool-dependent operations still require the actual host environment. Local structural checks don't measure workflow quality; run realistic examples and compare outputs before claiming those benefits.
 
-## Source-only artwork validation
+## Source-only publisher validation
 
-The installed structural helper inventories text, paths and sizes and reports media as unvalidated. Run media-header checks and a full image decoder in the publisher’s source-only release pipeline. Keep these gates mandatory before packaging, while excluding their implementations from the installed payload. Preserve original artwork and valid listing metadata; this separates release tooling from installed behavior rather than treating static artwork as executable code.
+Use the installed preparation skill's checklist with the host's file tools to inspect a candidate. General filesystem scanners, catalog generation, media-header checks and full image decoding belong in the publisher’s source-only release environment. This project's structural checker and media checker remain mandatory packaging gates, with their implementations excluded from installed bundles. The installed agency browser reads only bounded, validated catalog metadata; it does not open skill routes or artwork. Preserve original artwork, valid listing metadata and credential audits.

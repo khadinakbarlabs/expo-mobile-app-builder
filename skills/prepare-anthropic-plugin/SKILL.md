@@ -22,13 +22,9 @@ Produce a concrete package the owner can verify before any submission. This work
 
 ## Check the exact native package
 
-8. Run this skill's read-only helper from its installed directory, with the intended native folder as the argument:
+8. Use the host's file tools to inventory the intended native folder against the structural preparation section in [requirements](references/requirements.md): regular contained files, exact component routes, safe filenames, directory limits, README/license, listing URLs, contained icon metadata and pinned launchers. Inspect all candidate instructions and executable code for credential access and outbound behavior. Skip credentials and signing artifacts by filename and reject them from the payload; do not read their values into a report. Record explicit findings and checks still pending.
 
-```sh
-node scripts/check-plugin.mjs ./candidate-plugin
-```
-
-It returns JSON for structural, file/path/size, contained icon path, listing URLs and common launcher checks. It does not read image bytes or validate media contents, fetch URLs, scan all secrets, execute skills, validate every native component schema, or inspect Git attributes above the target folder. Run separate source-only media validation, a full image decoder, a credential audit and the current native validator before release; review any runtime components separately. Media validation belongs in the publisher’s release environment and must not be wired into the installed plugin’s commands, hooks or scripts.
+This installed workflow contains instructions and templates, without a bundled filesystem scanner. An optional [publisher structural checker](https://github.com/khadinakbarlabs/expo-mobile-app-builder/blob/main/scripts/check-anthropic-package.mjs) remains in the canonical source repository for verified publisher checkouts; it is also a mandatory gate in this project's packaging pipeline. It checks text, paths, sizes and launchers; it does not inspect image bytes, fetch URLs, scan all secrets, execute skills, validate every native component schema or inspect Git attributes above the target folder. Run separate source-only media validation, a full image decoder, a credential audit and the current native validator before release; review runtime components separately. Keep publisher filesystem/media scanners out of installed commands and hooks.
 
 9. Use a directory-aware Claude Code validator; the five directory fields require version 2.1.281 or later. As verified 2026-10-03, an isolated exact validator can be run without replacing the user's global installation:
 

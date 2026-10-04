@@ -18,8 +18,7 @@ COMMON = [
     'RELEASE-CHECKLIST.md', 'skills', 'agency', 'docs',
     # Include only selected brand exports; retain prior candidates in source.
     'assets/mobile-app-builder-logo-v8.png', 'assets/mobile-app-builder-banner.png',
-    'scripts/agency-catalog.mjs', 'scripts/agency.mjs',
-    'scripts/build-agency-catalog.mjs', 'scripts/plan-expo-project.mjs',
+    'scripts/agency-runtime.mjs', 'scripts/agency.mjs', 'scripts/plan-expo-project.mjs',
 ]
 SURFACES = {
     'portable': ['plugin.json', 'agents'],
@@ -28,7 +27,7 @@ SURFACES = {
     'cursor': ['.cursor-plugin/plugin.json'],
 }
 # The publisher's artwork preview belongs to source, not an installed workflow.
-SOURCE_ONLY_PATHS = {'docs/OWNER-REVIEW.html'}
+SOURCE_ONLY_PATHS = {'docs/OWNER-REVIEW.html', 'skills/prepare-anthropic-plugin/scripts/check-plugin.mjs'}
 EXCLUDED_NAMES = {'.git', '.DS_Store', 'Thumbs.db', 'desktop.ini', '__MACOSX', 'node_modules', '__pycache__', 'dist', 'coverage'}
 SECRET_SUFFIXES = {'.p8', '.p12', '.pem', '.key', '.jks', '.keystore'}
 SECRET_NAME = re.compile(r'^(?:GoogleService-Info\.plist|google-services\.json|credentials\.json|service-account.*\.json)$', re.IGNORECASE)
@@ -129,7 +128,7 @@ def main():
             target = native_root / file.relative_to(ROOT)
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(file, target)
-        subprocess.run(['node', str(ROOT / 'skills/prepare-anthropic-plugin/scripts/check-plugin.mjs'), str(native_root)], cwd=ROOT, check=True)
+        subprocess.run(['node', str(ROOT / 'scripts/check-anthropic-package.mjs'), str(native_root)], cwd=ROOT, check=True)
         subprocess.run(['node', str(ROOT / 'scripts/validate-anthropic-media.mjs'), str(native_root)], cwd=ROOT, check=True)
         subprocess.run(['node', str(ROOT / 'scripts/audit-public-package.mjs'), str(native_root)], cwd=ROOT, check=True)
         outputs = [(surface, staged / f'mobile-app-builder-{version}-{surface}.zip') for surface in SURFACES]

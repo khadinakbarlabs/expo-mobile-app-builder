@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { inspectPlugin, unpinnedLaunchers, caseCollisions } from '../skills/prepare-anthropic-plugin/scripts/check-plugin.mjs';
+import { inspectPlugin, unpinnedLaunchers, caseCollisions } from '../scripts/check-anthropic-package.mjs';
 import { inspectMedia } from '../scripts/validate-anthropic-media.mjs';
 
 function fixture(run) {
@@ -22,7 +22,7 @@ test('valid candidate reports local checks without claiming portal approval', ()
   assert.equal(report.status, 'local-checks-passed');
   assert.equal(report.portalValidated, false);
 }));
-test('installed structural helper never reads image bytes', () => fixture(root => {
+test('publisher structural helper leaves image bytes to the separate media gate', () => fixture(root => {
   const original = fs.readFileSync;
   fs.readFileSync = (file, ...args) => {
     assert.notEqual(path.extname(String(file)), '.png', 'media belongs to release validation');

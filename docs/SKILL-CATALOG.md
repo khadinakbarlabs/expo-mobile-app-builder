@@ -2,7 +2,7 @@
 
 Every workflow has one department and subcategory. Platform tags describe the primary scope; shared workflows still require an iOS/Android parity decision.
 
-Generated from `agency/taxonomy.json`; regenerate with `node scripts/build-agency-catalog.mjs`.
+Generated from `agency/taxonomy.json`. Maintainers regenerate with `node scripts/build-agency-catalog.mjs` in the canonical source checkout; installed browsing reads the prepared catalog.
 
 ## Research & intelligence
 

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+export { selectSkills } from './agency-runtime.mjs';
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -52,11 +53,4 @@ export function readSkills(base = root) {
 
 export function loadCatalog(base = root) {
   return buildCatalog(JSON.parse(fs.readFileSync(path.join(base, 'agency/taxonomy.json'), 'utf8')), readSkills(base));
-}
-
-export function selectSkills(catalog, filters = {}) {
-  return catalog.skills.filter(skill =>
-    (!filters.department || skill.department === filters.department) &&
-    (!filters.platform || skill.platform === filters.platform) &&
-    (!filters.query || `${skill.id} ${skill.description}`.toLowerCase().includes(filters.query.toLowerCase())));
 }

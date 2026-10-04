@@ -40,6 +40,22 @@ class PackageTests(unittest.TestCase):
                 paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
                 self.assertNotIn('scripts/validate-anthropic-media.mjs', paths)
 
+    def test_publisher_scanners_and_catalog_generation_are_source_only(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            publisher_tools = ['scripts/agency-catalog.mjs', 'scripts/build-agency-catalog.mjs', 'scripts/check-anthropic-package.mjs', 'skills/prepare-anthropic-plugin/scripts/check-plugin.mjs']
+            for name in publisher_tools:
+                file = root / name
+                file.parent.mkdir(parents=True, exist_ok=True)
+                file.write_text('publisher tool')
+            for surface in PACKAGE.SURFACES:
+                paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
+                for name in publisher_tools:
+                    self.assertNotIn(name, paths)
+                self.assertIn('scripts/agency-runtime.mjs', paths)
+                self.assertIn('scripts/agency.mjs', paths)
+
     def test_owner_artwork_preview_is_source_only_and_brand_docs_remain(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

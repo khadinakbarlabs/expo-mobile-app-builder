@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { loadCatalog, selectSkills } from './agency-catalog.mjs';
+import { loadPreparedCatalog, selectSkills } from './agency-runtime.mjs';
 
 const args = process.argv.slice(2);
 const filters = {};
@@ -17,7 +17,7 @@ try {
     }
     filters[argument.slice(2)] = args[++index];
   }
-  const catalog = loadCatalog();
+  const catalog = loadPreparedCatalog();
   if (filters.department && !catalog.departments.some(item => item.id === filters.department)) throw new Error('Unknown department. Use --help.');
   if (filters.platform && !['ios', 'android', 'shared'].includes(filters.platform)) throw new Error('Unknown platform. Use --help.');
   const skills = selectSkills(catalog, filters);
