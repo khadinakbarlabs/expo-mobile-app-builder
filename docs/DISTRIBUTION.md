@@ -14,11 +14,13 @@ The same canonical skills are packaged for several agent ecosystems. A native ma
 
 Official directory status can change independently of a GitHub release. Verify the live platform surface before describing a listing as approved or published.
 
-## Directory snapshot before 1.3.8 — 2026-10-04
+## Directory snapshot before 1.3.9 — 2026-10-04
 
-Anthropic fetched v1.3.7 at native commit d6ebc59: 504 files, security passed, In review and Live not yet. The image-reference association cleared; INVENTORY_INCOMPLETE and the broad credential association remain with a reviewer. No missing or unreadable file is named. Valid icon and four listing URLs remain informational/no-action findings.
+Anthropic fetched v1.3.8 at native commit 11390d0: 501 files, validation and security passed, In review and Live not yet. INVENTORY_INCOMPLETE and the broad credential association remain with a reviewer. No missing or unreadable file or credential source/destination is named. Valid icon and four listing URLs remain informational/no-action findings.
 
-Version 1.3.8 fixes a reproduced Claude discovery mismatch: the previous explicit agent routes produced zero agents in the pinned host inventory, while standard discovery loads all 16. It also moves publisher-only command instructions into source documentation and checks every installed helper/resource reference. These are verified package fixes; only the exact new directory scan can establish whether either review hold cleared.
+Version 1.3.8 fixed the reproduced Claude discovery mismatch; standard discovery loads all 189 skills and 16 agents. Its exact directory scan did not clear the remaining reviewer holds.
+
+Version 1.3.9 uses a dedicated Claude layout: 312 files, with OpenAI-only per-skill UI metadata excluded. Every native workflow, role, resource, helper and branding asset remains included. Canonical source and the other distributions retain OpenAI metadata. The smaller host-specific inventory is a tested alternative, not a diagnosed or guaranteed remedy for the directory hold; only a scan of the new published commit can establish its effect.
 
 OpenAI v1.3.4 was submitted for review on 2026-10-03 with all 189 skills passed and all six owner declarations accepted. Its same-record upload guard confirmed In review while the dashboard displayed Unavailable. Publication is not confirmed; preserve the pending review and the separate older hosted MCP record.
 

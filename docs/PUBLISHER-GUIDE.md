@@ -21,9 +21,9 @@ Packaging stages the exact Claude tree and rejects unresolved installed helper c
 After packaging, substitute the actual release version below:
 
 ```bash
-node scripts/verify-claude-inventory.mjs dist/1.3.8/anthropic-source
-npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate dist/1.3.8/anthropic-source --strict
-node scripts/validate-openai-upload.mjs dist/1.3.8/mobile-app-builder-1.3.8-openai.zip
+node scripts/verify-claude-inventory.mjs dist/1.3.9/anthropic-source
+npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate dist/1.3.9/anthropic-source --strict
+node scripts/validate-openai-upload.mjs dist/1.3.9/mobile-app-builder-1.3.9-openai.zip
 ```
 
 The pinned Claude inventory command lists components without starting a model session. Its output must match every catalog skill and specialist; successful manifest validation alone does not prove discovery. Version 2.1.287 listed zero agents for the prior inline plugin with explicit manifest agent files; default `agents/` discovery listed all 16. Keep the standard layout and retain the host check in CI.

@@ -18,6 +18,14 @@
 
 # Changelog
 
+## 1.3.9 — 2026-10-04
+
+- Package Claude without the 189 OpenAI-only per-skill UI metadata files, reducing its native payload from 501 to 312 files.
+- Preserve all 189 workflows, 16 native specialists, resources, four readable helpers and selected branding; retain OpenAI metadata in canonical source and the other distributions.
+- Use the same host-specific file selection for native branch staging and the Claude ZIP; add regression checks for selective exclusion, resource retention and symlink rejection.
+- Clarify distribution-specific discovery in installed guides and update versioned installation links.
+- The exact published commit needs a new Anthropic scan; local packaging and host discovery do not establish reviewer clearance or live directory availability.
+
 ## 1.3.8 — 2026-10-04
 
 - Fix Claude inline component discovery: use the standard agents directory so the pinned host lists all 16 specialists alongside all 189 skills.

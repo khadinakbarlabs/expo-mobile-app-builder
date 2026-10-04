@@ -27,6 +27,8 @@ jobs:
       - run: node scripts/verify-claude-inventory.mjs dist/$(node -p "require('./plugin.json').version")/anthropic-source
       - run: npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate .claude-plugin/plugin.json --strict
       - run: npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate .claude-plugin/marketplace.json --strict
+      - run: npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate dist/$(node -p "require('./plugin.json').version")/anthropic-source/.claude-plugin/plugin.json --strict
+      - run: npx --yes @anthropic-ai/claude-code@2.1.287 plugin validate dist/$(node -p "require('./plugin.json').version")/anthropic-source/.claude-plugin/marketplace.json --strict
 
   worker:
     runs-on: ubuntu-latest

@@ -46,12 +46,18 @@ def collect_files(root, surface):
     def visit(file):
         if file.is_symlink():
             raise ValueError('Symbolic links are not allowed in bundles')
-        if file.relative_to(root).as_posix() in SOURCE_ONLY_PATHS:
+        relative = file.relative_to(root)
+        if relative.as_posix() in SOURCE_ONLY_PATHS:
             return
         if file.name in EXCLUDED_NAMES:
             return
         if file.name.startswith(('.env', '.dev.vars')) or file.name in {'.ssh', '.aws', 'secrets', 'credentials'} or file.suffix.lower() in SECRET_SUFFIXES or SECRET_NAME.fullmatch(file.name):
             raise ValueError('Credential-shaped file in allowlisted bundle content')
+        # Claude discovers SKILL.md directly; this UI metadata is for OpenAI.
+        if (surface == 'claude' and file.is_file() and len(relative.parts) == 4
+                and relative.parts[0] == 'skills'
+                and relative.parts[2:] == ('agents', 'openai.yaml')):
+            return
         if file.is_dir():
             for child in sorted(file.iterdir()):
                 visit(child)

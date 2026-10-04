@@ -31,6 +31,41 @@ class PackageTests(unittest.TestCase):
             self.assertNotIn('.claude-plugin/plugin.json', paths)
             self.assertNotIn('agents/ux-designer.md', paths)
 
+    def test_claude_omits_only_openai_skill_metadata(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            contents = {
+                'skills/example/SKILL.md': 'workflow',
+                'skills/example/agents/openai.yaml': 'OpenAI UI metadata',
+                'skills/example/references/openai.yaml': 'workflow resource',
+                'agents/ux-designer.md': 'native role',
+            }
+            for name, content in contents.items():
+                file = root / name
+                file.parent.mkdir(parents=True, exist_ok=True)
+                file.write_text(content)
+            for surface in PACKAGE.SURFACES:
+                paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
+                if surface == 'claude':
+                    self.assertNotIn('skills/example/agents/openai.yaml', paths)
+                    self.assertIn('agents/ux-designer.md', paths)
+                else:
+                    self.assertIn('skills/example/agents/openai.yaml', paths)
+                self.assertIn('skills/example/SKILL.md', paths)
+                self.assertIn('skills/example/references/openai.yaml', paths)
+            self.assertTrue((root / 'skills/example/agents/openai.yaml').exists())
+
+    def test_omitted_claude_metadata_does_not_hide_a_symlink(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            metadata = root / 'skills/example/agents/openai.yaml'
+            metadata.parent.mkdir(parents=True)
+            metadata.symlink_to(root / 'README.md')
+            with self.assertRaisesRegex(ValueError, 'Symbolic'):
+                PACKAGE.collect_files(root, 'claude')
+
     def test_media_release_tool_is_excluded_from_every_installed_surface(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

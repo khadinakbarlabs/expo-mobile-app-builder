@@ -28,7 +28,6 @@ agency/
 skills/
   mobile-app-agency/
     SKILL.md                         Coordination entry point
-    agents/openai.yaml               Codex skill discovery metadata
     references/
       roles.md                       All portable role cards
       handoffs.md                    Task contract, ownership, permissions, receipt
@@ -59,7 +58,7 @@ The taxonomy is an organization of resources, not a Git checkout layout. Calling
 | `growth` | `growth-strategist`, `seo-strategist` | Measurable acquisition/retention experiments and readouts |
 | `operations` | `agency-director`, `release-manager` | File ownership, dependency coordination, evidence and external-state closure |
 
-Native agents can be discovered by a host that supports the plugin's agent format. Codex's `agents/openai.yaml` is skill UI metadata, not a promise of native subagent execution. The standalone `mobile-app-agency` skill carries every role card locally so the same workflow works when only that skill is installed.
+Native agents can be discovered by a host that supports the plugin's agent format. OpenAI per-skill UI metadata remains in canonical source and the OpenAI distribution; Claude packages omit it and use native skill and agent discovery. UI metadata does not establish native subagent execution. The standalone `mobile-app-agency` skill carries every role card locally so the same workflow works when only that skill is installed.
 
 ## How a project moves
 
