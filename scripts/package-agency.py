@@ -126,6 +126,7 @@ def main():
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(file, target)
         subprocess.run(['node', str(ROOT / 'skills/prepare-anthropic-plugin/scripts/check-plugin.mjs'), str(native_root)], cwd=ROOT, check=True)
+        subprocess.run(['node', str(ROOT / 'scripts/validate-anthropic-media.mjs'), str(native_root)], cwd=ROOT, check=True)
         subprocess.run(['node', str(ROOT / 'scripts/audit-public-package.mjs'), str(native_root)], cwd=ROOT, check=True)
         outputs = [(surface, staged / f'mobile-app-builder-{version}-{surface}.zip') for surface in SURFACES]
         receipts = [create_bundle(ROOT, surface, file) for surface, file in outputs]

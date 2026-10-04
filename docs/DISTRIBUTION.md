@@ -16,9 +16,9 @@ Official directory status can change independently of a GitHub release. Verify t
 
 ## Current directory status — 2026-10-03
 
-GitHub release 1.3.4 is published. Anthropic follows the already-submitted `claude-release` 1.3.2 commit: security scan passed, In review, Live not yet, with a component-inventory policy hold requiring reviewer interpretation. The latest 1.3.4 Claude ZIP is available for direct installation; the tracked branch was preserved to avoid resetting the existing human review.
+GitHub 1.3.4 is published; 1.3.5 is the publication-fix candidate. Anthropic 1.3.2 remains In review with security passed and a component-inventory hold. The owner authorized shipping 1.3.5 to the tracked native branch. Confirm its exact fetched commit and scan result before claiming the hold cleared or the plugin live.
 
-OpenAI has a fully checked skills-only 1.3.4 draft under Khadin Akbar Ventures: all 189 skills passed, with no security warning. Revised uploads saved despite generic errors; the main upload route created the working draft and completed checks. Submit only the working draft after the owner confirms the six OpenAI attestations. The privacy-policy assessment notice explicitly permits additional review. No OpenAI review submission or live listing is claimed.
+OpenAI v1.3.4 was submitted for review on 2026-10-03 with all 189 skills passed and all six owner declarations accepted. Its same-record upload guard confirmed In review while the dashboard displayed Unavailable. Publication is not confirmed; preserve the pending review and the separate older hosted MCP record.
 
 ## Earlier agency candidate — 2026-10-03
 

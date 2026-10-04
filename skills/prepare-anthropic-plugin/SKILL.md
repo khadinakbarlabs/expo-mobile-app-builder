@@ -28,7 +28,7 @@ Produce a concrete package the owner can verify before any submission. This work
 node scripts/check-plugin.mjs ./candidate-plugin
 ```
 
-It returns JSON for structural, file/path/size, contained icon, listing URLs and common launcher checks. It does not fetch URLs, decode every image format, scan all secrets, execute skills, validate every native component schema, or inspect Git attributes above the target folder. Run a separate credential audit, full image decoder and current native validator; review any runtime components separately.
+It returns JSON for structural, file/path/size, contained icon path, listing URLs and common launcher checks. It does not read image bytes or validate media contents, fetch URLs, scan all secrets, execute skills, validate every native component schema, or inspect Git attributes above the target folder. Run separate source-only media validation, a full image decoder, a credential audit and the current native validator before release; review any runtime components separately. Media validation belongs in the publisher’s release environment and must not be wired into the installed plugin’s commands, hooks or scripts.
 
 9. Use a directory-aware Claude Code validator; the five directory fields require version 2.1.281 or later. As verified 2026-10-03, an isolated exact validator can be run without replacing the user's global installation:
 

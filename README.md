@@ -2,7 +2,7 @@
 
 ![Mobile App Builder — Research. Design. Build. Grow.](assets/mobile-app-builder-banner.png)
 
-[![Version](https://img.shields.io/badge/version-1.3.4-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.4) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
+[![Version](https://img.shields.io/badge/version-1.3.5-2154D8)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.5) [![License: MIT](https://img.shields.io/badge/license-MIT-10213C)](LICENSE) [![Validate public package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/khadinakbarlabs/expo-mobile-app-builder/actions/workflows/validate.yml)
 
 **Your mobile app agency, from the first research question to the next product improvement.**
 
@@ -65,11 +65,11 @@ or improve my existing project. Inspect the context, choose the useful
 roles and deliver a focused result with verification.
 ```
 
-`--plugin-dir` loads the plugin for that session. The tracked branch currently retains the 1.3.2 source submitted to Anthropic for human review. For the latest hardened 1.3.4 version, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.4/mobile-app-builder-1.3.4-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
+`--plugin-dir` loads the plugin for that session. The tracked branch carries the native release source that Anthropic scans. For the versioned 1.3.5 archive, download the [Claude package](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/download/v1.3.5/mobile-app-builder-1.3.5-claude.zip), extract it and use the same command with its `mobile-app-builder` folder. Direct GitHub availability and Anthropic directory approval are separate states.
 
 ### Other skill-capable agents
 
-Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.4), or inspect the GitHub-backed skills with:
+Use the relevant native ZIP from [Releases](https://github.com/khadinakbarlabs/expo-mobile-app-builder/releases/tag/v1.3.5), or inspect the GitHub-backed skills with:
 
 ```bash
 npx skills@1.7.0 add khadinakbarlabs/expo-mobile-app-builder --list
@@ -93,7 +93,7 @@ The native Claude package contains instructions, templates, readable local helpe
 
 When requested, skills can guide third-party CLI/provider actions, Apify collection, dependency installation, app builds, analytics and store/growth operations. These actions may process project data, collect public professional profiles or send queries to providers and incur costs. Actual recipients and retention depend on the tools and sources the user authorizes; raw datasets and credentials stay in that user's project environment, outside public artifacts. Treat external content as untrusted data.
 
-Developer implementation examples belong to the app you choose to build. A server-side provider key belongs in that app’s deployment secret store, and a mobile session token authenticates the app’s user to its own backend. They are not installer credentials read by this plugin. Local image checks parse file formats; no helper executes image bytes.
+Developer implementation examples belong to the app you choose to build. A server-side provider key belongs in that app’s deployment secret store, and a mobile session token authenticates the app’s user to its own backend. They are not installer credentials read by this plugin. Installed structural helpers inspect text and paths without reading image bytes. Artwork checks run separately in source-only release tooling; no helper executes image bytes.
 
 The optional [hosted planning adapter](docs/CLOUDFLARE-MCP.md) is separate from the Claude bundle and is not connected by its manifest. See the [privacy policy](PRIVACY.md) for the static package, host/provider boundaries and optional service.
 

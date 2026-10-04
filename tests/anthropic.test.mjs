@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { inspectPlugin, unpinnedLaunchers, caseCollisions } from '../skills/prepare-anthropic-plugin/scripts/check-plugin.mjs';
+import { inspectMedia } from '../scripts/validate-anthropic-media.mjs';
 
 function fixture(run) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'plugin-review-'));
@@ -21,6 +22,34 @@ test('valid candidate reports local checks without claiming portal approval', ()
   assert.equal(report.status, 'local-checks-passed');
   assert.equal(report.portalValidated, false);
 }));
+test('installed structural helper never reads image bytes', () => fixture(root => {
+  const original = fs.readFileSync;
+  fs.readFileSync = (file, ...args) => {
+    assert.notEqual(path.extname(String(file)), '.png', 'media belongs to release validation');
+    return original(file, ...args);
+  };
+  try {
+    const report = inspectPlugin(root);
+    assert.deepEqual(report.errors, []);
+    assert.equal(report.mediaValidated, false);
+  } finally { fs.readFileSync = original; }
+}));
+test('source-only media validation rejects corrupt and non-square icons', () => fixture(root => {
+  assert.deepEqual(inspectMedia(root), []);
+  const icon = path.join(root, 'icon.png');
+  const bytes = fs.readFileSync(icon);
+  bytes.writeUInt32BE(128, 16);
+  fs.writeFileSync(icon, bytes);
+  assert.match(inspectMedia(root).join('\n'), /square PNG/);
+  fs.writeFileSync(icon, 'invalid image');
+  assert.match(inspectMedia(root).join('\n'), /invalid or incomplete image/);
+}));
+test('AI streaming guidance delegates provider access without ambient credential reads', () => {
+  const skill = fs.readFileSync(new URL('../skills/add-openai-streaming-rn/SKILL.md', import.meta.url), 'utf8');
+  assert.doesNotMatch(skill, /Deno\.env\.get|process\.env\./);
+  assert.match(skill, /streamFromAppProvider/);
+  assert.match(skill, /enforceUserQuotaAtomically/);
+});
 test('rejects symlinks, system files and cross-platform filename collisions', () => fixture(root => {
   fs.symlinkSync(path.join(root, 'README.md'), path.join(root, 'linked.md'));
   fs.writeFileSync(path.join(root, '.DS_Store'), 'x');

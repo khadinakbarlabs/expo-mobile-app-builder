@@ -1,6 +1,6 @@
 # Mobile App Builder — owner review
 
-Current directory readback — 2026-10-03. **Anthropic version 1.3.2 is submitted and In review; security scan passed. Live: not yet.** A reviewer must resolve the content-policy hold `INVENTORY_INCOMPLETE`. GitHub release 1.3.4 includes subsequent OpenAI workflow hardening; the queued Anthropic source remains the exact 1.3.2 commit below.
+Current directory readback — 2026-10-04: Anthropic 1.3.2 remains In review after a passed security scan, with an INVENTORY_INCOMPLETE policy hold. Release 1.3.5 addresses the reported environment-secret example and installed image-reading helper. It must be scanned at its exact new native commit before any cleared-findings or publication claim. The owner authorized shipping these fixes. Valid directory metadata is retained.
 
 ![Mobile App Builder](../assets/mobile-app-builder-logo-v8.png)
 

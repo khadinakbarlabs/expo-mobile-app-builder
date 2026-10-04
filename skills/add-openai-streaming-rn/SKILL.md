@@ -18,7 +18,7 @@ Never call an AI provider directly from a mobile client. Put the provider key in
 
 ## Implementation context
 
-This is inert example source for the consuming app’s deployed backend, not code executed by the plugin. The provider key below is configured explicitly in that app’s server-side secret store and sent only to its own provider. Do not read or reuse the installer’s machine credentials, and do not run this example as a plugin hook or local command. The mobile session token in the client example is the consuming app’s signed-in user session, not an installer token.
+This is inert example source for the consuming app’s deployed backend, not code executed by the plugin. The backend receives an explicit provider adapter configured by the app owner in that app's server-side secret store. Do not read or reuse the installer’s machine credentials, and do not run this example as a plugin hook or local command. The mobile session token in the client example is the consuming app’s signed-in user session, not an installer token.
 
 ## Authenticated Supabase Edge Function
 
@@ -59,21 +59,9 @@ export default {
     const allowed = await enforceUserQuotaAtomically(userId);
     if (!allowed) return new Response('Usage limit reached', { status: 429 });
 
-    const providerKey = Deno.env.get('OPENAI_API_KEY');
-    if (!providerKey) return new Response('Service unavailable', { status: 503 });
-
-    const upstream = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${providerKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: body.messages,
-        stream: true,
-      }),
-    });
+    // Supply this adapter from the consuming app's backend. It uses only that
+    // app's explicit provider configuration; it never inspects local CLI auth.
+    const upstream = await streamFromAppProvider({ userId, messages: body.messages });
 
     if (!upstream.ok || !upstream.body) {
       return new Response('Upstream service unavailable', { status: 502 });
@@ -91,6 +79,8 @@ export default {
 ```
 
 Before deploying, verify the current authentication configuration in the provider's official documentation. Do not set `auth: 'none'` or disable JWT verification for a route that spends provider funds or reads user data.
+
+`enforceUserQuotaAtomically` and `streamFromAppProvider` are required consuming-app implementations, not supplied runtime functions. The provider adapter must keep the app owner's secret in backend-only storage, restrict the destination to OpenAI's API, enforce a fixed model and output-token limit, use a bounded request timeout, and translate network failures into a generic service error. Do not deploy until both adapters exist and the security tests below pass. The plugin itself requires no provider credential and declares no provider connector.
 
 ## Client streaming
 

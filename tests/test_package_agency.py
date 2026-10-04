@@ -31,6 +31,15 @@ class PackageTests(unittest.TestCase):
             self.assertNotIn('.claude-plugin/plugin.json', paths)
             self.assertNotIn('agents/ux-designer.md', paths)
 
+    def test_media_release_tool_is_excluded_from_every_installed_surface(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            (root / 'scripts/validate-anthropic-media.mjs').write_text('source-only check')
+            for surface in PACKAGE.SURFACES:
+                paths = {file.relative_to(root).as_posix() for file in PACKAGE.collect_files(root, surface)}
+                self.assertNotIn('scripts/validate-anthropic-media.mjs', paths)
+
     def test_symlinks_and_credentials_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -1,8 +1,8 @@
 # Agency release preparation
 
-Current readback — 2026-10-03: GitHub release 1.3.4 is published. Anthropic version 1.3.2 was submitted and its security scan passed; it is **In review**, held for content policy review with `INVENTORY_INCOMPLETE`. **Live: not yet.** The portal names no missing or unreadable source file requiring a deterministic repair. Retained documentation/metadata warnings need reviewer interpretation.
+Current readback — 2026-10-04: Anthropic 1.3.2 remains In review, security passed, Live not yet. Candidate 1.3.5 replaces ambient credential reads in AI guidance with an explicit consuming-app backend adapter and moves artwork-byte validation out of installed tooling into a mandatory source-only release gate. All 189 skills and 16 agents remain. The owner authorized shipping fixes; portal results must identify the exact new native commit.
 
-OpenAI has a saved skills-only 1.3.4 draft under the business publisher. **All 189 skill checks passed with no security warnings.** Eight workflow warnings were addressed in source and reviewed independently. The privacy-policy assessment notice explicitly permits additional review and does not block submission. The final form has only the six OpenAI owner attestations pending confirmation. **OpenAI review submission has not happened yet.** The revised-draft route returned generic errors and left changed skills unchecked; the main upload route created a fresh, successfully checked draft. Only that working draft should be submitted; the stalled draft remains unsubmitted. The older hosted MCP submission is separate and was not changed.
+OpenAI v1.3.4 was submitted with owner authorization on 2026-10-03 after all 189 skills passed and all six declarations were accepted. The same-record upload guard confirmed that review had started, although the dashboard showed Unavailable. Publication remains unconfirmed. Preserve that pending record; 1.3.5 is a separate GitHub candidate and does not replace the queued OpenAI review.
 
 ## Prepared
 
@@ -21,7 +21,7 @@ OpenAI has a saved skills-only 1.3.4 draft under the business publisher. **All 1
 4. Validate the exact selected archive in the target host and portal. Skills-only packages require no MCP review cases, demo recording or reviewer credentials. A separately submitted hosted MCP app has its own tool, demo and reviewer requirements.
 5. Keep draft upload, review submission, approval and publication separately authorized and separately observed. Do not replace a live submission or its attestations as a consequence of preparing this local candidate.
 
-GitHub publication and an Anthropic draft were authorized on 2026-10-03. The owner subsequently authorized Anthropic audience/policy answers and that review submission completed. OpenAI has separate owner attestations; installed caches and the production Worker remain unchanged.
+GitHub publication and an Anthropic draft were authorized on 2026-10-03. The owner subsequently authorized Anthropic audience/policy answers and that review submission completed. The separately authorized OpenAI submission has completed; installed caches and the production Worker remain unchanged.
 
 ## Store, creator, ads and SEO intelligence
 

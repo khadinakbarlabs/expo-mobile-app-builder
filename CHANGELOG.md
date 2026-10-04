@@ -18,6 +18,14 @@
 
 # Changelog
 
+## 1.3.5 — 2026-10-04
+
+- Replace the AI streaming example's ambient secret read with an explicit consuming-app provider adapter, retaining authentication, atomic quotas and bounded provider requirements.
+- Keep installed Anthropic preparation tooling structural; move artwork byte inspection to a mandatory source-only release gate excluded from every bundle.
+- Add regression coverage for separation of media reads, corrupt artwork rejection and provider credential boundaries.
+- Clarify safe research command guidance without runnable unsafe shell examples. Preserve all intelligence workflows, 16 agents, 189 skills and valid directory listing fields.
+- Local/package results and the exact fetched directory scan remain separate from Anthropic reviewer approval and live availability.
+
 ## 1.3.4 — 2026-10-03
 
 - Preserve native project changes during App Clip setup; require scoped regeneration authorization and validate invocation routes.
