@@ -29,6 +29,7 @@
 - [ ] Publish the approved native source tree rather than the mixed canonical root; verify exact public commit and current policy contents.
 - [ ] Validate the exact native tree with Claude Code 2.1.281+ (current pinned check: 2.1.287).
 - [ ] Confirm plugin file count, per-file limits, platform-safe names, paths, Git attributes, supported binaries and no credential artifacts.
+- [ ] Keep publisher filesystem scanners, catalog generation and media inspection source-only. Verify the installed agency browser against its prepared catalog and the source-only checks against the exact native tree.
 - [ ] Load intended Claude surfaces and record actual behavior/evaluation evidence.
 - [ ] Reuse the existing source submission, verify organization/GitHub push access and revalidate the fetched commit.
 - [ ] Owner verifies compliance contact and completes attestations; portal validation, security scan, reviewer approval and live publication remain separate.

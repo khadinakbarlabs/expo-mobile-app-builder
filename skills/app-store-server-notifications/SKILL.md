@@ -21,11 +21,12 @@ App Store Server Notifications are signed webhook payloads. Decode-only JWT help
 ```ts
 import { Environment, SignedDataVerifier } from '@apple/app-store-server-library';
 
-const bundleId = process.env.APP_BUNDLE_ID;
-const appAppleId = Number(process.env.APP_APPLE_ID);
+// Explicit public identity supplied by this application's server configuration.
+const { bundleId, appAppleId } = getAppStoreNotificationIdentity() ?? {};
 
-if (!bundleId || !Number.isSafeInteger(appAppleId)) {
-  throw new Error('Missing verified App Store notification configuration');
+if (typeof bundleId !== 'string' || !bundleId.trim() || bundleId !== bundleId.trim() ||
+    !Number.isSafeInteger(appAppleId) || appAppleId <= 0) {
+  throw new Error('Invalid App Store notification configuration');
 }
 
 const verifier = new SignedDataVerifier(
@@ -80,6 +81,8 @@ export async function POST(req: Request) {
 }
 ```
 
+`getAppStoreNotificationIdentity` is an application-owned server accessor returning the owner's exact App Store Connect bundle ID and positive numeric app Apple ID. These public identifiers are not signing credentials. Supply this configuration explicitly for the consuming app; do not read the plugin installer's environment or accept these values from an incoming webhook. Invalid configuration fails server initialization before any verifier is created.
+
 `loadTrustedAppleRootCAs` and `applyVerifiedSubscriptionTransition` are application-owned server helpers. The former must load current Apple roots; the latter must allow only known event-state transitions. Do not replace either with decode-only parsing or a client-provided status.
 
 ## Environment and testing
@@ -95,3 +98,5 @@ RevenueCat can forward normalized events, but its webhook must still be authenti
 ## Reference
 
 See the current [Apple App Store Server Library documentation](https://apple.github.io/app-store-server-library-node/) before implementation. Apple documents `SignedDataVerifier.verifyAndDecodeNotification` for notification verification.
+
+Verifier configuration and production app-ID requirements checked against [Apple's SignedDataVerifier reference](https://apple.github.io/app-store-server-library-node/classes/SignedDataVerifier.html) on 2026-10-04.
